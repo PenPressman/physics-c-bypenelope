@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COMING SOON!</title>
+<style>
+  body {
+    background-color: #001f3f; /* Dark blue background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Align items in column */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide overflow */
+    color: white; /* White text */
+  }
+
+  header {
+    font-size: 72px; /* Large font size */
+    text-align: center; /* Center text */
+    margin-bottom: 20px; /* Add margin below header */
+  }
+
+  .battery {
+    width: 100px; /* Width of the battery */
+    height: 200px; /* Height of the battery */
+    background-color: #333; /* Dark gray color for the battery */
+    position: relative;
+  }
+
+  .battery::before,
+  .battery::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px; /* Width of the battery terminals */
+    height: 10px; /* Height of the battery terminals */
+    background-color: #666; /* Medium gray color for the terminals */
+    top: 50%; /* Position terminals vertically centered */
+  }
+
+  .battery::before {
+    left: 5px; /* Position left terminal */
+    transform: translate(-50%, -50%);
+  }
+
+  .battery::after {
+    right: 5px; /* Position right terminal */
+    transform: translate(50%, -50%);
+  }
+
+  .top-connector {
+    width: 30px; /* Width of the connector */
+    height: 10px; /* Height of the connector */
+    background-color: #666; /* Medium gray color for the connector */
+    position: absolute;
+    top: -10px; /* Position the connector above the battery */
+    left: 50%; /* Position the connector at the center horizontally */
+    transform: translateX(-50%); /* Center the connector horizontally */
+  }
+
+  .charging {
+    position: absolute;
+    width: 70px; /* Width of the charging indicator */
+    height: 200px; /* Height of the charging indicator */
+    background-color: #4CAF50; /* Green color for the charging indicator */
+    bottom: 5px; /* Distance from the bottom */
+    animation: chargeBattery 4s ease-in-out infinite alternate; /* Animation for charging */
+  }
+
+  @keyframes chargeBattery {
+    0% {
+      height: 0; /* Start height of charging indicator */
+    }
+    100% {
+      height: 200px; /* End height of charging indicator */
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>COMING SOON!</h1>
+</header>
+
+<div class="battery">
+  <div class="top-connector"></div>
+  <div class="charging"></div>
+</div>
+
+</body>
+</html>
