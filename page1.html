@@ -162,7 +162,7 @@
       
   <div id="unitsBox" class="box hidden">
     <h2 style="text-align: center;"> SI Units for Kinematics </h2>
-    <div style="text-align: left;">
+    <div style="text-align: center;">
         <p> Quick note, as long as your units are consistent when you are converting things, use whatever you want, just remember what the base units are.
           <br>
       <div style="text-align: center;">  
@@ -179,20 +179,10 @@
             padding: 10px;
             text-align: center;
         }
-        th:first-child, th:last-child {
-            border-left: 2px solid black; /* bolded left and right edges for first row */
-            border-right: 2px solid black;
-        }
-        th {
-            border-top: 2px solid white; /* bolded top edge for first row */
-        }
     </style>
 </head>
 <body>
     <table>
-        <tr>
-            <th></th>
-            <th></th>
         </tr>
         <!-- Rows -->
         <tr>
@@ -226,17 +216,17 @@
   function toggleFormulas() {
     var formulasBox = document.getElementById("formulasBox");
     formulasBox.classList.toggle("hidden");
-  }
+  }}
 
   function toggleMainConcepts() {
     var conceptsBox = document.getElementById("conceptsBox");
     conceptsBox.classList.toggle("hidden");
-  }
+  }}
 
   function toggleUnits() {
     var unitsBox = document.getElementById("unitsBox");
     unitsBox.classList.toggle("hidden");
-  }
+  }}
 
   // Function to animate circle along the parabolic path
   function animateCircle() {
