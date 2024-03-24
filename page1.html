@@ -184,8 +184,7 @@
             border-right: 2px solid black;
         }
         th {
-            border-top: 2px solid black; /* bolded top edge for first row */
-            border-bottom: 2px solid black; /* bolded bottom edge for first row */
+            border-top: 2px solid white; /* bolded top edge for first row */
         }
     </style>
 </head>
@@ -228,8 +227,7 @@
     var formulasBox = document.getElementById("formulasBox");
     formulasBox.classList.toggle("hidden");
   }
-  
- // Hide other boxes
+
     var conceptsBox = document.getElementById("conceptsBox");
     var unitsBox = document.getElementById("unitsBox");
     conceptsBox.classList.add("hidden");
@@ -240,7 +238,6 @@
     var conceptsBox = document.getElementById("conceptsBox");
     conceptsBox.classList.toggle("hidden");
   }
-    // Hide other boxes
     var formulasBox = document.getElementById("formulasBox");
     var unitsBox = document.getElementById("unitsBox");
     formulasBox.classList.add("hidden");
@@ -252,7 +249,6 @@
     unitsBox.classList.toggle("hidden");
   }
   
-   // Hide other boxes
     var formulasBox = document.getElementById("formulasBox");
     var conceptsBox = document.getElementById("conceptsBox");
     formulasBox.classList.add("hidden");
