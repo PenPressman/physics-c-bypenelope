@@ -228,10 +228,23 @@
     var formulasBox = document.getElementById("formulasBox");
     formulasBox.classList.toggle("hidden");
   }
-
+  
+ // Hide other boxes
+    var conceptsBox = document.getElementById("conceptsBox");
+    var unitsBox = document.getElementById("unitsBox");
+    conceptsBox.classList.add("hidden");
+    unitsBox.classList.add("hidden");
+  }
+  
   function toggleMainConcepts() {
     var conceptsBox = document.getElementById("conceptsBox");
     conceptsBox.classList.toggle("hidden");
+  }
+    // Hide other boxes
+    var formulasBox = document.getElementById("formulasBox");
+    var unitsBox = document.getElementById("unitsBox");
+    formulasBox.classList.add("hidden");
+    unitsBox.classList.add("hidden");
   }
 
   function toggleUnits() {
