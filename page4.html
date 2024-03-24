@@ -23,36 +23,46 @@
     margin-bottom: 20px; /* Add margin below header */
   }
 
-  .roller-coaster {
-    width: 400px;
-    height: 200px;
+  .animation-container {
     position: relative;
+    width: 400px; /* Size of the circle animation */
+    height: 400px; /* Size of the circle animation */
+    margin-bottom: 20px; /* Add margin below animation */
   }
 
-  .roller-coaster path {
+  .circle-line {
     fill: none;
     stroke: white;
-    stroke-width: 2;
-    stroke-dasharray: 5 5; /* Dotted line */
+    stroke-width: 20; /* Thickness of the circle line */
+    stroke-dasharray: 2000; /* Length of the circle path */
+    stroke-dashoffset: 0; /* Start the circle animation */
+    animation: animateCircle 5s linear infinite; /* Animation for circle line (faster) */
   }
 
-  .rainbow-rect {
-    width: 20px;
-    height: 20px;
+  .rainbow-circle {
+    width: 100px; /* Diameter of the rainbow circle */
+    height: 100px; /* Diameter of the rainbow circle */
     position: absolute;
-    top: -10px;
-    left: -10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the rainbow circle */
     background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
-    border-radius: 50%; /* Round shape */
-    animation: moveAlongPath 5s linear infinite; /* Animation */
+    border-radius: 50%; /* Circle shape */
+    animation: moveAroundCircle 5s linear infinite; /* Animation for rainbow circle (faster) */
   }
 
-  @keyframes moveAlongPath {
+  @keyframes animateCircle {
+    to {
+      stroke-dashoffset: -2000; /* Move the circle line */
+    }
+  }
+
+  @keyframes moveAroundCircle {
     0% {
-      transform: translateX(0) translateY(0);
+      transform: translate(-50%, -50%) rotate(0deg) translate(150px) rotate(0deg); /* Start position */
     }
     100% {
-      transform: translateX(380px) translateY(180px);
+      transform: translate(-50%, -50%) rotate(360deg) translate(150px) rotate(-360deg); /* End position */
     }
   }
 </style>
@@ -63,11 +73,15 @@
   <h1>COMING SOON!</h1>
 </header>
 
-<svg class="roller-coaster" viewBox="0 0 400 200">
-  <path d="M10,100 C50,50 150,50 190,100 S330,150 390,100" />
-</svg>
-
-<div class="rainbow-rect"></div>
+<div class="animation-container">
+  <!-- Circle made of a thick line -->
+  <svg viewBox="0 0 400 400">
+    <circle cx="200" cy="200" r="180" class="circle-line" />
+  </svg>
+  
+  <!-- Rainbow circle inside the border of the circle -->
+  <div class="rainbow-circle"></div>
+</div>
 
 </body>
 </html>
