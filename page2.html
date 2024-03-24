@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coming Soon</title>
+<style>
+  body {
+    background-color: #001f3f; /* Dark blue background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Align items in column */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+  }
+
+  header {
+    color: white; /* White text */
+    font-size: 72px; /* Large font size */
+    text-align: center; /* Center text */
+    margin-bottom: 20px; /* Add margin below header */
+  }
+
+  .smiley {
+    width: 100px;
+    height: 100px;
+    animation: wink 2s infinite;
+  }
+
+  @keyframes wink {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>COMING SOON!</h1>
+  
+  <!-- Smiley face animation -->
+  <svg class="smiley" viewBox="0 0 24 24">
+    <!-- Face -->
+    <circle cx="12" cy="12" r="10" fill="yellow" />
+
+    <!-- Left eye -->
+    <circle cx="8" cy="10" r="1.5" fill="black" />
+
+    <!-- Right eye -->
+    <circle cx="16" cy="10" r="1.5" fill="black" />
+
+    <!-- Mouth -->
+    <path d="M10,16 Q12,18 14,16" fill="none" stroke="black" stroke-width="1.5" />
+  </svg>
+</header>
+
+</body>
+</html>
