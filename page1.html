@@ -206,7 +206,7 @@
         </tr>
         <tr>
             <td>acceleration</td>
-            <td> meters per second per second [m/s <superscript> 2 </superscript>]</td>
+            <td> meters per second per second [m/s<sup>2</sup>]</td>
         </tr>
         <tr>
             <td>time</td>
@@ -237,6 +237,13 @@
   function toggleUnits() {
     var unitsBox = document.getElementById("unitsBox");
     unitsBox.classList.toggle("hidden");
+  }
+  
+   // Hide other boxes
+    var formulasBox = document.getElementById("formulasBox");
+    var conceptsBox = document.getElementById("conceptsBox");
+    formulasBox.classList.add("hidden");
+    conceptsBox.classList.add("hidden");
   }
 
   // Function to animate circle along the parabolic path
