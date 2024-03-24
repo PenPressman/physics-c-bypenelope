@@ -23,18 +23,36 @@
     margin-bottom: 20px; /* Add margin below header */
   }
 
-  .smiley {
-    width: 100px;
-    height: 100px;
-    animation: wink 2s infinite;
+  .roller-coaster {
+    width: 400px;
+    height: 200px;
+    position: relative;
   }
 
-  @keyframes wink {
-    0%, 100% {
-      transform: scale(1);
+  .roller-coaster path {
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-dasharray: 5 5; /* Dotted line */
+  }
+
+  .rainbow-rect {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    border-radius: 50%; /* Round shape */
+    animation: moveAlongPath 5s linear infinite; /* Animation */
+  }
+
+  @keyframes moveAlongPath {
+    0% {
+      transform: translateX(0) translateY(0);
     }
-    50% {
-      transform: scale(1.2);
+    100% {
+      transform: translateX(380px) translateY(180px);
     }
   }
 </style>
@@ -43,22 +61,13 @@
 
 <header>
   <h1>COMING SOON!</h1>
-  
-  <!-- Smiley face animation -->
-  <svg class="smiley" viewBox="0 0 24 24">
-    <!-- Face -->
-    <circle cx="12" cy="12" r="10" fill="#9acd32" /> <!-- Change fill color to light green -->
-
-    <!-- Left eye -->
-    <circle cx="8" cy="10" r="1.5" fill="black" />
-
-    <!-- Right eye -->
-    <circle cx="16" cy="10" r="1.5" fill="black" />
-
-    <!-- Mouth -->
-    <path d="M10,16 Q12,18 14,16" fill="none" stroke="black" stroke-width="1.5" />
-  </svg>
 </header>
+
+<svg class="roller-coaster" viewBox="0 0 400 200">
+  <path d="M10,100 C50,50 150,50 190,100 S330,150 390,100" />
+</svg>
+
+<div class="rainbow-rect"></div>
 
 </body>
 </html>
