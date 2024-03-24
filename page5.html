@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coming Soon</title>
+<title>COMING SOON!</title>
 <style>
   body {
     background-color: #001f3f; /* Dark blue background */
@@ -14,6 +14,7 @@
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide overflow */
   }
 
   header {
@@ -21,20 +22,47 @@
     font-size: 72px; /* Large font size */
     text-align: center; /* Center text */
     margin-bottom: 20px; /* Add margin below header */
+    position: absolute; /* Position header absolutely */
+    top: 20px; /* Distance from the top */
   }
 
-  .smiley {
-    width: 100px;
-    height: 100px;
-    animation: wink 2s infinite;
+  .sun {
+    width: 100px; /* Diameter of the sun */
+    height: 100px; /* Diameter of the sun */
+    background-color: yellow; /* Yellow color for the sun */
+    border-radius: 50%; /* Circular shape */
+    position: relative;
+    animation: rotateSun 10s linear infinite; /* Animation for sun rotation */
+    margin-top: 250px; /* Move animation down */
   }
 
-  @keyframes wink {
-    0%, 100% {
-      transform: scale(1);
+  .planet {
+    width: 30px; /* Diameter of the planet */
+    height: 30px; /* Diameter of the planet */
+    background-color: #4682B4; /* Blue color for the planet */
+    border-radius: 40%; /* Circular shape */
+    position: absolute;
+    top: 40%; /* Align to center vertically */
+    left: 40%; /* Align to center horizontally */
+    transform-origin: center bottom; /* Set rotation origin to bottom center */
+    animation: orbitPlanet 4s linear infinite; /* Animation for planet orbit */
+  }
+
+  @keyframes rotateSun {
+    0% {
+      transform: rotate(0deg); /* Start rotation angle */
     }
-    50% {
-      transform: scale(1.2);
+    100% {
+      transform: rotate(360deg); /* End rotation angle */
+    }
+  }
+
+  @keyframes orbitPlanet {
+    0% {
+      transform: translate(-50%, -200px) rotate(0deg); /* Start position */
+    }
+    100% {
+      transform: translate(-50%, -200px) rotate(360deg); /* End position */
     }
   }
 </style>
@@ -43,22 +71,11 @@
 
 <header>
   <h1>COMING SOON!</h1>
-  
-  <!-- Smiley face animation -->
-  <svg class="smiley" viewBox="0 0 24 24">
-    <!-- Face -->
-    <circle cx="12" cy="12" r="10" fill="#9acd32" /> <!-- Change fill color to light green -->
-
-    <!-- Left eye -->
-    <circle cx="8" cy="10" r="1.5" fill="black" />
-
-    <!-- Right eye -->
-    <circle cx="16" cy="10" r="1.5" fill="black" />
-
-    <!-- Mouth -->
-    <path d="M10,16 Q12,18 14,16" fill="none" stroke="black" stroke-width="1.5" />
-  </svg>
 </header>
+
+<div class="sun">
+  <div class="planet"></div>
+</div>
 
 </body>
 </html>
