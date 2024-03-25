@@ -89,94 +89,85 @@
     <div class="footer">
     
       <br> 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clickable Box</title>
-<style>
-    /* Set background color for the page */
-    body {
-        margin: 0;
-        padding: 0;
-
-        text-align: center; /* Center the content horizontally */
-    }
-
-    /* Style for the clickable box */
-    #clickBox {
-        width: 80px; /* Adjust width of the box */
-        height: 60px; /* Adjust height of the box */
-        background-color: #3474eb; /* Set background color of the box */
-        border: 2px solid #ccc;
-        text-align: center;
-        line-height: 60px;
-        cursor: pointer;
-        font-size: 12px; /* Adjust the font size to fit the text */
-        position: absolute;
-        top: 62%; /* Move the box 80% down the page */
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    /* Style for the click count display */
-    #clickCount {
-        position: absolute;
-        top: 90%; /* Move the click count 90% down the page */
-        left: 50%;
-        transform: translateX(-50%);
-    }
-</style>
-</head>
-<body>
-
-<!-- Clickable box element -->
-<div id="clickBox">Click here first!</div>
-
-<!-- Display click count -->
-<p id="clickCount">Viewer Count: <span id="count">0</span></p>
-
-<script>
-    // Get the click count from localStorage or set it to 0 if not present
-    var clickCount = localStorage.getItem("clickCount") || 0;
-
-    // Get the clickable box element
-    var box = document.getElementById("clickBox");
-
-    // Get the click count display element
-    var clickCountDisplay = document.getElementById("count");
-
-    // Update the click count display
-    clickCountDisplay.textContent = clickCount;
-
-    // Add a click event listener to the box
-    box.addEventListener("click", function() {
-        clickCount++; // Increment click count
-        clickCountDisplay.textContent = clickCount; // Update click count display
-        // Store the updated click count in localStorage
-        localStorage.setItem("clickCount", clickCount);
-    });
-</script>
-
-</body>
-</html>
 
 
-
-<br> 
-      <br> 
-<br> 
       <br> 
       <br> 
 
       Updated in: 2024.<br>
       Contact penelope.pressman@gmail.com with questions. <br>
-     *Disclaimer, I am a highschool student who is using the creation of this site as a fun way to study, it includes the explanations from my class/textbooks/thoughts that I found most helpful, <br>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>*Disclaimer, I am a highschool student who is using the creation of this site as a fun way to study, it includes the explanations from my class/textbooks/thoughts that I found most helpful, <br>
       but might not be everyone's favorite. So, make sure to try out different resources and see what works for you. <br>
-      **Note, this site is intended to be viewed on a laptop/ipad, certain buttons may not appear on a phone.
-       <br> 
-      <br>
+      **Note, this site is intended to be viewed on a laptop/ipad, certain buttons may not appear on a phone.</title>
+<style>
+    .light-blue {
+        color: lightblue;
+    }
+</style>
+</head>
+<body>
+
+<p><span class="light-blue">*Disclaimer, I am a highschool student who is using the creation of this site as a fun way to study, it includes the explanations <br> from my class/textbooks/thoughts that I found most helpful, but might not be everyone's favorite. So, make sure to try out different <br> resources and see what works for you. <br>
+      **Note, this site is intended to be viewed on a laptop/ipad, certain buttons may not appear on a phone.</span>.</p>
+
+</body>
+</html>
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visitor Counter</title>
+</head>
+<body>
+<p>Total Readers: <span id="visitorCount">0</span></p>
+
+<script>
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    // Function to get a cookie
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    // Function to increment visitor count if cookie is not set
+    function incrementVisitorCount() {
+        var visitorCount = getCookie("visitorCount");
+        if (!visitorCount) {
+            setCookie("visitorCount", "1", 365); // Set the cookie for 1 year
+            return 1; // Return 1 as this is the first visit
+        } else {
+            return parseInt(visitorCount) + 1; // Increment the count
+        }
+    }
+
+    // Update the visitor count display
+    document.getElementById("visitorCount").textContent = incrementVisitorCount();
+</script>
+</body>
+</html>
+
     </div>
   </div>
 </body>
