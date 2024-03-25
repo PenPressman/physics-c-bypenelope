@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -77,14 +77,14 @@
 <style>
     /* Style for the headers */
     .header {
-        font-size: 20px; /* Medium font size */
+        font-size: 24px; /* Medium font size */
         color: inherit; /* Inherit text color */
         margin: 20px 0; /* Add vertical margin */
     }
 
     /* Style for the first header */
     .first-header {
-        color: #B776C2; /* purple 1 */
+        color: #8000BE; /* purple 1 */
     }
 
     /* Style for the second header */
@@ -94,7 +94,7 @@
 
     /* Style for the third header */
     .third-header {
-        color: #B776C2; /* purple 3 */
+        color: #8175BE; /* purple 3 */
     }
 </style>
 </head>
@@ -219,6 +219,8 @@ Ok, taking a step back, there are two kinds of friction, both listed here: </p>
 Friction is “static” when it pertains to multiple unmoving objects,though there must be a force trying to move one, or there would be no “intended motion” to oppose. and kinetic when those objects are moving against each other. Friction is “kinetic” once those objects are moving against each other.
 <br><br>
 For me, it hasn’t worked well when I try to “common sense” my way through applications of friction. While this may not be the case for everyone, I find the directions of friction kinda counterintuitive, so I just write everything out without making any assumptions, and go from there. For example, if given a scenario where a car is moving foreward, I don’t just assume friction is backwards, and I wait to set up net force equations and see what happens (more on that when we talk about rolling/slipping).
+<br>
+Last note, as you can see on the formula sheet, the force of friction is equal to an object's normal force * the coefficient of friction between what it and what it is trying to move against, which is a constant that differs for every combination of surfaces.
 <br><br>
 Ok I almost forgot about drag, oops:
 <br><br>
@@ -269,19 +271,23 @@ As for applications of springs, I think it’s easiest to just give you info on 
 
 
  <h2 style="text-align: center;">Inclined Planes</h2>
-<style>
-    /* Style for the header */
-    h2 {
-        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to the text */
-    }
-</style>
+
     <p style="text-align: left;">
     First of all, components, components, components, components. That’s what you should think when you see an inclined plane. Remember that, for example, F<sub>g</sub> is only equal to the vertical component of the normal force, not the horizontal part. And, you need to draw the normal force perpendicular to the inclined plane just as you would draw it perpendicular to a flat surface by drawing a line straight up.<br>
  <br>
 
- <h2 style="text-align: center;">Circular Motion</h2>
+ <h2 style="text-align: center;">Massless Strings</h2>
     <p style="text-align: left;">
     text<br> <br>
+
+ <h2 style="text-align: center;">Circular Motion</h2>
+    <p style="text-align: left;">
+    The first thing to note about circular motion is that <u>this will come up later</u>! You’ll see the formula again a bunch, including in E & M when you look at the paths particles take.<br> <br>
+Here are the main things to note about circular motion: <br> <br>
+1. When an object is moving in a circle, it has acceleration pointed inward along the u>radial line</u>. That means a key thing to note is that even if you’re given a problem where a car is moving in a circle at a constant speed (i.e. the magnitude of its velocity is not changing), it can still have acceleration, and in fact, it does! Because the object is changing direction, and velocity is a vector, objects moving in circles experience <u>centripital acceleration</u>. Because of Newton’s 3rd law, we know that this acceleration must be caused by a force, which we’ll call <u>centripital force</u>, (F<sub>c</sub>). Remember this when setting up net-force equations! Don’t get tricked by scenarios like this on the AP… <br> Quick quiz: if a bird is flying around a tree at a constant speed, where do we draw its acceleration? Answer: pointing from the bird to the tree!<br><br>
+2. While we tend to think of normal force as oppositng gravity, that is not always the case. For example, if an object is moving around a roller coaster loop, its free-body diagram at the top of the loop will have both F<sub>g</sub> and F<sub>N</sub> pointed down. Since this coaster-cart only has centripital acceleration, F<sub>g</sub> + F<sub>N</sub> will equal mv<sup>2</sup>/r. <br> <br>
+3. We can calculate the “critical speed” of an object (aka the max v before it flies off, say, a hill), by setting up a similar equation to the one above. This time, we’ll make one change: F<sub>N</sub> will point up and F<sub>g</sub> will point down, so we’ll subtract the gravitational force from the normal force to find the net force, and set it equal to mv<sup>2</sup>/r to see how high v can go before F<sub>N</sub> exceeds F<sub>g</sub> and we fly off the hill. Don’t forget to factor in friction when applicable!<br><br>
+
 
  <h2 style="text-align: center;">Banked Curves</h2>
     <p style="text-align: left;">
@@ -292,12 +298,6 @@ As for applications of springs, I think it’s easiest to just give you info on 
         text<br> <br>
   
  <h2 style="text-align: center;">Elevators</h2>
-<style>
-    /* Style for the header */
-    h2 {
-        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to the text */
-    }
-</style>
  <p style="text-align: left;"> The two most common scenarios I see for elevator problems are: <br> <br> 1. Person standing in an elevator; in this case, the only two forces are F<sub>N</sub> up and F<sub>g</sub> down. <br> <br> 2. Something hanging from a string in the elevator; in this case, the only forces are the force of tension from the string up(F<sub>T</sub>) and F<sub>g</sub> down. DO NOT try to rationalize finding some sort of “force of elevator,” that is not a thing. The elevator part comes in when we use Newton’s 3rd law, because the acceleration will change if the elevator is accelerating, and since g is constant here, (F<sub>T</sub>)must be the thing changing.
 
 
