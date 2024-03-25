@@ -39,7 +39,7 @@
   }
 
   .button {
-    background-color: #e5d3f5;
+    background-color: #ADD8E6;
     color: #001F3F;
     padding: 15px 30px; /* Increase padding */
     border: none;
@@ -55,7 +55,7 @@
   }
 
   .box {
-    background-color: #641F90; /* Color of sections */
+    background-color: #2750AF; /* Color of sections */
     padding: 20px;
     margin-top: 20px;
     width: 90%; /* Decrease width */
@@ -74,40 +74,89 @@
 
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circle Text</title>
 <style>
-    /* Style for the headers */
-    .header {
-        font-size: 24px; /* Medium font size */
-        color: inherit; /* Inherit text color */
-        margin: 20px 0; /* Add vertical margin */
+    /* Style for the container */
+    .container {
+        display: flex; /* Use flexbox */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
     }
 
-    /* Style for the first header */
-    .first-header {
-        color: #8000BE; /* purple 1 */
+    /* Style for the circles */
+    .circle {
+        text-align: center; /* Center text */
+        border: 2px solid white; /* White outline */
+        border-radius: 50%; /* Make it a circle */
+        background-color: transparent; /* Clear background */
+        padding: 20px; /* Add padding */
+        max-width: 200px; /* Set maximum width */
+        margin-bottom: 20px; /* Add margin between circles */
     }
 
-    /* Style for the second header */
-    .second-header {
-        color: #B776C2; /* purple 2, also note: if you have two #s, everything turns white, which I did not realize lol */
+    /* Style for the text inside the circles */
+    .circle p {
+        font-size: 14px; /* Set font size */
+        margin: 0; /* Remove default margin */
+        word-wrap: break-word; /* Allow text to wrap */
     }
 
-    /* Style for the third header */
-    .third-header {
-        color: #8175BE; /* purple 3 */
+    /* Different colors for each circle */
+    .circle:nth-child(1) {
+        background-color: lightblue;
+    }
+
+    .circle:nth-child(2) {
+        background-color: lightgreen;
+    }
+
+    .circle:nth-child(3) {
+        background-color: lightpink;
+    }
+
+    /* Text colors for each circle */
+    .circle:nth-child(1) p {
+        color: navy; /* Very dark blue */
+    }
+
+    .circle:nth-child(2) p {
+        color: darkgreen; /* Very dark green */
+    }
+
+    .circle:nth-child(3) p {
+        color: darkred; /* Very dark red */
     }
 </style>
 </head>
 <body>
 
-<!-- First header -->
-<h2 class="header first-header">1st: Objects stay in the same state of motion (i.e., rest or constant velocity) until acted on by a non-zero force.</h2>
+<div class="container">
+    <!-- First circle -->
+    <div class="circle">
+        <p>1st: Objects stay in the same state of motion (i.e., rest or constant velocity) until acted on by a non-zero force.</p>
+    </div>
 
-<!-- Second header -->
-<h2 class="header second-header">2nd: Force = Mass x Acceleration (F = ma)</h2>
+    <!-- Second circle -->
+    <div class="circle">
+        <p>2nd: Force = Mass x Acceleration (F = ma)</p>
+    </div>
 
-<!-- Third header -->
-<h2 class="header third-header">3rd: For every action/force applied to an object, there is an equal and opposite one back on the applier. (F<sub>AB</sub> = - F<sub>BA</sub>)</h2>
+    <!-- Third circle -->
+    <div class="circle">
+        <p>3rd: For every action/force applied to an object, there is an equal and opposite one back on the applier. (F<sub>AB</sub> = - F<sub>BA</sub>)</p>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+>
 
 </body>
 </html>
@@ -400,4 +449,3 @@ To solve for any variable in an atwood machine, draw the free body diagram of th
 
 </body>
 </html>
-
