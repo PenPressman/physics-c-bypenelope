@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -216,7 +216,7 @@ Ok, taking a step back, there are two kinds of friction, both listed here: </p>
 1. Static Friction (f<sub>s</sub>)<br>
 2. Kinetic Friction (f<sub>k</sub>)</p><br>
 <p style="text-align: left;">
-Friction is “static” when it pertains to multiple unmoving objects,though there must be a force trying to move one, or there would be no “intended motion” to oppose. and kinetic when those objects are moving against each other. Friction is “kinetic” once those objects are moving against each other.
+Friction is “static” when it pertains to multiple unmoving objects,though there must be a force trying to move one, or there would be no “intended motion” to oppose. and kinetic when those objects are moving against each other. Friction is “kinetic” once those objects are moving against each other. Friction goes from static to kinetic when the force reaches (f<sub>s-max</sub>), which you can see the formula for on the formula page above.
 <br><br>
 For me, it hasn’t worked well when I try to “common sense” my way through applications of friction. While this may not be the case for everyone, I find the directions of friction kinda counterintuitive, so I just write everything out without making any assumptions, and go from there. For example, if given a scenario where a car is moving foreward, I don’t just assume friction is backwards, and I wait to set up net force equations and see what happens (more on that when we talk about rolling/slipping).
 <br>
@@ -270,12 +270,6 @@ As for applications of springs, I think it’s easiest to just give you info on 
 2. Don’t worry about the period of springs yet, that is unit 5. <br><br>
 
 
- <h2 style="text-align: center;">Inclined Planes</h2>
-
-    <p style="text-align: left;">
-    First of all, components, components, components, components. That’s what you should think when you see an inclined plane. Remember that, for example, F<sub>g</sub> is only equal to the vertical component of the normal force, not the horizontal part. And, you need to draw the normal force perpendicular to the inclined plane just as you would draw it perpendicular to a flat surface by drawing a line straight up.<br>
- <br>
-
  <h2 style="text-align: center;">Massless Strings</h2>
     <p style="text-align: left;">
     text<br> <br>
@@ -289,13 +283,29 @@ Here are the main things to note about circular motion: <br> <br>
 3. We can calculate the “critical speed” of an object (aka the max v before it flies off, say, a hill), by setting up a similar equation to the one above. This time, we’ll make one change: F<sub>N</sub> will point up and F<sub>g</sub> will point down, so we’ll subtract the gravitational force from the normal force to find the net force, and set it equal to mv<sup>2</sup>/r to see how high v can go before F<sub>N</sub> exceeds F<sub>g</sub> and we fly off the hill. Don’t forget to factor in friction when applicable!<br><br>
 
 
+ <h2 style="text-align: center;">Inclined Planes</h2>
+
+    <p style="text-align: left;">
+    First of all, components, components, components, components. That’s what you should think when you see an inclined plane. Remember that, for example, F<sub>g</sub> is only equal to the vertical component of the normal force, not the horizontal part. And, you need to draw the normal force perpendicular to the inclined plane just as you would draw it perpendicular to a flat surface by drawing a line straight up.<br> There’s not much to say here because if you practice and keep your coordinate system clear, you’ll be good to go.
+ <br><br>
+
  <h2 style="text-align: center;">Banked Curves</h2>
     <p style="text-align: left;">
-        text<br> <br>
+        Banked curves combine the last two topics, planes and circular motion. You’ll see that they allow us to do things like avoid crashing when we exit a highway even if it's icy and there is no friction between your tires and the ground.
+<br> <br>
+1. For problems where friction never comes up: set F<sub>N</sub> - F<sub>g</sub> equal to 0 to find the normal force needed so that there is no force in the y direction (meaning make sure you only include the y component of F<sub>N</sub>) and therefore no vertical acceleration (meaning, no slipping up or down the curve). Then, plug that value of F<sub>N</sub> into a centripital force equation to solve for v. Then you’re done!<br> Keep in mind, because of the formula you end up with, increasing your speed will make you slide up the curve, and decreasing it will make you slide down.<br><br>
+2. For problems where friction is involved: <br> <br>
+A. first, you need to figure out which way friction points. To do this, use the steps above to see what the “speed limit” to avoid accelerating in the y direction is, and see if you’re going faster or slower. If you’re going faster, you’ll be moving up so friction will point down, and if v is slower, it’ll be the opposite scenario.
 
     <h2 style="text-align: center;">Atwood Machines</h2>
     <p style="text-align: left;">
-        text<br> <br>
+        Hopefully you already know this, but atwood machines are systems with masses on a pulley attached with a string or multiple strings. For these problems, we are going to assume a) that the strings are massless, and b. that the pulleys are frictionless. We approximate massless strings because it allows us to assume that tension is the same everywhere in ths tring (write out an example net force equation to see why, and make sure to keep it simple at first, you’ll see that if the whole system accelerates together, the tension must be equal everywhere, and there must be no mass changing things). <br> <br>
+To solve for any variable in an atwood machine, draw the free body diagram of things acting along the “u-axis” (the curvy one we see in the machine) horizontally, so everything lines up. This will make it easier to see which forces go where. And, you’ll sometimes have atwood machines combined with inclined planes, so it’ll be even more important to keep track of your coordinate systems. <br><p style="text-align: center;"> Solving Atwoods<br><p style="text-align: left;">
+1. Draw the u-axis horizontally and keep track of what is positive and negative + left and right.<br><br>
+2. Fill in forces<br><br>
+3. Set up net force equations to solve.<br><br>
+
+<br><br>Once everything is drawn out properly, it shouldn’t be too difficult to solve for what you need.
   
  <h2 style="text-align: center;">Elevators</h2>
  <p style="text-align: left;"> The two most common scenarios I see for elevator problems are: <br> <br> 1. Person standing in an elevator; in this case, the only two forces are F<sub>N</sub> up and F<sub>g</sub> down. <br> <br> 2. Something hanging from a string in the elevator; in this case, the only forces are the force of tension from the string up(F<sub>T</sub>) and F<sub>g</sub> down. DO NOT try to rationalize finding some sort of “force of elevator,” that is not a thing. The elevator part comes in when we use Newton’s 3rd law, because the acceleration will change if the elevator is accelerating, and since g is constant here, (F<sub>T</sub>)must be the thing changing.
