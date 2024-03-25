@@ -70,7 +70,7 @@
 <body>
 
 <header>
-  <h1>Newton’s Laws (*page in progress*) </h1>
+  <h1>Newton’s Laws </h1>
 </header>
 
 
@@ -180,7 +180,8 @@
 <body>
 
 
-<p class="formatted-paragraph"  <b> <u> In a nutshell, Newton’s laws let us describe and analyze motion. We can derive lots of other stuff from these “first principles.” Also, as you enter this unit, remember not to make any assumptions about what is causing an object to move. I remember this as "there's a source for every force," </b> </u> meaning, if, for example, there is ball hanging from a string, and the string is attached to a moving plane, the string is the only thing pulling the ball up, not the plane. This will all make sense later, but I like to start by thinking about it.</p>
+<p class="formatted-paragraph" </u> In a nutshell, Newton’s laws let us describe and analyze motion. We can derive lots of other stuff from these “first principles.” Also, as you enter this unit, remember not to make any assumptions about what is causing an object to move. I remember this as </u> <u>"there's a source for every force,"</u> meaning, if, for example, there is a ball hanging from a string, and the string is attached to a moving plane, the string is the only thing pulling the ball up, not the plane. This will all make sense later, but I like to start by thinking about it.<br>
+For this unit, it will probably be helpful to review formulas before concepts. </p>
 
 
 </body>
@@ -197,47 +198,34 @@
     <button class="button" onclick="toggleUnits()">Click to review relevant SI units</button>
   </div>
 <div id="formulasBox" class="box hidden">
-    <h2>A Note</h2>
- <p style="text-align: left;">
-    <p>Since this </p>
-    <p>text</p>
-    <p>text</p>
-    <p>text</p>
-    <p>text</p>
-    <p>text</p><br>
-        </p>
-        <p>* </p>
-    <h2 style="text-align: center;">Next Header</h2>
+    <h2> General</h2>
+    <p>F=ma (“force is equal to mass times acceleration”)</p>
+<br>
+<p>Force of gravity: F<sub>g</sub>=m<sub>(ass)</sub>g</p><br>
+   <h2 style="text-align: center;">Friction and Drag</h2><br>
+  <p style="text-align: center;">
+    <p>Force (F) of kinetic friction: f<sub>k</sub>=μ<sub>k</sub>F<sub>N</sub></p>
+    <p>Force (F)of kinetic friction: f=μF<sub>N</sub></p>
+  <p>Force (F) of max static friction: f<sub>s-max</sub>=μ<sub>s</sub>F<sub>N</sub></p><br>
+    <p>Drag force (resistive force): F<sub>D</sub>=-k<sub>(surface area constant)</sub>v</p>
+</p>
+    <p>Terminal velocity: v<sub>T</sub>=mg/k</p>
+<p>V as a function of time for an object experiencing F<sub>D</sub>: V(t)=mg/k(1-e<sup>-kt/m</sup>)<br>
+        <br>  <h2 style="text-align: center;">Circular Motion</h2>
     <p style="text-align: center;">
-       text<br>
+       Centripital force: F<sub>c</sub>ma<sub>c</sub><br>
+<p> Centripital acceleration: a<sub>c</sub>=mv<sup>2</sup>/r (r=radius of circular path)<br>
     </p>
-    <p style="text-align: left;">
-       text
-    </p>
-    <p style="text-align: left;">
-        More text
-    </p>
+<p>Max velocity (“critical speed”): mg=mv<sub>c</sub><sup>2</sup>/r
+  <br>
 
-    <h2 style="text-align: center;">Other Formulas</h2>
+   <br> <h2 style="text-align: center;">Springs</h2>
     <p style="text-align: center;">
-       Bunch of text
-    </p>
-    <p style="text-align: left;">
-        Yay more writing
-    </p>
+        <p>Force of a spring: F<sub>spring</sub>=-k<sub>(spring constant)</sub>x<sub>(displacement from equilibrium length)</sub></p>
+     <br>
+<br>
+<br>
 
-    <h2 style="text-align: center;">Next Header</h2>
-    <p style="text-align: center;">
-       text<br>
-       text<br>
-       text<br>
-       text<br>
-       text<br>
-    </p>
-
-    <p style="text-align: left;">
-        *Remember, note.
-    </p>
 </div>
   <div id="conceptsBox" class="box hidden">
     <h2 style="text-align: center;"> Intro </h2>
@@ -248,7 +236,7 @@
     }
 </style>
     <div style="text-align: left;">
-        <p> For this unit, just keep in mind what I wrote above: you CANNOT just assume there is a force because there is MOVEMENT. Rather, a force indicates a change in ACCELERATION. Another thing to keep in mind is that if an object is moving at a constant speed, or is at rest, then the net force acting on it MUST BE 0. If, for example, an object is sitting at rest on a table, and we know that gravity is exerting a force “Fg” (which, given F=ma, will be equal to the object's mass x 9.8m/s), then in order for the object to not accelerate downward, it must be experiencing an upward force equal to Fg in magnitude but opposite in direction (this is where Newton’s 3rd law comes in!). We call this the “normal force,” F<sub>N</sub>. This example is the simplest “third law pair” scenario I can think of, and it’s important to keep in mind that the reason Newton’s laws are so helpful is because they really do always work if applied correctly. So, when you’re working on force problems, remember the pairs!<br> <br><br> Another thing to keep in mind is <u> always draw free body diagrams</u>, even if you are not explicitly told to. They will help you keep in mind what the scenario looks like, and are super important when things get more complicated (ex. Atwood machines, or you need to draw components (ex. Inclined planes). <br><br>I’m not going to go over the specifics of drawing them because again, practice is key, but basically, each force gets an arrow, the length of which represents its magnitude relative to other forces acting on the object. I reccomend using solid lines for overall forces and then dotted lines to separate horizontal and vertical components.</p>
+        <p> For this unit, just keep in mind what I wrote above: you CANNOT just assume there is a force because there is MOVEMENT. Rather, a force indicates a change in ACCELERATION. Another thing to keep in mind is that if an object is moving at a constant speed, or is at rest, then the net force acting on it MUST BE 0. If, for example, an object is sitting at rest on a table, and we know that gravity is exerting a force “F<sub>g</sub>” (which, given F=ma, will be equal to the object's mass x 9.8m/s), then in order for the object to not accelerate downward, it must be experiencing an upward force equal to Fg in magnitude but opposite in direction (this is where Newton’s 3rd law comes in!). We call this the “normal force,” F<sub>N</sub>. This example is the simplest “third law pair” scenario I can think of, and it’s important to keep in mind that the reason Newton’s laws are so helpful is because they really do always work if applied correctly. So, when you’re working on force problems, remember the pairs!<br> <br><br> Another thing to keep in mind is <u> always draw free body diagrams</u>, even if you are not explicitly told to. They will help you keep in mind what the scenario looks like, and are super important when things get more complicated (ex. Atwood machines, or you need to draw components (ex. Inclined planes). <br><br>I’m not going to go over the specifics of drawing them because again, practice is key, but basically, each force gets an arrow, the length of which represents its magnitude relative to other forces acting on the object. I reccomend using solid lines for overall forces and then dotted lines to separate horizontal and vertical components.</p>
      </p>
     </div>
     <h2 style="text-align: center;">Friction and Drag</h2>
@@ -449,3 +437,5 @@ To solve for any variable in an atwood machine, draw the free body diagram of th
 
 </body>
 </html>
+
+
