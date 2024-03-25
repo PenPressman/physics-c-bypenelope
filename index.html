@@ -100,7 +100,7 @@
     body {
         margin: 0;
         padding: 0;
-     
+
         text-align: center; /* Center the content horizontally */
     }
 
@@ -135,11 +135,11 @@
 <div id="clickBox">Click here first!</div>
 
 <!-- Display click count -->
-<p id="clickCount">Viewer Count: <span id="count">0</span></p>
+<p id="clickCount">Click Count: <span id="count">0</span></p>
 
 <script>
-    // JavaScript to handle clicks and update count
-    var clickCount = 0; // Initialize click count
+    // Get the click count from localStorage or set it to 0 if not present
+    var clickCount = localStorage.getItem("clickCount") || 0;
 
     // Get the clickable box element
     var box = document.getElementById("clickBox");
@@ -147,15 +147,21 @@
     // Get the click count display element
     var clickCountDisplay = document.getElementById("count");
 
+    // Update the click count display
+    clickCountDisplay.textContent = clickCount;
+
     // Add a click event listener to the box
     box.addEventListener("click", function() {
         clickCount++; // Increment click count
         clickCountDisplay.textContent = clickCount; // Update click count display
+        // Store the updated click count in localStorage
+        localStorage.setItem("clickCount", clickCount);
     });
 </script>
 
 </body>
 </html>
+
 
 
 <br> 
