@@ -73,6 +73,72 @@
   <h1>Energy & Momentum </h1>
 </header>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagonal Animation</title>
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+    }
+    .circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    .pink {
+        background-color: #ff69b4; /* bright pink */
+        animation-name: moveDiagonalPink;
+    }
+    .green {
+        background-color: #00ff00; /* bright green */
+        animation-name: moveDiagonalGreen;
+    }
+    @keyframes moveDiagonalPink {
+        0% {
+            top: 0;
+            left: 0;
+        }
+        50% {
+            top: 25%;
+            left: 50%;
+        }
+        100% {
+            top: 0;
+            left: 0;
+        }
+    }
+    @keyframes moveDiagonalGreen {
+        0% {
+            top: 0;
+            right: 0;
+        }
+        50% {
+            top: 25%;
+            right: 50%;
+        }
+        100% {
+            top: 0;
+            right: 0;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="circle pink"></div>
+<div class="circle green"></div>
+
+<script>
+    // JavaScript not needed for animation
+</script>
+</body>
+</html>
 
 
 
@@ -94,6 +160,11 @@
 </head>
 <body>
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <p class="formatted-paragraph" </u>[coming soon]<br>
  </p>
@@ -127,8 +198,6 @@
         <p> For this unit, 
 </p>
 <br>
-<div>
-</div>
       
   <div id="unitsBox" class="box hidden">
     <h2 style="text-align: center;"> SI Units for Newton’s Laws </h2>
@@ -221,8 +290,6 @@
 
 </body>
 </html>
-
-
 
 
 
