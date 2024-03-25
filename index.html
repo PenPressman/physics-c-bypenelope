@@ -87,12 +87,83 @@
       </div>
     </main>
     <div class="footer">
+    
+      <br> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clickable Box</title>
+<style>
+    /* Set background color for the page */
+    body {
+        margin: 0;
+        padding: 0;
+     
+        text-align: center; /* Center the content horizontally */
+    }
+
+    /* Style for the clickable box */
+    #clickBox {
+        width: 80px; /* Adjust width of the box */
+        height: 60px; /* Adjust height of the box */
+        background-color: pink; /* Set background color of the box */
+        border: 2px solid #ccc;
+        text-align: center;
+        line-height: 60px;
+        cursor: pointer;
+        font-size: 12px; /* Adjust the font size to fit the text */
+        position: absolute;
+        top: 62%; /* Move the box 80% down the page */
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Style for the click count display */
+    #clickCount {
+        position: absolute;
+        top: 90%; /* Move the click count 90% down the page */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+</style>
+</head>
+<body>
+
+<!-- Clickable box element -->
+<div id="clickBox">Click here first!</div>
+
+<!-- Display click count -->
+<p id="clickCount">Viewer Count: <span id="count">0</span></p>
+
+<script>
+    // JavaScript to handle clicks and update count
+    var clickCount = 0; // Initialize click count
+
+    // Get the clickable box element
+    var box = document.getElementById("clickBox");
+
+    // Get the click count display element
+    var clickCountDisplay = document.getElementById("count");
+
+    // Add a click event listener to the box
+    box.addEventListener("click", function() {
+        clickCount++; // Increment click count
+        clickCountDisplay.textContent = clickCount; // Update click count display
+    });
+</script>
+
+</body>
+</html>
+
+
+<br> 
+      <br> 
+<br> 
       <br> 
       <br> 
-      <br> 
-      <br> 
-      <br> 
-      <br> 
+
       Updated in: 2024.<br>
       Contact penelope.pressman@gmail.com with questions. <br>
      *Disclaimer, I am a highschool student who is using the creation of this site as a fun way to study, it includes the explanations from my class/textbooks/thoughts that I found most helpful, <br>
