@@ -93,11 +93,13 @@
         animation-iteration-count: infinite;
     }
     .pink {
-        background-color: #ff69b4; /* bright pink */
+        background: linear-gradient(to right, #ff69b4, #ffff00); /* Gradient from pink to yellow */
+      
         animation-name: moveDiagonalPink;
     }
     .green {
-        background-color: #00ff00; /* bright green */
+         background: linear-gradient(to right, #0000ff, #00ff00); /* Gradient from blue to green */
+
         animation-name: moveDiagonalGreen;
     }
     @keyframes moveDiagonalPink {
@@ -183,11 +185,17 @@
     <button class="button" onclick="toggleMainConcepts()">Click to see main concepts</button>
     <button class="button" onclick="toggleUnits()">Click to review relevant SI units</button>
   </div>
+  
 <div id="formulasBox" class="box hidden">
     <h2> General</h2>
     <p>F=ma </div>
-  <div id="conceptsBox" class="box hidden">
-    <h2 style="text-align: center;"> Intro </h2>
+    <div id="conceptsBox" class="box hidden">
+
+ <h2 style="text-align: center;"> Center of Mass </h2>
+    <div style="text-align: left;">
+        <p> Stuff about center of mass, 
+
+    <h2 style="text-align: center;"> Energy </h2>
 <style>
     /* Style for the header */
     h1 {
@@ -195,9 +203,19 @@
     }
 </style>
     <div style="text-align: left;">
-        <p> For this unit, 
-</p>
-<br>
+        <p> Stuff about energy, 
+
+
+    <h2 style="text-align: center;"> Work and Power </h2>
+    <div style="text-align: left;">
+        <p> Stuff about work and power, 
+
+    <h2 style="text-align: center;"> Momentum and Impulse </h2>
+    <div style="text-align: left;">
+        <p> Stuff about work and power, 
+
+
+
       
   <div id="unitsBox" class="box hidden">
     <h2 style="text-align: center;"> SI Units for Newton’s Laws </h2>
