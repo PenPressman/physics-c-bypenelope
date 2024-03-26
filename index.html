@@ -88,11 +88,76 @@
     </main>
     <div class="footer">
     
-      <br> 
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Word Generator</title>
+  <style>
+    body {
+      margin: 0; /* Reset margin */
+      padding: 0; /* Reset padding */
+    }
 
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
 
-      <br> 
-      <br> 
+    #generateBtn {
+      padding: 8px 8px;
+      font-size: 12px;
+  font-weight: semibold;
+      cursor: pointer;
+      background-color: #ADD8E6; /* Light blue background color */
+      color: #001F3F; /* navy text color */
+      border: none; /* Remove button border */
+      border-radius: 5px; /* Add some border radius for rounded corners */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    }
+
+    #generateBtn:hover {
+      background-color: #4da8da; /* Darker shade of blue on hover */
+    }
+
+    #randomWord {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+      color: lightpink; /* White text color */
+    }
+  </style>
+</head>
+<body>
+  <class="container">
+    <button id="generateBtn">Don't know what to study? Click here and you'll get a random unit.</button>
+    <p id="randomWord"></p>
+
+  <script>
+    document.getElementById('generateBtn').addEventListener('click', function() {
+      // List of words/phrases
+      var words = [
+        'Kinematics',
+        "Newton's Laws",
+        'Energy and Momentum',
+        'Rotation',
+        'SMH and Gravity',
+        'Electrostatics',
+        'Circuits',
+        'Magnetism and Electromagnetism'
+      ];
+
+      // Generate random index
+      var randomIndex = Math.floor(Math.random() * words.length);
+
+      // Display random word/phrase
+      document.getElementById('randomWord').innerText = words[randomIndex];
+    });
+  </script>
+</body>
+</html>
+
 
       Updated in: 2024.<br>
       Contact penelope.pressman@gmail.com with questions. <br>
@@ -112,7 +177,7 @@
 <body>
 
 <p><span class="light-blue">*Disclaimer, I am a highschool student who is using the creation of this site as a fun way to study, it includes the explanations <br> from my class/textbooks/thoughts that I found most helpful, but might not be everyone's favorite. So, make sure to try out different <br> resources and see what works for you. <br>
-      **Note, this site is intended to be viewed on a laptop/ipad, certain buttons may not appear on a phone.</span>.</p>
+      **Note, this site is intended to be viewed on a laptop/ipad, certain buttons may not appear on a phone.</span>.
 
 </body>
 </html>
