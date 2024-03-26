@@ -22,10 +22,10 @@
     }
     header {
       text-align: center;
-      padding: 20px;
-      color: #3567b6; /* Slightly lighter navy */
-      font-size: 28px; /* Larger header text */
-      text-shadow: 3px 3px 6px #fff; /* Enhanced white shadow */
+      padding: 10px;
+      color: #dce8fa; /* Slightly lighter blue */
+      font-size: 31px; /* Larger header text */
+      text-shadow: 3px 3px 4px #566fbf; /* Enhanced blue shadow */
     }
     h1 {
       margin: 0;
@@ -33,30 +33,31 @@
     p {
       padding: 10px;
       margin-bottom: 20px;
-      font-size: 20px; /* Larger text size */
+      font-size: 18px; /* Larger text size */
     }
     main {
       text-align: center;
-      width: 80%;
+      width: %;
     }
     .button-container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 20px; /* Added space between columns */
+      gap: 10px; /* Added space between columns */
       justify-content: center;
+margin-bottom: 0px;
     }
     button {
       font-family: Calibri, sans-serif;
-      margin: 5px;
-      padding: 20px;
-      font-size: 18px; /* Larger buttons */
+      margin: 12px;
+      padding: 15px;
+      font-size: 23px; /* Larger buttons */
       cursor: pointer;
       border: none;
-      background-color: #80a9e4;
-      color: white;
-      border-radius: 10px;
+      background-color: #c9dfff;
+      color: #001F3F;
+      border-radius: 8px;
       transition: background-color 0.3s ease;
-      width: 200px; /* Same size buttons */
+      width: 210px; /* Same size buttons */
     }
     button:hover {
       background-color: #6092d1;
@@ -73,7 +74,7 @@
     <header>
       <h1>AP Physics C: Mech and E & M</h1>
     </header>
-    <p>Welcome. Click the buttons below to find info, formulas and more for each unit. Have fun!</p>
+    <p>Welcome. Click the buttons below to find info, formulas and more for each unit. Have fun!<br><br></p>
     <main>
       <div class="button-container">
         <button onclick="location.href='page1.html'">Kinematics</button>
@@ -87,6 +88,9 @@
       </div>
     </main>
     <div class="footer">
+<div>
+</div>
+<br>
     
     <!DOCTYPE html>
 <html lang="en">
@@ -106,32 +110,31 @@
     }
 
     #generateBtn {
-      padding: 8px 8px;
-      font-size: 12px;
-  font-weight: semibold;
+      padding: 10px 5px;
+      font-size: 14px;
       cursor: pointer;
-      background-color: #ADD8E6; /* Light blue background color */
-      color: #001F3F; /* navy text color */
+      background-color: #566fbf; /* blue background color */
+      color: white; /* white text color */
       border: none; /* Remove button border */
-      border-radius: 5px; /* Add some border radius for rounded corners */
+      border-radius: 10px; /* Add some border radius for rounded corners */
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     }
 
     #generateBtn:hover {
-      background-color: #4da8da; /* Darker shade of blue on hover */
+      background-color: #e6bedf; /* Darker shade when hovering over button */
     }
 
-    #randomWord {
-      font-size: 20px;
-      font-weight: bold;
-      margin-top: 10px;
-      color: lightpink; /* White text color */
+   #randomWord {
+  font-size: 25px;
+  margin-top: 10px;
+  color: white; /* light blue text color */
+  text-shadow: 2px 2px 4px #c272b4; /* Adding pink shadow */
     }
   </style>
 </head>
 <body>
   <class="container">
-    <button id="generateBtn">Don't know what to study? Click here and you'll get a random unit.</button>
+    <button id="generateBtn">Don't know what to study? <br> Click here for a random unit.<br></button>
     <p id="randomWord"></p>
 
   <script>
@@ -159,28 +162,6 @@
 </html>
 
 
-      Updated in: 2024.<br>
-      Contact penelope.pressman@gmail.com with questions. <br>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>*Disclaimer, I am a highschool student who is using the creation of this site as a fun way to study, it includes the explanations from my class/textbooks/thoughts that I found most helpful, <br>
-      but might not be everyone's favorite. So, make sure to try out different resources and see what works for you. <br>
-      **Note, this site is intended to be viewed on a laptop/ipad, certain buttons may not appear on a phone.</title>
-<style>
-    .light-blue {
-        color: lightblue;
-    }
-</style>
-</head>
-<body>
-
-<p><span class="light-blue">*Note, this site is intended to be viewed on a laptop/ipad, certain buttons may not appear on a phone.</span>.
-
-</body>
-</html>
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -189,7 +170,9 @@
 <title>Visitor Counter</title>
 </head>
 <body>
-<p>Total Readers: <span id="visitorCount">0</span></p>
+<p style="color:white; font-size:15pt; font-weight:bold; margin-top: 0;color: #d9f1ff">
+    Total Readers: <span id="visitorCount">0</span>
+
 
 <script>
     // Function to set a cookie
@@ -229,8 +212,26 @@
     // Update the visitor count display
     document.getElementById("visitorCount").textContent = incrementVisitorCount();
 </script>
+
+
+<div style="width: 55%; margin: 0 auto;">
+    <p style="color:#cae5fc; font-size:10pt; text-align:center; margin-bottom: 0;">
+        <strong>Disclaimer:</strong> This site is basically just a fun way for me to study that might be helpful, but since I focus on the explanations and examples that I like the most/ones I came up with, it may not be the best for everyone. See what works for you!
+        <br>
+        <strong>Note:</strong> I built this to be viewed on a laptop/computer/ipad, so viewing the site on a phone will mean you miss some buttons and have some formatting issues.
+    </p>
+    <p style="color:white; font-size:small; margin-top: 0;">
+        Updated in: 2024.<br>
+        Contact <a href="mailto:penelope.pressman@gmail.com" style="color:white; text-decoration:underline;">penelope.pressman@gmail.com</a> with questions.
+    </p>
+</div>
+
+
 </body>
 </html>
+
+ 
+
 
     </div>
   </div>
