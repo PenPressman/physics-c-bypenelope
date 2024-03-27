@@ -3,85 +3,232 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coming Soon</title>
+<title>Newton’s Laws</title>
 <style>
   body {
-    background-color: #001f3f; /* Dark blue background */
+    background-color: #001f3f;
+    font-family: Calibri, sans-serif;
+    color: white; /* Setting font color to white for better readability on *darker* background */
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column; /* Align items in column */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center align the text */
+    font-size: 18px; /* Increase font size */
   }
-
+  
   header {
-    color: white; /* White text */
-    font-size: 72px; /* Large font size */
-    text-align: center; /* Center text */
-    margin-bottom: 20px; /* Add margin below header */
+    background-color: #001f3f;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px; /* Increase font size for header */
+    margin-bottom: 5px; /* Add margin below header */
   }
 
-  .animation-container {
-    position: relative;
-    width: 400px; /* Size of the circle animation */
-    height: 400px; /* Size of the circle animation */
-    margin-bottom: 20px; /* Add margin below animation */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px;
   }
 
-  .circle-line {
-    fill: none;
-    stroke: white;
-    stroke-width: 20; /* Thickness of the circle line */
-    stroke-dasharray: 2000; /* Length of the circle path */
-    stroke-dashoffset: 0; /* Start the circle animation */
-    animation: animateCircle 5s linear infinite; /* Animation for circle line (faster) */
+  .content {
+    width: 70%; /* Adjust width */
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin */
+    font-weight: lighter; /* Make text thinner */
   }
 
-  .rainbow-circle {
-    width: 100px; /* Diameter of the rainbow circle */
-    height: 100px; /* Diameter of the rainbow circle */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the rainbow circle */
-    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
-    border-radius: 50%; /* Circle shape */
-    animation: moveAroundCircle 5s linear infinite; /* Animation for rainbow circle (faster) */
+  .button {
+    background-color: #ADD8E6;
+    color: #001F3F;
+    padding: 15px 30px; /* Increase padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; /* Add margin above and below buttons */
+    font-weight: bold; /* Make text bold */
+    font-size: 18px; /* Increase font size */
   }
 
-  @keyframes animateCircle {
-    to {
-      stroke-dashoffset: -2000; /* Move the circle line */
-    }
+  .hidden {
+    display: none;
   }
 
-  @keyframes moveAroundCircle {
-    0% {
-      transform: translate(-50%, -50%) rotate(0deg) translate(150px) rotate(0deg); /* Start position */
-    }
-    100% {
-      transform: translate(-50%, -50%) rotate(360deg) translate(150px) rotate(-360deg); /* End position */
-    }
+  .box {
+    background-color: #075a90
+; /* Color of sections */
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%; /* Decrease width */
+  }
+
+  .box p {
+    color: white; /* Set paragraph text to same as background color */
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>COMING SOON!</h1>
+  <h1>Rotation </h1>
 </header>
 
-<div class="animation-container">
-  <!-- Circle made of a thick line -->
-  <svg viewBox="0 0 400 400">
-    <circle cx="200" cy="200" r="180" class="circle-line" />
-  </svg>
-  
-  <!-- Rainbow circle inside the border of the circle -->
-  <div class="rainbow-circle"></div>
-</div>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formatted Paragraph</title>
+<style>
+    /* Style for the specific paragraph */
+    .formatted-paragraph {
+        max-width: 900px; /* Set maximum width */
+        margin: 0 auto; /* Center the paragraph horizontally */
+        padding: 0 20px; /* Add some padding to the sides */
+        /* Add any additional styles for the paragraph */
+    }
+</style>
+</head>
+<body>
+
+
+<p class="formatted-paragraph" </u><strong>[PAGE IN PROGRESS]</strong><br>
+ </p>
+
+<p class="formatted-paragraph" </u>The good news about this unit is that you’ve already had an intro to almost every concept… just the linear version. You’ll notice that, even for things that don’t just mean “the angular version of [insert something we already learned,” a lot of stuff looks pretty similar. When in doubt, think of the version of things you already know well (ie COE, kinematics, COP etc) and then work on translating it to the rotational version. Also, this unit is fun because you’ll be able to explain a lot of cool real-world phenomena in a technical way. Yay!<br>
+ </p>
 
 </body>
 </html>
+
+
+
+<div class="container">
+  <div class="content">
+
+ 
+    <button class="button" onclick="toggleFormulas()">Click to see formulas</button>
+    <button class="button" onclick="toggleMainConcepts()">Click to see main concepts</button>
+    <button class="button" onclick="toggleUnits()">Click to review relevant SI units</button>
+  </div>
+<div id="formulasBox" class="box hidden">
+    <h2> General</h2>
+    <p>F=ma </div>
+  <div id="conceptsBox" class="box hidden">
+    <h2 style="text-align: center;"> Intro </h2>
+<style>
+    /* Style for the header */
+    h1 {
+        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to the text */
+    }
+</style>
+    <div style="text-align: left;">
+        <p> For this unit, 
+</p>
+<br>
+<div>
+</div>
+      <div>
+</div>
+  <div id="unitsBox" class="box hidden">
+    <h2 style="text-align: center;"> SI Units for Newton’s Laws </h2>
+    <div style="text-align: center;">
+        <p> Quick note (which you’ll see on every topic page), as long as your units are consistent when you are converting things, use whatever you want, just remember what the base units are.<br>
+<br> Also, I’m considering each set of units cumulative, so make sure you know any units from topics before this (i.e. kinematics).
+          <br>
+      <div style="text-align: center;">  
+        <p> <html>
+<head>
+    <title>  </title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 2px solid white; /* white border for each cell */
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        </tr>
+        <!-- Rows -->
+        <tr>
+            <td>x</td>
+            <td>x [N]</td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>x </td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>x [kg]</td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>x </td>
+      
+        </tr>
+         </table>
+        </p>
+    </div>
+  </div>
+  </div>
+</div>
+<script>
+  function toggleFormulas() {
+    var formulasBox = document.getElementById("formulasBox");
+    formulasBox.classList.toggle("hidden");
+  }
+
+  function toggleMainConcepts() {
+    var conceptsBox = document.getElementById("conceptsBox");
+    conceptsBox.classList.toggle("hidden");
+  }
+
+  function toggleUnits() {
+    var unitsBox = document.getElementById("unitsBox");
+    unitsBox.classList.toggle("hidden");
+  }
+
+  // Function to animate circle along the parabolic path
+  function animateCircle() {
+    var circle = document.getElementById("circle");
+    var path = document.getElementById("parabola");
+    var length = path.getTotalLength();
+    
+    // Animate circle along the path
+    var duration = 10000; // Duration of animation in milliseconds, slowed down
+    var startTime = null;
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = timestamp - startTime;
+      var point = path.getPointAtLength(progress % length);
+      circle.setAttribute("cx", point.x);
+      circle.setAttribute("cy", point.y);
+      window.requestAnimationFrame(step);
+    }
+    window.requestAnimationFrame(step);
+  }
+
+  // Call the function to animate circle
+  animateCircle();
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
