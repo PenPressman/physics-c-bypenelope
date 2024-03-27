@@ -17,16 +17,7 @@
       text-align: center; /* Center align all text */
         
     }
-      body {
-            font-size: 16px; /* Adjust as needed */
-        }
-
-        /* Styles for larger screens */
-        @media (min-width: 768px) {
-            body {
-                font-size: 18px; /* Adjust as needed */
-            }
-        }
+    
     .container {
       display: flex;
       flex-direction: column;
@@ -38,7 +29,7 @@
       padding: 10px;
       color: #dce8fa; /* Slightly lighter blue */
       font-size: 31px; /* Larger header text */
-      text-shadow: 3px 3px 4px #566fbf; /* Enhanced blue shadow */
+      text-shadow: 4px 4px 4px #566fbf; /* Enhanced blue shadow */
     }
     h1 {
       margin: 0;
@@ -59,6 +50,19 @@
       justify-content: center;
 margin-bottom: 0px;
     }
+     /* Media query for screens up to 768px wide (e.g., tablets) */
+  @media screen and (max-width: 768px) {
+    .button-container {
+      padding: 10px;
+    }
+  }
+
+  /* Media query for screens up to 480px wide (e.g., smartphones) */
+  @media screen and (max-width: 480px) {
+    .button-container {
+      padding: 5px;
+    }
+  }
     button {
       font-family: Calibri, sans-serif;
       margin: 12px;
