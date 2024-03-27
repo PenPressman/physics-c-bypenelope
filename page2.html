@@ -89,6 +89,20 @@
      margin-left: 300px; /* Add space on left */
  
     }
+   /* Media query for screens up to 768px wide (e.g., tablets) */
+  @media screen and (max-width: 768px) {
+    .container1 {
+      padding: 10px;
+    }
+  }
+
+  /* Media query for screens up to 480px wide (e.g., smartphones) */
+  @media screen and (max-width: 480px) {
+    .container1 {
+      padding: 5px;
+      flex-direction: column; /* Stack items vertically */
+    }
+  }
 
     /* Style for the circles */
     .circle {
