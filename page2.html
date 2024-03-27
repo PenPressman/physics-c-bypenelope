@@ -115,12 +115,54 @@
         margin-left: 20px; /* Add margin between circles */
     }
 
+    }
+   /* Media query for screens up to 768px wide (e.g., tablets) */
+  @media screen and (max-width: 768px) {
+    .circle {
+    }
+  }
+
+  /* Media query for screens up to 480px wide (e.g., smartphones) */
+  @media screen and (max-width: 480px) {
+    .circle {
+      padding: 5px;
+      text-align: center; /* Center text */
+        border: 2px transparent; /* White outline */
+        border-radius: 50%; /* Make it a circle */
+        background-color: transparent; /* Clear background */
+        padding: 0px; /* Add padding */
+        max-width: 0px; /* Set maximum width */
+        margin-left: 0px; /* Add margin between circles */
+    }
+  }
+
     /* Style for the text inside the circles */
     .circle p {
         font-size: 15px; /* Set font size */
         margin: 0; /* Remove default margin */
         word-wrap: break-word; /* Allow text to wrap */
     }
+
+   }
+   /* Media query for screens up to 768px wide (e.g., tablets) */
+  @media screen and (max-width: 768px) {
+    .circle p {
+       font-size: 15px; /* Set font size */
+        margin: 0; /* Remove default margin */
+        word-wrap: break-word; /* Allow text to wrap */
+    }
+  }
+
+  /* Media query for screens up to 480px wide (e.g., smartphones) */
+  @media screen and (max-width: 480px) {
+    .circle p {
+     font-size: 0px; /* Set font size */
+        margin: 0; /* Remove default margin */
+        word-wrap: break-word; /* Allow text to wrap */
+    }
+  }
+
+  
 
     /* Different colors for each circle */
     .circle:nth-child(1) {
