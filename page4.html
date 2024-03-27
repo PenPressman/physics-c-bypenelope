@@ -74,7 +74,63 @@
 </header>
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Rainbow Circle</title>
+  <style>
 
+    .circle {
+      position: relative;
+      width: 200px; /* Reduced size */
+      height: 200px; /* Reduced size */
+      border: 6px dotted #ffcccc; /* Thicker border and light pink color */
+      border-radius: 50%;
+Margin-left: 605px
+    }
+
+
+    .rainbow-circle {
+      position: absolute;
+      top: calc(50% - 22px); /* Half of the circle's diameter minus half of the border width */
+      left: calc(50% - 22px); /* Half of the circle's diameter minus half of the border width */
+      width: 40px; /* Increased width */
+      height: 40px; /* Increased height */
+      background-image: radial-gradient(circle at center, pink, orange, yellow, pink, indigo, violet, pink);
+      border-radius: 50%;
+      animation: moveCircle 4s linear infinite;
+    }
+
+    @keyframes moveLine {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes moveCircle {
+      0% {
+        transform: rotate(0deg) translateX(88px) rotate(0deg); /* Adjusted distance */
+      }
+      100% {
+        transform: rotate(360deg) translateX(88px) rotate(-360deg); /* Adjusted distance */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="circle">
+    <div class="dotted-line"></div>
+    <div class="rainbow-circle"></div>
+  </div>
+</body>
+</html>
+
+<p><br></p>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -219,6 +275,10 @@
 
 </body>
 </html>
+
+
+
+
 
 
 
