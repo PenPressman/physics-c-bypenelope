@@ -173,8 +173,8 @@ Margin-left: 100px
 
 <div class="container">
   <div class="content">
-    <button class="button" onclick="toggleFormulas()">Click to review relevant formulas</button>
-    <button class="button" onclick="toggleMainConcepts()">*COMING SOON*</button>
+    <button class="button" onclick="toggleFormulas()">Click to see formulas</button>
+    <button class="button" onclick="toggleMainConcepts()">Click to see main concepts</button>
     <button class="button" onclick="toggleUnits()">Click to review relevant SI units</button>
   </div>
 
@@ -266,8 +266,7 @@ Honestly, you basically know all of this from the first kinematics unit, just ma
 The general principles of net torque will look similar to stuff from the force unit (Newton's laws), but torque gets a bit more complicated… Oh and to solve for individual torque values, we can just use the cross product of force and r (distance between the force and the axis of rotation), which basically just means multiplying the perpendicular components. This is why we open a car door from the couter edge rather than right by the hinge: with less “r,” we can apply less force and get more torque. The main reason torque is more complicated than force is because while one out of two of the variables you need for forces is mass (which is a pretty simple concept/a consisten number), torque requires us to learn about moment of inertia (here is probably a good point to make sure you know the net torque and net force equations). <br><br>Before we get into how “I” (moment of inertia) works, I want to go over it conceptually. For the forces we learned earlier, because of the relationship between net force, mass, and acceleration, you can think of mass as “resisting” acceleration. Aka, more mass means more force needed to accelerate the object. Torque has a similar structure, because of the relationship between net torque, moment of inertia, and angular acceleration, a greater moment of inertia means you need more torque for more angular acceleration. The difference is, moment of inertia is literally defined as how resistant an object is to angular acceleration, so that part requires less explanation. Oh and the other difference is, it's a lot more complex to find. Soooo: <br>
 <h4 style="text-align: center;"> <u>Moment of Inertia</u></h4>
     <p style="text-align: left;">
-Writing
-
+There are three things to focus on for moment of inertia, all three of which you can find on the formula sheet: solving “I” algebraically, with calculus, and with the parallel axis theorem (each of these has a formula associated with it). However, it’s important to understand it or you can easily mix things up. If given a simple system with values for the mass of parts of the system and distances from the axis of rotation, you can use algebra to solve. However, your work only ends there if this axis of rotation is at the object's center of mass (reminder to review how to find COM!)If the axis is somewhere else, you need to use the parallel axis theorem, which requires first finding I<sub>COM</sub> and then adding that value to the product of: the total mass of the system (M), the distance between the axis of rotation and the COM (h), squared, and ½. If your system is too complex to solve algebraically, use the calculus method. Remember, use the parallel axis theorem ANY time the COM is different from the AOR… practice this so you don’t forget!
 
  <h2 style="text-align: center;">Energy, but w/ Rotation </h2>
     <p style="text-align: left;">
@@ -276,21 +275,20 @@ Ok, there is really not much new content here. We’re just adding a new form of
 Now that we know to factor in K<sub>rot</sub> in conservation of energy statements, which ball would move down a hill faster? A ball that is rolling or a ball that is sliding? Let’s assume that they both start from the same height, at rest (meaning, they both start with an equal amount of gravitational potential energy, and that is all they start with). <br><br>
 Answer: the sliding ball. On the right side of the COE equation for the sliding ball, once we get to the ground, there will only be K, the linear version, and we can use that to solve for v. Once we have v, we can use kinematics to see how long the ball took. However, in the rolling scenario, the right side of the COE equation will also have K<sub>rot</sub> (aka more non-K<sub>linear</sub> on the right side, meaning when we solve for v as part of K<sub>linear</sub>, we’ll get a smaller value. So, using kinematics to solve, we’ll see that with a slower linear velocity, the ball takes longer to reach the ground. Done!<br>
 <h4 style="text-align: center;"> <u>Work</u></h4>
-    <p style="text-align: left;">
+    <p style="text-align: center;">
 Just learn the formula, it's literally just like the force one: work = torque x how much it moved (angularly).<br>
  <h2 style="text-align: center;">Angular Momentum</h2>
     <p style="text-align: left;">
-Remember how when we have force and need torque, we use the cross product of force and distance from the axis of rotation? Same deal for angular momentum (L). Once we have linear momentum (p), we just find the cross product of p and r (the distance from the axis of rotation), and that gives us L! Remember, finding the cross product is basically just multiplying perpendicular components. You can also just find L by multiplying the object's angular velocity by its moment of inertia (don’t get this mixed up with finding K<sub>rot</sub>, there’s no ½ or power of two!
+The basics: angular momentum (L) is conserved, so you can make a COL equation and solve for missing pieces! Remember how when we have force and need torque, we use the cross product of force and distance from the axis of rotation? Same deal for L. Once we have linear momentum (p), we just find the cross product of p and r (the distance from the axis of rotation), and that gives us L! Remember, finding the cross product is basically just multiplying perpendicular components. You can also just find L by multiplying the object's angular velocity by its moment of inertia (don’t get this mixed up with finding K<sub>rot</sub>, there’s no ½ or power of two!
 
  <h2 style="text-align: center;">Rolling</h2>
     <p style="text-align: left;">
-Writing
-<h4 style="text-align: center;"> <u>w/ Slipping</u></h4>
+Once you learn the examples/tips below, just remember the point at which an object switches from slipping to rolling or the other way around, and you’ll be all set. Remember, no matter how complicated an example looks, there are only so many variations when it comes to how you solve for missing variables, so don’t overthink it.<br>
+<h4 style="text-align: center;"> <u>things to keep in mind</u></h4>
     <p style="text-align: left;">
-Writing
-<h4 style="text-align: center;"> <u>w/ w/out Slipping</u></h4>
-    <p style="text-align: left;">
-Writing
+1. If you have both linear and angular motion, use the relationships to write everything in linear terms (i.e. divide v by r and sub that for ω )  in a combined equation.<br>
+2. When a ball is rolling w/ slipping, its angular velocity will adjust until it is rolling w/out slipping. Specifically, if it is rolling with “too little” spin, and thus slipping, ω will increase until it is equal to v<sub>COM</sub>/R (v<sub>COM</sub> being the linear velocity  about the ball’s COM and R being the radius of the ball). If it is rolling with “too much” spin, and thus slipping, ω will decrease until it is equal to v<sub>COM</sub>/R. <br>
+3. Once we reach the point where the ball is fully rolling w/out slipping, v<sub>COM</sub> will be equal to Rω, which we can derive by setting v equal to dx/dt, and thus v<sub>COM</sub> equal to ds/dt. After that, we can sub θR for s, and solve for v<sub>COM</sub>. Now picture a ball rolling down a ramp (no slipping). We can set up net force and torque equation and use linear → angular relationships to solve for the missing pieces. Specifically, since we know that the only linear forces are friction and gravity, we can first solve for the force of friction and then substitute a<sub>COM</sub>/R for α in order to solve.<br>
 
 
       </div>
