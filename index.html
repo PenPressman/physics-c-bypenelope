@@ -85,6 +85,16 @@ margin-bottom: 0px;
       font-size: 16px; /* Larger footer text */
       color: white;
     }
+ /* Text shadow for buttons with light pink shadow */
+    .light-pink-shadow {
+      text-shadow: 1px 1px .5px #c272b4;
+    }
+
+    /* Text shadow for buttons with light green shadow */
+    .light-green-shadow {
+      text-shadow: 1px 1px .5px #83e187;
+    }
+
   </style>
 </head>
 <body>
@@ -92,19 +102,57 @@ margin-bottom: 0px;
     <header>
       <h1>AP Physics C: Mech and E & M</h1>
     </header>
-    <p>Welcome. Click the buttons below to find info, formulas and more for each unit. Have fun!<br><br></p>
+    <p>Welcome. Click the buttons below to find info, formulas and more for each unit. Have fun!<br>
+</p>
+
     <main>
       <div class="button-container">
-        <button onclick="location.href='page1.html'">Kinematics</button>
-        <button onclick="location.href='page2.html'">Newton's Laws</button>
-        <button onclick="location.href='page3.html'">Energy & Momentum</button>
-        <button onclick="location.href='page4.html'">Rotation</button>
-        <button onclick="location.href='page5.html'">SHM and Gravity</button>
-        <button onclick="location.href='page6.html'">Electrostatics</button>
-        <button onclick="location.href='page7.html'">Circuits</button>
-        <button onclick="location.href='page8.html'">Magnetism and Electromagnetism</button>
+       <button onclick="location.href='page1.html'" class="light-pink-shadow">Kinematics</button>
+        <button onclick="location.href='page2.html'" class="light-pink-shadow">Newton's Laws</button>
+        <button onclick="location.href='page3.html'" class="light-pink-shadow">Energy & Momentum</button>
+        <button onclick="location.href='page4.html'" class="light-pink-shadow">Rotation</button>
+        <button onclick="location.href='page5.html'" class="light-pink-shadow">SHM and Gravity</button>
+        <button onclick="location.href='page6.html'" class="light-green-shadow">Electrostatics</button>
+        <button onclick="location.href='page7.html'" class="light-green-shadow">Circuits</button>
+        <button onclick="location.href='page8.html'" class="light-green-shadow">Magnetism and Electromagnetism</button>
       </div>
     </main>
+
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Shadow Example</title>
+  <style>
+    /* Define text colors */
+    .light-pink-text {
+      color: #ff8dd1; /* Light pink color */
+Font-size: 11pt
+    }
+ .reg-text {*/ reg text format
+      color: white; /* white color */
+Font-size: 11pt
+    }
+    
+    .light-green-text {
+      color: #6eed8b; /* Light green color */
+Font-size: 11pt
+    }
+
+    /* Define text shadows */
+    .pink-shadow {
+      text-shadow: 2px 2px 4px #ff8dd1; /* Pink shadow */
+    }
+    
+    .green-shadow {
+      text-shadow: 2px 2px 4px #6eed8b; /* Green shadow */
+    }
+  </style>
+  <p><em>
+   <span class="reg-text"> ***Light pink shadow is <span class="light-pink-text pink-shadow">mech</span>, light green shadow is
+    <span class="light-green-text green-shadow">E & M</span>
+  </em>
+</html>
     <div class="footer">
 
     
@@ -236,7 +284,7 @@ margin-bottom: 0px;
 
 <div style="width: 55%; margin: 0 auto;">
     <p style="color:#cae5fc; font-size:10pt; text-align:center; margin-bottom: 0;">
-        <strong>Disclaimer:</strong> This site is basically just a fun way for me to study that might be helpful, but since I focus on the explanations and examples that I like the most/ones I came up with, it may not be the best for everyone. See what works for you! <sup>*</sup>Note, some formatting may appear strange on mobile.
+        <strong>Disclaimer:</strong> This site is basically just a fun way for me to study that might be helpful, but since I focus on the explanations and examples that I like the most/ones I came up with, it may not be the best for everyone. See what works for you!<br><strong>Note:</strong> some formatting may appear strange on mobile.
 
     <p style="color:white; font-size:small; margin-top: 0;">
         Updated in: 2024.<br>
