@@ -3,79 +3,293 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>COMING SOON!</title>
+<title>Newton’s Laws</title>
 <style>
   body {
-    background-color: #001f3f; /* Dark blue background */
+    background-color: #001f3f;
+    font-family: Calibri, sans-serif;
+    color: white; /* Setting font color to white for better readability on *darker* background */
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column; /* Align items in column */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Hide overflow */
+    text-align: center; /* Center align the text */
+    font-size: 18px; /* Increase font size */
   }
-
+  
   header {
-    color: white; /* White text */
-    font-size: 72px; /* Large font size */
-    text-align: center; /* Center text */
-    margin-bottom: 20px; /* Add margin below header */
-    position: absolute; /* Position header absolutely */
-    top: 20px; /* Distance from the top */
+    background-color: #001f3f;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px; /* Increase font size for header */
+    margin-bottom: 5px; /* Add margin below header */
   }
 
-  .sun {
-    width: 100px; /* Diameter of the sun */
-    height: 100px; /* Diameter of the sun */
-    background-color: yellow; /* Yellow color for the sun */
-    border-radius: 50%; /* Circular shape */
-    position: relative;
-    animation: rotateSun 10s linear infinite; /* Animation for sun rotation */
-    margin-top: 250px; /* Move animation down */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px;
   }
 
-  .planet {
-    width: 30px; /* Diameter of the planet */
-    height: 30px; /* Diameter of the planet */
-    background-color: #4682B4; /* Blue color for the planet */
-    border-radius: 40%; /* Circular shape */
-    position: absolute;
-    top: 40%; /* Align to center vertically */
-    left: 40%; /* Align to center horizontally */
-    transform-origin: center bottom; /* Set rotation origin to bottom center */
-    animation: orbitPlanet 4s linear infinite; /* Animation for planet orbit */
+  .content {
+    width: 70%; /* Adjust width */
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin */
+    font-weight: lighter; /* Make text thinner */
   }
 
-  @keyframes rotateSun {
-    0% {
-      transform: rotate(0deg); /* Start rotation angle */
-    }
-    100% {
-      transform: rotate(360deg); /* End rotation angle */
-    }
+  .button {
+    background-color: #ADD8E6;
+    color: #001F3F;
+    padding: 15px 30px; /* Increase padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; /* Add margin above and below buttons */
+    font-weight: bold; /* Make text bold */
+    font-size: 18px; /* Increase font size */
   }
 
-  @keyframes orbitPlanet {
-    0% {
-      transform: translate(-50%, -200px) rotate(0deg); /* Start position */
-    }
-    100% {
-      transform: translate(-50%, -200px) rotate(360deg); /* End position */
-    }
+  .hidden {
+    display: none;
   }
+
+  .box {
+    background-color: #075a90
+; /* Color of sections */
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%; /* Decrease width */
+  }
+
+  .box p {
+    color: white; /* Set paragraph text to same as background color */
+  }
+
+ </style>
+</head>
+<body>
+
 </style>
 </head>
 <body>
 
 <header>
-  <h1>COMING SOON!</h1>
+  <h1>SHM and Gravity </h1>
 </header>
 
-<div class="sun">
-  <div class="planet"></div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elliptical Orbit</title>
+    <style>
+        canvas {
+            display: block;
+            margin: auto;
+            margin-top: 0px; /* Adjust as needed to move it higher up the page */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Set canvas size
+        canvas.width = 400;
+        canvas.height = 150;
+
+        // Colors
+        const YELLOW = '#FFFF00';
+        const BLUE = '#0000FF';
+        const GREEN = '#00FF00';
+
+        // Ellipse parameters
+        const ellipseWidth = 200; // Make one side wider
+        const ellipseHeight = 100;
+        const ellipseCenter = { x: canvas.width / 2, y: canvas.height / 2 };
+
+        // Circle parameters
+        const circleRadius = 15;
+        const orbitRadiusX = ellipseWidth / 2;
+        const orbitRadiusY = ellipseHeight / 2;
+        const dotRadius = 8; // Radius of the green dot
+        let angle = 0;
+
+        function draw() {
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw the yellow ellipse
+            ctx.beginPath();
+            ctx.ellipse(ellipseCenter.x, ellipseCenter.y, ellipseWidth / 2, ellipseHeight / 2, 0, 0, 2 * Math.PI);
+            ctx.lineWidth = 5; // Thicker line
+            ctx.strokeStyle = YELLOW;
+            ctx.stroke();
+
+            // Calculate circle position
+            const circleX = ellipseCenter.x + Math.cos(angle) * orbitRadiusX;
+            const circleY = ellipseCenter.y + Math.sin(angle) * orbitRadiusY;
+
+            // Draw the blue circle
+            ctx.beginPath();
+            ctx.arc(circleX, circleY, circleRadius, 0, 2 * Math.PI);
+            ctx.fillStyle = BLUE;
+            ctx.fill();
+
+            // Draw the green dot in the middle of the blue circle
+            ctx.beginPath();
+            ctx.arc(circleX, circleY, dotRadius, 0, 2 * Math.PI);
+            ctx.fillStyle = GREEN;
+            ctx.fill();
+
+            // Increment angle for next frame
+            angle += 0.02;
+
+            requestAnimationFrame(draw);
+        }
+
+        draw();
+    </script>
+</body>
+</html>
+
+
+
+
+
+<br>
+<br>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formatted Paragraph</title>
+<style>
+    /* Style for the specific paragraph */
+    .formatted-paragraph {
+        max-width: 900px; /* Set maximum width */
+        margin: 0 auto; /* Center the paragraph horizontally */
+        padding: 0 20px; /* Add some padding to the sides */
+        /* Add any additional styles for the paragraph */
+    }
+</style>
+</head>
+<body>
+
+
+<p class="formatted-paragraph" </u><strong>[PAGE IN PROGRESS]</strong><br>
+ </p>
+
+<p class="formatted-paragraph" </u> This unit is… a lot. HOWEVER, there are a lot of repetitive concepts that you can apply elsewhere, so once you get a hang of things everything will make more sense. Also, even though the AP gives you formulas for some stuff, I recommend using the tricks I include (some of which are from my class/textbooks and some of which I made), or your own, in order to memorize the formulas. It’ll help you get through problems faster if you start to associate relevant formulas with the concepts they go with. <br>
+ </p>
 
 </body>
 </html>
+
+<div class="container">
+  <div class="content">
+
+ 
+    <button class="button" onclick="toggleFormulas()">Click to see formulas</button>
+    <button class="button" onclick="toggleMainConcepts()">Click to see main concepts</button>
+    <button class="button" onclick="toggleUnits()">Click to review relevant SI units</button>
+  </div>
+<div id="formulasBox" class="box hidden">
+    <h2> General</h2>
+</div>
+
+  <div id="conceptsBox" class="box hidden">
+    <h2 style="text-align: center;"> Intro </h2>
+<style>
+    /* Style for the header */
+    h1 {
+        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to the text */
+    }
+</style>
+
+  </div>
+      
+  <div id="unitsBox" class="box hidden">
+    <h2 style="text-align: center;"> SI Units for SHM and Gravity </h2>
+    <div style="text-align: center;">
+             <div style="text-align: center;">  
+        <p> <html>
+<head>
+    <title>  </title>
+    <style>
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 2px solid white; /* white border for each cell */
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        </tr>
+        <!-- Rows -->
+        <tr>
+            <td>x</td>
+            <td>x [N]</td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>x </td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>x [kg]</td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>x </td>
+      
+        </tr>
+         </table>
+        </p>
+    </div>
+  </div>
+  </div>
+</div>
+<script>
+  function toggleFormulas() {
+    var formulasBox = document.getElementById("formulasBox");
+    formulasBox.classList.toggle("hidden");
+  }
+
+  function toggleMainConcepts() {
+    var conceptsBox = document.getElementById("conceptsBox");
+    conceptsBox.classList.toggle("hidden");
+  }
+
+  function toggleUnits() {
+    var unitsBox = document.getElementById("unitsBox");
+    unitsBox.classList.toggle("hidden");
+  }
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
