@@ -92,6 +92,18 @@
             position: relative;
         }
 
+      /* Media query for screens up to 480px wide (e.g., smartphones) */
+  @media screen and (max-width: 480px) {
+    .#animation-container {
+   width: 60px; /* Decrease the width of the battery */
+    height: 120px; /* Decrease the height of the battery */
+    background-color: #333; /* Dark gray color for the battery */
+    position: absolute;
+    top: 40%; /* Adjust the top position to move the battery further up */
+    left: 20%; /* Position the battery 50% from the left */
+    transform: translate(-50%, -50%); /* Center the battery both vertically and horizontally */
+    }}
+
         canvas {
             display: block;
             border: 1.5px solid white; /* Optional: Add border for visualization */
