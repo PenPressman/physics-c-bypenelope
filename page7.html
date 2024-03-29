@@ -76,7 +76,13 @@
     left: 50%; /* Position the battery 50% from the left */
     transform: translate(-50%, -50%); /* Center the battery both vertically and horizontally */
 }
-	 /* Media query for screens up to 480px wide (e.g., smartphones) */
+	/* Media query for screens up to 768px wide (e.g., tablets) */
+  @media screen and (max-width: 768px) {
+    .battery {
+    }
+  }
+	
+	/* Media query for screens up to 480px wide (e.g., smartphones) */
   @media screen and (max-width: 480px) {
     .battery {
  top: 40%; /* to move the battery further down on phone */
@@ -152,7 +158,6 @@
   <div class="charging"></div>
 </div>
 <br>
-	<br>
 <br>
 <br>
 <br>
