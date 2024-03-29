@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Newton’s Laws</title>
+<title>Electrostatics</title>
 <style>
   body {
     background-color: #001f3f;
@@ -102,7 +102,17 @@ margin: 25px 10px;
           text-align: center;
             position: relative;
         }
-
+	/* Media query for screens up to 768px wide (e.g., tablets) */
+  @media screen and (max-width: 768px) {
+    .#animation-container {
+    }
+  }
+	
+	/* Media query for screens up to 480px wide (e.g., smartphones) */
+  @media screen and (max-width: 480px) {
+    .#animation-container {
+  margin: 1% 5%; /*  margin for phone */
+    }
 
         canvas {
             display: block;
