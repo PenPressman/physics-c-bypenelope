@@ -68,7 +68,6 @@
 
       }
 
-
   
 </style>
 </head>
@@ -191,7 +190,6 @@ justify: left;
 <br>
 <br>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -210,11 +208,10 @@ justify: left;
 </head>
 <body>
 
-
-<p class="formatted-paragraph" </u><strong>[PAGE IN PROGRESS]</strong><br>
+<p class="formatted-paragraph" 
  </p>
 
-<p class="formatted-paragraph" </u>[Intro here]<br>
+<p class="formatted-paragraph" </u> Welcome to the start of the next “class” of AP Physics C. Electrostatics and Magnetism! Starting now, every new concept is technically separate from all previous units. HOWEVER, since motion and forces come up again, thinks like kinematics and first principles will be helpful in solving new problems. You’ll see how circular motion eventually comes up too. I’ve tried to format this digital resource in a way that allows you to just read through things (no diagrams, just explanations), because for me, forcing myself to picture things and draw everything myself is helpful. For this unit, though, there will be some things that are difficult to just think through/picture, so I’ll make note of when you really should draw things out. Of course, you can also just use this add a “read though before your test” type of thing. This unit will focus on particles, their charges, and the forces that charge creates. And, how that all influences motion and a bunch of other stuff… specifics to come!
  </p>
 
 </body>
@@ -226,7 +223,7 @@ justify: left;
  
     <button class="button" onclick="toggleFormulas()">COMING SOON</button>
     <button class="button" onclick="toggleMainConcepts()">COMING SOON</button>
-    <button class="button" onclick="toggleUnits()">COMING SOON</button>
+    <button class="button" onclick="toggleUnits()">Click to review relevant SI units</button>
   </div>
 <div id="formulasBox" class="box hidden">
     <h2> General</h2>
@@ -244,12 +241,58 @@ justify: left;
   </div>
       
   <div id="unitsBox" class="box hidden">
-    <h2 style="text-align: center;"> SI Units for Electrostatics </h2>
+    <h2 style="text-align: center;"> SI Units and Constants for Electrostatics </h2>
     <div style="text-align: center;">
-        <p>
-          <br>
-      <div style="text-align: center;">  
-        <p> <html>
+<head>
+    <title>  </title>
+    <style>
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 2px solid white; /* white border for each cell */
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h4><u>Units</h4></u>   
+
+    <table>
+
+        </tr>
+        <!-- Rows -->
+        <tr>
+            <td>charge (q/Q)</td>
+            <td>coulombs [C] </td>
+        </tr>
+        <tr>
+            <td>electric potential (V)</td>
+            <td>volts, or joules per coulomb: [V] or [J/C] </td>
+        </tr>
+        <tr>
+            <td>electric potential energy (U<sub>E</sub></td>
+            <td>joules [J]</td>
+        </tr>
+        <tr>
+            <td>electric field (E)</td>
+            <td>newtons per coulomb [N/C] </td>
+      
+        </tr>
+        <tr>
+            <td>electric flux (symbol here)</td>
+            <td>newton meters squared per coulomb [Nm<sup>2</sup>/C] </td>
+      
+        </tr>
+        
+         </table>
+        </p>
+    </div>
+  <div style="text-align: center;"> <h4><u>Constants</h4></u>   
+        <p> </p><html>
 <head>
     <title>  </title>
     <style>
@@ -269,30 +312,54 @@ justify: left;
     <table>
         </tr>
         <!-- Rows -->
-        <tr>
-            <td>x</td>
-            <td>x</td>
+                <tr>
+            <td>charge of an electron (q<sub>e</sub>)</td>
+            <td>-1.6E<sup>-19</sup>C</td>
         </tr>
         <tr>
-            <td>x</td>
-            <td>x</td>
+            <td>mass of an electron (m<sub>e</sub>)</td>
+            <td>9.11E<sup>-31</sup>kg</td>
         </tr>
         <tr>
-            <td>x</td>
-            <td>x</td>
+            <td>charge of a proton (q<sub>p</sub>)</td>
+            <td>1.6E<sup>-19</sup>C </td>
         </tr>
         <tr>
-            <td>x</td>
-            <td>x </td>
+            <td>mass of a proton (m<sub>p</sub>)</td>
+            <td>1.673E<sup>-27</sup>kg</td>
       
         </tr>
-         </table>
+        <tr>
+            <td>charge of a neutron (q<sub>n</sub>)</td>
+            <td>0C </td>
+      
+        </tr>
+
+        <tr>
+            <td>mass of a neutron (m<sub>n</sub>)</td>
+            <td>1.675E<sup>-27</sup>kg </td>
+      
+        </tr>
+
+        <tr>
+            <td>permittivity of free space (ε<sub>0</sub>)</td>
+            <td>8.85E<sup>-12</sup> C<sup>2</sup>/Nm<sup>2</sup> </td>
+      
+        </tr>
+
+        <tr>
+            <td>electrostatic constant (K)</td>
+            <td>1/4π ε<sub>0</sub>, 9E<sup>9</sup> Nm<sup>2</sup>/C<sup>2</sup> (*for point charges) </td>
+      
+        </tr>
+
+              </table>
         </p>
     </div>
+
   </div>
   </div>
-</div>
-<script>
+</div><script>
   function toggleFormulas() {
     var formulasBox = document.getElementById("formulasBox");
     formulasBox.classList.toggle("hidden");
@@ -334,14 +401,6 @@ justify: left;
 
 </body>
 </html>
-
-
-
-
-
-
-
-
 
 
 
