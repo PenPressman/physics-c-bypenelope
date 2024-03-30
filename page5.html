@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Newton’s Laws</title>
+<title>SHM and Gravity</title>
 <style>
   body {
     background-color: #001f3f;
@@ -313,7 +313,7 @@ Periods of eliptical orbits: T<sup>2</sup> = 4π<sup>2</sup>/GM a (where “a”
 
 
   <div id="conceptsBox" class="box hidden">
-    <h2 style="text-align: center;"> Intro to SHM </h2>
+    <h2 style="text-align: center;"> Simple Harmonic Motion (SHM) </h2>
 <style>
     /* Style for the header */
     h1 {
@@ -321,7 +321,7 @@ Periods of eliptical orbits: T<sup>2</sup> = 4π<sup>2</sup>/GM a (where “a”
     }
 </style>
 <p style="text-align: left;">
-Writing</p>
+It will be easier to learn all of this through examples, but before we start: SHM refers to periodic motion due to a consistent restoring force. In an SHM scenario, we’ll have an equilibrium point in the middle of the period (the time it takes to complete a cycle). Think of the period as the time one oscillation takes; meaning, frequency will give you a value in a new unit: hz, for how many oscillations the system experiences in an amount of time. I’ll go into more detail about how the rest of the formulas work in each example, but for me it has been helpful to think of things broadly first. Also, in this unit there will often be multiple viable ways to solve things given the many relationships between variables, so figure out what comes easiest to you, or what makes the most sense (though hopefully, eventually, everything will!). </p><br>
 <h4 style="text-align: center;"><u>Mass Springs</u></h4>
 <p style="text-align: left;">
 The basics of mass-spring systems have come up already in the forces unit, so now instead of describing what springs <u>do</u>, we’re just focusing on <u>how they move</u>, and what those cycles look like. Picture a spring with a mass on the end, oscillating up and down. That’s what we’re learning about here.  <br><br> If you want a good intro to this unit, play around with a string and different masses for a bit. <br><br> Remember, we also already learned how to solve for systems with multiple springs, so make sure you know series vs parallel spring calculations. <br><br> Ok, the main part: the reason we have the relationships between 2π, ω, f and T (which you can see on the formula page), is that you can think of a mass on a spring (or any simple harmonic motion, for that matter) as an imaginary particle moving in a circle, except in reality, the circle is just a back-and-forth path. This is why, when we calculate the position or speed of the mass in examples, we use sin/cos functions to help us account for the periodic-ness of the function. Granted, this is not the technical way of explaining all of this, and it's mostly just based on how I understand it, but going over these concepts a few times is helpful, because SHM has many consistent patterns across different scenarios. Another thing to note is that instead of memorizing where along the “graph” of a mass-spring system’s motion the kinetic energy or spring-potential energy will be highest, you can just think through it. If a spring is being held and not allowed to expand with a mass on its end, it clearly has potential energy given that it could at any moment be released and cause movement, and you can also tell that it doesn’t currently have kinetic energy since it is not moving. Oh make sure to remember, if the spring system is vertical, there might also be gravitational potential, and if there is a surface involved in a scenario, there could be friction! On things like practice APs, most questions I’ve seen test your understanding of the relationships between variables in spring systems, so like: when is it moving fastest, which system has a greater period, etc. Make sure you know everything well enough to be ready for those. </p>
@@ -336,17 +336,17 @@ Before we get into any specifics of pendulums (which, if you don’t know, are s
 </p>
 
 
-
-
 <h4 style="text-align: center;"><u>Simple Pendulums</u></h4>
 <p style="text-align: left;">
-Writing </p>
+This is the one you pictured earlier, fixed top point, swinging back and forth. Besides memorizing the formula on the sheet, you can also derive it from first principles, aka f=ma, by relating the force of gravity to mass and the 2nd derivative of the position, which in this case will be angular displacement. Remember, once you get to a place with a formula that looks similar to the hallmark of SHM, use that similarity to find what ω will be in that scenario. <br><br> Next, the only other thing you need to know for these is that for angles less than 15 degrees, we just make sinθ equal to θ. Don’t ask me why… we just do. The good news is, it makes things simpler, the bad news is, if you’re like me, it might be endlessly frustrating knowing you're a bit further from an accurate calculation than you could be. But anyway… moving on!!</p>
+<br>
 <h4 style="text-align: center;"><u>Physical Pendulums</u></h4>
 <p style="text-align: left;">
-Writing </p>
+For these, picture one upright ruler (perfectly vertical), and then a second ruler overlapping at a slight angle with the first one. Then imagine a nail is put loosely through the rulers, so that the angled one begins to swing back and forth while the vertical one stays upright. If this example doesn’t make sense to you, google a physical pendulum: personally I like to think of this version. This time, we can derive ω  from the net torque equation, which is basically just a spin-off from f=ma. The main thing to keep in mind is being careful with any distance variables: make sure you know which refers to the length of the pendulum, the COM, the axis of rotation, and any values between those. Ok, all set! </p><br>
+
 <h4 style="text-align: center;"><u>Torsion Pendulums</u></h4>
 <p style="text-align: left;">
-Writing </p>
+I’m not going to try relating this to anything real-world because I can’t personally think of a time I have seen these, but other than googling an image: think of a spring that twists (or spirals) downward, and then when it’s coiled up enough, “unsprings” the other way. This repeats again, giving us our SHM scenario. Ok from there: don’t derive this one, you need a “torsion constant” which will be given. Then, use the formula and you’re set!  </p><br>
 
 <h2 style="text-align: center;"> Gravity </h2>
 <p style="text-align: left;">
