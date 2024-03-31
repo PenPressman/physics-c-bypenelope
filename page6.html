@@ -22,7 +22,7 @@
     font-size: 24px; /* Increase font size for header */
     margin-bottom: 5px; /* Add margin below header */
   }
-
+ 
   .container {
     display: flex;
     justify-content: center;
@@ -30,14 +30,14 @@
     flex-direction: column; /* Stack elements vertically */
     padding: 20px;
   }
-
+ 
   .content {
     width: 70%; /* Adjust width */
     padding: 20px;
     margin-bottom: 20px; /* Add margin */
     font-weight: lighter; /* Make text thinner */
   }
-
+ 
   .button {
     background-color: #ADD8E6;
     color: #001F3F;
@@ -49,11 +49,11 @@
     font-weight: bold; /* Make text bold */
     font-size: 18px; /* Increase font size */
   }
-
+ 
   .hidden {
     display: none;
   }
-
+ 
   .box {
     background-color: #075a90
 ; /* Color of sections */
@@ -61,22 +61,22 @@
     margin-top: 20px;
     width: 90%; /* Decrease width */
   }
-
+ 
   .box p {
     color: white; /* Set paragraph text to same as background color */
   }
-
+ 
       }
-
+ 
   
 </style>
 </head>
 <body>
-
+ 
 <header>
   <h1>Electrostatics (coming soon) </h1>
 </header>
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,7 +90,7 @@
           text-align: center;
             position: center;
         }
-
+ 
       /* Media query for screens up to 480px wide (e.g., smartphones) */
   @media screen and (max-width: 480px) {
     .#animation-container {
@@ -99,14 +99,14 @@
           text-align: center;
             position: relative;
     }}
-
+ 
         canvas {
             display: block;
             border: 1.5px solid white; /* Optional: Add border for visualization */
 justify: center;
            
         }
-
+ 
        /* Media query for screens up to 480px wide (e.g., smartphones) */
   @media screen and (max-width: 480px) {
     .canvas {
@@ -121,17 +121,17 @@ justify: left;
     <div id="animation-container">
         <canvas id="canvas" width="250" height="130"></canvas>
     </div>
-
+ 
     <script>
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
-
+ 
         const WIDTH = canvas.width;
         const HEIGHT = canvas.height;
-
+ 
         const GREEN = '#00FF00';
         const PINK = '#FF00FF';
-
+ 
         class Dot {
             constructor(color, size) {
                 this.color = color;
@@ -141,11 +141,11 @@ justify: left;
                 this.speed_x = (Math.random() < 0.5 ? -1 : 1) * (Math.random() * 3 + 1);
                 this.speed_y = (Math.random() < 0.5 ? -1 : 1) * (Math.random() * 3 + 1);
             }
-
+ 
             move() {
                 this.x += this.speed_x;
                 this.y += this.speed_y;
-
+ 
                 if (this.x <= this.size || this.x >= WIDTH - this.size) {
                     this.speed_x *= -1;
                 }
@@ -153,7 +153,7 @@ justify: left;
                     this.speed_y *= -1;
                 }
             }
-
+ 
             draw() {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
@@ -162,7 +162,7 @@ justify: left;
                 ctx.closePath();
             }
         }
-
+ 
         const dots = [];
         const numDots = 20;
         for (let i = 0; i < numDots; i++) {
@@ -170,26 +170,26 @@ justify: left;
             const size = Math.random() * (15 - 5) + 5;
             dots.push(new Dot(color, size));
         }
-
+ 
         function animate() {
             ctx.clearRect(0, 0, WIDTH, HEIGHT);
-
+ 
             for (const dot of dots) {
                 dot.move();
                 dot.draw();
             }
-
+ 
             requestAnimationFrame(animate);
         }
-
+ 
         animate();
     </script>
 </body>
 </html>
-
+ 
 <br>
 <br>
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -207,19 +207,19 @@ justify: left;
 </style>
 </head>
 <body>
-
-<p class="formatted-paragraph" 
+ 
+<p class="formatted-paragraph"
  </p>
-
-<p class="formatted-paragraph" </u> Welcome to the start of the next “class” of AP Physics C. Electrostatics and Magnetism! Starting now, every new concept is technically separate from all previous units. HOWEVER, since motion and forces come up again, thinks like kinematics and first principles will be helpful in solving new problems. You’ll see how circular motion eventually comes up too. I’ve tried to format this digital resource in a way that allows you to just read through things (no diagrams, just explanations), because for me, forcing myself to picture things and draw everything myself is helpful. For this unit, though, there will be some things that are difficult to just think through/picture, so I’ll make note of when you really should draw things out. Of course, you can also just use this add a “read though before your test” type of thing. This unit will focus on particles, their charges, and the forces that charge creates. And, how that all influences motion and a bunch of other stuff… specifics to come!
+ 
+<p class="formatted-paragraph" </u> Welcome to the start of the next “class” of AP Physics C. Electrostatics and Magnetism! Starting now, every new concept is technically separate from all previous units. HOWEVER, since motion and forces come up again, things like kinematics and first principles will be helpful in solving new problems. You’ll see how circular motion eventually comes up too. I’ve tried to format this digital resource in a way that allows you to just read through things (no diagrams, just explanations), because for me, forcing myself to picture things and draw everything myself is helpful. For this unit, though, there will be some things that are difficult to just think through/picture, so I’ll make note of when you really should draw things out. Of course, you can also just use this as a “read though before your test” type of thing. This unit will focus on particles, their charges, and the forces that charge creates. And, how that all influences motion and a bunch of other stuff… specifics to come!
  </p>
-
+ 
 </body>
 </html>
-
+ 
 <div class="container">
   <div class="content">
-
+ 
  
     <button class="button" onclick="toggleFormulas()">COMING SOON</button>
     <button class="button" onclick="toggleMainConcepts()">COMING SOON</button>
@@ -228,15 +228,45 @@ justify: left;
 <div id="formulasBox" class="box hidden">
     <h2> General</h2>
 </div>
-
+ 
   <div id="conceptsBox" class="box hidden">
-    <h2 style="text-align: center;"> Intro </h2>
+    <h2 style="text-align: center;"> Charging </h2>
 <style>
     /* Style for the header */
-    h1 {
+    h2 {
         text-shadow: 2px 2px 4px navy; /* Add a navy shadow to the text */
     }
 </style>
+ 
+ <h2 style="text-align: center;"> Forces and Fields </h2>
+<p style="text-align: left;">
+Writing
+</p>
+<br>
+
+ <h2 style="text-align: center;"> Gauss’ Law </h2>
+<p style="text-align: left;">
+Writing
+</p>
+<br>
+
+
+ <h2 style="text-align: center;"> Conductors </h2>
+<p style="text-align: left;">
+Writing
+</p>
+<br>
+
+ <h2 style="text-align: center;"> Electric Potential and Electric Potential Energy </h2>
+<p style="text-align: left;">
+Writing
+</p>
+<br>
+
+
+
+
+
 
   </div>
       
@@ -246,7 +276,7 @@ justify: left;
 <head>
     <title>  </title>
     <style>
-
+ 
         table {
             border-collapse: collapse;
             width: 100%;
@@ -259,10 +289,10 @@ justify: left;
     </style>
 </head>
 <body>
-<h4><u>Units</h4></u>   
-
+<h4><u>Units</h4></u>  
+ 
     <table>
-
+ 
         </tr>
         <!-- Rows -->
         <tr>
@@ -291,28 +321,28 @@ justify: left;
          </table>
         </p>
     </div>
-  <div style="text-align: center;"> <h4><u>Constants</h4></u>   
-        <p> </p><html>
+  <div style="text-align: center;"> <h4><u>Constants</h4></u>  
+    	<p> </p><html>
 <head>
-    <title>  </title>
-    <style>
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 2px solid white; /* white border for each cell */
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
+	<title>  </title>
+	<style>
+ 
+    	table {
+        	border-collapse: collapse;
+        	width: 100%;
+    	}
+    	th, td {
+        	border: 2px solid white; /* white border for each cell */
+        	padding: 10px;
+        	text-align: center;
+    	}
+	</style>
 </head>
 <body>
-    <table>
-        </tr>
-        <!-- Rows -->
-                <tr>
+	<table>
+    	</tr>
+    	<!-- Rows -->
+    	        <tr>
             <td>charge of an electron (q<sub>e</sub>)</td>
             <td>-1.6E<sup>-19</sup>C</td>
         </tr>
@@ -334,29 +364,29 @@ justify: left;
             <td>0C </td>
       
         </tr>
-
+ 
         <tr>
             <td>mass of a neutron (m<sub>n</sub>)</td>
             <td>1.675E<sup>-27</sup>kg </td>
       
         </tr>
-
+ 
         <tr>
             <td>permittivity of free space (ε<sub>0</sub>)</td>
             <td>8.85E<sup>-12</sup> C<sup>2</sup>/Nm<sup>2</sup> </td>
       
         </tr>
-
+ 
         <tr>
             <td>electrostatic constant (K)</td>
             <td>1/4π ε<sub>0</sub>, 9E<sup>9</sup> Nm<sup>2</sup>/C<sup>2</sup> (*for point charges) </td>
       
         </tr>
-
-              </table>
-        </p>
-    </div>
-
+ 
+          	</table>
+    	</p>
+	</div>
+ 
   </div>
   </div>
 </div><script>
@@ -364,17 +394,17 @@ justify: left;
     var formulasBox = document.getElementById("formulasBox");
     formulasBox.classList.toggle("hidden");
   }
-
+ 
   function toggleMainConcepts() {
     var conceptsBox = document.getElementById("conceptsBox");
     conceptsBox.classList.toggle("hidden");
   }
-
+ 
   function toggleUnits() {
     var unitsBox = document.getElementById("unitsBox");
     unitsBox.classList.toggle("hidden");
   }
-
+ 
   // Function to animate circle along the parabolic path
   function animateCircle() {
     var circle = document.getElementById("circle");
@@ -394,13 +424,14 @@ justify: left;
     }
     window.requestAnimationFrame(step);
   }
-
+ 
   // Call the function to animate circle
   animateCircle();
 </script>
-
+ 
 </body>
 </html>
-
-
+ 
+ 
+ 
 
