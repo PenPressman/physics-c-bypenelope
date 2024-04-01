@@ -239,7 +239,7 @@ Font-size: 11pt
 <p style="color:white; font-size:15pt; font-weight:bold; margin-top: 0;color: #d9f1ff">
     Logged Readers: 
 
-  <script>
+ <script>
     // Function to set a cookie
     function setCookie(name, value, days) {
         var expires = "";
@@ -263,20 +263,23 @@ Font-size: 11pt
         return null;
     }
 
-    // Function to increment visitor count if cookie is not set
+    // Function to increment visitor count and set the cookie
     function incrementVisitorCount() {
         var visitorCount = getCookie("visitorCount");
         if (!visitorCount) {
             setCookie("visitorCount", "1", 365); // Set the cookie for 1 year
             return 1; // Return 1 as this is the first visit
         } else {
-            return parseInt(visitorCount) + 1; // Increment the count
+            var incrementedCount = parseInt(visitorCount) + 1;
+            setCookie("visitorCount", incrementedCount, 365); // Update the cookie with incremented count
+            return incrementedCount;
         }
     }
 
     // Update the visitor count display
     document.getElementById("visitorCount").textContent = incrementVisitorCount();
 </script>
+
   
   
   <span id="visitorCount">0</span>
