@@ -251,7 +251,7 @@ font-style: italic;
     </style>
 
 <body>
-    <p><span id="loggedReaders">Logged Readers:</span> <span id="visitorCount">0</span></p>
+  <p><span id="loggedReaders">Logged Readers:</span> <span id="visitorCount">0</span></p>
 
     <script>
         // Function to set/update the visitor count in the HTML and in cookies
@@ -276,12 +276,16 @@ font-style: italic;
         // On page load, get the visitor count from cookies and update the HTML
         window.onload = function() {
             let visitorCount = getVisitorCount();
-            setVisitorCount(visitorCount + 1); // Increment count for current visitor
+            if (!document.cookie.includes("visited=true")) { // Check if the visitor has not visited before
+                setVisitorCount(visitorCount + 1); // Increment count for current visitor
+                document.cookie = "visited=true"; // Set a cookie to indicate that the visitor has visited
+            } else {
+                setVisitorCount(visitorCount); // If visitor has visited before, keep the count same
+            }
         };
     </script>
 </body>
 </html>
-
 
 <div style="width: 55%; margin: 0 auto;">
     <p style="color:#cae5fc; font-size:10pt; text-align:center; margin-bottom: 0;">
