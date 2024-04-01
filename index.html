@@ -230,61 +230,57 @@ Font-size: 11pt
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Visitor Counter</title>
-</head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logged Readers</title>
+    <style>
+       
+        #loggedReaders {
+            color: lavender;
+            font-weight: bold;
+		font-size: 15pt;
+font-style: italic;
+        }
+        #visitorCount {
+            color: lavender;
+            font-weight: bold;
+	font-size: 15pt;
+font-style: italic;
+        }
+    </style>
+
 <body>
-<p style="color:white; font-size:15pt; font-weight:bold; margin-top: 0;color: #d9f1ff">
-  
+    <p><span id="loggedReaders">Logged Readers:</span> <span id="visitorCount">0</span></p>
 
- <script>
-    // Function to set a cookie
-    function setCookie(name, value, days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = "; expires=" + date.toUTCString();
+    <script>
+        // Function to set/update the visitor count in the HTML and in cookies
+        function setVisitorCount(count) {
+            document.getElementById('visitorCount').textContent = count;
+            // Set the count in cookies with expiration date 1 year from now
+            document.cookie = "visitorCount=" + count + ";expires=" + new Date(new Date().getTime() + 365 * 24 * 60 * 60 * 1000).toUTCString() + ";path=/";
         }
-        document.cookie = name + "=" + (value || "") + expires + "; path=/";
-    }
 
-    // Function to get a cookie
-    function getCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        // Function to retrieve the visitor count from cookies
+        function getVisitorCount() {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i].trim();
+                if (cookie.startsWith("visitorCount=")) {
+                    return parseInt(cookie.substring("visitorCount=".length, cookie.length)) || 0;
+                }
+            }
+            return 0; // Return 0 if cookie not found
         }
-        return null;
-    }
 
-    // Function to increment visitor count and set the cookie
-    function incrementVisitorCount() {
-        var visitorCount = getCookie("visitorCount");
-        if (!visitorCount) {
-            setCookie("visitorCount", "1", 365); // Set the cookie for 1 year
-            return 1; // Return 1 as this is the first visit
-        } else {
-            var incrementedCount = parseInt(visitorCount) + 1;
-            setCookie("visitorCount", incrementedCount, 365); // Update the cookie with incremented count
-            return incrementedCount;
-        }
-    }
-
-    // Update the visitor count display
-    document.getElementById("visitorCount").textContent = incrementVisitorCount();
-</script>
-
-
-  Logged Readers: <span id="visitorCount">3</span> <span id="textContent">0</span> </p>
-
-
-
+        // On page load, get the visitor count from cookies and update the HTML
+        window.onload = function() {
+            let visitorCount = getVisitorCount();
+            setVisitorCount(visitorCount + 1); // Increment count for current visitor
+        };
+    </script>
+</body>
+</html>
 
 
 <div style="width: 55%; margin: 0 auto;">
