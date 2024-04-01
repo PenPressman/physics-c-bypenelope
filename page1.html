@@ -23,6 +23,17 @@
     margin-bottom: 5px; /* Add margin below header */
   }
 
+   /* Media query for screens up to 480px wide (e.g., smartphones) */
+  @media screen and (max-width: 480px) {
+    .header {
+ background-color: #001f3f;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px; /* Increase font size for header */
+    margin-top: 50px; /* Add margin above header */
+    }
+  }
+
   .container {
     display: flex;
     justify-content: center;
@@ -324,8 +335,8 @@ In short, vectors = the dreaded (or maybe fun for some people?) return of geomet
 
         #menuButton {
             position: absolute;
-            top: 2%; /* Moved down */
-            left: 34px;
+            top: 30px; /* Moved down */
+            left: 30px;
             font-size: 43px;
             color: white;
             background-color: transparent;
