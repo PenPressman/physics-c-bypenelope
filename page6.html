@@ -433,168 +433,97 @@ Writing
 </html>
  
  
- <!DOCTYPE html>
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menu with Buttons</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<style>
-  /* Common button style */
-  .stacked-buttons {
-    display: none; /* Initially hide the buttons */
-    position: fixed; /* Position buttons relative to the viewport */
-    top: 60px; /* Position buttons farther from the top */
-    left: 20px; /* Position buttons 20px from the left */
-    z-index: 999; /* Ensure buttons appear on top of other content */
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Example</title>
+    <style>
+        .menu {
+            display: none;
+            position: absolute;
+            top: 90px; /* Moved down */
+            left: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 4px;
+            z-index: 1;
+            border-radius: 8px;
+            font-size: 16px;
+        }
 
-  /* Style for the menu icon */
-  .menu-icon {
-    position: fixed; /* Position the menu icon */
-    top: 20px; /* Position the menu icon 20px from the top */
-    left: 25px; /* Position the menu icon 20px from the left */
-    z-index: 1000; /* Ensure menu icon appears on top of other content */
-    font-size: 45px; /* Set font size for the menu icon */
-    cursor: pointer; /* Set cursor to pointer */
-  }
+        .menu a, #likeButton {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+            color: #333;
+            background-color: #add8e6;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.4;
+         
+        }
 
-  /* Style for the blue box menu */
-  .menu-container {
-    display: none; /* Initially hide the menu container */
-    position: fixed; /* Position the menu container */
-    top: 20px; /* Position the menu container 20px from the top */
-    left: 20px; /* Position the menu container 20px from the left */
-    background-color: transparent; /* Set background color to clear */
-    padding: 10px; /* Add padding to the menu container */
-    border-radius: 0px; /* Add border radius */
-    z-index: 998; /* Ensure menu container appears below buttons and menu icon */
-  }
+        .menu a:hover, #likeButton:hover {
+            background-color: #8ab6d6;
+        }
 
-  /* Style for the home button */
-  .home-button {
-    width: 48px; /* Set width and height for the button */
-    height: 48px;
-    background-color: lightblue; /* Set background color to light blue */
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    border-radius: 50%; /* Make the button round */
-    cursor: pointer; /* Set cursor to pointer */
-    text-decoration: none; /* Remove default underline for links */
-    margin-top: 30px; /* Reduce margin to bring buttons closer together */
-  }
+        #menuButton {
+            position: absolute;
+            top: 30px; /* Moved down */
+            left: 34px;
+            font-size: 43px;
+            color: white;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
 
-  .email-button {
-    width: 48px; /* Set width and height for the button */
-    height: 48px;
-    background-color: lightblue; /* Set background color to light blue */
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    border-radius: 50%; /* Make the button round */
-    cursor: pointer; /* Set cursor to pointer */
-    text-decoration: none; /* Remove default underline for links */
-    margin-top: 55px; /* Adjusted margin to position the email button below the home button */
-  }
 
-  .like-button {
-    width: 48px; /* Set width and height for the button */
-    height: 48px;
-    background-color: lightblue; /* Set background color to light blue */
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    border-radius: 50%; /* Make the button round */
-    cursor: pointer; /* Set cursor to pointer */
-    text-decoration: none; /* Remove default underline for links */
-    margin-top: 40px; /* Reduce margin to bring buttons closer together */
-  }
-
-</style>
+        }
+    </style>
 </head>
 <body>
+    <button id="menuButton" onclick="toggleMenu()">&#9776;</button>
+    <div id="menu" class="menu">
+        <a href="index.html">&#127968; Home</a>
+        <a href="mailto:penelope.pressman@gmail.com">&#128235; Contact</a>
+        <button id="likeButton">❤️ Like page         </button>
+    </div>
 
-<!-- Menu Icon -->
-<div class="menu-icon" onclick="toggleMenu()">
-  <!-- Icon provided by the Material Symbols Outlined font -->
-  <span style="font-family: 'Material Symbols Outlined', sans-serif;">☰</span>
-</div>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
 
+        var likeButton = document.getElementById("likeButton");
+        var likeCount = 0;
+        var liked = false;
 
-<!-- Menu Container -->
-<div class="menu-container" id="menuContainer">
-  <!-- Home Button with House Icon -->
-  <a href="index.html" class="stacked-buttons home-button"> 
-    <span style="font-family: 'Material Symbols Outlined', sans-serif; font-size: 27px;">🏠</span>  
-  </a>
-  <br><br>
-
-  <!-- Email Button -->
-  <a href="mailto:penelope.pressman@gmail.com" class="stacked-buttons email-button" style="top: 90px;">
-    <!-- Icon provided by the Material Symbols Outlined font -->
-    <span style="font-family: 'Material Symbols Outlined', sans-serif; font-size: 27px;">✉️</span>
-  </a>
-  <br><br>
-
-  <!-- Like Button -->
-  <button class="stacked-buttons like-button" id="likeButton" onclick="like()" style="top: 160px;">
-    <!-- Icon provided by the Material Symbols Outlined font -->
-    <span style="font-family: 'Material Symbols Outlined', sans-serif; font-size: 25px;">❤️</span>
-  </button>
-</div>
-
-<!-- Like Count Display -->
-<div id="likeCountDisplay" style="position: fixed; top: 100px; left: 90px; font-size: 16px; color: white;"></div>
-
-<script>
-  let likeCount = 0;
-  let hasClicked = false; // Flag to track if the like button has been clicked
-
-  function like() {
-    if (!hasClicked) { // Check if the like button has been clicked before
-      likeCount++;
-      document.getElementById("likeCount").innerText = likeCount;
-      document.getElementById("likeButton").style.backgroundColor = "pink";
-      updateLikeCountDisplay(); // Call the function to update the like count display
-      hasClicked = true; // Set the flag to true after clicking
-    }
-  }
-
-  function updateLikeCountDisplay() {
-    document.getElementById("likeCountDisplay").innerText = "Likes: " + likeCount;
-  }
-
-  function toggleMenu() {
-    let menuContainer = document.getElementById("menuContainer");
-    if (menuContainer.style.display === "none") {
-      menuContainer.style.display = "block";
-      // Display all buttons when menu is clicked
-      let buttons = document.getElementsByClassName("stacked-buttons");
-      for (let i = 0; i < buttons.length; i++) {
-        buttons[i].style.display = "flex";
-      }
-    } else {
-      menuContainer.style.display = "none";
-      // Hide all buttons when menu is closed
-      let buttons = document.getElementsByClassName("stacked-buttons");
-      for (let i = 0; i < buttons.length; i++) {
-        buttons[i].style.display = "none";
-      }
-    }
-  }
-</script>
-
+        likeButton.addEventListener("click", function() {
+            if (!liked) {
+                likeCount++;
+                likeButton.innerHTML = "Liked page ❤️";
+                likeButton.style.backgroundColor = "lightpink"; /* pink */
+                liked = true;
+                alert("Liked! Count: " + likeCount);
+            } else {
+                alert("You already liked this.");
+            }
+        });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
 
