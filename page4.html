@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kinematics</title>
+<title>Rotation</title>
 <style>
   body {
     background-color: #001f3f;
     font-family: Calibri, sans-serif;
-    color: white; /* Setting font color to white for better readability on dark background */
+    color: white; /* Setting font color to white for better readability on *darker* background */
     margin: 0;
     padding: 0;
     text-align: center; /* Center align the text */
@@ -55,135 +55,249 @@
   }
 
   .box {
-    background-color: #075a90; /* Slightly darker blue */
+    background-color: #075a90
+; /* Color of sections */
     padding: 20px;
     margin-top: 20px;
     width: 90%; /* Decrease width */
   }
 
   .box p {
-    color: white; /* Set paragraph text to white */
+    color: white; /* Set paragraph text to same as background color */
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Kinematics</h1>
+  <h1>Rotation</h1>
 </header>
 
-<svg width="70%" height="200" viewBox="0 0 1000 200" style="margin-top: -50px;">
-  <path id="parabola" d="M0,200 Q500,-6 1000,200" fill="none" stroke="#ADD8E6" stroke-dasharray="2 2" />
-  <circle id="circle" cx="0" cy="200" r="15" fill="#2750AF" />
-</svg>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Rainbow Circle</title>
+  <style>
+
+    .circle {
+      position: relative;
+      width: 180px; /* Reduced size */
+      height: 180px; /* Reduced size */
+      border: 6px dotted #ffcccc; /* Thicker border and light pink color */
+      border-radius: 50%;
+Margin-left: 610px
+    }
+
+ /* Media query for screens up to 768px wide (e.g., tablets) */
+  @media screen and (max-width: 768px) {
+    .circle {
+    }
+  }
+
+  /* Media query for screens up to 480px wide (e.g., smartphones) */
+  @media screen and (max-width: 480px) {
+    .circle {
+Margin-left: 100px
+    }
+  }
+
+
+    .rainbow-circle {
+      position: absolute;
+      top: calc(50% - 22px); /* Half of the circle's diameter minus half of the border width */
+      left: calc(50% - 22px); /* Half of the circle's diameter minus half of the border width */
+      width: 37px; /* Increased width */
+      height: 37px; /* Increased height */
+      background-image: radial-gradient(circle at center, pink, lightpink, yellow, lightblue, blue, blue, pink);
+      border-radius: 50%;
+      animation: moveCircle 4s linear infinite;
+    }
+
+    @keyframes moveLine {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes moveCircle {
+      0% {
+        transform: rotate(0deg) translateX(88px) rotate(0deg); /* Adjusted distance */
+      }
+      100% {
+        transform: rotate(360deg) translateX(88px) rotate(-360deg); /* Adjusted distance */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="circle">
+    <div class="dotted-line"></div>
+    <div class="rainbow-circle"></div>
+  </div>
+</body>
+</html>
+
+<p></p>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formatted Paragraph</title>
+<style>
+    /* Style for the specific paragraph */
+    .formatted-paragraph {
+        max-width: 900px; /* Set maximum width */
+        margin: 0 auto; /* Center the paragraph horizontally */
+        padding: 0 20px; /* Add some padding to the sides */
+        /* Add any additional styles for the paragraph */
+    }
+</style>
+</head>
+<body>
+<br>
+
+
+<p class="formatted-paragraph">The good news about this unit is that you’ve already had an intro to almost every concept… just the linear version. You’ll notice that, even for things that don’t just mean “the angular version of [insert something we already learned,” a lot of stuff looks pretty similar. When in doubt, think of the version of things you already know well (ie COE, kinematics, COP etc) and then work on translating it to the rotational version. Also, this unit is fun because you’ll be able to explain a lot of cool real-world phenomena in a technical way. Yay!<br></p>
+
+</body>
+</html>
+
 
 <div class="container">
   <div class="content">
-    <p>Back to basics! Kinematics are pretty fundamental, and you'll need them a lot later on. Aside from memorizing the <u><b>kinematic equations</b></u>, go over the principle concepts and make sure you understand everything, especially common topics like <u><b>free-fall, projectile motion, relative velocity</b></u> and more. Since this is the first unit, make sure to review <u><b>calculus skills</b></u> (specifically deriving and integrating functions) and <u><b>calculator skills</b></u> (nsolve is the best :).</p>
+    <button class="button" onclick="toggleFormulas()">Click to see formulas</button>
+    <button class="button" onclick="toggleMainConcepts()">Click to see main concepts</button>
+    <button class="button" onclick="toggleUnits()">Click to review relevant SI units</button>
   </div>
-  <div>
-       <button class="button" onclick="toggleUnits()"> Relevant SI Units</button>
-    <button class="button" onclick="toggleFormulas()">Formulas</button>
-    <button class="button" onclick="toggleMainConcepts()">Concept Explanations</button>
-   
-  </div>
-<div id="formulasBox" class="box hidden">
-    <h2>The Kinematic Equations</h2>
-  <style>
-    /* Style for the header */
-    h2{
-        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to the text */
-    }
-</style>
-    <p>v = v<sub>0</sub> + a*t</p>
-    <p>v<sub>0</sub> = v<sub>0</sub><sup>2</sup> + 2*a*(Δx)</p>
-    <p>(Δx) = v<sub>0</sub>*t + ½*a*t<sup>2</sup></p>
-    <p>(Δx) = ½(v + v<sub>0</sub>)*t</p>
-    <div style="text-align: left;">
-        <p>
-            *v<sub>0</sub>* = initial velocity, sometimes written as v<sub>i</sub><br>
-           *x = displacement in one direction (I use "x" as my go-to variable, but make sure to keep in mind what it is actually representing in a given scenario)<br>
-            *acceleration (must be constant in order to apply kinematics! Remember that a<sub>y</sub> due to gravity is equal to -9.8m/s, but you can round to -10 on the AP)
-        </p>
-        <p>*Note, aside from time, all variables must be analyzed using individual components (ie. x, y, or z direction).</p>
-    </div>
 
-    <h2 style="text-align: center;">Relative Velocity</h2>
+  <div id="formulasBox" class="box hidden">
+ <h2 style="text-align: center;">Relating Linear and Angular Variables</h2>
+ <p style="text-align: center;">
+s=θr<br>
+v=ωr<br>
+a=αr<br>
+a<sub>c</sub>=ωr<sup>2</sup><br>
+revs*2π=rads
+ <br><br><h2 style="text-align: center;">Angular Kinematics</h2>
+<h4 style="text-align: center;"><u>Angular Kinematic Equations</u></h4>
     <p style="text-align: center;">
-        V<sub>PS</sub> = V<sub>PW</sub> + V<sub>WS</sub><br>
-    </p>
-    <p style="text-align: left;">
-        (where each variable represents a reference frame, ie. V<sub>person to shore</sub> = V<sub>person to water</sub> + V<sub>water to shore</sub>)
-    </p>
-    <p style="text-align: left;">
-        You can learn more about the concept of relative velocity if you click the other button, but for now- to remember the formula, I like to think of it as splitting the two variables and adding a common one in the middle. In a nutshell, pick a variable and use it to split them!
-    </p>
+ <p>ω = ω<sub>0</sub> + α*t</p>
+    <p>ω<sub>0</sub> = ω<sub>0</sub><sup>2</sup> + 2*α*(Δθ)</p>
+    <p>(Δθ) = ω<sub>0</sub>*t + ½*α*t<sup>2</sup></p>
+    <p>(Δθ) = ½(ω + ω<sub>0</sub>)*t</p>
 
-    <h2 style="text-align: center;">Other Formulas</h2>
+    <h4 style="text-align: center;"><u>Other Angular Formulas</u></h4>
     <p style="text-align: center;">
-        Speed = d<sub>istance</sub>/t<br>
-        Constant velocity: v = Δx/t<br>
-        Average velocity: v<sub>avg</sub> = Δx/t<br>
-        Constant acceleration: a = Δv/t<br>
-        Average acceleration: a<sub>avg</sub> = Δv/t
+         Constant angular velocity: ω = Δθ/t<br>
+        Average angular velocity: ω<sub>avg</sub> = Δθ/t<br>
+        Constant angular acceleration: α = Δω/t<br>
+        Average angular acceleration: α<sub>avg</sub> = Δω/t
     </p>
-    <p style="text-align: left;">
-        For vectors, just remember the Pythagorean theorem: A<sup>2</sup> = B<sup>2</sup> + C<sup>2</sup>
-    </p>
-
-    <h2 style="text-align: center;">Calculus Relationships</h2>
-    <p style="text-align: center;">
-        v = dx/dt<br>
-        a = dv/dt = d<sup>2</sup>x/dx<sup>2</sup><br>
-        x = &int;v dt<br>
-        v = &int;a dt<br>
-        AUC (area under the curve) of a a/t graph is Δv<br>
-        AUC (area under the curve) of a v/t graph is Δx
-    </p>
-
-    <p style="text-align: left;">
-        *Remember, to find Δx or Δv, make the integral definite and include the initial condition! Also, keep in mind components just like with the kinematic equations, since v and a are vectors (more explanation in the concept section).
-    </p>
-</div>
-  <div id="conceptsBox" class="box hidden">
-    <h2 style="text-align: center;"> Overview </h2>
-    <div style="text-align: left;">
-        <p> Since making this is also my way of studying, I’m including the ways I’ve found it easiest to understand things. That being said, there’s no way around the fact that doing practice problems is the best way to make sure that you actually know the content and not just the formulas, so do as many as you can! However, if you’re tired before a test or something, feel free to just read these :) </p>
-     </p>
-    </div>
-    <h2 style="text-align: center;">Relative Velocity</h2>
-    <p style="text-align: left;">
-       I want to start with this because I think it's the most isolated concept from the rest of this unit, and once you get it…  you get it. Basically, think of walking on one of those flat escalators or moving floor things at airports, whatever you want to call them. In terms of how long it takes you to move from one place in the airport to another, we can just measure the time it takes for you to move, say, 20 meters. So, let’s say that took 20 seconds, aka you are moving at 1m/s. When we think of it more specifically, that’s really how fast you are moving relative to the still ground of the airport. The measurement of how long it took you from here to there doesn’t tell you how fast you were walking, or how fast the flat escalator was moving. In order to determine either of those velocities, we need to compare all three frames to each other: you to the ground, you to the escalator, and the escalator to the ground. The formula for relative velocity analysis (click the formula button to see it) makes a lot of sense when you think about it – my speed in the airport is a combination of how fast I'm walking and how fast the escalator is moving me, hence the addition. The only thing to keep in mind, and the reason you should do some practice problems, is that these can get just a bit more complicated because you need to make sure to take components into account. Remember to calculate the velocities in the x and y directions separately. Then you’ll be good to go!
-
-    <h2 style="text-align: center;">Vectors and Scalars</h2>
-    <p style="text-align: left;">
-       Speaking of splitting up components, this is important in general for any <u> vector quantities </u>. Because vectors take into account direction in addition to magnitude, you need to remember to split things into x and y. Stuff like mass, electric potential, and energy are scalars, so having a negative sign before an amount of energy would probably mean there was a change in energy or something like that. For vectors, like velocity, a negative sign refers to the direction of the velocity. A quick trick to remember is that if the velocity and acceleration have the same sign, the object is speeding up. If they are opposites, it is slowing down. That's why having "negative acceleration" does NOT necesarily entail slowing down (which might be confusing to those thinking of acceleration colloquially). If you're given individual components for something like velocity (ex. v=(2x)i + (4x <superscript> 2 </superscript>)j m/s), and you're given a scenario in which to find acceleration or some other variable, it's probably easiest to keep everythinng in terms of individual components (this is called "unit vector notation"). However, if you need to find the <u> magnitude </u> of the vector, make sure to use the Pythagorean theorum (you can find it under the equations button), and then use SOCATOAH to find the angle. There will be a lot more to go over about vectors and scalars in later units, but for now, this is all you need. Oh and, if you want to add vectors in a different way (and for some reason you are given an example where this is easier), you can  use the tip-to-tail method: draw the vectors by connecting each "tip" to the next one's "tail" and then find the final result. Remember, if one of them is negative, invert it before you add it (aka subtracting the vector).
-<br>
-<br>
-In short, vectors = the dreaded (or maybe fun for some people?) return of geometry.
-</br>
   
- <h2 style="text-align: center;">Projectile Motion</h2>
 
- <p style="text-align: center;"> I’m not going to spend a lot of time on this because the main thing is just to do some practice problems, but here are a few notes to keep in mind. </p>
+    <h4 style="text-align: center;"><u>Calculus Relationships</u></h4>
+    <p style="text-align: center;">
+        ω = dθ/dt<br>
+        α = dω/dt = d<sup>2</sup>x/dx<sup>2</sup><br>
+        θ = &int;ω dt<br>
+        ω = &int; α dt<br>
+        AUC (area under the curve) of a α/t graph is Δω<br>
+        AUC (area under the curve) of a ω/t graph is Δθ
+    </p>
 
+    <p style="text-align: center;">
+        *remember, to find Δθ or Δω, make the integral definite and include the initial condition 
+    </p>
+
+
+<br> <h2 style="text-align: center;">Angular Forces (Torque)</h2>
+    <p style="text-align: center;">
+Στ=Iα<br>
+τ=rF<sub>⊥</sub> (aka, the cross product of force and distance from the axis of rotation)
+
+<h4 style="text-align: center;"> <u>Moment of Inertia</u></h4>
+    <p style="text-align: center;">
+I <sub>COM</sub>= Σ m<sub>i</sub>r<sub>i</sub><sup>2</sup><br>
+∥ axis theorem: I=I<sub>COM</sub>+Mh<sup>2</sup> (where “h” is the distance between COM and axis of rotation, and “M” is mass)<br>
+Calculus: I=&int;r<sup>2</sup>dm<br>
+Linear density: λ=M/L (where “L” is length)
+Areal density: ρ=M/A (where “A” is area)
+<br><br>**moment of inertia gets complicated, so I’m going to wait to explain further on the concepts page<br>
+
+
+<br> <h2 style="text-align: center;">Energy, but w/ Rotation </h2>
+    <p style="text-align: center;">
+K<sub>rot</sub>=1/2Iω<sup>2</sup><br>
+
+<h4 style="text-align: center;"> <u>Work</u></h4>
+    <p style="text-align: center;">
+work: W=τθ <br>
+work concerning non-constant torque: W= ∫τ dθ (where the limits of integration are either θi and θf )
+
+ <br> <br><h2 style="text-align: center;">Angular Momentum</h2>
+    <p style="text-align: center;">
+conservation of angular momentum: L = rp<sub>⊥</sub> = rmv<sub>⊥</sub>
+<p> conservation of angular momentum (COL): L<sub> total before </sub>= L<sub> total after </sub></p>
+ <h4 style="text-align: center;"><u>Rolling</u></h4>
+    <p style="text-align: center;">
+V<sub>COM</sub> (aka linear v)=Rω (where “R” is the radius of the circular object)
+
+
+      </div>
+
+  <div id="conceptsBox" class="box hidden">
+ <h2 style="text-align: center;">General</h2>
     <p style="text-align: left;">
-1. Remember that acceleration due to gravity (aka “g”) is in the <u> y direction only </u>! <br> <br>
+Since a lot of this unit includes variations of concepts we already know, I find it the best one to use to study for everything I learned earlier. The caveat to that is, MAKE SURE you know the previous units well before starting this one, because otherwise there will be <u>a ton</u> to catch up on.<br>
+  
+ <h2 style="text-align: center;">Angular Kinematics</h2>
+    <p style="text-align: left;">
+Honestly, you basically know all of this from the first kinematics unit, just make sure to alaways convert to angular if some variables are given linearly, and if you’re given info in revs, convert to rads. This does not mean you should put your calculator in rads though! <u>KEEP IT IN DEGREES</u>. Keep in mind, angular displacement really just means the change in angle, in the same way that linear displacement is just a change in (linear) position. So, do some practice problems, go over your conversions, and you’ll be all set. <br> 
+ <h2 style="text-align: center;">Angular Forces (Torque)</h2>
+    <p style="text-align: left;">
+The general principles of net torque will look similar to stuff from the force unit (Newton's laws), but torque gets a bit more complicated… Oh and to solve for individual torque values, we can just use the cross product of force and r (distance between the force and the axis of rotation), which basically just means multiplying the perpendicular components. This is why we open a car door from the couter edge rather than right by the hinge: with less “r,” we can apply less force and get more torque. The main reason torque is more complicated than force is because while one out of two of the variables you need for forces is mass (which is a pretty simple concept/a consisten number), torque requires us to learn about moment of inertia (here is probably a good point to make sure you know the net torque and net force equations). <br><br>Before we get into how “I” (moment of inertia) works, I want to go over it conceptually. For the forces we learned earlier, because of the relationship between net force, mass, and acceleration, you can think of mass as “resisting” acceleration. Aka, more mass means more force needed to accelerate the object. Torque has a similar structure, because of the relationship between net torque, moment of inertia, and angular acceleration, a greater moment of inertia means you need more torque for more angular acceleration. The difference is, moment of inertia is literally defined as how resistant an object is to angular acceleration, so that part requires less explanation. Oh and the other difference is, it's a lot more complex to find. Soooo: <br>
+<h4 style="text-align: center;"> <u>Moment of Inertia</u></h4>
+    <p style="text-align: left;">
+There are three things to focus on for moment of inertia, all three of which you can find on the formula sheet: solving “I” algebraically, with calculus, and with the parallel axis theorem (each of these has a formula associated with it). However, it’s important to understand it or you can easily mix things up. If given a simple system with values for the mass of parts of the system and distances from the axis of rotation, you can use algebra to solve. However, your work only ends there if this axis of rotation is at the object's center of mass (reminder to review how to find COM!)If the axis is somewhere else, you need to use the parallel axis theorem, which requires first finding I<sub>COM</sub> and then adding that value to the product of: the total mass of the system (M), the distance between the axis of rotation and the COM (h), squared, and ½. If your system is too complex to solve algebraically, use the calculus method. Remember, use the parallel axis theorem ANY time the COM is different from the AOR… practice this so you don’t forget!
 
-2. Remember that you can find the max height by finding where v <sub> y </sub> is 0, since that is where the velocity will change direction and the projectile will start heading back down.<br> <br>
+ <h2 style="text-align: center;">Energy, but w/ Rotation </h2>
+    <p style="text-align: left;">
+Ok, there is really not much new content here. We’re just adding a new form of kinetic energy (K<sub>rot</sub>), that looks pretty much exactly like linear K, except this time mass is swapped for (you guessed it) moment of inertia, and velocity is swapped for (you guessed it) angular velocity. Yet again, do some practice and you’re good to go. <br><br>
+<em><i>Stop reading if you’re in a rush, keep reading if you want a fun example. </em></i><br><br>
+Now that we know to factor in K<sub>rot</sub> in conservation of energy statements, which ball would move down a hill faster? A ball that is rolling or a ball that is sliding? Let’s assume that they both start from the same height, at rest (meaning, they both start with an equal amount of gravitational potential energy, and that is all they start with). <br><br>
+Answer: the sliding ball. On the right side of the COE equation for the sliding ball, once we get to the ground, there will only be K, the linear version, and we can use that to solve for v. Once we have v, we can use kinematics to see how long the ball took. However, in the rolling scenario, the right side of the COE equation will also have K<sub>rot</sub> (aka more non-K<sub>linear</sub> on the right side, meaning when we solve for v as part of K<sub>linear</sub>, we’ll get a smaller value. So, using kinematics to solve, we’ll see that with a slower linear velocity, the ball takes longer to reach the ground. Done!<br>
+<h4 style="text-align: center;"> <u>Work</u></h4>
+    <p style="text-align: center;">
+Just learn the formula, it's literally just like the force one: work = torque x how much it moved (angularly).<br>
+ <h2 style="text-align: center;">Angular Momentum</h2>
+    <p style="text-align: left;">
+The basics: angular momentum (L) is conserved, so you can make a COL equation and solve for missing pieces! Remember how when we have force and need torque, we use the cross product of force and distance from the axis of rotation? Same deal for L. Once we have linear momentum (p), we just find the cross product of p and r (the distance from the axis of rotation), and that gives us L! Remember, finding the cross product is basically just multiplying perpendicular components. You can also just find L by multiplying the object's angular velocity by its moment of inertia (don’t get this mixed up with finding K<sub>rot</sub>, there’s no ½ or power of two!
 
-3. Unit 2 will explain this more, but aside from gravity, since there is no force acting on a projectile, it must have no other acceleration besides g. The exception to this would be if you had a problem where the projectile also had some sort of engine causing constant acceleration I guess.<br> <br>
+ <h2 style="text-align: center;">Rolling</h2>
+    <p style="text-align: left;">
+Once you learn the examples/tips below, just remember the point at which an object switches from slipping to rolling or the other way around, and you’ll be all set. Remember, no matter how complicated an example looks, there are only so many variations when it comes to how you solve for missing variables, so don’t overthink it.<br>
+<h4 style="text-align: center;"> <u>things to keep in mind</u></h4>
+    <p style="text-align: left;">
+1. If you have both linear and angular motion, use the relationships to write everything in linear terms (i.e. divide v by r and sub that for ω )  in a combined equation.<br>
+2. When a ball is rolling w/ slipping, its angular velocity will adjust until it is rolling w/out slipping. Specifically, if it is rolling with “too little” spin, and thus slipping, ω will increase until it is equal to v<sub>COM</sub>/R (v<sub>COM</sub> being the linear velocity  about the ball’s COM and R being the radius of the ball). If it is rolling with “too much” spin, and thus slipping, ω will decrease until it is equal to v<sub>COM</sub>/R. <br>
+3. Once we reach the point where the ball is fully rolling w/out slipping, v<sub>COM</sub> will be equal to Rω, which we can derive by setting v equal to dx/dt, and thus v<sub>COM</sub> equal to ds/dt. After that, we can sub θR for s, and solve for v<sub>COM</sub>. Now picture a ball rolling down a ramp (no slipping). We can set up net force and torque equation and use linear → angular relationships to solve for the missing pieces. Specifically, since we know that the only linear forces are friction and gravity, we can first solve for the force of friction and then substitute a<sub>COM</sub>/R for α in order to solve.<br>
 
-4. Since the kinematic equations are consistently effective at solving for your missing variables, start by writing down everything you know (i.e. make a chart of x and y variables) and then go from there!<br> <br>
 
-</p>
-
-  </div>
-      
+      </div>
   <div id="unitsBox" class="box hidden">
-    <h2 style="text-align: center;"> SI Units for Kinematics </h2>
+    <h2 style="text-align: center;"> SI Units for Rotation </h2>
     <div style="text-align: center;">
-        
+        <p> Quick note (which you’ll see on every topic page), as long as your units are consistent when you are converting things, use whatever you want, just remember what the base units are.<br>
+<br> Also, I’m considering each set of units cumulative, so make sure you know any units from topics before this (i.e. kinematics, Newton’s laws, energy and momentum).
+            <br>
       <div style="text-align: center;">  
         <p> <html>
 <head>
@@ -200,36 +314,39 @@ In short, vectors = the dreaded (or maybe fun for some people?) return of geomet
         }
     </style>
 </head>
-<body>
-    <table>
-        </tr>
-        <!-- Rows -->
-        <tr>
-            <td>position (x)</td>
-            <td>meters [m] </td>
-        </tr>
-        <tr>
-            <td>velocity (v)</td>
-            <td>meters per second [m/s] </td>
-        </tr>
-        <tr>
-            <td>acceleration (a)</td>
-            <td> meters per second per second [m/s<sup>2</sup>]</td>
-        </tr>
-        <tr>
-            <td>time (t)</td>
-            <td>seconds [s] </td>
-        </tr>
-        <tr>
-            <td>speed (s)</td>
-            <td> meters per second [m/s] </td>
-        </tr>
-         </table>
+
+          <table>
+            <tr>
+              <td>angular displacement (θ)</td>
+              <td>radians [rad] (or, degrees/revs)</td>
+            </tr>
+            <tr>
+              <td>angular velocity (ω)</td>
+              <td>radians per second [rad/s]</td>
+            </tr>
+            <tr>
+              <td>angular acceleration (α)</td>
+              <td>radians per second squared [rad/s<sup>2</sup>]</td>
+            </tr>
+            <tr>
+              <td>moment of inertia (I)</td>
+              <td>kilogram meters squared [kgm<sup>2</sup>]</td>
+            </tr>
+            <tr>
+              <td>torque (τ)</td>
+              <td>newton meter [Nm] </td>
+            </tr>
+            <tr>
+              <td>arc length (s)</td>
+              <td>meters [m]</td>
+            </tr>
+          </table>
         </p>
+      </div>
     </div>
   </div>
-  </div>
-</div>
+
+
 <script>
   function toggleFormulas() {
     var formulasBox = document.getElementById("formulasBox");
@@ -245,36 +362,29 @@ In short, vectors = the dreaded (or maybe fun for some people?) return of geomet
     var unitsBox = document.getElementById("unitsBox");
     unitsBox.classList.toggle("hidden");
   }
-
-  // Function to animate circle along the parabolic path
-  function animateCircle() {
-    var circle = document.getElementById("circle");
-    var path = document.getElementById("parabola");
-    var length = path.getTotalLength();
-    
-    // Animate circle along the path
-    var duration = 10000; // Duration of animation in milliseconds, slowed down
-    var startTime = null;
-    function step(timestamp) {
-      if (!startTime) startTime = timestamp;
-      var progress = timestamp - startTime;
-      var point = path.getPointAtLength(progress % length);
-      circle.setAttribute("cx", point.x);
-      circle.setAttribute("cy", point.y);
-      window.requestAnimationFrame(step);
-    }
-    window.requestAnimationFrame(step);
-  }
-
-  // Call the function to animate circle
-  animateCircle();
 </script>
 
 </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Header Shadow</title>
+<style>
+    /* Style for headers */
+    h1, h2, h3, h5, h5, h6 {
+        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to all headers */
+    }
+</style>
+</head>
+<body>
 
 
+</body>
+</html>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -367,4 +477,3 @@ In short, vectors = the dreaded (or maybe fun for some people?) return of geomet
     </script>
 </body>
 </html>
-
