@@ -329,8 +329,21 @@ In short, vectors = the dreaded (or maybe fun for some people?) return of geomet
             cursor: pointer;
             z-index: 2;
 
-
         }
+
+      	/* Media query for screens up to 480px wide (e.g., smartphones) */
+  @media screen and (max-width: 480px) {
+    .menuButton {
+ position: absolute;
+            top: 0px; /* Moved down */
+            left: 70px;
+            font-size: 43px;
+            color: white;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+    }
 
 
 
