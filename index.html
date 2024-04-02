@@ -105,8 +105,12 @@ margin-bottom: 0px;
     <header>
       <h1>AP Physics C: Mech and E & M</h1>
     </header>
-    <p>Welcome. Click the buttons below to find info, formulas and more for each unit. Have fun!<br><br><em>[note, page intended for laptop/ipad, clarity issues may arise on phone]</em>
-<br></p>
+    <p>Welcome. Click the buttons below to find info, formulas and more for each unit. Have fun!
+<em>
+   <span class="reg-text"> <br><br>***Light pink shadow is <span class="light-pink-text pink-shadow">mech</span>, light green shadow is
+    <span class="light-green-text green-shadow">E & M</span>
+  </em>
+</p>
 
     <main>
       <div class="button-container">
@@ -151,10 +155,7 @@ Font-size: 11pt
       text-shadow: 2px 2px 4px #6eed8b; /* Green shadow */
     }
   </style>
-  <p><em>
-   <span class="reg-text"> ***Light pink shadow is <span class="light-pink-text pink-shadow">mech</span>, light green shadow is
-    <span class="light-green-text green-shadow">E & M</span>
-  </em>
+  
 </html>
     <div class="footer">
 
@@ -231,65 +232,6 @@ Font-size: 11pt
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logged Readers</title>
-    <style>
-       
-        #loggedReaders {
-            color: lavender;
-            font-weight: bold;
-		font-size: 15pt;
-font-style: italic;
-        }
-        #visitorCount {
-            color: lavender;
-            font-weight: bold;
-	font-size: 15pt;
-font-style: italic;
-        }
-    </style>
-
-<body>
-  <p><span id="loggedReaders">Logged Readers:</span> <span id="visitorCount">4</span></p>
-
-    <script>
-        // Function to set/update the visitor count in the HTML and in cookies
-        function setVisitorCount(count) {
-            document.getElementById('visitorCount').textContent = count;
-            // Set the count in cookies with expiration date 1 year from now
-            document.cookie = "visitorCount=" + count + ";expires=" + new Date(new Date().getTime() + 365 * 24 * 60 * 60 * 1000).toUTCString() + ";path=/";
-        }
-
-        // Function to retrieve the visitor count from cookies
-        function getVisitorCount() {
-            const cookies = document.cookie.split(';');
-            for (let i = 0; i < cookies.length; i++) {
-                let cookie = cookies[i].trim();
-                if (cookie.startsWith("visitorCount=")) {
-                    return parseInt(cookie.substring("visitorCount=".length, cookie.length)) || 0;
-                }
-            }
-            return 0; // Return 0 if cookie not found
-        }
-
-        // On page load, get the visitor count from cookies and update the HTML
-        window.onload = function() {
-            let visitorCount = getVisitorCount();
-            if (!document.cookie.includes("visited=true")) { // Check if the visitor has not visited before
-                setVisitorCount(visitorCount + 1); // Increment count for current visitor
-                document.cookie = "visited=true"; // Set a cookie to indicate that the visitor has visited
-            } else {
-                setVisitorCount(visitorCount); // If visitor has visited before, keep the count same
-            }
-        };
-    </script>
-</body>
-</html>
-
 <div style="width: 55%; margin: 0 auto;">
     <p style="color:#cae5fc; font-size:10pt; text-align:center; margin-bottom: 0;">
         <strong>Disclaimer:</strong> This site is basically just a fun way for me to study that might be helpful, but since I focus on the explanations and examples that I like the most/ones I came up with, it may not be the best for everyone. See what works for you!<br><strong>Note:</strong> some formatting may appear strange on mobile.
@@ -297,20 +239,17 @@ font-style: italic;
     <p style="color:white; font-size:small; margin-top: 0;">
         Updated in: 2024.<br>
         Contact <a href="mailto:penelope.pressman@gmail.com" style="color:white; text-decoration:underline;">penelope.pressman@gmail.com</a> with questions.
-    </p>
+       </p>
 </div>
 
 
+
+    
 </body>
 </html>
 
- 
+	       <img src="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" alt="Phys by pen" width="100">  
 
-
-    </div>
-  </div>
-</body>
-</html>
 
   </body>
 </html>
