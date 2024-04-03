@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinematics</title>
+  <link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
+   <meta name="description" content="Learn about Kinematics">
+<style>
+  body {
+    background-color: #001f3f;
+    font-family: Calibri, sans-serif;
+    color: white; /* Setting font color to white for better readability on dark background */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center align the text */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  header {
+    background-color: #001f3f;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px; /* Increase font size for header */
+    margin-bottom: 5px; /* Add margin below header */
+     text-shadow: 4px 4px 4px #566fbf; /* Enhanced blue shadow */
+  }
+
+   /* Media query for screens up to 480px wide (e.g., smartphones) */
+  @media screen and (max-width: 480px) {
+    .header {
+ background-color: #001f3f;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px; /* Increase font size for header */
+    margin-top: 200px; /* Add margin above header */
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px;
+  }
+
+  .content {
+    width: 70%; /* Adjust width */
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin */
+    font-weight: lighter; /* Make text thinner */
+  }
+
+  .button {
+    background-color: #ADD8E6;
+    color: #001F3F;
+    padding: 15px 30px; /* Increase padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; /* Add margin above and below buttons */
+    font-weight: bold; /* Make text bold */
+    font-size: 18px; /* Increase font size */
+  }
+
+   button:hover {
+      background-color: #6092d1;
+    }
+
+  .hidden {
+    display: none;
+  }
+
+  .box {
+    background-color: #075a90; /* Slightly darker blue */
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%; /* Decrease width */
+  }
+
+  .box p {
+    color: white; /* Set paragraph text to white */
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Sources</h1>
+</header>
+
+
+<style>
+  .p4 {
+    font-size: medium;
+    color: lightblue;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+  <h2>What I learned From </h2>
+  <style>
+    /* Style for the header */
+    h2{
+        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to the text */
+    }
+</style>
+<p class="p4">
+
+1. Halliday, D., Resnick, R. and Walker, J. (2014) Fundamental of Physics. 10th Edition, Wiley and Sons, New York.<br><br>
+
+2. Marlborough School Physics Classes (Hnrs Phys, AP Physics C: E & M) <br><br>
+
+  3. Young Hugh D. University Physics with Modern Physics and Masteringphysics. 14. uppl ed. Academic Imports Sweden AB 2015.<br><br>
+  
+</p>
+
+  <h2>Resources That Seem Helpful </h2>
+  <p class="p4">
+   Access for free at https://openstax.org/books/college-physics-2e/pages/1-introduction-to-science-and-the-realm-of-physics-physical-quantities-and-units
+    <br></p>
+
+    <h2>A Useful Guide to Independent Learning</h2>
+  <p class="p4">
+  From Susan Rigetti: https://www.susanrigetti.com/physics
+  </p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Example</title>
+    <style>
+        .menu {
+            display: none;
+            position: absolute;
+            top: 90px; /* Moved down */
+            left: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 4px;
+            z-index: 1;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+
+        .menu a, #likeButton {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+            color: #333;
+            background-color: #add8e6;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.4;
+         
+        }
+
+        .menu a:hover, #likeButton:hover {
+            background-color: #8ab6d6;
+        }
+
+        #menuButton {
+            position: absolute;
+            top: 30px; /* Moved down */
+            left: 30px;
+            font-size: 43px;
+            color: white;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+
+        }
+
+    </style>
+</head>
+<body>
+    <button id="menuButton" onclick="toggleMenu()">&#9776;</button>
+    <div id="menu" class="menu">
+        <a href="index.html">&#127968; Home</a>
+        <a href="mailto:penelope.pressman@gmail.com">&#128235; Contact</a>
+        <button id="likeButton">❤️ Like page         </button>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        var likeButton = document.getElementById("likeButton");
+        var likeCount = 0;
+        var liked = false;
+
+        likeButton.addEventListener("click", function() {
+            if (!liked) {
+                likeCount++;
+                likeButton.innerHTML = "Liked page ❤️";
+                likeButton.style.backgroundColor = "lightpink"; /* pink */
+                liked = true;
+                alert("Liked! Count: " + likeCount);
+            } else {
+                alert("You already liked this.");
+            }
+        });
+    </script>
+</body>
+</html>
+
+          
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>phys by pen logo add</title>
+<style>
+  
+    .image {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        max-width: 70px; /* Adjust the size as needed */
+        max-height: 70px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <img class="image" src="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" alt="Physics Image">
+</div>
+</body>
+</html>
