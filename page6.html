@@ -232,21 +232,13 @@ justify: left;
  
       <button class="button" onclick="toggleUnits()"> Relevant Units & Constants</button>
     <button class="button" onclick="toggleFormulas()">*COMING SOON*</button>
-    <button class="button" onclick="toggleMainConcepts()">*COMING SOON*</button>
+    <button class="button" onclick="toggleMainConcepts()">Concept Explanations</button>
   </div>
 <div id="formulasBox" class="box hidden">
-    <h2> General</h2>
-</div>
- 
-  <div id="conceptsBox" class="box hidden">
-    <h2 style="text-align: center;"> Charging </h2>
-<style>
-    /* Style for the header */
-    h2 {
-        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to the text */
-    }
-</style>
- 
+    <h2> Charging</h2>
+
+
+
  <h2 style="text-align: center;"> Forces and Fields </h2>
 <p style="text-align: left;">
 Writing
@@ -270,6 +262,86 @@ Writing
 <p style="text-align: left;">
 Writing
 </p>
+<br>
+
+
+
+</div>
+ 
+  <div id="conceptsBox" class="box hidden">
+    <h2 style="text-align: center;"> Charging </h2>
+<style>
+    /* Style for the header */
+    h2 {
+        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to the text */
+    }
+</style>
+
+<p style="text-align: left;">
+Jumping right in because this unit has a lot to cover. Charging refers to creating a net positive or negative charge on an object. This is caused by a disruption in the amount of protons and electrons, which carry positive and negative charge respectively. Protons are held extremely tightly in the nucleus of atoms by an enormous amount of energy, while electrons move around more loosely in outer shells. As such, netcharges are created by a <u>loss</u> or <u>gain</u> of electrons, NEVER a loss or gain of protons. Don’t forget! Additionally, materials can either be <u>conductors</u> or <u>insulators</u>. Conductors allow electrons to flow more easily, while insulators prevent such movement. The more “conductive” a material is, the more readily the electrons flow. <br><br>There are three main methods of charging, make sure you understand them. <br><br>
+<p style="text-align: center;">
+1. Conduction: </P><br>
+
+<p style="text-align: center;">
+This one is simple: when two objects made of conductive materials touch each other, electrons are able to flow between them, affecting their charges. Keep in mind for solving problems, when two conductors with different charges touch and separate, their charges will add together and then evently split in two.<br>
+</p>
+
+<p style="text-align: center;">
+2. Induction: </P><br>
+
+<p style="text-align: center;">
+
+
+Induction entails a method of charging with <u>no actual contact between the objects</u>. Start with one non-charged object and one charged one. For this example, let's say it is negatively charged. When the negatively charged object, which we’ll call object A, is brough to object B (the neutral one), all the electrons in B will be repelled by A, and move to the side furthest from A. If we then ground B by using a conductor to connect it to the ground, the electrons will be pushed out of the object to the ground. We then “unground” B, leaving it with a net-negative charge. Keep in mind, at this point A is still right next to B, but not touching. Once B has a negative charge and is separate from the ground, we can move A away, and we have successfully charged B!
+</p><br>
+
+<p style="text-align: center;">
+3. Friction: </P><br>
+
+<p style="text-align: center;">
+
+
+You’ve probably seen this one in your life before. For example, think of how wbrushing your hair with a dry brush can make your hair stand up, the same as if you touched a balloon to hair or rubbed a shirt on a couch. Charging by friction simply involves motion between two surfaces creating a charge.
+</p>
+
+
+ 
+ <h2 style="text-align: center;"> Forces and Fields </h2>
+<h4 style="text-align: center;"> <u>Electrostatic Force</u></h4>
+<p style="text-align: left;">
+You’ve probably already heard that “like charges repel,” and “opposite charges attract,” but this unit will let us quantify that “push” from charged objects known as electrostatic force (F<sub>E</sub>). To solve for this force, the formula takes into account the charges, the distance between them, and the composition of the space between them. For this unit, we’ll always be in a vacuum, but now that you’ve seen ε<sub>0</sub>, keep it mind, because next unit we’ll learn to add a constant to account for different materials. Remember to split the forces up into components, and then use vector analysis to eventually find the overall force. If you have many particles, just add up the net force as per usual, but keep direction in mind: force is a vector! This is also where kinematics (and Newton’s laws, of course) can make a return, since we can analyze the way a net force would affect the acceleration of a particle, and in turn its motion.
+
+</p>
+<br>
+
+<h4 style="text-align: center;"> <u>Electric Field</u></h4>
+<p style="text-align: left;">
+Now that we know how to solve for F<sub>E</sub, we can also solve for electric fields, which are the effect of the presence of a charge. The direction of an E-field is always the direction of the force a positive charge would feel. So, you can intuition check any problems by imagining what would happen in the place where you are trying to find the E-field. For example, if we drew arrows for an E-field of a negative charge, all the arrows would point radially inward, as that is how a positive charge would be pulled. Additionally, since the F<sub>E</sub gets weaker further from a charge, so does the E-field. When we move away, it has less “push” or “pull.” On a practical level, practice using the formulas to find E-fields and calculus methods to derive E-fields of different charged objects. The formulas are on the formula page!</p>
+<br>
+
+
+ <h2 style="text-align: center;"> Gauss’ Law </h2>
+<p style="text-align: left;">
+Bear with me for this one, because I have an odd way of explaining it, but once you get it, it’ll be pretty simple. Picture a small sun, with rays of light shining outward (don’t worry, we’re not skipping to a light and heat course, this is just a metaphor). Now, picture a large orb made of solar panels. Like a large ball where the whole inside is plastered with the panels. In this example, let's pretend solar panels only gather energy if hit directly by (as in perpendicular to) rays of light. Ok, put the sun inside the orb, in your mind at least. So, we have a sun radiating out, and solar panels surrounding it gaining energy only from light hitting them in a way that creates a perpendicular (90 degree) angle between the ray and the panels. Got it? So, the sun is the charge, the rays are the electric field, and the orb is what we call a “gaussian surface.” In order to see how much e-field is present from an object/particle/mass, we start with how much charge is “enclosed” in a gaussian surface. Using this, we can measure how much electric field will “pierce” the surface, ie, hit it perpendicularly. As such, it doesn’t matter how big we make our gaussian surface (unless it grows enough to enclose more charge). What I mean by this is, the orb can move as far away from the sun as it wants: the same amount of light will be enclosed. Now that you know the general concept (and can see the formulas on the formula sheet). Make sure you understand examples. To find the charge in a portion of wire, we would use what shape for our gaussian surface? Answer: a cylinder. That would effectively enclose our charge. Remember, the ends of the cylinder wouldn’t affect anything, because no electric field from the wire would “pierce” the surface. Remember, we would use the surface area of a cylinder as the area of our gaussian surface. A sphere would surround a sphere, a prism would surround a sheet, etc etc, you get the point. We can start with the basic formula for Gauss’ law to derive it for different kinds of objects, so practice deriving the E-field outside and inside spheres, sheets, and lines of charge. Also, note that conductors and insulators act differently. In fact, <u>inside a conductor, the E-field will always be 0</u>.<br></p>
+
+ <h4 style="text-align: center;"> <u>Electric Flux</u> </h4>
+<p style="text-align: left;">
+Briefly, since electric flux comes up in Gauss’ law calculations (though for our purposes, we can always just plug in EA for it right away), I want to briefly mention it. The main thing to note is simply that if the E-field is pointing into a surface, flux will be negative, and if it is pointing outwards, flux will be positive. Draw an example if it is helpful for you to visualize things. Additionally, remember to only multiply the <u>parallel</u> components of E and A to find flux in a problem.<br>
+</p>
+
+
+ <h2 style="text-align: center;"> Electric Potential and Electric Potential Energy </h2>
+<p style="text-align: left;">
+Before we get into each, start remembering that electric potential and electric potential energy are <u>two different things</u>. Ok, now the specifics.<br><br>
+</p>
+
+<h4 style="text-align: center;"> <u>Electric Potential Energy</u></h4>
+<p style="text-align: left;">
+As per usual, if we have a force causing movement, or any movement for that matter, there is probably a form of energy for when that movement is what I think of as “in waiting.” In this case, think of holding two negatively charged objects near each other. They would be trying desperately to repel each other, meaning when they are close, they have electric potential energy. As they move away, they will lose potential, as the electric force also dissipates. As such, the formulas you’ll see on the formula sheet are pretty intuitive, and account for this. In order to truly have 0 potential energy, we would need the like-charged objects to be infinitely far away, though the force, and thus potential energy, would be negligible far before then. Additionally, if charges are opposite, there would in turn be an opposite scenario, in which they would need to touch for the potential to disappear. The conceopt of work will also come back here, since we can calculate the work needed to move a particle, and the work an electric field does to move a particle (or object).
+
+<h4 style="text-align: center;"> <u>Electric Potential</u></h4>
+<p style="text-align: left;">
+Electric potential takes the charge out of the equation from electric potential energy… literally. Electric potential energy accounts for the fact that different charges will be influenced differently by different amounts of electric potential. Remember how we used mhg to find gravitational potential? This is basically the same deal, but the “height” is electric potential, and the mass is the charge. Because the units line up, we don’t need a version of “g” to make everything fit. <br><br>Another thing to know is we now have “equipotential lines” perpendicular to E-field lines, which should hopefully make sense. E field lines around a positive charge would radiate outwards, and in turn, potential would be equal along a circular shell path, and decrease as we move farther from the particle in the center. Thinking it through, we know that positive charges will move to areas of lower potential, and negative charges will move to areas of higher potential. Also, practice deriving the electric potential created by different shapes of objects. That’s it! Also, don’t forget the formula sheet for this unit, there’s a lot, and they’re important.
 <br>
 
 
