@@ -203,7 +203,7 @@
 <p class="formatted-paragraph" </u><strong>[PAGE IN PROGRESS]</strong><br>
  </p>
 
-<p class="formatted-paragraph" </u>[Intro here]<br>
+<p class="formatted-paragraph" </u>The good news about this unit is there is very little to memorize. The bad news is, problems can get very confusing very quickly, so its extra important to keep track of everything. When in doubt, right down all the things you know must be true, and draw the clearest possible versions of every problem. It's hard to explain this before we get to the details, but remember: combine what you can, draw every loop, and don’t mix up series vs parallel calculations.  <br>
  </p>
 
 </body>
@@ -214,11 +214,80 @@
 
  
        <button class="button" onclick="toggleUnits()">Relevant Units & Constants</button>
-    <button class="button" onclick="toggleFormulas()">*COMING SOON*</button>
+    <button class="button" onclick="toggleFormulas()">Formulas</button>
     <button class="button" onclick="toggleMainConcepts()">*COMING SOON*</button>
   </div>
 <div id="formulasBox" class="box hidden">
-    <h2> General</h2>
+  <h2 style="text-align: center;"> Basic Circuits </h2>
+<p style="text-align: center;">
+V=IR
+</p>
+ <h4 style="text-align: center;"> <u>Power Equations</u> </h4>
+<p style="text-align: center;">
+P=VI (*I remember this as VI=P, as in “VIP”)<br>
+P=V<sup>2</sup>/R<br>
+P=I<sup>2</sup>R
+<br><br>
+total E dissipated: E=Pt
+
+
+</p>
+
+  <h4 style="text-align: center;"> <u>Equivalent Resistance</u> </h4>
+<p style="text-align: center;">
+in series: R<sub>1</sub + R<sub>2</sub> = R<sub>eq</sub>
+in parallel: 1/R<sub>1</sub + 1/R<sub>2</sub> = R<sub>eq</sub>
+
+
+</p>
+<p style="text-align: left;">
+**Note, equivalent resistance is sometimes denoted as “R<sub>T</sub>”
+</p>
+
+  <h2 style="text-align: center;"> Capacitor Circuits </h2>
+
+<p>
+
+potential difference: ∆V=Ed **review E-fields!<br>
+charge in a capacitor: Q=CV<br><br>
+
+dielectrics: C=K ε<sub>0</sub> A/d (where “A” is the area of the plates) (where “K” is the dielectric constant)<br><br>
+
+parallel plate capacitors: C = ε<sub>0</sub> A/d (where “A” is the area of the plates)<br>
+cyllyndrial capacitors: C = 2π ε<sub>0</sub>/L ln(b/a) <br>
+spherical capacitors: C = 4π ε<sub>0</sub>(ab/(b-a))<br><br></p>
+
+  <h4 style="text-align: center;"> <u>Equivalent Capacitance </u></h4>
+In series:1/C<sub>1</sub + 1/C<sub>2</sub> = C<sub>eq</sub>
+In parallel: C<sub>1</sub + C<sub>2</sub> = C<sub>eq</sub>
+
+  <h4 style="text-align: center;"> <u>Energy</u></h4>
+<p>
+in a capacitor: U<sub>cap</sub>=1/2CV<sup>2</sup><br>
+in a capacitor: U<sub>cap</sub>=Q<sup>2</sup>2C<br><br>
+energy density: μ= 1/2ε<sub>0</sub>E<sup>2</sup></p>
+
+
+  <h2 style="text-align: center;"> Resistance Capacitor Circuits </h2>
+
+“tau,” aka RC circuit time constant: τ=RC =63.2% of total voltage<br><br>
+
+charge over time: q(t)= Q(1-e<sup>-t/RC</sup>)<br>
+voltage in a capacitor over time: V<sub>cap</sub>(t)= ε(1-e<sup>-t/RC</sup>)<br>
+voltage in a resistor over time: V<sub>R</sub>(t)= εe<sup>-t/RC</sup><br>
+current over time: i(t)= I<sub>max</sub>e<sup>-t/RC</sup><br></p>
+
+  <h2 style="text-align: center;"> Other </h2>
+
+<p>
+resistance of a wire: R= ρL/A (where “L” is the length of the wire and “A” is the area of the cross section)<br><br>
+resistivity: ρ=E/J<br>
+current density:J=i/A <br>
+conductivity: σ=1/ρ<br><br>
+
+voltage of a battery: V = ε-1R<sub>internal</sub> (where “ε” is EMF,  aka terminal voltage, aka electromotive force)
+
+</p>
 </div>
 
   <div id="conceptsBox" class="box hidden">
@@ -264,15 +333,15 @@
         </tr>
         <tr>
             <td>voltage (v)</td>
-            <td>volts [v]</td>
+            <td>volts [v] (volts = joules per coulomb, j/c)</td>
         </tr>
         <tr>
             <td>resistance (R)</td>
             <td>ohms [Ω]</td>
         </tr>
         <tr>
-            <td>capacitance</td>
-            <td>farads [f] (farrads = coulombs/volts, c/v)</td>
+            <td>capacitance (C)</td>
+            <td>farads [f] (farrads = coulombs per volt, c/v)</td>
       
         </tr>
 
@@ -284,6 +353,11 @@
 	    <tr>
             <td>resistivity (ρ)</td>
             <td>ohm meters [Ωm]</td>
+      
+        </tr>
+<tr>
+            <td>tau (τ) </td>
+            <td>seconds [s]</td>
       
         </tr>
          </table>
