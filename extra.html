@@ -4,105 +4,151 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Phys for Fun</title>
-	<meta name="description" content="Platform to delve deeper into random physics concepts and share ideas!">
-	<meta name="google-site-verification" content="riKf53f3Se-WIW2mjg--QE53K6J8YkSkidC29bytnZ8" />
-	<link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
-    <!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+  <meta name="description" content="Platform to delve deeper into random physics concepts and share ideas!">
+  <meta name="google-site-verification" content="riKf53f3Se-WIW2mjg--QE53K6J8YkSkidC29bytnZ8" />
+  <link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4M671CKZE1');
+  </script>
+  <style>
+    body {
+      background-color: #001f3f;
+      font-family: Calibri, sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-size: 18px;
+    }
+    header {
+      background-color: #001f3f;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 5px;
+      text-shadow: 4px 4px 4px #566fbf;
+    }
+    @media screen and (max-width: 480px) {
+      .header {
+        background-color: #001f3f;
+        padding: 10px 20px;
+        text-align: center;
+        font-size: 24px;
+        margin-top: 200px;
+      }
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }
 
-	  gtag('config', 'G-4M671CKZE1');
-	</script>
-	<style>
-	  body {
-	    background-color: #001f3f;
-	    font-family: Calibri, sans-serif;
-	    color: white;
-	    margin: 0;
-	    padding: 0;
-	    text-align: center;
-	    font-size: 18px;
-	  }
-	  
-	  header {
-	    background-color: #001f3f;
-	    padding: 10px 20px;
-	    text-align: center;
-	    font-size: 24px;
-	    margin-bottom: 5px;
-	     text-shadow: 4px 4px 4px #566fbf;
-	  }
-
-	   @media screen and (max-width: 480px) {
-	    .header {
-	 background-color: #001f3f;
-	    padding: 10px 20px;
-	    text-align: center;
-	    font-size: 24px;
-	    margin-top: 200px;
-	    }
-	  }
-
-	  .container {
-	    display: flex;
-	    justify-content: center;
-	    align-items: center;
-	    flex-direction: column;
-	    padding: 20px;
-	  }
-
-	  .content {
-	    width: 70%;
-	    padding: 20px;
-	    margin-bottom: 20px;
-	    font-weight: lighter;
-	  }
-
-	  .button {
-	    background-color: #ADD8E6;
-	    color: #001F3F;
-	    padding: 15px 30px;
-	    border: none;
-	    border-radius: 5px;
-	    cursor: pointer;
-	    margin: 10px 0;
-	    font-weight: bold;
-	    font-size: 18px;
-	  }
-
-	   button:hover {
-	      background-color: #6092d1;
-	    }
-
-	  .hidden {
-	    display: none;
-	  }
-
-	  .box {
-	    background-color: #075a90;
-	    padding: 20px;
-	    margin-top: 20px;
-	    width: 90%;
-	  }
-
-	  .box p {
-	    color: white;
-	  }
-	</style>
+    .content {
+      width: 70%;
+      padding: 20px;
+      margin-bottom: 20px;
+      font-weight: lighter;
+    }
+    .button {
+      background-color: #ADD8E6;
+      color: #001F3F;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px 0;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    button:hover {
+      background-color: #6092d1;
+    }
+    .hidden {
+      display: none;
+    }
+    .box {
+      background-color: #075a90;
+  padding: 20px;
+  margin: auto; /* Center horizontally */
+  margin-top: 20px; /* Add space from the top */
+  width: 80%; /* 80% width */
+  color: white;
+  border-radius: 5px;
+}
+	
+    }
+    .box p {
+      color: white;
+    }
+  </style>
 </head>
-<body>
-  <div class="container">
-    <header>
+ <header>
       <h1>Phys for Fun</h1>
     </header>
-  <div class="commentbox"></div>
-<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
-<script>commentBox('my-project-id')</script>
+<div class="box">
 
-             
+
+<h2>Yay, you're here :)</h2>
+ <style> h2{
+        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to the text */
+    }
+</style>
+<br>
+
+<p> This page isn't about things necessary for any AP physics exam, but it's a place to learn more about topics that may or may not have come up throughout the class. If you're trying to cram for a test, go back to the main page, if not, have fun! The first topic of the month is in progress right now, so for now -- please let me know if you have ideas. You'll notice the menu button, and the home page, will give you an option to contact me, or you can comment below:
+
+<br>
+  </div>
+<div class="box">
+
+<h3>Thoughts? Questions? Things to discuss? Things you want added to the site? Comment below!</h3>
+<style>
+ h3{
+        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to the text */
+    }
+</style>
+
+</div>
+<br>
+
+
+
+
+
+
+<body>
+  <div class="container">
+  
+    <div class="commentbox"></div>
+    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+    <script>
+      commentBox('my-project-id', {
+        className: 'commentbox', // the class of divs to look for
+        defaultBoxId: 'commentbox', // the default ID to associate to the div
+        tlcParam: 'tlc', // used for identifying links to comments on your page
+        sortOrder: 'best', // specify the default comment sort order ("best", "newest", "oldest")
+        backgroundColor: '#ADD8E6', // light blue background
+        textColor: '#001F3F', // default black
+        subtextColor: '#001F3F', // white subtext color
+        singleSignOn: null, // enables Single Sign-On (for Professional plans only)
+        createBoxUrl(boxId, pageLocation) {
+          pageLocation.search = ''; // removes query string!
+          pageLocation.hash = boxId; // creates link to this specific Comment Box on your page
+          return pageLocation.href; // return url string
+        },
+        onCommentCount(count) {}
+      });
+    </script>
+
+  </div>
+	</style>
 <!DOCTYPE html>
 <html lang="en">
 <head>
