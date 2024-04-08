@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coming Soon</title>
-  <link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
+<title>Magnetism and Electromagnetism</title>
+	 <link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
 
 <meta name="description" content="Learn about magnetism and electromagnetism">
 
@@ -18,67 +17,300 @@
 
   gtag('config', 'G-4M671CKZE1');
 </script>
-  
+
+<meta name="description" content="Learn about magnetism and electromagnetism">
 <style>
   body {
-    background-color: #001f3f; /* Dark blue background */
+    background-color: #001f3f;
+    font-family: Calibri, sans-serif;
+    color: white; /* Setting font color to white for better readability on *darker* background */
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column; /* Align items in column */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center align the text */
+    font-size: 18px; /* Increase font size */
   }
-
+  
   header {
-    color: white; /* White text */
-    font-size: 30px; /* Large font size */
-    text-align: center; /* Center text */
-    margin-bottom: 20px; /* Add margin below header */
-     text-shadow: 4px 4px 4px #566fbf; /* Enhanced blue shadow */
+    background-color: #001f3f;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px; /* Increase font size for header */
+    margin-bottom: 5px; /* Add margin below header */
+	text-shadow: 4px 4px 4px #566fbf; /* Enhanced blue shadow */
+  }
+ 
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px;
+  }
+ 
+  .content {
+    width: 70%; /* Adjust width */
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin */
+    font-weight: lighter; /* Make text thinner */
+  }
+ 
+  .button {
+    background-color: #ADD8E6;
+    color: #001F3F;
+    padding: 15px 30px; /* Increase padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; /* Add margin above and below buttons */
+    font-weight: bold; /* Make text bold */
+    font-size: 18px; /* Increase font size */
   }
 
-  .smiley {
-    width: 100px;
-    height: 100px;
-    animation: wink 2s infinite;
-  }
-
-  @keyframes wink {
-    0%, 100% {
-      transform: scale(1);
+	 button:hover {
+      background-color: #6092d1;
     }
-    50% {
-      transform: scale(1.2);
-    }
+ 
+  .hidden {
+    display: none;
   }
+ 
+  .box {
+    background-color: #075a90
+; /* Color of sections */
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%; /* Decrease width */
+  }
+ 
+  .box p {
+    color: white; /* Set paragraph text to same as background color */
+  }
+ 
+      }
+ 
+  
 </style>
 </head>
 <body>
-
+ 
 <header>
-  <h1>[still learning, so coming soon!]</h1>
-  
-  <!-- Smiley face animation -->
-  <svg class="smiley" viewBox="0 0 24 24">
-    <!-- Face -->
-    <circle cx="12" cy="12" r="10" fill="yellow" /> <!-- Change fill color to light green -->
-
-    <!-- Left eye -->
-    <circle cx="8" cy="10" r="1.5" fill="black" />
-
-    <!-- Right eye -->
-    <circle cx="16" cy="10" r="1.5" fill="black" />
-
-    <!-- Mouth -->
-    <path d="M10,16 Q12,18 14,16" fill="none" stroke="black" stroke-width="1.5" />
-  </svg>
+  <h1>Magnetism and Electromagnetism (coming soon) </h1>
 </header>
-
+ 
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formatted Paragraph</title>
+<style>
+    /* Style for the specific paragraph */
+    .formatted-paragraph {
+        max-width: 900px; /* Set maximum width */
+        margin: 0 auto; /* Center the paragraph horizontally */
+        padding: 0 20px; /* Add some padding to the sides */
+        /* Add any additional styles for the paragraph */
+    }
+</style>
+</head>
+<body>
+ 
+<p class="formatted-paragraph"
+ </p>
+ 
+<p class="formatted-paragraph" </u> [INTRO HERE]<br>
+(I’m still learning this unit, so it's coming ASAP)
+ </p>
+ 
 </body>
 </html>
+ 
+<div class="container">
+  <div class="content">
+ 
+ 
+      <button class="button" onclick="toggleUnits()"> Relevant Units & Constants</button>
+    <button class="button" onclick="toggleFormulas()">Formulas</button>
+    <button class="button" onclick="toggleMainConcepts()">Concept Explanations</button>
+  </div>
+<div id="formulasBox" class="box hidden">
+   <h2 style="text-align: center;"> SUBJECT HERE </h2>
+<p>
+writing</p><br>
 
+<h2 style="text-align: center;"> SUBJECT HERE </h2>
+<p>
+writing</p><br>
+
+<h4 style="text-align: center;"><u>subheading</u></h4>
+<p style="text-align: center;">
+writing
+</p>
+
+</div>
+ 
+  <div id="conceptsBox" class="box hidden">
+    <h2 style="text-align: center;"> Charging </h2>
+<style>
+    /* Style for the header */
+    h2 {
+        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to the text */
+    }
+</style>
+
+ <h2 style="text-align: center;"> SUBJECT HERE </h2>
+<p>
+writing</p><br>
+
+<h2 style="text-align: center;"> SUBJECT HERE </h2>
+<p>
+writing</p><br>
+
+<h4 style="text-align: center;"><u>subheading</u></h4>
+<p style="text-align: center;">
+writing
+</p>
+
+
+
+
+  </div>
+      
+  <div id="unitsBox" class="box hidden">
+    <h2 style="text-align: center;"> SI Units and Constants for Magnetism and Electromagnetism </h2>
+    <div style="text-align: center;">
+<head>
+    <title>  </title>
+    <style>
+ 
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 2px solid white; /* white border for each cell */
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h4><u>Units</h4></u>  
+ 
+    <table>
+ 
+        </tr>
+        <!-- Rows -->
+        <tr>
+            <td>x</td>
+            <td>x [x] </td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>x [x] </td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>x [x] </td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>x [x] </td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>x [x] </td>
+        </tr>
+        
+         </table>
+        </p>
+    </div>
+  <div style="text-align: center;"> <h4><u>Constants</h4></u>  
+    	<p> </p><html>
+<head>
+	<title>  </title>
+	<style>
+ 
+    	table {
+        	border-collapse: collapse;
+        	width: 100%;
+    	}
+    	th, td {
+        	border: 2px solid white; /* white border for each cell */
+        	padding: 10px;
+        	text-align: center;
+    	}
+	</style>
+</head>
+<body>
+	<table>
+    	</tr>
+    	<!-- Rows -->
+    	        <tr>
+                   </tr>
+        <tr>
+            <td>x</td>
+            <td>x [x] </td>
+        </tr>
+       <tr>
+            <td>x</td>
+            <td>x [x] </td>
+        </tr>
+            
+        
+        </tr>
+ 
+          	</table>
+    	</p>
+	</div>
+ 
+  </div>
+  </div>
+</div><script>
+  function toggleFormulas() {
+    var formulasBox = document.getElementById("formulasBox");
+    formulasBox.classList.toggle("hidden");
+  }
+ 
+  function toggleMainConcepts() {
+    var conceptsBox = document.getElementById("conceptsBox");
+    conceptsBox.classList.toggle("hidden");
+  }
+ 
+  function toggleUnits() {
+    var unitsBox = document.getElementById("unitsBox");
+    unitsBox.classList.toggle("hidden");
+  }
+ 
+  // Function to animate circle along the parabolic path
+  function animateCircle() {
+    var circle = document.getElementById("circle");
+    var path = document.getElementById("parabola");
+    var length = path.getTotalLength();
+    
+    // Animate circle along the path
+    var duration = 10000; // Duration of animation in milliseconds, slowed down
+    var startTime = null;
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = timestamp - startTime;
+      var point = path.getPointAtLength(progress % length);
+      circle.setAttribute("cx", point.x);
+      circle.setAttribute("cy", point.y);
+      window.requestAnimationFrame(step);
+    }
+    window.requestAnimationFrame(step);
+  }
+ 
+  // Call the function to animate circle
+  animateCircle();
+</script>
+ 
+</body>
+</html>
+ 
+ 
 
 
 <!DOCTYPE html>
@@ -171,9 +403,31 @@
         });
     </script>
 </body>
-
-    <img src="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" alt="Phys by pen" width="100">  
-
-
 </html>
+
+          
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>phys by pen logo add</title>
+<style>
+  
+    .image {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        max-width: 70px; /* Adjust the size as needed */
+        max-height: 70px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <img class="image" src="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" alt="Physics Image">
+</div>
+</body>
+</html>
+
 
