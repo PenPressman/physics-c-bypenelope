@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetism and Electromagnetism</title>
+	 <link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
+
+<meta name="description" content="Learn about magnetism and electromagnetism">
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4M671CKZE1');
+</script>
+
+<meta name="description" content="Learn about magnetism and electromagnetism">
+<style>
+  body {
+    background-color: #001f3f;
+    font-family: Calibri, sans-serif;
+    color: white; /* Setting font color to white for better readability on *darker* background */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center align the text */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  header {
+    background-color: #001f3f;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px; /* Increase font size for header */
+    margin-bottom: 5px; /* Add margin below header */
+	text-shadow: 4px 4px 4px #566fbf; /* Enhanced blue shadow */
+  }
+ 
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px;
+  }
+ 
+  .content {
+    width: 70%; /* Adjust width */
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin */
+    font-weight: lighter; /* Make text thinner */
+  }
+ 
+  .button {
+    background-color: #ADD8E6;
+    color: #001F3F;
+    padding: 15px 30px; /* Increase padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; /* Add margin above and below buttons */
+    font-weight: bold; /* Make text bold */
+    font-size: 18px; /* Increase font size */
+  }
+
+	 button:hover {
+      background-color: #6092d1;
+    }
+ 
+  .hidden {
+    display: none;
+  }
+ 
+  .box {
+    background-color: #075a90
+; /* Color of sections */
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%; /* Decrease width */
+  }
+ 
+  .box p {
+    color: white; /* Set paragraph text to same as background color */
+  }
+ 
+      }
+ 
+  
+</style>
+</head>
+<body>
+ 
+<header>
+  <h1>COMING SOON! </h1>
+</header>
+  <br>
+  <p>For now, here's a practice problem.</p>
+ 
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectile Motion Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.3.0/math.min.js"></script>
+    <style>
+       <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #game {
+            text-align: center;
+        }
+
+        canvas {
+            border: 0px solid black;
+        }
+
+        /* Smaller text for instructions */
+        #game p {
+            font-size: 18px;
+        }
+
+    </style>
+    </style>
+</head>
+<body>
+    <div id="game">
+        <header>
+
+<style>
+    /* Style for the header */
+    h1 {
+        text-shadow: 4px 4px 4px #566fbf; /* Enhanced blue shadow */
+    }
+</style>
+ <div class="container">
+        <div class="content">
+
+            <h3><u>Time to test what you've learned!</u></h3>
+            <p><strong>Given information:</strong><br><br>A 40g rock is at rest in a slingshot on the ground. When launched from an angle of 48.3 degrees, the projectile is able to hit a target 100 FEET off the ground, and 38.4 METERS away horizontally. Gravity is the only external force acting on the projectile. What must be the initial velocity of the rock? Fill in the blank with the solution to launch the projectile and hit the target! Units: 1ft = .3048m.</p>
+        </header>
+
+        <label for="velocity">Initial velocity in m/s:</label>
+        <input type="text" id="velocity" name="velocity">
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="result"></p>
+        <canvas id="canvas" width="400" height="300"></canvas>
+    </div>
+
+    <script>
+        function projectile_trajectory(initial_velocity) {
+            const angle = math.unit(48.3, 'deg');
+            const gravity = math.unit(9.8, 'm/s^2'); // gravity is positive for upward motion
+            const time_of_flight = 2 * initial_velocity * math.sin(angle) / gravity;
+            const horizontal_distance = initial_velocity * math.cos(angle) * time_of_flight;
+            const time = math.range(0, time_of_flight, time_of_flight / 100).toArray();
+            const x = time.map(t => initial_velocity * math.cos(angle) * t);
+            const y = time.map(t => initial_velocity * math.sin(angle) * t - 0.5 * gravity * t ** 2);
+            return [x, y, horizontal_distance];
+        }
+
+        function animate_trajectory(x, y, horizontal_distance) {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.beginPath();
+            ctx.moveTo(0, canvas.height);
+            ctx.lineTo(horizontal_distance * 10, canvas.height - 100);
+            ctx.strokeStyle = 'white';
+            ctx.setLineDash([5, 5]);
+            ctx.stroke();
+
+            let i = 0;
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.beginPath();
+                ctx.moveTo(0, canvas.height);
+                ctx.lineTo(horizontal_distance * 10, canvas.height - 100);
+                ctx.strokeStyle = 'white';
+                ctx.setLineDash([5, 5]);
+                ctx.stroke();
+
+                // Draw black circle at current position
+                ctx.beginPath();
+                ctx.arc(x[i] * 10, canvas.height - y[i] * 10, 5, 0, Math.PI * 2);
+                ctx.fillStyle = 'black';
+                ctx.fill();
+
+                // Draw red target circle at the end
+                ctx.beginPath();
+                ctx.arc(horizontal_distance * 10, canvas.height - 100, 10, 0, Math.PI * 2);
+                ctx.fillStyle = 'red';
+                ctx.fill();
+
+                i++;
+
+                if (i < x.length) {
+                    requestAnimationFrame(draw);
+                }
+            }
+
+            draw();
+        }
+
+        function checkAnswer() {
+            const A1 = parseFloat(document.getElementById('velocity').value);
+            const correctAnswer = 35.97;
+            const tolerance = 0.1; // Tolerance for approximate equality
+
+            const resultElement = document.getElementById('result');
+            if (Math.abs(A1 - correctAnswer) < tolerance) {
+                resultElement.textContent = 'You did it!';
+                const [x, y, horizontal_distance] = projectile_trajectory(A1);
+                animate_trajectory(x, y, horizontal_distance);
+            } else {
+                resultElement.textContent = 'Not quite. Try again!';
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Example</title>
+    <style>
+        .menu {
+            display: none;
+            position: absolute;
+            top: 90px; /* Moved down */
+            left: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 4px;
+            z-index: 1;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .menu a, #likeButton {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+            color: #333;
+            background-color: #add8e6;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.4;
+         
+        }
+
+        .menu a:hover, #likeButton:hover {
+            background-color: #8ab6d6;
+        }
+
+        #menuButton {
+            position: absolute;
+            top: 30px; /* Moved down */
+            left: 34px;
+            font-size: 43px;
+            color: white;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+
+
+        }
+    </style>
+</head>
+<body>
+    <button id="menuButton" onclick="toggleMenu()">&#9776;</button>
+    <div id="menu" class="menu">
+        <a href="index.html">&#127968; Home</a>
+        <a href="mailto:penelope.pressman@gmail.com">&#128235; Contact</a>
+        <button id="likeButton">❤️ Like page         </button>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        var likeButton = document.getElementById("likeButton");
+        var likeCount = 0;
+        var liked = false;
+
+        likeButton.addEventListener("click", function() {
+            if (!liked) {
+                likeCount++;
+                likeButton.innerHTML = "Liked page ❤️";
+                likeButton.style.backgroundColor = "lightpink"; /* pink */
+                liked = true;
+                alert("Liked! Count: " + likeCount);
+            } else {
+                alert("You already liked this.");
+            }
+        });
+    </script>
+</body>
+</html>
+
+          
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>phys by pen logo add</title>
+<style>
+  
+    .image {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        max-width: 70px; /* Adjust the size as needed */
+        max-height: 70px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <img class="image" src="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" alt="Physics Image">
+</div>
+</body>
+</html>
