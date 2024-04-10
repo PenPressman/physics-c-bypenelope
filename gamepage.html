@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Magnetism and Electromagnetism</title>
+<title>Phys Games</title>
 	 <link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
 
-<meta name="description" content="Learn about magnetism and electromagnetism">
+<meta name="description" content="Play games to learn physics">
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1"></script>
@@ -94,151 +94,273 @@
 <body>
  
 <header>
-  <h1>COMING SOON! </h1>
+  <h1>Phys Games</h1>
 </header>
   <br>
-  <p>For now, here's a practice problem.</p>
+  <p>Want to practice kinematics? Use the game below to do so. <strong><br>[*Games for more units coming soon!*]</strong></p>
  
  
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projectile Motion Game</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.3.0/math.min.js"></script>
+    <title>Kinematics Game: Projectile Motion</title>
     <style>
-       <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        #game {
+            font-family: Calibri, sans-serif;
             text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #ffffff; /* Change text color to white */
         }
-
-        canvas {
-            border: 0px solid black;
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
         }
-
-        /* Smaller text for instructions */
-        #game p {
+        p {
             font-size: 18px;
+            margin-bottom: 10px;
         }
-
-    </style>
+        #target {
+            width: 80px;
+            height: 80px;
+            margin: 20px auto;
+            position: relative;
+        }
+        #target div {
+            position: absolute;
+            border-radius: 50%;
+        }
+        .red-circle {
+            background-color: red;
+            width: 100%;
+            height: 100%;
+        }
+        .white-circle-1 {
+            background-color: white;
+            width: 80%;
+            height: 80%;
+            top: 10%;
+            left: 10%;
+        }
+        .red-circle-2 {
+            background-color: red;
+            width: 60%;
+            height: 60%;
+            top: 20%;
+            left: 20%;
+        }
+        .white-circle-2 {
+            background-color: white;
+            width: 40%;
+            height: 40%;
+            top: 30%;
+            left: 30%;
+        }
+        .red-circle-3 {
+            background-color: red;
+            width: 20%;
+            height: 20%;
+            top: 40%;
+            left: 40%;
+        }
+        #result {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        #scoreboard {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        #score {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .tally-mark {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0 5px;
+            border: 1px solid #ffffff; /* White border */
+            border-radius: 50%; /* Circular shape */
+            background-color: transparent; /* Transparent background */
+        }
+        .score-marker {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0 5px;
+            border: 1px solid #ffffff; /* White border */
+            border-radius: 3px; /* Rounded corners */
+            background-color: transparent; /* Transparent background */
+        }
+        button {
+            background-color: #ff6347;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff847c; /* Brighter red on hover */
+        }
     </style>
 </head>
 <body>
-    <div id="game">
-        <header>
+    <p>How it works: Your goal is to throw a rock at a target so that it hits it perfectly. <br>Neglecting air resistance and assuming velocity to be the velocity of the rock about its center of mass, <br>use the info below to find the initial velocity you'll need for perfect contact with the target. <br><strong>Hit the target 5 times to win!<br><br></strong></p>
+    <p><strong id="targetDistanceLabel">Horizontal Distance from Target:</strong> <span id="targetDistance">200</span> meters</p>
+    <p><strong id="targetHeightLabel">Target Height:</strong> <span id="targetHeight">50</span> meters</p>
+    <p><strong id="initialHeightLabel">Initial Height of Projectile:</strong> <span id="initialHeight">10</span> meters</p>
+    <p><strong id="gravityLabel">Gravitational Acceleration:</strong> <span id="gravity">9.8</span> m/s<sup>2</sup></p>
+    <p><strong id="launchAngleLabel">Launch Angle (0-90 degrees):</strong> <span id="launchAngle">45</span> degrees</p>
+    <p>Enter the Initial Velocity (m/s):</p>
+    <input type="number" id="initialVelocityInput">
+    <button onclick="checkVelocity()">Check Velocity</button>
+    <div id="result"></div>
 
-<style>
-    /* Style for the header */
-    h1 {
-        text-shadow: 4px 4px 4px #566fbf; /* Enhanced blue shadow */
-    }
-</style>
- <div class="container">
-        <div class="content">
+    <div id="scoreboard">
+        <div id="score">Score: 
+            <span class="score-marker"></span>
+            <span class="score-marker"></span>
+            <span class="score-marker"></span>
+            <span class="score-marker"></span>
+            <span class="score-marker"></span> / 5
+        </div>
+    </div>
 
-            <h3><u>Time to test what you've learned!</u></h3>
-            <p><strong>Given information:</strong><br><br>A 40g rock is at rest in a slingshot on the ground. When launched from an angle of 48.3 degrees, the projectile is able to hit a target 100 FEET off the ground, and 38.4 METERS away horizontally. Gravity is the only external force acting on the projectile. What must be the initial velocity of the rock? Fill in the blank with the solution to launch the projectile and hit the target! Units: 1ft = .3048m.</p>
-        </header>
-
-        <label for="velocity">Initial velocity in m/s:</label>
-        <input type="text" id="velocity" name="velocity">
-        <button onclick="checkAnswer()">Submit</button>
-        <p id="result"></p>
-        <canvas id="canvas" width="400" height="300"></canvas>
+    <div id="target">
+        <div class="red-circle"></div>
+        <div class="white-circle-1"></div>
+        <div class="red-circle-2"></div>
+        <div class="white-circle-2"></div>
+        <div class="red-circle-3"></div>
     </div>
 
     <script>
-        function projectile_trajectory(initial_velocity) {
-            const angle = math.unit(48.3, 'deg');
-            const gravity = math.unit(9.8, 'm/s^2'); // gravity is positive for upward motion
-            const time_of_flight = 2 * initial_velocity * math.sin(angle) / gravity;
-            const horizontal_distance = initial_velocity * math.cos(angle) * time_of_flight;
-            const time = math.range(0, time_of_flight, time_of_flight / 100).toArray();
-            const x = time.map(t => initial_velocity * math.cos(angle) * t);
-            const y = time.map(t => initial_velocity * math.sin(angle) * t - 0.5 * gravity * t ** 2);
-            return [x, y, horizontal_distance];
+        let score = 0;
+
+        const targetDistance = 200; // Random distance between 200 and 800 meters
+        const targetHeight = 50; // Random height between 50 and 250 meters
+        const initialHeight = 10; // Initial height of the projectile (you can change this if needed)
+        const gravity = 9.8; // Acceleration due to gravity in m/s^2
+
+        const launchAngle = 45; // Random launch angle between 1 and 90 degrees
+
+        document.getElementById('targetDistance').textContent = targetDistance;
+        document.getElementById('targetHeight').textContent = targetHeight;
+        document.getElementById('initialHeight').textContent = initialHeight;
+        document.getElementById('gravity').textContent = gravity;
+        document.getElementById('launchAngle').textContent = launchAngle;
+
+        function calculateVelocityComponents(angle, velocity) {
+            const radians = angle * Math.PI / 180;
+            const velocityX = velocity * Math.cos(radians);
+            const velocityY = velocity * Math.sin(radians);
+            return { velocityX, velocityY };
         }
 
-        function animate_trajectory(x, y, horizontal_distance) {
-            const canvas = document.getElementById('canvas');
-            const ctx = canvas.getContext('2d');
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        function checkVelocity() {
+            const initialVelocity = parseFloat(document.getElementById('initialVelocityInput').value);
 
-            ctx.beginPath();
-            ctx.moveTo(0, canvas.height);
-            ctx.lineTo(horizontal_distance * 10, canvas.height - 100);
-            ctx.strokeStyle = 'white';
-            ctx.setLineDash([5, 5]);
-            ctx.stroke();
+            if (isNaN(initialVelocity)) {
+                document.getElementById('result').textContent = 'Please enter a valid initial velocity.';
+                return;
+            }
 
-            let i = 0;
+            const { velocityX, velocityY } = calculateVelocityComponents(launchAngle, initialVelocity);
 
-            function draw() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                ctx.beginPath();
-                ctx.moveTo(0, canvas.height);
-                ctx.lineTo(horizontal_distance * 10, canvas.height - 100);
-                ctx.strokeStyle = 'white';
-                ctx.setLineDash([5, 5]);
-                ctx.stroke();
+            const timeOfFlight = (velocityY + Math.sqrt(Math.pow(velocityY, 2) + 2 * gravity * initialHeight)) / gravity;
+            const requiredHorizontalVelocity = velocityX;
+            const requiredInitialVelocity = Math.sqrt(Math.pow(requiredHorizontalVelocity, 2) + Math.pow(velocityY, 2));
 
-                // Draw black circle at current position
-                ctx.beginPath();
-                ctx.arc(x[i] * 10, canvas.height - y[i] * 10, 5, 0, Math.PI * 2);
-                ctx.fillStyle = 'black';
-                ctx.fill();
+            let resultText = '';
 
-                // Draw red target circle at the end
-                ctx.beginPath();
-                ctx.arc(horizontal_distance * 10, canvas.height - 100, 10, 0, Math.PI * 2);
-                ctx.fillStyle = 'red';
-                ctx.fill();
+            if (requiredHorizontalVelocity.toFixed(2) === targetDistance.toFixed(2)) {
+                resultText = `<span style="color: green;">You did it!</span>`;
+                addTallyMark(true);
+                document.getElementById('result').classList.remove('incorrect');
+                displayHit();
+            } else if (requiredHorizontalVelocity > targetDistance) {
+                resultText = `<span style="color: darkred;">Oops, try again.</span>`;
+                addTallyMark(false);
+                document.getElementById('result').classList.add('incorrect');
+            } else if (requiredHorizontalVelocity < targetDistance) {
+                resultText = `<span style="color: darkred;">Oops, try again.</span>`;
+                addTallyMark(false);
+                document.getElementById('result').classList.add('incorrect');
+            }
 
-                i++;
+            document.getElementById('result').innerHTML = resultText;
+        }
 
-                if (i < x.length) {
-                    requestAnimationFrame(draw);
+        function addTallyMark(correct) {
+            const tallyMarks = document.getElementById('score');
+            const tallyMark = document.createElement('span');
+            tallyMark.className = 'tally-mark';
+            if (correct) {
+                tallyMark.innerHTML = '&#10003;'; // Checkmark symbol
+                tallyMark.style.color = 'green';
+                tallyMark.style.backgroundColor = 'transparent'; // Transparent background
+                tallyMark.style.borderColor = 'green'; // Green border
+                score++;
+            } else {
+                tallyMark.innerHTML = '&#10007;'; // Cross mark symbol
+                tallyMark.style.color = 'red';
+                tallyMark.style.backgroundColor = 'transparent'; // Transparent background
+                tallyMark.style.borderColor = 'red'; // Red border
+                if (score > 0) {
+                    score--;
                 }
             }
-
-            draw();
+            tallyMarks.appendChild(tallyMark);
+            updateScore();
         }
 
-        function checkAnswer() {
-            const A1 = parseFloat(document.getElementById('velocity').value);
-            const correctAnswer = 35.97;
-            const tolerance = 0.1; // Tolerance for approximate equality
-
-            const resultElement = document.getElementById('result');
-            if (Math.abs(A1 - correctAnswer) < tolerance) {
-                resultElement.textContent = 'You did it!';
-                const [x, y, horizontal_distance] = projectile_trajectory(A1);
-                animate_trajectory(x, y, horizontal_distance);
-            } else {
-                resultElement.textContent = 'Not quite. Try again!';
+        function updateScore() {
+            const scoreElement = document.getElementById('score');
+            scoreElement.textContent = `Score: ${score}/5`;
+            if (score === 5) {
+                scoreElement.textContent += ' - YOU WON!!';
+                showPlayAgainButton();
             }
+        }
+
+        function showPlayAgainButton() {
+            const playAgainButton = document.createElement('button');
+            playAgainButton.textContent = 'Play again?';
+            playAgainButton.addEventListener('click', resetGame);
+            document.body.appendChild(playAgainButton);
+        }
+
+        function resetGame() {
+            score = 0;
+            document.getElementById('score').innerHTML = '';
+            const playAgainButton = document.querySelector('button');
+            if (playAgainButton) {
+                playAgainButton.remove();
+            }
+            // Reset the game state here
+            // For simplicity, we'll just reload the page
+            location.reload();
+        }
+
+        function displayHit() {
+            const target = document.getElementById('target');
+            const hitMarker = document.createElement('div');
+            hitMarker.className = 'hit-marker';
+            hitMarker.textContent = 'X';
+            target.appendChild(hitMarker);
+            setTimeout(() => {
+                hitMarker.remove();
+            }, 4000);
         }
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
 
 
 <!DOCTYPE html>
