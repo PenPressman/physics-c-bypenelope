@@ -97,8 +97,14 @@
   <h1>Phys Games</h1>
 </header>
   <br>
-  <p>Want to practice kinematics? Use the game below to do so. <strong><br>[*Games for more units coming soon!*]</strong></p>
- 
+  <p2>Want to practice kinematics? Use the game below to do so. <strong><br><br>[*Games for more units coming soon!*]</strong></p2>
+	
+  <style>
+        p2 {
+           
+            color: lightblue; /* Change text color to lb */
+		font-size: 14px;
+        }
  
 <!DOCTYPE html>
 <html lang="en">
@@ -114,17 +120,14 @@
             padding: 0;
             color: #ffffff; /* Change text color to white */
         }
-        h1 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
+      
         p {
             font-size: 18px;
             margin-bottom: 10px;
         }
         #target {
-            width: 80px;
-            height: 80px;
+            width: 120px;
+            height: 120px;
             margin: 20px auto;
             position: relative;
         }
@@ -211,7 +214,7 @@
     </style>
 </head>
 <body>
-    <p>How it works: Your goal is to throw a rock at a target so that it hits it perfectly. <br>Neglecting air resistance and assuming velocity to be the velocity of the rock about its center of mass, <br>use the info below to find the initial velocity you'll need for perfect contact with the target. <br><strong>Hit the target 5 times to win!<br><br></strong></p>
+    <p><strong><em>How it works:</em></strong> Your goal is to throw a rock at a target so that it hits the target perfectly. <br>Neglecting air resistance and assuming velocity to be the velocity of the rock about its center of mass, <br>use the info below to find the initial velocity you'll need for perfect contact with the target. <br><strong>Hit the target 5 times to win!<br><br></strong></p>
     <p><strong id="targetDistanceLabel">Horizontal Distance from Target:</strong> <span id="targetDistance">200</span> meters</p>
     <p><strong id="targetHeightLabel">Target Height:</strong> <span id="targetHeight">50</span> meters</p>
     <p><strong id="initialHeightLabel">Initial Height of Projectile:</strong> <span id="initialHeight">10</span> meters</p>
