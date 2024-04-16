@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Friction Game</title>
+  <style>
+    body {
+      font-family: Calibri, sans-serif;
+      text-align: center;
+      background-color: #2c3e50;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      font-size: 48px;
+      margin-top: 20px;
+    }
+    #score {
+      font-size: 36px;
+      margin-top: 20px;
+    }
+    #instructions {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+    #scenario {
+      margin-top: 50px;
+      font-size: 24px;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 24px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      margin: 10px;
+    }
+    #left {
+      background-color: #3498db;
+      color: white;
+    }
+    #right {
+      background-color: #e74c3c;
+      color: white;
+    }
+    #feedback {
+      margin-top: 20px;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    .correct {
+      color: green;
+    }
+    .wrong {
+      color: red;
+    }
+    #scoreCircles {
+      margin-top: 20px;
+    }
+    .scoreCircle {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #ccc;
+      margin: 0 10px;
+    }
+    .scoreCircle.correct {
+      background-color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+  <h1>Static Friction Game</h1>
+  <div id="score">Score: <span id="scoreValue">0</span>/5</div>
+  <div id="instructions">Select the correct direction of the force static friction acting on the objects in the following scenarios. Get 5 correct to win!</div>
+  <div id="scenario"></div>
+  <button class="button" id="left">LEFT</button>
+  <button class="button" id="right">RIGHT</button>
+  <div id="feedback"></div>
+  <div id="scoreCircles"></div>
+
+  <script>
+    const scenarios = [
+      { scenario: "A person walking to the left", answer: "left" },
+      { scenario: "A ball rolling to the right without slipping", answer: "left" },
+      { scenario: "The wheels of a car driving right", answer: "left" },
+      { scenario: "A person trying to tug a stationary cart to the left", answer: "right" },
+      { scenario: "A wheelbarrow’s wheels as it is rolled left", answer: "right" },
+      { scenario: "A dog running to the right", answer: "right" }
+    ];
+
+    let score = 0;
+    let currentScenarioIndex = 0;
+
+    const scenarioElement = document.getElementById("scenario");
+    const leftButton = document.getElementById("left");
+    const rightButton = document.getElementById("right");
+    const scoreValueElement = document.getElementById("scoreValue");
+    const feedbackElement = document.getElementById("feedback");
+    const scoreCirclesElement = document.getElementById("scoreCircles");
+
+    function displayScenario() {
+      scenarioElement.textContent = scenarios[currentScenarioIndex].scenario;
+      feedbackElement.textContent = "";
+    }
+
+    function displayFeedback(isCorrect) {
+      feedbackElement.textContent = isCorrect ? "Correct!" : "Nope!";
+      feedbackElement.className = isCorrect ? "correct" : "wrong";
+    }
+
+    function updateScoreCircles() {
+      scoreCirclesElement.innerHTML = "";
+      for (let i = 0; i < score; i++) {
+        const circle = document.createElement("div");
+        circle.classList.add("scoreCircle", "correct");
+        scoreCirclesElement.appendChild(circle);
+      }
+      for (let i = score; i < 5; i++) {
+        const circle = document.createElement("div");
+        circle.classList.add("scoreCircle");
+        scoreCirclesElement.appendChild(circle);
+      }
+    }
+
+    function checkAnswer(answer) {
+      if (answer === scenarios[currentScenarioIndex].answer) {
+        score++;
+        scoreValueElement.textContent = score;
+        displayFeedback(true);
+        updateScoreCircles();
+      } else {
+        displayFeedback(false);
+      }
+
+      if (score === 5) {
+        alert("Congratulations! You've won!");
+        score = 0;
+        scoreValueElement.textContent = score;
+        updateScoreCircles();
+      } else {
+        currentScenarioIndex++;
+        displayScenario();
+      }
+    }
+
+    leftButton.addEventListener("click", () => checkAnswer("left"));
+    rightButton.addEventListener("click", () => checkAnswer("right"));
+
+    displayScenario();
+    updateScoreCircles();
+  </script>
+</body>
+</html>
