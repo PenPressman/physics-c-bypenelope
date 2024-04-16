@@ -97,7 +97,7 @@
   <h1>Phys Games</h1>
 </header>
   <br>
-  <p2>Want to practice kinematics? Use the game below to do so. <strong><br><br>[*Games for more units coming soon!*]</strong></p2>
+  <p2>Play the game below to practice kinematics: <strong><br>[*Games for more units coming soon!*]</strong></p2>
 	
   <style>
         p2 {
@@ -213,19 +213,7 @@
         }
     </style>
 </head>
-<body>
-    <p><strong><em>How it works:</em></strong> Your goal is to throw a rock at a target so that it hits the target perfectly. <br>Neglecting air resistance and assuming velocity to be the velocity of the rock about its center of mass, <br>use the info below to find the initial velocity you'll need for perfect contact with the target. <br><strong>Hit the target 5 times to win!<br><br></strong></p>
-    <p><strong id="targetDistanceLabel">Horizontal Distance from Target:</strong> <span id="targetDistance">200</span> meters</p>
-    <p><strong id="targetHeightLabel">Target Height:</strong> <span id="targetHeight">50</span> meters</p>
-    <p><strong id="initialHeightLabel">Initial Height of Projectile:</strong> <span id="initialHeight">10</span> meters</p>
-    <p><strong id="gravityLabel">Gravitational Acceleration:</strong> <span id="gravity">9.8</span> m/s<sup>2</sup></p>
-    <p><strong id="launchAngleLabel">Launch Angle (0-90 degrees):</strong> <span id="launchAngle">45</span> degrees</p>
-    <p>Enter the Initial Velocity (m/s):</p>
-    <input type="number" id="initialVelocityInput">
-    <button onclick="checkVelocity()">Check Velocity</button>
-    <div id="result"></div>
-
-    <div id="scoreboard">
+	<div id="scoreboard">
         <div id="score">Score: 
             <span class="score-marker"></span>
             <span class="score-marker"></span>
@@ -242,6 +230,19 @@
         <div class="white-circle-2"></div>
         <div class="red-circle-3"></div>
     </div>
+<body>
+    <p><strong><em>How it works:</em></strong> Your goal is to throw a rock at a target so that it hits the target perfectly. <br>Neglecting air resistance and assuming velocity to be the velocity of the rock about its center of mass, <br>use the info below to find the initial velocity you'll need for perfect contact with the target. <br><strong>Hit the target 5 times to win!<br><br></strong></p>
+    <p><strong id="targetDistanceLabel">Horizontal Distance from Target:</strong> <span id="targetDistance">200</span> meters</p>
+    <p><strong id="targetHeightLabel">Target Height:</strong> <span id="targetHeight">50</span> meters</p>
+    <p><strong id="initialHeightLabel">Initial Height of Projectile:</strong> <span id="initialHeight">10</span> meters</p>
+    <p><strong id="gravityLabel">Gravitational Acceleration:</strong> <span id="gravity">9.8</span> m/s<sup>2</sup></p>
+    <p><strong id="launchAngleLabel">Launch Angle (0-90 degrees):</strong> <span id="launchAngle">45</span> degrees</p>
+    <p>Enter the Initial Velocity (m/s):</p>
+    <input type="number" id="initialVelocityInput">
+    <button onclick="checkVelocity()">Check Velocity</button>
+    <div id="result"></div>
+
+    
 
     <script>
         let score = 0;
