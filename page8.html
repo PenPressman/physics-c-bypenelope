@@ -265,11 +265,11 @@ inside straight wire: B  = μ<sub>0</sub>Ir/2πR<sup>2</sup> </p>
 
 <h4 style="text-align: center;"><u>Solenoid</u></h4>
 <p style="text-align: center;">
-B<sub>sol</sub>=μ<sub>0</sub>In (where “n” is the number of loops)
+B<sub>sol</sub>=μ<sub>0</sub>In (where “n” is the number of turns)
 </p>
 <h4 style="text-align: center;"><u>Toroid</u></h4>
 <p style="text-align: center;">
-B<sub>tor</sub>=μ<sub>0</sub>IN/2πr
+B<sub>tor</sub>=μ<sub>0</sub>IN/2πr (same “n” as solenoids)
 <br>
 </p>
 <br>
@@ -330,34 +330,30 @@ Electrons always movie around randomly and quickly (very very quickly). Overall,
 Just as we can use Gauss’ law to solve for E-fields, we can use Ampere’s law for B-fields. Instead of enclosed charge, we’ll use inclosed current. Instead of Gausian spheres etc, we’ll use Amperian loops. Ok, examples:</p><br>
 <h4 style="text-align: center;"><u>Wire Systems</u></h4>
 <p style="text-align: left;">
-We already know that if we had just one current carrying wire, we can use the right hand rules to find the B-field, but we can also use Ampere’s law instead.<br>
-*coming soon*</p><br>
+If we had just one current carrying wire, we can use the formulas we already know to find the B-field at a distance away, but we can also use Ampere’s law instead. First, draw the loop outside the “r” distance we are measuring the field at. Instead of surface area like in Gauss’ law, we’ll just use circumference of a circle for the “area” of the loop. If you test it, you’ll see we end up with the same formula we’ve seen before. Sidenote, the direction of the loop = the direction of the B-field. For multiple wires, we can draw loops around each wire, and all the B-fields to get a net B-field. Remember to use the RH rules to keep directions consistent. If you have uniform current density within wires, you can use J (current over area) in order to find charge enclosed in the area of the wire in which you are enclosing a field.</p><br>
 
-<h4 style="text-align: center;"><u>Basics</u></h4>
-<p style="text-align: left;">
-*coming soon*
-</p>
 <h4 style="text-align: center;"><u>Coaxial Cable</u></h4>
 <p style="text-align: left;">
-*coming soon*
+Aka, a circular wire with a spherical shell around it. When finding the I<sub>enclosed</sub>, the value will change as you move the amperian loop. IF you re within the spherical shell, you can use current density in order to find the current relative to the radius. If you are around the whole thing, just subtract the current causing out of the page field from into the page.
 </p>
 <h4 style="text-align: center;"><u>Solenoid</u></h4>
 <p style="text-align: left;">
-*coming soon*
+A solenoid is just a coil, not sure why it needs a special name — picture a wire coiled around a pencil if you took out the pencil. The coils create current pointing into the page at the bottom and out of the page at the top. For this class’ purposes, a simpler version will just be a row of “out of the page” current with a row of “into the page” current below it, aka B-field lines pointed straight right. If you make the coil into a circle, that is a “toroid,” making the simpler version of the B-field into a circle. For that, use an Amperian loop, and enclose whatever is in the middle
 </p>
-<h4 style="text-align: center;"><u>Toroid</u></h4>
-<p style="text-align: left;">
-*coming soon*
-</p>
+
 <h2 style="text-align: center;">Farraday’s Law</h2>
 <p style="text-align: left;">
-*coming soon*</p><br>
-<h2 style="text-align: center;">Magnetic Flux</h2>
+The basic thing to know here is that if a B-field is CHANGING, then you can GENERATE a current. Therefore, the things affecting the size of that current will be the strength of the field, the number of coils, length of loop, and rate of change of the field in a loop scenario like we’ll usually see. That gives us a formula (aka Farraday’s law) which is on the formula sheet. We relate everything to EMF instead of current, but you know V=IR already so it gets pretty simple to convert. Part of this formula is magnetic flux: </p><br>
+<h4 style="text-align: center;"><u>Magnetic Flux</u></h4>
 <p style="text-align: left;">
-*coming soon*</p><br>
-<h2 style="text-align: center;">Lenz’s Law</h2>
+Again, notice the parallel in the formula for electric flux. Generally, we would integrate the dot product of the B-field and dA, but since we usually have constant B and A, we can just do B dot A, aka multiply the parallel components (or just multiply by the cos of the angle between them). There are three factors in magnetic flux: amount of area, strength of B, and angle between them.</p><br>
+<h4 style="text-align: center;"><u>Lenz’s Law</u></h4>
 <p style="text-align: left;">
-*coming soon*</p><br>
+Lenz’ law will tell us information about the direction of the current created. Basically, it says that current opposes the <u>effect</u> of the changing flux. In relating these, just remember the RH rule for curved and straight variables! </p><br>
+<h4 style="text-align: center;"><u>Farraday’s Law Example</u></h4>
+<p style="text-align: left;">
+Now that you know the context, one example of these ideas is if we have a loop with a resistor inserted halfway into a B-field. In this case, the “area” that is relevant is just the part in the B-field, I like to think of it as “submerged.” In this case, everything will be constant except for the area, so we can separate it into length and width, knowing length is constant, and leaving width as the only thing changing with respect to time. Since the loop is moving, dw/dt=v.
+
 <h2 style="text-align: center;">Inductance </h2>
 <p style="text-align: left;">
 *coming soon*</p><br>
