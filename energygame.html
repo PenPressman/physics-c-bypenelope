@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phys by Pen</title>
+	<meta name="description" content="Resources and explanations for AP physics C: E and M!">
+	<meta name="google-site-verification" content="riKf53f3Se-WIW2mjg--QE53K6J8YkSkidC29bytnZ8" />
+<link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4M671CKZE1');
+</script>
+	<style>
+  body {
+    background-color: #001f3f;
+    font-family: Calibri, sans-serif;
+    color: white; /* Setting font color to white for better readability on dark background */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center align the text */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  header {
+    background-color: #001f3f;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px; /* Increase font size for header */
+    margin-bottom: 5px; /* Add margin below header */
+     text-shadow: 4px 4px 4px #566fbf; /* Enhanced blue shadow */
+  }
+
+   /* Media query for screens up to 480px wide (e.g., smartphones) */
+  @media screen and (max-width: 480px) {
+    .header {
+ background-color: #001f3f;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px; /* Increase font size for header */
+    margin-top: 200px; /* Add margin above header */
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px;
+  }
+
+  .content {
+    width: 70%; /* Adjust width */
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin */
+    font-weight: lighter; /* Make text thinner */
+  }
+
+  .button {
+    background-color: #ADD8E6;
+    color: #001F3F;
+    padding: 15px 30px; /* Increase padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; /* Add margin above and below buttons */
+    font-weight: bold; /* Make text bold */
+    font-size: 18px; /* Increase font size */
+  }
+
+   button:hover {
+      background-color: #6092d1;
+    }
+
+  .hidden {
+    display: none;
+  }
+
+  .box {
+    background-color: #075a90; /* Slightly darker blue */
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%; /* Decrease width */
+  }
+
+  .box p {
+    color: white; /* Set paragraph text to white */
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Energy Game</h1>
+</header>
+<p><br>Play with your arrow keys and hit the target to observe how different variables effect kinetic energy</p>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinetic and Potential Energy Game</title>
+<style>
+    canvas {
+        border: 1px solid black;
+    }
+</style>
+</head>
+<body>
+<canvas id="canvas" width="800" height="600"></canvas>
+<script>
+    // Initialize canvas
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    // Constants
+    const WIDTH = canvas.width;
+    const HEIGHT = canvas.height;
+    const BALL_RADIUS = 20;
+    const BALL_COLOR = 'blue';
+    const GRAVITY = 9.8; // m/s^2, acceleration due to gravity
+    const MASS = 1; // kg, mass of the ball
+    const PIXELS_PER_METER = 20; // scale for converting meters to pixels
+    const MAX_VELOCITY = 6;
+
+    // Ball object
+    const ball = {
+        x: WIDTH / 2,
+        y: HEIGHT / 2,
+        radius: BALL_RADIUS,
+        velocityX: 0,
+        velocityY: 0,
+    };
+
+    // Target object
+    let target = createRandomTarget();
+
+    // Key state object
+    const keys = {};
+
+    // Event listeners for key presses
+    document.addEventListener('keydown', function(event) {
+        keys[event.key] = true;
+    });
+    document.addEventListener('keyup', function(event) {
+        keys[event.key] = false;
+    });
+
+    // Main loop
+    function mainLoop() {
+        // Update ball position
+        if (keys['ArrowLeft']) {
+            ball.velocityX = -MAX_VELOCITY;
+        } else if (keys['ArrowRight']) {
+            ball.velocityX = MAX_VELOCITY;
+        } else {
+            ball.velocityX = 0;
+        }
+        if (keys['ArrowUp']) {
+            ball.velocityY = -MAX_VELOCITY;
+        } else if (keys['ArrowDown']) {
+            ball.velocityY = MAX_VELOCITY;
+        } else {
+            ball.velocityY = 0;
+        }
+        ball.x += ball.velocityX;
+        ball.y += ball.velocityY;
+
+        // Update ball velocity due to gravity
+        ball.velocityY += GRAVITY / PIXELS_PER_METER;
+        
+        // Bounce off walls
+        if (ball.x - ball.radius <= 0 || ball.x + ball.radius >= WIDTH) {
+            ball.velocityX = -ball.velocityX;
+        }
+
+        // Bounce off the floor
+        if (ball.y + ball.radius >= HEIGHT) {
+            ball.velocityY = -ball.velocityY * 0.8; // dampening factor
+            ball.y = HEIGHT - ball.radius;
+        }
+
+        // Bounce off the ceiling
+        if (ball.y - ball.radius <= 0) {
+            ball.velocityY = -ball.velocityY;
+            ball.y = ball.radius;
+        }
+
+        // Check collision with target
+        if (ball.x + ball.radius >= target.x && ball.x - ball.radius <= target.x + target.radius &&
+            ball.y + ball.radius >= target.y && ball.y - ball.radius <= target.y + target.radius) {
+            // Move the target to a new random position
+            target = createRandomTarget();
+        }
+
+        // Clear canvas
+        ctx.clearRect(0, 0, WIDTH, HEIGHT);
+
+        // Draw target
+        drawTarget(target);
+
+        // Draw ball
+        ctx.beginPath();
+        ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+        ctx.fillStyle = BALL_COLOR;
+        ctx.fill();
+        ctx.closePath();
+
+        // Calculate and display kinetic energy
+        const kineticEnergy = 0.5 * MASS * (ball.velocityX ** 2 + ball.velocityY ** 2);
+        // Calculate and display potential energy
+        const potentialEnergy = MASS * GRAVITY * (HEIGHT - ball.y) / PIXELS_PER_METER;
+        // Calculate and display height
+        const height = (HEIGHT - ball.y) / PIXELS_PER_METER;
+        // Display mass
+        const mass = MASS;
+
+        // Display energy values
+
+        ctx.fillStyle = 'white';
+        ctx.font = '20px Calibri';
+        ctx.fillText(`Kinetic Energy: ${kineticEnergy.toFixed(2)} Joules`, 20, 20);
+        ctx.fillText(`Potential Energy: ${potentialEnergy.toFixed(2)} Joules`, 20, 50);
+        ctx.fillText(`Height: ${height.toFixed(2)} meters`, 20, 80);
+        ctx.fillText(`Mass: ${mass} kg`, 20, 110);
+
+        // Request animation frame
+        requestAnimationFrame(mainLoop);
+    }
+
+    // Function to create a random target
+    function createRandomTarget() {
+        return {
+            x: Math.random() * (WIDTH - 100) + 50,
+            y: Math.random() * (HEIGHT - 100) + 50,
+            radius: Math.random() * 20 + 30, // Random radius between 30 and 50
+            color1: 'red',
+            color2: 'white'
+        };
+    }
+
+    // Function to draw the target
+    function drawTarget(target) {
+        ctx.beginPath();
+        ctx.arc(target.x, target.y, target.radius, 0, Math.PI * 2);
+        ctx.fillStyle = target.color1;
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.arc(target.x, target.y, target.radius / 2, 0, Math.PI * 2);
+        ctx.fillStyle = target.color2;
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    // Start the game
+    mainLoop();
+</script>
+</body>
+</html>
+
+
+ 
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Example</title>
+    <style>
+        .menu {
+            display: none;
+            position: absolute;
+            top: 90px; /* Moved down */
+            left: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 4px;
+            z-index: 1;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+
+        .menu a, #likeButton {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+            color: #333;
+            background-color: #add8e6;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.4;
+         
+        }
+
+        .menu a:hover, #likeButton:hover {
+            background-color: #8ab6d6;
+        }
+
+        #menuButton {
+            position: absolute;
+            top: 30px; /* Moved down */
+            left: 30px;
+            font-size: 43px;
+            color: white;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+
+        }
+
+    </style>
+</head>
+<body>
+    <button id="menuButton" onclick="toggleMenu()">&#9776;</button>
+    <div id="menu" class="menu">
+        <a href="index.html">&#127968; Home</a>
+        <a href="mailto:penelope.pressman@gmail.com">&#128235; Contact</a>
+        <button id="likeButton">❤️ Like page         </button>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        var likeButton = document.getElementById("likeButton");
+        var likeCount = 0;
+        var liked = false;
+
+        likeButton.addEventListener("click", function() {
+            if (!liked) {
+                likeCount++;
+                likeButton.innerHTML = "Liked page ❤️";
+                likeButton.style.backgroundColor = "lightpink"; /* pink */
+                liked = true;
+                alert("Liked! Count: " + likeCount);
+            } else {
+                alert("You already liked this.");
+            }
+        });
+    </script>
+</body>
+</html>
+
+          
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>phys by pen logo add</title>
+<style>
+  
+    .image {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        max-width: 70px; /* Adjust the size as needed */
+        max-height: 70px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <img class="image" src="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" alt="Physics Image">
+</div>
+</body>
+</html>
