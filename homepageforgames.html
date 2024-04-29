@@ -19,15 +19,14 @@
   gtag('config', 'G-4M671CKZE1');
 </script>
 	<style>
-    body {
+   body {
       font-family: Calibri, sans-serif;
       margin: 20px 0;
       padding: 0;
       box-sizing: border-box;
       background-color: #001f3f;
       color: #fff;
-      text-align: center; /* Center align all text */
-        
+      text-align: center;
     }
     
     .container {
@@ -36,79 +35,76 @@
       align-items: center;
       min-height: 100vh;
     }
+    
     header {
       text-align: center;
       padding: 10px;
-      color: #dce8fa; /* Slightly lighter blue */
-      font-size: 31px; /* Larger header text */
-      text-shadow: 4px 4px 4px #566fbf; /* Enhanced blue shadow */
+      color: #dce8fa;
+      font-size: 31px;
+      text-shadow: 4px 4px 4px #566fbf;
     }
+    
     h1 {
       margin: 0;
     }
+    
     p {
       padding: 10px;
       margin-bottom: 20px;
-      font-size: 18px; /* Larger text size */
+      font-size: 18px;
     }
+    
     main {
       text-align: center;
-      width: %;
     }
+    
     .button-container {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0px; /* Added space between columns */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
       justify-content: center;
-align-left: center;
-margin-bottom: 0px;
+      align-items: center;
+      margin-bottom: 20px;
     }
-     /* Media query for screens up to 768px wide (e.g., tablets) */
-  @media screen and (max-width: 768px) {
-    .button-container {
-      padding: 10px;
-    }
-  }
-
-  /* Media query for screens up to 480px wide (e.g., smartphones) */
-  @media screen and (max-width: 480px) {
-    .button-container {
-      padding: 300px;
-	 align-items: center;
-margin-left: 300px;
-       grid-template-columns: repeat(1, 1fr);
-    }
-  }
+    
     .button {
       font-family: Calibri, sans-serif;
       margin: 12px;
       padding: 24px;
-      font-size: 35px; /* Larger buttons */
+      font-size: 25px;
       cursor: pointer;
       border: none;
-      background-color: #c9dfff;
-      color: #001F3F;
+      color: #fff;
       border-radius: 8px;
       transition: background-color 0.3s ease;
-      width: 210px; /* Same size buttons */
-   box-shadow: inset 0 0 20px rgba(0, 31, 63, 0.5); /* Darker shadow inside on hover */
+      width: 100%;
+      box-shadow: inset 0 0 20px rgba(0, 31, 63, 0.5);
     }
+    
+    .button:nth-child(1) {
+      background-color: #ff5733; /* Orange */
+    }
+    
+    .button:nth-child(2) {
+      background-color: #f368e0; /* Pink */
+    }
+    
+    .button:nth-child(3) {
+      background-color: #19d3f3; /* Blue */
+    }
+    
+    .button:nth-child(4) {
+      background-color: #4caf50; /* Green */
+    }
+    
     .button:hover {
       background-color: #6092d1;
     }
+    
     .footer {
-      margin-top: 20px; /* Reduced space */
-      font-size: 16px; /* Larger footer text */
+      margin-top: 20px;
+      font-size: 16px;
       color: white;
-    }
- /* Text shadow for buttons with light blue shadow */
-    .light-pink-shadow {
-      text-shadow: 1px 1px .5px lightblue;
-    }
-
-    /* Text shadow for buttons with light green shadow */
-    .light-green-shadow {
-      text-shadow: 1px 1px .5px #83e187;
     }
 
   </style>
