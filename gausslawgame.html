@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phys Games</title>
+	 <link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
+
+<meta name="description" content="Play games to learn physics">
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4M671CKZE1');
+</script>
+
+<meta name="description" content="play kinematics games">
+<style>
+  body {
+    background-color: #001f3f;
+    font-family: Calibri, sans-serif;
+    color: white; /* Setting font color to white for better readability on *darker* background */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center align the text */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  header {
+    background-color: #001f3f;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px; /* Increase font size for header */
+    margin-bottom: 5px; /* Add margin below header */
+	text-shadow: 4px 4px 4px #566fbf; /* Enhanced blue shadow */
+  }
+ 
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px;
+	  margin-top: 3px; /* Add margin */
+  }
+ 
+  .content {
+    width: 70%; /* Adjust width */
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin */
+    font-weight: lighter; /* Make text thinner */
+  }
+ 
+  .button {
+    background-color: #ADD8E6;
+    color: #001F3F;
+    padding: 15px 30px; /* Increase padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; /* Add margin above and below buttons */
+    font-weight: bold; /* Make text bold */
+    font-size: 18px; /* Increase font size */
+  }
+
+	 button:hover {
+      background-color: #6092d1;
+    }
+ 
+  .hidden {
+    display: none;
+  }
+ 
+  .box {
+    background-color: #075a90
+; /* Color of sections */
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%; /* Decrease width */
+  }
+ 
+  .box p {
+    color: white; /* Set paragraph text to same as background color */
+  }
+ 
+      }
+ 
+  
+</style>
+</head>
+<body>
+ 
+<header>
+  <h1>Gauss' Law Game</h1>
+</header>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gauss' Law Game</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
+    #title {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 24px;
+        color: #333;
+    }
+    #instructions {
+        text-align: center;
+        margin: 10px auto;
+        width: 60%;
+        font-size: 18px;
+        color: #666;
+    }
+    #shapes {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .shape {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 0 10px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .shape:hover {
+        transform: scale(1.1);
+    }
+    #circle {
+        background-color: #ff9999;
+        border-radius: 50%;
+    }
+    #rectangle {
+        background-color: #99ff99;
+    }
+    #triangle {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid #9999ff;
+    }
+    #info {
+        text-align: center;
+        margin: 20px auto;
+        width: 60%;
+    }
+    #feedback {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    .correct {
+        color: green;
+    }
+    .incorrect {
+        color: red;
+    }
+    #calculation {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    canvas {
+        border: 1px solid black;
+        margin: 20px auto;
+        display: block;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+</style>
+</head>
+<body>
+<div id="title">
+    <h1>Gauss' Law Game</h1>
+</div>
+<div id="instructions">
+    <p>To win the game, choose the correct Gaussian surface to enclose the charge. Once the correct one is chosen, you'll get the info you need to solve for the electric field magnitude using Gauss' Law.</p>
+</div>
+<div id="shapes">
+    <div class="shape" id="circle" draggable="true"></div>
+    <div class="shape" id="rectangle" draggable="true"></div>
+    <div class="shape" id="triangle" draggable="true"></div>
+</div>
+<div id="info"></div>
+<div id="feedback"></div>
+<div id="calculation"></div>
+<canvas id="canvas" width="800" height="600"></canvas>
+<script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const infoDiv = document.getElementById('info');
+    const feedbackDiv = document.getElementById('feedback');
+    const calculationDiv = document.getElementById('calculation');
+
+    let charge;
+    let selectedSurface;
+    let surfaceX;
+    let surfaceY;
+
+    function generateRandomCharge() {
+        charge = {
+            x: Math.random() * (canvas.width - 100) + 50,
+            y: Math.random() * (canvas.height - 100) + 50,
+            radius: 20,
+            value: Math.floor(Math.random() * 10) + 1 // Random charge between 1 and 10 Coulombs
+        };
+        drawCharge();
+    }
+
+    function drawCharge() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw charge
+        ctx.beginPath();
+        ctx.arc(charge.x, charge.y, charge.radius, 0, Math.PI * 2);
+        ctx.fillStyle = '#ffcc00';
+        ctx.fill();
+        ctx.fillStyle = '#333';
+        ctx.textAlign = 'center';
+        ctx.font = 'bold 20px Arial';
+        ctx.fillText(`${charge.value} C`, charge.x, charge.y + 8);
+    }
+
+    function checkGaussLaw() {
+        const userEField = parseFloat(prompt(`Enter the electric field magnitude at the selected surface (${selectedSurface}):`));
+        const eField = charge.value / (2 * Math.PI * charge.radius * charge.radius);
+        if (userEField === eField) {
+            displayFeedback('Correct!', true);
+        } else {
+            displayFeedback('Incorrect! Try again.', false);
+        }
+    }
+
+    function displayFeedback(message, isCorrect) {
+        feedbackDiv.innerHTML = message;
+        feedbackDiv.className = isCorrect ? 'correct' : 'incorrect';
+        setTimeout(() => {
+            feedbackDiv.innerHTML = '';
+        }, 2000);
+    }
+
+    function handleMouseDown(event) {
+        const rect = canvas.getBoundingClientRect();
+        const mouseX = event.clientX - rect.left;
+        const mouseY = event.clientY - rect.top;
+
+        if (mouseX >= charge.x - charge.radius && mouseY >= charge.y - charge.radius &&
+            mouseX <= charge.x + charge.radius && mouseY <= charge.y + charge.radius) {
+            if (selectedSurface === 'circle') {
+                checkGaussLaw();
+            } else {
+                displayFeedback('Incorrect! Drag the circle over the charge.', false);
+            }
+        }
+    }
+
+    function handleDragStart(event) {
+        event.dataTransfer.setData('text', event.target.id);
+    }
+
+    function handleDragOver(event) {
+        event.preventDefault();
+    }
+
+    function handleDrop(event) {
+        event.preventDefault();
+        const surfaceId = event.dataTransfer.getData('text');
+        if (surfaceId === 'circle') {
+            selectedSurface = surfaceId;
+            surfaceX = event.clientX;
+            surfaceY = event.clientY;
+            drawCharge();
+            infoDiv.innerHTML = `Selected Surface: ${selectedSurface}<br>Circle Radius: ${charge.radius} m;
+            calculationDiv.innerHTML = `Calculate the electric field magnitude at the selected surface (${selectedSurface}):<br><input type="number" id="eField"> N/C`;
+            // Disable dragging for other shapes
+            document.getElementById('rectangle').draggable = false;
+            document.getElementById('triangle').draggable = false;
+        } else {
+            infoDiv.innerHTML = '';
+            calculationDiv.innerHTML = '';
+            selectedSurface = null;
+            // Enable dragging for other shapes
+            document.getElementById('rectangle').draggable = true;
+            document.getElementById('triangle').draggable = true;
+        }
+    }
+
+    canvas.addEventListener('mousedown', handleMouseDown);
+    canvas.addEventListener('dragover', handleDragOver);
+    canvas.addEventListener('drop', handleDrop);
+
+    document.getElementById('circle').addEventListener('dragstart', handleDragStart);
+    document.getElementById('rectangle').addEventListener('dragstart', handleDragStart);
+    document.getElementById('triangle').addEventListener('dragstart', handleDragStart);
+
+    generateRandomCharge();
+</script>
+</body>
+</html>
+
+
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Example</title>
+    <style>
+        .menu {
+            display: none;
+            position: absolute;
+            top: 90px; /* Moved down */
+            left: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 4px;
+            z-index: 1;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .menu a, #likeButton {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+            color: #333;
+            background-color: #add8e6;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.4;
+         
+        }
+
+        .menu a:hover, #likeButton:hover {
+            background-color: #8ab6d6;
+        }
+
+        #menuButton {
+            position: absolute;
+            top: 30px; /* Moved down */
+            left: 34px;
+            font-size: 43px;
+            color: white;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+
+
+        }
+    </style>
+</head>
+<body>
+    <button id="menuButton" onclick="toggleMenu()">&#9776;</button>
+    <div id="menu" class="menu">
+        <a href="index.html">&#127968; Home</a>
+        <a href="mailto:penelope.pressman@gmail.com">&#128235; Contact</a>
+        <button id="likeButton">❤️ Like page         </button>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        var likeButton = document.getElementById("likeButton");
+        var likeCount = 0;
+        var liked = false;
+
+        likeButton.addEventListener("click", function() {
+            if (!liked) {
+                likeCount++;
+                likeButton.innerHTML = "Liked page ❤️";
+                likeButton.style.backgroundColor = "lightpink"; /* pink */
+                liked = true;
+                alert("Liked! Count: " + likeCount);
+            } else {
+                alert("You already liked this.");
+            }
+        });
+    </script>
+</body>
+</html>
+
+          
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>phys by pen logo add</title>
+<style>
+  
+    .image {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        max-width: 70px; /* Adjust the size as needed */
+        max-height: 70px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <img class="image" src="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" alt="Physics Image">
+</div>
+</body>
+</html>
+	
