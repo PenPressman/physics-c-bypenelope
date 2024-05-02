@@ -102,180 +102,138 @@
   <h1>Friction Game</h1>
 </header>
 
+<p>Select the correct direction of the force static friction acting on the objects in the following scenarios. <br>Get 5 correct to win! <br>The game will automatically stop once your score reaches 5.</p>
+  
 
   
 <body>
  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Static Friction Game</title>
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direction Game</title>
+<style>
     body {
-      font-family: Calibri, sans-serif;
-      text-align: center;
-      color: white;
-      margin: 0;
-      padding: 0;
-      display: flex;
-            font-size: 24px;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+        font-family: Calibri, sans-serif;
+        text-align: center;
     }
-    .container2 {
-      width: 60%;
-      margin: auto;
-      margin-top: 10px;
-    }
-    h8 {
-      font-size: 48px;
-      margin-top: 0px;
-    }
-    #score {
-      font-size: 34px;
-      margin-top: 2px;
-    }
-    #instructions {
-      font-size: 27px;
-      margin-top: 5px;
+    #container {
+        margin-top: 50px;
     }
     #scenario {
-      margin-top: 50px;
-      font-size: 24px;
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #CFFCFE;
     }
-    .button2 {
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 24px;
-      cursor: pointer;
-      border: none;
-      border-radius: 5px;
-      margin: 10px;
+    #buttons {
+        margin-top: 20px;
     }
-    #left {
-      background-color: #3498db;
-      color: white;
+    button {
+        font-size: 23px;
+        padding: 20px 40px;
+        margin: 0 10px;
+        background-color: #ffb6c1; /* Light pink */
+        color: #fff; /* White text */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     }
-    #right {
-      background-color: #e74c3c;
-      color: white;
+    button:hover {
+        background-color: #add8e6; /* Light blue */
     }
-    #feedback {
-      margin-top: 20px;
-      font-size: 24px;
-      font-weight: bold;
+    #score {
+        font-size: 24px;
+        color: #FF69B4; /* Bright pink */
+        margin-top: 20px;
     }
-    .correct {
-      color: green;
+    .incorrect {
+        color: red;
     }
-    .wrong {
-      color: red;
+    #winMessage {
+        font-size: 36px;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 2px 2px #ffb6c1; /* Light pink shadow */
+        margin-top: 20px;
+        display: none; /* Initially hidden */
     }
-    #scoreCircles {
-      margin-top: 20px;
-    }
-    .scoreCircle {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background-color: #ccc;
-      margin: 0 10px;
-    }
-    .scoreCircle.correct {
-      background-color: #27ae60;
-    }
-  </style>
+</style>
 </head>
 <body>
-  <div class="container2">
-    <div id="score">Score: <span id="scoreValue">0</span>/5</div>
-    <div id="instructions">Select the correct direction of the force static friction acting on the objects in the following scenarios. Get 5 correct to win!</div>
-    <div id="scenario"></div>
-    <button class="button2" id="left">LEFT</button>
-    <button class="button2" id="right">RIGHT</button>
-    <div id="feedback"></div>
-    <div id="scoreCircles"></div>
-  </div>
+<div id="container">
+    <div id="scenario">Scenario will appear here</div>
+    <div id="buttons">
+        <button onclick="checkAnswer('left')">Left</button>
+        <button onclick="checkAnswer('right')">Right</button>
+    </div>
+    <div id="score">Score: 0</div>
+    <div id="winMessage">You win!</div>
+</div>
 
-  <script>
+<script>
+    let score = 0;
+    let correctAnswers = 0;
+
     const scenarios = [
-      { scenario: "A person walking to the left", answer: "left" },
-      { scenario: "A ball rolling to the right without slipping", answer: "left" },
-      { scenario: "The wheels of a car driving right", answer: "left" },
-      { scenario: "A person trying to tug a stationary cart to the left", answer: "right" },
-      { scenario: "A wheelbarrow’s wheels as it is rolled left", answer: "right" },
-      { scenario: "A dog running to the right", answer: "right" }
+        {text: "A person walking to the left", answer: "left"},
+        {text: "A ball rolling to the right without slipping", answer: "left"},
+        {text: "The wheels of a car driving right", answer: "left"},
+        {text: "A person trying to tug a stationary card to the left", answer: "right"},
+        {text: "A wheelbarrow’s wheels as it is rolled left", answer: "right"},
+        {text: "A dog running to the right", answer: "right"}
     ];
 
-    let score = 0;
     let currentScenarioIndex = 0;
-
-    const scenarioElement = document.getElementById("scenario");
-    const leftButton = document.getElementById("left");
-    const rightButton = document.getElementById("right");
-    const scoreValueElement = document.getElementById("scoreValue");
-    const feedbackElement = document.getElementById("feedback");
-    const scoreCirclesElement = document.getElementById("scoreCircles");
+    const scenarioElement = document.getElementById('scenario');
+    const scoreElement = document.getElementById('score');
+    const winMessageElement = document.getElementById('winMessage');
 
     function displayScenario() {
-      scenarioElement.textContent = scenarios[currentScenarioIndex].scenario;
-      feedbackElement.textContent = "";
+        scenarioElement.textContent = scenarios[currentScenarioIndex].text;
     }
 
-    function displayFeedback(isCorrect) {
-      feedbackElement.textContent = isCorrect ? "Correct!" : "Nope.";
-      feedbackElement.className = isCorrect ? "correct" : "wrong";
+    function checkAnswer(selected) {
+        if (selected === scenarios[currentScenarioIndex].answer) {
+            score++;
+            scoreElement.textContent = `Score: ${score}`;
+            scoreElement.classList.remove('incorrect');
+            correctAnswers++;
+            if (correctAnswers === 5) {
+                scoreElement.textContent = `Score: ${score}`;
+                winMessageElement.textContent = "You win!";
+                winMessageElement.style.display = "block";
+                resetGame();
+            } else {
+                currentScenarioIndex++;
+                correctAnswers = 0; // Reset consecutive correct answers
+                displayScenario();
+            }
+        } else {
+            scoreElement.textContent = `Score: ${score}`;
+            scoreElement.classList.add('incorrect');
+            correctAnswers = 0; // Reset consecutive correct answers
+            setTimeout(() => {
+                scoreElement.classList.remove('incorrect');
+                currentScenarioIndex++;
+                displayScenario();
+            }, 1000); // Delay to reset score color and display next question
+        }
     }
 
-    function updateScoreCircles() {
-      scoreCirclesElement.innerHTML = "";
-      for (let i = 0; i < score; i++) {
-        const circle = document.createElement("div");
-        circle.classList.add("scoreCircle", "correct");
-        scoreCirclesElement.appendChild(circle);
-      }
-      for (let i = score; i < 5; i++) {
-        const circle = document.createElement("div");
-        circle.classList.add("scoreCircle");
-        scoreCirclesElement.appendChild(circle);
-      }
-    }
-
-    function checkAnswer(answer) {
-      if (answer === scenarios[currentScenarioIndex].answer) {
-        score++;
-        scoreValueElement.textContent = score;
-        displayFeedback(true);
-        updateScoreCircles();
-      } else {
-        displayFeedback(false);
-      }
-
-      if (score === 5) {
-        alert("Congratulations! You've won!");
+    function resetGame() {
         score = 0;
-        scoreValueElement.textContent = score;
-        updateScoreCircles();
-      } else {
-        currentScenarioIndex++;
+        correctAnswers = 0;
+        currentScenarioIndex = 0;
         displayScenario();
-      }
     }
-
-    leftButton.addEventListener("click", () => checkAnswer("left"));
-    rightButton.addEventListener("click", () => checkAnswer("right"));
 
     displayScenario();
-    updateScoreCircles();
-  </script>
+</script>
 </body>
 </html>
-
-
 
 
 <!DOCTYPE html>
