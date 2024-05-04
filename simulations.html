@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phys by Pen</title>
+	<meta name="description" content="Resources and explanations for AP physics C: E and M!">
+	<meta name="google-site-verification" content="riKf53f3Se-WIW2mjg--QE53K6J8YkSkidC29bytnZ8" />
+<link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4M671CKZE1');
+</script>
+	<style>
+  body {
+    background-color: #001f3f;
+    font-family: Calibri, sans-serif;
+    color: white; /* Setting font color to white for better readability on dark background */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center align the text */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  header {
+    background-color: #001f3f;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px; /* Increase font size for header */
+    margin-bottom: 5px; /* Add margin below header */
+     text-shadow: 4px 4px 4px #566fbf; /* Enhanced blue shadow */
+  }
+
+   /* Media query for screens up to 480px wide (e.g., smartphones) */
+  @media screen and (max-width: 480px) {
+    .header {
+ background-color: #001f3f;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px; /* Increase font size for header */
+    margin-top: 200px; /* Add margin above header */
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px;
+  }
+
+  .content {
+    width: 70%; /* Adjust width */
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin */
+    font-weight: lighter; /* Make text thinner */
+  }
+
+  .button2 {
+    background-color: #ADD8E6;
+    color: #001F3F;
+    padding: 15px 30px; /* Increase padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; /* Add margin above and below buttons */
+    font-weight: bold; /* Make text bold */
+    font-size: 18px; /* Increase font size */
+  }
+
+   button:hover {
+      background-color: #6092d1;
+    }
+
+  .hidden {
+    display: none;
+  }
+
+  .box {
+    background-color: #075a90; /* Slightly darker blue */
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%; /* Decrease width */
+  }
+
+  .box p {
+    color: white; /* Set paragraph text to white */
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Scenario Simulators</h1>
+</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scenario Generators</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #1e272e; /* Dark Gunmetal */
+        color: #ffffff; /* White */
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1, h2 {
+        color: #54a0ff; /* Alice Blue */
+        text-shadow: 2px 2px 4px #000000;
+        margin-bottom: 20px;
+    }
+
+    button {
+        background-color: #ffaf40; /* Selective Yellow */
+        border: none;
+        color: #000000; /* Black */
+        padding: 10px 20px;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 4px #000000;
+    }
+
+    button:hover {
+        background-color: #ff9f1a; /* Rajah */
+    }
+
+    canvas {
+        border: 2px solid #ffffff; /* White */
+        margin-top: 10px;
+        box-shadow: 2px 2px 4px #000000;
+    }
+
+    label {
+        color: #2ed573; /* Pastel Green */
+        font-weight: bold;
+    }
+
+    input[type="number"] {
+        border: 2px solid #2ed573; /* Pastel Green */
+        padding: 5px;
+        margin: 5px 0;
+        width: 100px;
+        border-radius: 5px;
+    }
+
+    .display {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #ff9f43; /* Atomic Tangerine */
+    }
+</style>
+</head>
+<body>
+
+<h2>Projectile Motion Simulator</h2>
+  <p>Visualize the path of a projectice.</p>
+<div>
+    <label for="velocity">Initial Velocity (m/s): </label>
+    <input type="number" id="velocity" value="20">
+</div>
+<div>
+    <label for="angle">Launch Angle (degrees): </label>
+    <input type="number" id="angle" value="45">
+</div>
+<div>
+    <label for="gravity">Gravity (m/s²): </label>
+    <input type="number" id="gravity" value="9.81">
+</div>
+<button onclick="simulateProjectile()">Launch!</button>
+<canvas id="canvasProjectile" width="800" height="400"></canvas>
+
+<h2>Virtual Pendulum 1</h2>
+  <P>keep in mind, the animation only shows where the pendulum will start and end after resitive forces slow it down, <br>theoretically you should JUST use SHM to calculate its movement, <Br> but you can observe those values below.</P>
+<div>
+    <label for="length1">Length (m): </label>
+    <input type="number" id="length1" value="1">
+</div>
+<div>
+    <label for="mass1">Mass (kg): </label>
+    <input type="number" id="mass1" value="1">
+</div>
+<div>
+    <label for="initialAngle1">Initial Angle (degrees): </label>
+    <input type="number" id="initialAngle1" value="45">
+</div>
+<div>
+    <label for="gravityPendulum1">Gravity (m/s²): </label>
+    <input type="number" id="gravityPendulum1" value="9.81">
+</div>
+<div class="display" id="displayPendulum1"></div>
+<button onclick="simulatePendulum(1)">Swing!</button>
+<canvas id="canvasPendulum1" width="800" height="400"></canvas>
+
+<h2>Virtual Pendulum 2</h2>
+  <p>Compare values you input for this one to the pendulum you made above.</p>
+<div>
+    <label for="length2">Length (m): </label>
+    <input type="number" id="length2" value="1">
+</div>
+<div>
+    <label for="mass2">Mass (kg): </label>
+    <input type="number" id="mass2" value="1">
+</div>
+<div>
+    <label for="initialAngle2">Initial Angle (degrees): </label>
+    <input type="number" id="initialAngle2" value="45">
+</div>
+<div>
+    <label for="gravityPendulum2">Gravity (m/s²): </label>
+    <input type="number" id="gravityPendulum2" value="9.81">
+</div>
+<div class="display" id="displayPendulum2"></div>
+<button onclick="simulatePendulum(2)">Swing!</button>
+<canvas id="canvasPendulum2" width="800" height="400"></canvas>
+
+<h2>Heat Transfer Simulator</h2>
+  <p>Play around with heat transfer.</p>
+<div>
+    <label for="material">Material: </label>
+    <select id="material">
+        <option value="iron">Iron</option>
+        <option value="copper">Copper</option>
+        <option value="aluminum">Aluminum</option>
+    </select>
+</div>
+<div class="display" id="temperatureDisplay"></div>
+<div class="display" id="energyDisplay"></div>
+<button onclick="simulateHeatTransfer()">Start Heating!</button>
+<canvas id="canvasHeatTransfer" width="800" height="400"></canvas>
+
+<script>
+    // Projectile Motion Simulator
+    function simulateProjectile() {
+        const canvas = document.getElementById('canvasProjectile');
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        const v0 = parseFloat(document.getElementById('velocity').value);
+        const theta = parseFloat(document.getElementById('angle').value);
+        const g = parseFloat(document.getElementById('gravity').value);
+        
+        const tMax = 2 * v0 * Math.sin(theta * Math.PI / 180) / g;
+        
+        ctx.beginPath();
+        ctx.moveTo(0, canvas.height);
+        for (let t = 0; t <= tMax; t += 0.05) {
+            const x = v0 * Math.cos(theta * Math.PI / 180) * t;
+            const y = canvas.height - (v0 * Math.sin(theta * Math.PI / 180) * t - 0.5 * g * t ** 2);
+            ctx.lineTo(x, y);
+        }
+        ctx.strokeStyle = "#ffd700"; // Gold
+        ctx.stroke();
+    }
+
+    // Virtual Pendulum
+    function simulatePendulum(id) {
+        const canvas = document.getElementById(`canvasPendulum${id}`);
+        const ctx = canvas.getContext('2d');
+        
+        let length, mass, initialAngle, g;
+        if (id === 1) {
+            length = parseFloat(document.getElementById('length1').value);
+            mass = parseFloat(document.getElementById('mass1').value);
+            initialAngle = parseFloat(document.getElementById('initialAngle1').value);
+            g = parseFloat(document.getElementById('gravityPendulum1').value);
+        } else {
+            length = parseFloat(document.getElementById('length2').value);
+            mass = parseFloat(document.getElementById('mass2').value);
+            initialAngle = parseFloat(document.getElementById('initialAngle2').value);
+            g = parseFloat(document.getElementById('gravityPendulum2').value);
+        }
+        
+        const pivotX = canvas.width / 2;
+        const pivotY = 100;
+        let angle = initialAngle * Math.PI / 180;
+        let direction = 1; // 1 for clockwise, -1 for counterclockwise
+        const damping = 0.99;
+        
+        function drawPendulum() {
+            const bobX = pivotX + length * Math.sin(angle);
+            const bobY = pivotY + length * Math.cos(angle);
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.moveTo(pivotX, pivotY);
+            ctx.lineTo(bobX, bobY);
+            ctx.strokeStyle = "#ff0000"; // Red
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.arc(bobX, bobY, mass * 5, 0, 2 * Math.PI);
+            ctx.fillStyle = "#ff0000"; // Red
+            ctx.fill();
+        }
+        
+        function update() {
+            const angAcc = -g / length * Math.sin(angle);
+            angle += direction * angAcc;
+            angle *= damping;
+            drawPendulum();
+            
+            const period = 2 * Math.PI * Math.sqrt(length / g);
+            const frequency = 1 / period;
+            document.getElementById(`displayPendulum${id}`).innerHTML = `Period: ${period.toFixed(2)} s, Frequency: ${frequency.toFixed(2)} Hz`;
+            
+            if (angle <= -Math.PI / 2 || angle >= Math.PI / 2) {
+                direction *= -1;
+            }
+            
+            requestAnimationFrame(update);
+        }
+        
+        update();
+    }
+
+    // Heat Transfer Simulator
+    function simulateHeatTransfer() {
+        const canvas = document.getElementById('canvasHeatTransfer');
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        const material = document.getElementById('material').value;
+        const thermalConductivity = getThermalConductivity(material); // Function to get thermal conductivity based on material
+        const area = 1; // Assuming area of contact is 1 m²
+        const thickness = 0.1; // Thickness of material in meters
+        const timeStep = 100; // Time step in milliseconds
+        let temperature = 20; // Initial temperature in Celsius
+        let energy = 0; // Initial energy
+
+        function drawTemperature() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "#ff0000"; // Red
+            ctx.fillRect(50, 100, temperature * 5, 50); // Draw rectangle representing temperature
+            document.getElementById('temperatureDisplay').innerHTML = `Temperature: ${temperature.toFixed(2)} °C`;
+            document.getElementById('energyDisplay').innerHTML = `Energy: ${energy.toFixed(2)} J`;
+        }
+
+        function simulateHeatFlow() {
+            const heatLossRate = thermalConductivity * area * (100 - temperature) / thickness; // Heat loss rate in watts
+            temperature += heatLossRate * timeStep / (3600 * 1000); // Change in temperature over time step
+            energy += heatLossRate * timeStep / 1000; // Energy change over time step
+            drawTemperature();
+            setTimeout(simulateHeatFlow, timeStep);
+        }
+
+        simulateHeatFlow();
+    }
+
+    // Utility function to get thermal conductivity based on material
+    function getThermalConductivity(material) {
+        switch (material) {
+            case "iron":
+                return 80; // Thermal conductivity of iron in W/(m*K)
+            case "copper":
+                return 400; // Thermal conductivity of copper in W/(m*K)
+            case "aluminum":
+                return 200; // Thermal conductivity of aluminum in W/(m*K)
+            default:
+                return 0;
+        }
+    }
+</script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Example</title>
+    <style>
+        .menu {
+            display: none;
+            position: absolute;
+            top: 90px; /* Moved down */
+            left: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 4px;
+            z-index: 1;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+
+        .menu a, #likeButton {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+            color: #333;
+            background-color: #add8e6;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.4;
+         
+        }
+
+        .menu a:hover, #likeButton:hover {
+            background-color: #8ab6d6;
+        }
+
+        #menuButton {
+           position: absolute;
+    top: 30px; /* Moved down */
+    left: 30px;
+    font-size: 43px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0; /* Remove padding */
+    width: 50px; /* Adjust width to fit the shape */
+    height: 50px; /* Adjust height to fit the shape */
+}
+
+        }
+
+    </style>
+</head>
+<body>
+    <button id="menuButton" onclick="toggleMenu()">&#9776;</button>
+    <div id="menu" class="menu">
+        <a href="index.html">&#127968; Home</a>
+        <a href="mailto:penelope.pressman@gmail.com">&#128235; Contact</a>
+        <button2 id="likeButton">❤️ Like page         </button2>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        var likeButton = document.getElementById("likeButton");
+        var likeCount = 0;
+        var liked = false;
+
+        likeButton.addEventListener("click", function() {
+            if (!liked) {
+                likeCount++;
+                likeButton.innerHTML = "Liked page ❤️";
+                likeButton.style.backgroundColor = "lightpink"; /* pink */
+                liked = true;
+                alert("Liked! Count: " + likeCount);
+            } else {
+                alert("You already liked this.");
+            }
+        });
+    </script>
+</body>
+</html>
+
+          
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>phys by pen logo add</title>
+<style>
+  
+    .image {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        max-width: 70px; /* Adjust the size as needed */
+        max-height: 70px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <img class="image" src="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" alt="Physics Image">
+</div>
+</body>
+</html>
