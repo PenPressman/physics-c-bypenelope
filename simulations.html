@@ -185,6 +185,32 @@
 <button onclick="simulateProjectile()">Launch!</button>
 <canvas id="canvasProjectile" width="800" height="400"></canvas>
 
+
+<h2>Wave Interference</h2>
+<div>
+    <label for="wavelength1">Wavelength 1 (m): </label>
+    <input type="number" id="wavelength1" value="5">
+</div>
+<div>
+    <label for="wavelength2">Wavelength 2 (m): </label>
+    <input type="number" id="wavelength2" value="7">
+</div>
+<div>
+    <label for="amplitude1">Amplitude 1: </label>
+    <input type="number" id="amplitude1" value="1">
+</div>
+<div>
+    <label for="amplitude2">Amplitude 2: </label>
+    <input type="number" id="amplitude2" value="0.5">
+</div>
+<div>
+    <label for="phaseDifference">Phase Difference (radians): </label>
+    <input type="number" id="phaseDifference" value="1.5">
+</div>
+<button onclick="simulateWave()">Simulate</button>
+<canvas id="canvasWave" width="800" height="400"></canvas>
+
+
 <h2>Virtual Pendulum 1</h2>
   <P>keep in mind, the animation only shows where the pendulum will start and end after resitive forces slow it down, <br>theoretically you should JUST use SHM to calculate its movement, <Br> but you can observe those values below.</P>
 <div>
@@ -265,6 +291,35 @@
             ctx.lineTo(x, y);
         }
         ctx.strokeStyle = "#ffd700"; // Gold
+        ctx.stroke();
+    }
+
+// Wave Interference
+    function simulateWave() {
+        const canvas = document.getElementById('canvasWave');
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        const wavelength1 = parseFloat(document.getElementById('wavelength1').value);
+        const wavelength2 = parseFloat(document.getElementById('wavelength2').value);
+        const amplitude1 = parseFloat(document.getElementById('amplitude1').value);
+        const amplitude2 = parseFloat(document.getElementById('amplitude2').value);
+        const phaseDifference = parseFloat(document.getElementById('phaseDifference').value);
+        
+        const numPoints = 1000;
+        const xValues = Array.from({ length: numPoints }, (_, i) => i * 10 / numPoints);
+        const yValues1 = xValues.map(x => amplitude1 * Math.sin(2 * Math.PI * x / wavelength1));
+        const yValues2 = xValues.map(x => amplitude2 * Math.sin(2 * Math.PI * x / wavelength2 + phaseDifference));
+        const yValuesTotal = yValues1.map((y1, i) => y1 + yValues2[i]);
+        
+        const scale = 50; // Scale for visualization
+        
+        ctx.beginPath();
+        ctx.moveTo(0, canvas.height / 2);
+        for (let i = 0; i < numPoints; i++) {
+            ctx.lineTo(xValues[i] * scale, canvas.height / 2 - yValuesTotal[i] * scale);
+        }
+        ctx.strokeStyle = "#87ceeb"; // Sky Blue
         ctx.stroke();
     }
 
