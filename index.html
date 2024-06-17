@@ -21,7 +21,7 @@
   <style>
     /* Existing styles */
     body {
-      font-family: Arial, sans-serif;
+      font-family: Calibri, sans-serif;
       line-height: 1.6;
       margin: 0;
       padding: 0;
@@ -50,17 +50,17 @@
       background: #4287f5;
     }
     .container {
-      padding: 20px;
+      padding: 2px;
     }
     .section {
-      margin-bottom: 20px;
+      margin-bottom: 0px;
   background: #4287f5;
     }
     footer {
       background: #1c345c;
       color: #fff;
       text-align: center;
-      padding: 7px 0;
+      padding: 2px ;
       position: fixed;
       width: 100%;
       bottom: 0;
@@ -150,13 +150,12 @@
 @media screen and (max-width: 768px) {
   .physics-button-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for better fit */
+    grid-template-columns: repeat(1, 1fr); /* Adjust to 2 columns for better fit */
     gap: 10px;
     justify-content: center;
     margin-left: 0; /* Reset margin for centered alignment */
   }
   .physics-button {
-    width: 100%; /* Full width for buttons to occupy the container */
     margin: 10px 0; /* Adjust margin for spacing between buttons */
   }
 }
@@ -236,7 +235,7 @@ AP Physics C: Mech and E & M
           <button class="physics-button light-green-shadow" onclick="location.href='page8.html'">Magnetism and Electromagnetism</button>
       
  </div>
-
+<br>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -340,10 +339,10 @@ AP Physics C: Mech and E & M
         left: 50%;
         transform: translateX(-50%);
         width: 570px; /* Wider box */
-        height: 350px; /* Shorter box */
-        background-color: #c9dfff; /* Navy background */
+        height: 320px; /* Shorter box */
+        background-color: #c9dfff; /* background */
         border: 7px solid; /* Colorful border */
-        border-image: linear-gradient(to right, #ff3847, #ff3847) 1; /* Gradient border */
+        border-image: linear-gradient(to bottom, #4287f5, #ff3847) 1; /* Gradient border */
         padding: 25px;
         text-align: left; /* Left align text for better readability */
         z-index: 1000;
@@ -363,13 +362,13 @@ AP Physics C: Mech and E & M
     /* Close button styling */
     .close-btn {
         position: absolute;
-        top: 15px;
+        top: 8px;
         right: 15px;
         background: #c9dfff; /* No background */
         border: none; /* No border */
-        font-size: 27px; /* Bigger font size */
+        font-size: 25px; /* Bigger font size */
         font-weight: bold; /* Bold text */
-        color: #4287f5; /* Pink color */
+        color: #ff3847; /* Pink color */
         cursor: pointer;
         padding: 0; /* No padding */
     }
@@ -379,15 +378,16 @@ AP Physics C: Mech and E & M
         color: #001F3F; /* color */
         font-size: 27px; /* Smaller font size for header */
         text-align: center; /* Center the header */
-        text-shadow: 2px 2px 4px #e5d3f5; /* Bright shadow */
+        text-shadow: 1px 1px 1px #4287f5; /* Bright shadow */
 font-weight: bold; /* Bold text */
+ margin: 2px 0; /* Spacing around text */
     }
 
     .popup-box p {
         color: #001F3F; /* color */
-        font-size: 12px; /* Slightly bigger font size */
+        font-size: 12.5px; /* Slightly bigger font size */
         line-height: 1.4; /* Improved readability */
-        margin: 7px 0; /* Spacing around text */
+        margin: 2px 0; /* Spacing around text */
         font-style: italic; /* Italicized text */
         font-weight: bold; /* Bold text */
     }
@@ -396,8 +396,8 @@ font-weight: bold; /* Bold text */
 <body>
 
 <div class="popup-box hide-on-mobile" id="popupBox">
-    <button18 class="close-btn" onclick="closePopup()">X</button18>
-    <h2>Welcome!</h2>
+   
+    <h2>Welcome! <button18 class="close-btn" onclick="closePopup()">X</button18></h2>
    <p> Please read this before proceeding:<br><br> [Note, page not intended for mobile devices, formatting may appear strange and certain features will not be available] <br><br>
     This website contains resources for AP Physics C: Mechanics and Electricity and Magnetism (E & M). The explanations are written by me, a high schooler, but they are based on what I have learned from 2.5 years of physics classes, multiple textbooks which you can find the names of on the sources page, as well as various resources. The games and extra stuff have been helpful for me to visualize and play around with stuff, so see what works for you.<br><br>
     I'm working on updating this site with more content for other areas of physics (thermo, optics, etc) so check back in a few months if you're curious. I've also included some basic intros to concepts if you're in a pre-AP-C physics class. <br><br>Use what's helpful, ignore what isn't, and have fun :)
@@ -440,9 +440,6 @@ font-weight: bold; /* Bold text */
         }
     </style>
 </div>
-
-<br>
-<br>
 <br>
 <br>
 
@@ -453,7 +450,7 @@ font-weight: bold; /* Bold text */
     </div>
   </div>
   <footer>
-    <p> 2024 Penelope Pressman</p>
+    <p> Penelope Pressman - Phys by Pen 2024</p>
   </footer>
 </body>
 </html>
