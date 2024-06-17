@@ -155,6 +155,35 @@ margin-bottom: 0px;
 	  box-shadow:#6092d1;
     }
 
+ /* Media query for screens up to 768px wide (e.g., tablets) */
+  @media screen and (max-width: 768px) {
+    .button-container {
+      padding: 10px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px; /* Added space between columns */
+      justify-content: center;
+    }
+  }
+
+  /* Media query for screens up to 480px wide (e.g., smartphones) */
+  @media screen and (max-width: 480px) {
+    .button-container {
+      padding: 5px;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 5px; /* Added space between columns */
+      justify-content: center;
+    }
+    .hide-on-mobile {
+      display: none;
+    }
+  }
+
+@media screen and (max-width: 480px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
   </style>
 </head>
 
@@ -169,7 +198,8 @@ margin-bottom: 0px;
     <span class="light-green-text green-shadow">E & M</span>
   </em><br> You can find sources and information at the bottom of this page, and more resources using the buttons on the top right.
 </p>
-<button id="colorButton" onclick="changeBackgroundColor()"><strong>Change site color</strong></button>
+<button id="colorButton" class="hide-on-mobile" onclick="changeBackgroundColor()"><strong>Change site color</strong></button>
+
 <script>
     function changeBackgroundColor() {
         // Generate a random color
@@ -289,7 +319,7 @@ box-shadow: inset 0 0 10px 5px rgba(22, 227, 100, 0.7), /* Blue outer shadow */
 
 
 
-<a href="homepageforgames.html" class="pink-button" id="pinkButton"><strong><u>Phys Games!</strong><br></u>Click for games to practice!</a>
+<a href="homepageforgames.html" class="pink-button hide-on-mobile" id="pinkButton"><strong><u>Phys Games!</strong><br></u>Click for games to practice!</a>
 
 
 
@@ -362,7 +392,7 @@ box-shadow: inset 0 0 10px 5px rgba(245, 0, 145, 0.8), /* outer shadow */
 
 
 
-<a href="simulations.html" class="pink-button3" id="pinkButton3"><strong><u>Extra</strong><br></u>Click to simulate examples.</a>
+<a href="simulations.html" class="pink-button3 hide-on-mobile" id="pinkButton3"><strong><u>Extra</strong><br></u>Click to simulate examples.</a>
 
 
 
@@ -548,7 +578,7 @@ font-weight: bold; /* Bold text */
 </head>
 <body>
 
-<div class="popup-box" id="popupBox">
+<div class="popup-box hide-on-mobile" id="popupBox">
     <button18 class="close-btn" onclick="closePopup()">X</button18>
     <h2>Welcome!</h2>
    <p> Please skim this info before proceeding:<br><br>
