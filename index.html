@@ -136,21 +136,24 @@
         justify-content: center;
       }
     }
-    @media screen and (max-width: 480px) {
-      .physics-button-container {
-        padding: 5px;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 5px;
-        justify-content: center;
-      }
-      .hide-on-mobile {
-        display: none;
-      }
+
+	    @media screen and (max-width: 480px) {
+  .physics-button-container {
+    padding: 5px;
+    grid-template-columns: repeat(1, 1fr); /* Single column layout */
+    gap: 5px;
+    justify-items: center; /* Center the buttons horizontally */
+    justify-content: center;
+  }
+  .physics-button {
+    margin: 10px 0; /* Adjust margin for spacing between buttons */
+  }
+}
 
 @media screen and (max-width: 768px) {
   .physics-button-container {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Adjust to 2 columns for better fit */
+    grid-template-columns: repeat(4, 1fr); /* Adjust to 2 columns for better fit */
     gap: 10px;
     justify-content: center;
     margin-left: 0; /* Reset margin for centered alignment */
@@ -403,9 +406,35 @@ font-weight: bold; /* Bold text */
 </div>
 
 <script>
-    // Function to show the popup box
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    // Function to get a cookie
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    // Function to check cookie and show the popup
     function showPopup() {
-        document.getElementById('popupBox').classList.add('show');
+        if (!getCookie('popupShown')) {
+            document.getElementById('popupBox').classList.add('show');
+            setCookie('popupShown', 'true', 365);
+        }
     }
 
     // Function to close the popup box
@@ -418,6 +447,7 @@ font-weight: bold; /* Bold text */
         setTimeout(showPopup, 500); // Slight delay before showing
     }
 </script>
+
 
 </body>
 </html>
