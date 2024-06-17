@@ -136,24 +136,21 @@
         justify-content: center;
       }
     }
-
-	    @media screen and (max-width: 480px) {
-  .physics-button-container {
-    padding: 5px;
-    grid-template-columns: repeat(1, 1fr); /* Single column layout */
-    gap: 5px;
-    justify-items: center; /* Center the buttons horizontally */
-    justify-content: center;
-  }
-  .physics-button {
-    margin: 10px 0; /* Adjust margin for spacing between buttons */
-  }
-}
+    @media screen and (max-width: 480px) {
+      .physics-button-container {
+        padding: 5px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+        justify-content: center;
+      }
+      .hide-on-mobile {
+        display: none;
+      }
 
 @media screen and (max-width: 768px) {
   .physics-button-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Adjust to 2 columns for better fit */
+    grid-template-columns: repeat(1, 1fr); /* Adjust to 2 columns for better fit */
     gap: 10px;
     justify-content: center;
     margin-left: 0; /* Reset margin for centered alignment */
