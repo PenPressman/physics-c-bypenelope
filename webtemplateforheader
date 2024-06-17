@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penelope Pressman</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background: #555;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .contact-info, .resume, .portfolio {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Penelope Pressman</h1>
+        <p>Avid Reader and Writer</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
+        <a href="#resume">Resume</a>
+        <a href="#portfolio">Portfolio</a>
+    </nav>
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Hello! I'm Penelope Pressman, an avid reader and writer with a deep passion for physics, psychology, and research. I love exploring new ideas and concepts, and I am always eager to learn more and share my knowledge with others.</p>
+        </section>
+        <section id="interests" class="section">
+            <h2>Interests</h2>
+            <p>I have a keen interest in the following areas:</p>
+            <ul>
+                <li>Physics</li>
+                <li>Psychology</li>
+                <li>Research</li>
+            </ul>
+        </section>
+        <section id="contact" class="section contact-info">
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:penelope@example.com">penelope@example.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/penelopepressman" target="_blank">linkedin.com/in/penelopepressman</a></p>
+        </section>
+        <section id="resume" class="section resume">
+            <h2>Resume</h2>
+            <p>You can download my resume <a href="path/to/your/resume.pdf" target="_blank">here</a>.</p>
+        </section>
+        <section id="portfolio" class="section portfolio">
+            <h2>Portfolio</h2>
+            <p>Check out some of my work:</p>
+            <ul>
+                <li><a href="link-to-your-project1" target="_blank">Project 1</a></li>
+                <li><a href="link-to-your-project2" target="_blank">Project 2</a></li>
+                <li><a href="link-to-your-project3" target="_blank">Project 3</a></li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Penelope Pressman</p>
+    </footer>
+</body>
+</html>
