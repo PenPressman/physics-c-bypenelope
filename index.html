@@ -44,6 +44,8 @@
  border: 9px solid
 #47a7f5; /* border */
 }
+
+
     header {
       text-align: center;
       padding: 10px;
@@ -161,7 +163,7 @@ margin-bottom: 0px;
     <header>
       <h1>AP Physics C: Mech and E & M</h1>
     </header>
-    <p style="color:#9ddefc;">Welcome. Click the buttons below to find info, formulas and more for each unit. Have fun!<br>
+    <p style="color:#9ddefc;">Click the buttons below to find info, formulas and more for each unit. Have fun!<br>
    <span class="reg-text"> <br>
 <br>***Light pink shadow is <span class="light-pink-text pink-shadow">mech</span>, light green shadow is
     <span class="light-green-text green-shadow">E & M</span>
@@ -466,4 +468,111 @@ box-shadow: inset 0 0 10px 5px rgba(245, 0, 145, 0.8), /* outer shadow */
 
 
   </body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popup intro thing</title>
+<style>
+    body {
+        font-family: Calibri, sans-serif;
+        color: #001F3F;
+    }
+
+    /* Popup box styling */
+    .popup-box {
+        display: none; /* Initially hidden */
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 570px; /* Wider box */
+        height: 300px; /* Shorter box */
+        background-color: #c9dfff; /* Navy background */
+        border: 7px solid; /* Colorful border */
+        border-image: linear-gradient(to right, #00FF00, #FF00FF) 1; /* Gradient border */
+        padding: 25px;
+        text-align: left; /* Left align text for better readability */
+        z-index: 1000;
+        border-radius: 0px; /* Rounded corners */
+        opacity: 0; /* Start with invisible */
+        transition: opacity 2.3s ease, transform 2.3s ease; /* Smooth transition with longer duration */
+    }
+
+    /* Make popup visible and centered */
+    .popup-box.show {
+        display: block;
+        bottom: 50%;
+        opacity: 1;
+        transform: translateX(-50%) translateY(50%);
+    }
+
+    /* Close button styling */
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: #c9dfff; /* No background */
+        border: none; /* No border */
+        font-size: 27px; /* Bigger font size */
+        font-weight: bold; /* Bold text */
+        color: #FF69B4; /* Pink color */
+        cursor: pointer;
+        padding: 0; /* No padding */
+    }
+
+    /* Text styling */
+    .popup-box h2 {
+        color: #001F3F; /* color */
+        font-size: 27px; /* Smaller font size for header */
+        text-align: center; /* Center the header */
+        text-shadow: 2px 2px 4px #e5d3f5; /* Bright shadow */
+font-weight: bold; /* Bold text */
+    }
+
+    .popup-box p {
+        color: #001F3F; /* color */
+        font-size: 12px; /* Slightly bigger font size */
+        line-height: 1.4; /* Improved readability */
+        margin: 7px 0; /* Spacing around text */
+        font-style: italic; /* Italicized text */
+        font-weight: bold; /* Bold text */
+    }
+</style>
+</head>
+<body>
+
+<div class="popup-box" id="popupBox">
+    <button18 class="close-btn" onclick="closePopup()">X</button18>
+    <h2>Welcome!</h2>
+   <p> Please skim this info before proceeding:<br><br>
+    This website contains resources for AP Physics C: Mechanics and Electricity and Magnetism (E & M). The explanations are written by me, a high schooler, but they are based on what I have learned from 2.5 years of physics classes, multiple textbooks which you can find the names of on the sources page, as well as various resources. The games and extra stuff have been helpful for me to visualize and play around with stuff, so see what works for you.<br><br>
+    I'm working on updating this site with more content for other areas of physics (thermo, optics, etc) so check back in a few months if you're curious. I've also included some basic intros to concepts if you're in a pre-AP-C physics class. <br><br>Use what's helpful, ignore what isn't, and have fun :)
+    </p>
+</div>
+
+<script>
+    // Function to show the popup box
+    function showPopup() {
+        document.getElementById('popupBox').classList.add('show');
+    }
+
+    // Function to close the popup box
+    function closePopup() {
+        document.getElementById('popupBox').classList.remove('show');
+    }
+
+    // Show the popup when the page loads
+    window.onload = function() {
+        setTimeout(showPopup, 500); // Slight delay before showing
+    }
+</script>
+
+</body>
 </html>
