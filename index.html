@@ -147,6 +147,39 @@
         display: none;
       }
 
+@media screen and (max-width: 768px) {
+  .physics-button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for better fit */
+    gap: 10px;
+    justify-content: center;
+    margin-left: 0; /* Reset margin for centered alignment */
+  }
+  .physics-button {
+    width: 100%; /* Full width for buttons to occupy the container */
+    margin: 10px 0; /* Adjust margin for spacing between buttons */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .popup-box {
+    width: 90%; /* Adjust width to fit better on smaller screens */
+    max-width: 300px; /* Maximum width to prevent overflow on very small screens */
+    padding: 15px; /* Adjust padding for better spacing */
+    text-align: center; /* Center align text for better readability */
+  }
+
+  .popup-box h2 {
+    font-size: 20px; /* Adjust font size for better readability */
+  }
+
+  .popup-box p {
+    font-size: 14px; /* Adjust font size for better readability */
+    line-height: 1.6; /* Adjust line height for readability */
+  }
+}
+
+
 .light-pink-shadow {
       text-shadow: 1px 1px .5px #c272b4;
     color: #c272b4; /* Light pink color */
