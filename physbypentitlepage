@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="google-adsense-account" content="ca-pub-5077959573383561">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Phys by Pen</title>
+	<meta name="description" content="Resources and explanations for AP physics C: E and M!">
+	<meta name="google-site-verification" content="riKf53f3Se-WIW2mjg--QE53K6J8YkSkidC29bytnZ8" />
+	<meta property="og:image" content="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1">
+	<meta name="description" content="Learn AP Physics C: E & M, and more, with explanations, formula sheets, and games + tools to help make things easier and more fun. ">
+<link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4M671CKZE1');
+</script>
+  <style>
+    /* Existing styles */
+    body {
+      font-family: Calibri, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #4287f5;
+    }
+    header {
+      background: #001f3f;
+       text-align: center;
+      padding: 10px;
+      color: #dce8fa;
+      font-size: 28px;
+      text-shadow: 4px 4px 4px #566fbf;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #1c345c;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background: #4287f5;
+    }
+    .container {
+      padding: 2px;
+    }
+    .section {
+      margin-bottom: 0px;
+  background: #4287f5;
+    }
+    footer {
+      background: #1c345c;
+      color: #fff;
+      text-align: center;
+      padding: 2px ;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    .contact-info, .resume, .portfolio {
+      margin-top: 20px;
+    }
+    
+    /* New styles for the added content */
+    .physics-container {
+      position: relative;
+      background-color: #001f3f;
+      border-radius: 30px;
+      padding: 20px;
+      margin: 20px auto; /* Adjusted margin for spacing */
+      max-width: 1260px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+      border: 9px solid #47a7f5;
+    }
+    .physics-header {
+      text-align: center;
+      padding: 0px;
+      color: #dce8fa;
+      font-size: 25px;
+      text-shadow: 4px 4px 4px #566fbf;
+    }
+    .physics-content {
+      text-align: center;
+      color: #47a7f5;
+      margin-top: 20px;
+    }
+    .physics-button-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+      justify-content: center;
+      margin-bottom: 20px;
+    margin-left: 60px;
+    }
+    .physics-button {
+      font-family: Calibri, sans-serif;
+      margin: 12px;
+      padding: 20px;
+      font-size: 23px;
+      cursor: pointer;
+      border: none;
+      background-color: #c9dfff;
+      color: #001f3f;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      width: 210px;
+      box-shadow: inset 0 0 20px rgba(0, 31, 63, 0.5);
+    }
+    .physics-button:hover {
+      background-color: #6092d1;
+    }
+    .physics-footer {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #47a7f5;
+    }
+    .light-pink-shadow {
+      text-shadow: 1px 1px .5px #c272b4;
+    }
+    .light-green-shadow {
+      text-shadow: 1px 1px .5px #83e187;
+    }
+
+
+  .center-button {
+    display: block;
+    margin: 0 auto;
+    text-align: center; /* Center the text horizontally */
+  }
+
+
+
+.light-red-shadow {
+      text-shadow: 1px 1px .5px #FF0000;
+ color: #001F3F; /* red for thermo*/
+    display: block;
+margin: 0 auto; /* Center horizontally */
+    text-align: center; /* Center text within button */
+    }
+
+    @media screen and (max-width: 768px) {
+      .physics-button-container {
+        padding: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        justify-content: center;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      .physics-button-container {
+        padding: 5px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+        justify-content: center;
+      }
+      .hide-on-mobile {
+        display: none;
+      }
+
+@media screen and (max-width: 768px) {
+  .physics-button-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Adjust to 2 columns for better fit */
+    gap: 10px;
+    justify-content: center;
+    margin-left: 0; /* Reset margin for centered alignment */
+  }
+  .physics-button {
+    margin: 10px 0; /* Adjust margin for spacing between buttons */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .popup-box {
+    width: 90%; /* Adjust width to fit better on smaller screens */
+    max-width: 300px; /* Maximum width to prevent overflow on very small screens */
+    padding: 15px; /* Adjust padding for better spacing */
+    text-align: center; /* Center align text for better readability */
+ height: 600px; /* Shorter box */
+  }
+
+  .popup-box h2 {
+    font-size: 20px; /* Adjust font size for better readability */
+  }
+
+  .popup-box p {
+    font-size: 14px; /* Adjust font size for better readability */
+    line-height: 1.6; /* Adjust line height for readability */
+  }
+}
+
+
+.light-pink-shadow {
+      text-shadow: 1px 1px .5px #c272b4;
+    color: #c272b4; /* Light pink color */
+    }
+
+
+  .center-button {
+    display: block;
+    margin: 0 auto;
+    text-align: center; /* Center the text horizontally */
+  }
+
+    .light-green-shadow {
+      text-shadow: 1px 1px .5px #83e187;
+    }
+
+ .light-red-shadow {
+      text-shadow: 1px 1px .5px #FF0000;
+ color: #FF0000; /* red for thermo*/
+    }
+    
+ 
+
+  </style>
+</head>
+<body>
+  <header>
+   
+<h1><br></h1>
+
+  </header>
+  <nav>
+    <a href="sources.html">Sources</a>
+    <a href="homepageforgames.html">Games</a>
+    <a href="simulations.html">Simulations</a>
+   <a href="mailto:penelope.pressman@gmail.com">Contact</a>
+  </nav>
+
+
+  <div class="container">
+    <section id="about" class="section">
+
+   
+    <!-- New section for AP Physics content -->
+    <div class="physics-container">
+
+
+
+   
+     <div class="physics-content">
+ <div class="physics-header">    
+<h1>AP Physics C: Mech and E & M   
+</div>
+</div>
+
+        <div class="physics-button-container">
+          <button class="physics-button light-pink-shadow" onclick="location.href='page1.html'">Kinematics</button>
+          <button class="physics-button light-pink-shadow" onclick="location.href='page2.html'">Newton's Laws</button>
+          <button class="physics-button light-pink-shadow" onclick="location.href='page3.html'">Energy & Momentum</button>
+          <button class="physics-button light-pink-shadow" onclick="location.href='page4.html'">Rotation</button>
+          <button class="physics-button light-pink-shadow" onclick="location.href='page5.html'">SHM and Gravity</button>
+          <button class="physics-button light-green-shadow" onclick="location.href='page6.html'">Electrostatics</button>
+          <button class="physics-button light-green-shadow" onclick="location.href='page7.html'">Circuits</button>
+          <button class="physics-button light-green-shadow" onclick="location.href='page8.html'">Magnetism and Electromagnetism</button>
+      
+ </div>
+<br>
+	    
+ <div class="physics-content">
+  <p style="color:#c9dfff;">
+   
+    <span class="reg-text">
+  
+      ***Light pink shadow is <span class="light-pink-shadow">mech</span>, light green shadow is
+      <span class="light-green-shadow">E & M</span>
+    </span><br>
+  </p>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Word Generator</title>
+  <style>
+   
+
+    .container {
+      text-align: center;
+      margin-top: 35px;
+    }
+
+
+    #generateBtn {
+      padding: 10px 5px;
+      font-size: 14px;
+      cursor: pointer;
+      background-color: #566fbf; /* blue background color */
+      text-shadow: 1px 1px 1px darkblue; /* Enhanced blue shadow */
+      color: white; /* white text color */
+      border: none; /* Remove button border */
+      border-radius: 10px; /* Add some border radius for rounded corners */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    }
+
+    #generateBtn:hover {
+      background-color: #e6bedf; /* Darker shade when hovering over button */
+    }
+
+   #randomWord {
+  font-size: 25px;
+  margin-top: 0px;
+  color: white; /* light blue text color */
+  text-shadow: 2px 2px 4px #c272b4; /* Adding pink shadow */
+    }
+  </style>
+</head>
+<body>
+  <class="container">
+    <button id="generateBtn">Don't know what to study? <br> Click here for a random unit.<br></button>
+    <p id="randomWord"></p>
+
+  <script>
+    document.getElementById('generateBtn').addEventListener('click', function() {
+      // List of words/phrases
+      var words = [
+        'Kinematics',
+        "Newton's Laws",
+        'Energy and Momentum',
+        'Rotation',
+        'SHM and Gravity',
+        'Electrostatics',
+        'Circuits',
+        'Magnetism and Electromagnetism'
+      ];
+
+      // Generate random index
+      var randomIndex = Math.floor(Math.random() * words.length);
+
+      // Display random word/phrase
+      document.getElementById('randomWord').innerText = words[randomIndex];
+    });
+  </script>
+</body>
+</html>
+
+</div>
+<div class="physics-container">
+
+<div class="physics-header">    
+<h1>Coming soon: Thermodynamics!</h1>
+</div>
+    <!-- Second section of buttons -->
+    <div style="display: flex; justify-content: center;">
+    <button class="physics-button light-red-shadow" onclick="location.href='introtothermodynamics.html'">Intro to Thermodynamics</button>
+</div>
+
+
+    </div>
+    
+    
+</div>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popup intro thing</title>
+<style>
+    body {
+        font-family: Calibri, sans-serif;
+        color: #001F3F;
+    }
+
+    /* Popup box styling */
+    .popup-box {
+        display: none; /* Initially hidden */
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 570px; /* Wider box */
+        height: 320px; /* Shorter box */
+        background-color: #c9dfff; /* background */
+        border: 7px solid; /* Colorful border */
+        border-image: linear-gradient(to bottom, #4287f5, #ff3847) 1; /* Gradient border */
+        padding: 25px;
+        text-align: left; /* Left align text for better readability */
+        z-index: 1000;
+        border-radius: 0px; /* Rounded corners */
+        opacity: 100; /* Start with invisible */
+        transition: opacity .1s ease, transform .1s ease; /* Smooth transition with longer duration */
+    }
+
+    /* Make popup visible and centered */
+    .popup-box.show {
+        display: block;
+        bottom: 50%;
+        opacity: 1;
+        transform: translateX(-50%) translateY(50%);
+    }
+
+    /* Close button styling */
+    .close-btn {
+        position: absolute;
+        top: 8px;
+        right: 15px;
+        background: #c9dfff; /* No background */
+        border: none; /* No border */
+        font-size: 25px; /* Bigger font size */
+        font-weight: bold; /* Bold text */
+        color: #ff3847; /* Pink color */
+        cursor: pointer;
+        padding: 0; /* No padding */
+    }
+
+    /* Text styling */
+    .popup-box h2 {
+        color: #001F3F; /* color */
+        font-size: 27px; /* Smaller font size for header */
+        text-align: center; /* Center the header */
+        text-shadow: 1px 1px 1px #4287f5; /* Bright shadow */
+font-weight: bold; /* Bold text */
+ margin: 2px 0; /* Spacing around text */
+    }
+
+    .popup-box p {
+        color: #001F3F; /* color */
+        font-size: 12.5px; /* Slightly bigger font size */
+        line-height: 1.4; /* Improved readability */
+        margin: 2px 0; /* Spacing around text */
+        font-style: italic; /* Italicized text */
+        font-weight: bold; /* Bold text */
+    }
+</style>
+</head>
+<body>
+
+<div class="popup-box hide-on-mobile" id="popupBox">
+   
+    <h2>Welcome! <button18 class="close-btn" onclick="closePopup()">X</button18></h2>
+   <p> Please read this before proceeding:<br><br> [Note, page not intended for mobile devices, formatting may appear strange and certain features will not be available] <br><br>
+    This website contains resources for AP Physics C: Mechanics and Electricity and Magnetism (E & M). The explanations are written by me, a high schooler, but they are based on what I have learned from 2.5 years of physics classes, multiple textbooks which you can find the names of on the sources page, as well as various resources. The games and extra stuff have been helpful for me to visualize and play around with stuff, so see what works for you.<br><br>
+    I'm working on updating this site with more content for other areas of physics (thermo, optics, etc) so check back in a few months if you're curious. I've also included some basic intros to concepts if you're in a pre-AP-C physics class. <br><br>Use what's helpful, ignore what isn't, and have fun :)
+  	</p>
+</div>
+
+<script>
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    // Function to get a cookie
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    // Function to check cookie and show the popup
+    function showPopup() {
+        if (!getCookie('popupShown')) {
+            document.getElementById('popupBox').classList.add('show');
+            setCookie('popupShown', 'true', 365);
+        }
+    }
+
+    // Function to close the popup box
+    function closePopup() {
+        document.getElementById('popupBox').classList.remove('show');
+    }
+
+    // Show the popup when the page loads
+    window.onload = function() {
+        setTimeout(showPopup, 500); // Slight delay before showing
+    }
+</script>
+
+
+</body>
+</html>
+
+
+      </div>
+
+
+
+
+<div style="width: 55%; margin: 0 auto;">
+  
+    <style>
+        .small-text {
+            font-size: 10pt;
+            color: white;
+            /* or #566fbf for dark, or #cae5fc for light */
+        }
+    </style>
+</div>
+<br>
+<br>
+
+  </body>
+</html>
+
+      
+    </div>
+  </div>
+  <footer>
+    <p> Penelope Pressman - Phys by Pen 2024</p>
+  </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>phys by pen logo add</title>
+<style>
+  
+    .image {
+        position: absolute;
+        top: 30px;
+        right: 570px;
+        max-width: 250px; /* Adjust the size as needed */
+        max-height: 250px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <img class="image" src="https://dl.dropboxusercontent.com/scl/fi/ut0j430toe9ru2rbm1hq2/phys-by-pen-for-index.png?rlkey=fbvl9zbnzobxm3663l2ulaepe&dl=0?raw=1" alt="Physics Image">
+
+</div>
+</body>
+</html>
