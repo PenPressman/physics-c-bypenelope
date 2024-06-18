@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intro to Thermodynamics</title>
+	 <link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
+
+<meta name="description" content="Learn about Thermodynamics">
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4M671CKZE1');
+</script>
+
+<meta name="description" content="Learn about thermodynamics">
+<style>
+body {
+   }
+  body {
+    background-color: #001f3f;
+    font-family: Calibri, sans-serif;
+    color: white; /* Setting font color to white for better readability on *darker* background */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center align the text */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  header {
+    background-color: #001f3f;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px; /* Increase font size for header */
+    margin-bottom: 5px; /* Add margin below header */
+	text-shadow: 4px 4px 4px #566fbf; /* Enhanced blue shadow */
+  }
+ 
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px;
+  }
+
+ 
+  .content {
+    width: 70%; /* Adjust width */
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin */
+    font-weight: lighter; /* Make text thinner */
+  }
+ 
+  .button {
+    background-color: #ADD8E6;
+    color: #001F3F;
+    padding: 15px 30px; /* Increase padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; /* Add margin above and below buttons */
+    font-weight: bold; /* Make text bold */
+    font-size: 18px; /* Increase font size */
+  }
+
+	 button:hover {
+      background-color: #6092d1;
+    }
+ 
+  .hidden {
+    display: none;
+  }
+ 
+  .box {
+    background-color: #075a90
+; /* Color of sections */
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%; /* Decrease width */
+  }
+ 
+  .box p {
+    color: white; /* Set paragraph text to same as background color */
+  }
+ 
+      }
+ 
+  
+</style>
+</head>
+<body>
+ 
+<header>
+  <h1>Intro to Thermodynamics</h1>
+</header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle and Circle Animation</title>
+    <style>
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 15vh; /* Adjust as needed */
+        }
+        #animationContainer {
+            position: relative;
+            width: 150px;
+            height: 150px;
+        }
+        #blueRectangle {
+            width: 100%;
+            height: 25px;
+            background-color: blue;
+            position: absolute;
+            bottom: 0;
+        }
+        #redCircle {
+            width: 25px;
+            height: 25px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 62.5px; /* (150px / 2) - (25px / 2) */
+        }
+    </style>
+</head>
+<body>
+    <div class="center-container">
+        <div id="animationContainer">
+            <div id="blueRectangle"></div>
+            <div id="redCircle"></div>
+        </div>
+    </div>
+
+    <script>
+        const blueRectangle = document.getElementById('blueRectangle');
+        const redCircle = document.getElementById('redCircle');
+        const duration = 10000; // 10 seconds
+        const fallDuration = 2000; // 2 seconds for the circle to fall
+        const containerHeight = 150;
+        const circleDiameter = 25;
+        const targetTop = containerHeight - circleDiameter - blueRectangle.clientHeight;
+        let startTime;
+
+        function animate(time) {
+            if (!startTime) startTime = time;
+            const elapsedTime = time - startTime;
+            
+            if (elapsedTime < fallDuration) {
+                // Circle falling down
+                const progress = elapsedTime / fallDuration;
+                redCircle.style.top = `${progress * targetTop}px`;
+                requestAnimationFrame(animate);
+            } else {
+                // Circle has touched the rectangle, start color transition
+                const colorStartTime = time;
+                const animateColors = (colorTime) => {
+                    const colorElapsedTime = colorTime - colorStartTime;
+                    const colorProgress = Math.min(colorElapsedTime / duration, 1);
+
+                    // Calculate the current colors
+                    const blueToPurple = `rgb(${Math.round(255 * colorProgress)}, 0, ${Math.round(255 * (1 - colorProgress))})`;
+                    const redToPurple = `rgb(255, 0, ${Math.round(255 * (1 - colorProgress))})`;
+
+                    blueRectangle.style.backgroundColor = blueToPurple;
+                    redCircle.style.backgroundColor = redToPurple;
+
+                    if (colorProgress < 1) {
+                        requestAnimationFrame(animateColors);
+                    }
+                };
+                requestAnimationFrame(animateColors);
+            }
+        }
+
+        requestAnimationFrame(animate);
+    </script>
+</body>
+</html>
+
+<br>
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formatted Paragraph</title>
+<style>
+    /* Style for the specific paragraph */
+    .formatted-paragraph {
+        max-width: 900px; /* Set maximum width */
+        margin: 0 auto; /* Center the paragraph horizontally */
+        padding: 0 20px; /* Add some padding to the sides */
+        /* Add any additional styles for the paragraph */
+    }
+</style>
+</head>
+<body>
+ 
+<p class="formatted-paragraph"
+ </p>
+<br>
+
+ 
+<p class="formatted-paragraph" </u>Up until now, all of the content on this website, and possibly all of the content you have learned if you are reading this, has focused on Newtonian mechanics, and electrostatics + magnetism. In past courses, rigid objects are enerally treated like particles when we analyze their motion. Sure, we learned how to calculate the center of mass of objects, but we don’t treat projectiles like objects made of 10<sup>15</sup> atoms, we just treat it like one particle moving from one infinitely precise spot. Thermodynamics is totally different. If you’ve taken chemistry courses, then concepts you are familiar with will show up here quite quickly, and you’ll start to see the overlap. For this area of physics, we focus on heat and energy (you’ll see why the “and” could be replaced by a “/” soon). Thermo looks at systems and the way they change, analyzing properties and the way interactions work. If you are already taking this course and using this as a “read-some-explanations-to-review-instead-of-doing-practice-problems-because-I-am-tired” resource, skip the historical intro stuff. I’m learning this course more informally than my past physics courses, so for now it won’t be organized by unit or anything. Instead,I’ll start simple and build up. As always, use what’s useful, ignore what isn’t. <br>
+ </p>
+ 
+</body>
+</html>
+ 
+<div class="container">
+  <div class="content">
+ 
+ 
+      <button class="button" onclick="toggleUnits()">**Coming soon**</button>
+    <button class="button" onclick="toggleFormulas()">**Coming soon**</button>    <button class="button" onclick="toggleMainConcepts()">**Coming soon**</button>
+  </div>
+<div id="formulasBox" class="box hidden">
+ <h2 style="text-align: center;"> Header </h2>
+<p>
+content</p><br>
+
+
+ <h4 style=”text-align: center;”><u>subheader</u></h4>
+
+conent</p>
+
+
+</div>
+ 
+  <div id="conceptsBox" class="box hidden">
+    <h2 style="text-align: center;">Header</h2>
+<style>
+    /* Style for the header */
+    h2 {
+        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to the text */
+    }
+</style>
+<p style="text-align: left;">
+content</p><br>
+
+ <h2 style="text-align: center;"> Header </h2>
+<p style="text-align: left;">
+content</p><br>
+<h4 style=”text-align: center;”><u>subheader</u></h4>
+<p style="text-align: left;">
+content</p><br>
+
+
+
+  </div>
+      
+  <div id="unitsBox" class="box hidden">
+    <h2 style="text-align: center;"> Units and Constants for ___</h2>
+<p>Remember, if there’s not much <u>new</u>, review <u>what you can already do.</u></p>
+    <div style="text-align: center;">
+<head>
+    <style>
+ 
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 2px solid white; /* white border for each cell */
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h4><u>Units</h4></u>  
+ 
+    <table>
+ 
+        </tr>
+        <!-- Rows -->
+        <tr>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+
+         </table>
+        </p>
+    </div>
+  <div style="text-align: center;"> <h4><u>Constants</h4></u>  
+    	<p> </p><html>
+<head>
+	<title>  </title>
+	<style>
+ 
+    	table {
+        	border-collapse: collapse;
+        	width: 100%;
+    	}
+    	th, td {
+        	border: 2px solid white; /* white border for each cell */
+        	padding: 10px;
+        	text-align: center;
+    	}
+	</style>
+</head>
+<body>
+	<table>
+    	</tr>
+    	<!-- Rows -->
+    	        <tr>
+                   </tr>
+         <tr>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+      
+ 
+          	</table>
+    	</p>
+	</div>
+ 
+  </div>
+  </div>
+</div><script>
+  function toggleFormulas() {
+    var formulasBox = document.getElementById("formulasBox");
+    formulasBox.classList.toggle("hidden");
+  }
+ 
+  function toggleMainConcepts() {
+    var conceptsBox = document.getElementById("conceptsBox");
+    conceptsBox.classList.toggle("hidden");
+  }
+ 
+  function toggleUnits() {
+    var unitsBox = document.getElementById("unitsBox");
+    unitsBox.classList.toggle("hidden");
+  }
+ 
+ 
+</script>
+ 
+</body>
+</html>
+ 
+ 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Example</title>
+    <style>
+        .menu {
+            display: none;
+            position: absolute;
+            top: 90px; /* Moved down */
+            left: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 4px;
+            z-index: 1;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .menu a, #likeButton {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+            color: #333;
+            background-color: #add8e6;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.4;
+         
+        }
+
+        .menu a:hover, #likeButton:hover {
+            background-color: #8ab6d6;
+        }
+
+        #menuButton {
+            position: absolute;
+            top: 30px; /* Moved down */
+            left: 34px;
+            font-size: 43px;
+            color: white;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+
+
+        }
+    </style>
+</head>
+<body>
+    <button id="menuButton" onclick="toggleMenu()">&#9776;</button>
+    <div id="menu" class="menu">
+        <a href="index.html">&#127968; Home</a>
+        <a href="mailto:penelope.pressman@gmail.com">&#128235; Contact</a>
+           </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        var likeButton = document.getElementById("likeButton");
+        var likeCount = 0;
+        var liked = false;
+
+        likeButton.addEventListener("click", function() {
+            if (!liked) {
+                likeCount++;
+                likeButton.innerHTML = "Liked page ❤️";
+                likeButton.style.backgroundColor = "lightpink"; /* pink */
+                liked = true;
+                alert("Liked! Count: " + likeCount);
+            } else {
+                alert("You already liked this.");
+            }
+        });
+    </script>
+</body>
+</html>
+
+          
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>phys by pen logo add</title>
+<style>
+  
+    .image {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        max-width: 70px; /* Adjust the size as needed */
+        max-height: 70px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <img class="image" src="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" alt="Physics Image">
+</div>
+</body>
+</html>
+
+
+
