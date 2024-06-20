@@ -148,56 +148,17 @@ margin: 0 auto; /* Center horizontally */
     text-align: center; /* Center text within button */
     }
 
-    @media screen and (max-width: 768px) {
-      .physics-button-container {
-        padding: 10px;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-        justify-content: center;
-      }
-    }
+
     @media screen and (max-width: 480px) {
       .physics-button-container {
-        padding: 5px;
+        padding: 2px;
         grid-template-columns: repeat(1, 1fr);
-        gap: 5px;
+        gap: 2px;
         justify-content: center;
       }
       .hide-on-mobile {
         display: none;
       }
-
-@media screen and (max-width: 768px) {
-  .physics-button-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Adjust to 2 columns for better fit */
-    gap: 10px;
-    justify-content: center;
-    margin-left: 0; /* Reset margin for centered alignment */
-  }
-  .physics-button {
-    margin: 10px 0; /* Adjust margin for spacing between buttons */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .popup-box {
-    width: 90%; /* Adjust width to fit better on smaller screens */
-    max-width: 300px; /* Maximum width to prevent overflow on very small screens */
-    padding: 15px; /* Adjust padding for better spacing */
-    text-align: center; /* Center align text for better readability */
- height: 600px; /* Shorter box */
-  }
-
-  .popup-box h2 {
-    font-size: 20px; /* Adjust font size for better readability */
-  }
-
-  .popup-box p {
-    font-size: 14px; /* Adjust font size for better readability */
-    line-height: 1.6; /* Adjust line height for readability */
-  }
-}
 
 
 .light-pink-shadow {
@@ -315,6 +276,8 @@ AP Physics C: Mech and E & M
   color: white; /* light blue text color */
   text-shadow: 2px 2px 4px #c272b4; /* Adding pink shadow */
     }
+
+	  
   </style>
 </head>
 <body>
@@ -437,6 +400,27 @@ font-weight: bold; /* Bold text */
         font-style: italic; /* Italicized text */
         font-weight: bold; /* Bold text */
     }
+
+	  @media screen and (max-width: 480px) {
+		   .popup-box {
+        display: none; /* Initially hidden */
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px; /* Wider box */
+        height: 620px; /* Shorter box */
+        background-color: #c9dfff; /* background */
+        border: 7px solid; /* Colorful border */
+        border-image: linear-gradient(to bottom, #4287f5, #ff3847) 1; /* Gradient border */
+        padding: 25px;
+        text-align: left; /* Left align text for better readability */
+        z-index: 1000;
+        border-radius: 0px; /* Rounded corners */
+        opacity: 100; /* Start with invisible */
+        transition: opacity .1s ease, transform .1s ease; /* Smooth transition with longer duration */
+    }}
+		  
 </style>
 </head>
 <body>
