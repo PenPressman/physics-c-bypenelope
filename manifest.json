@@ -1,20 +1,23 @@
 {
-  "name": "Phys by Pen",
-  "short_name": "PhysbyPen",
-  "start_url": "index.html",
+  "background_color": "#001f3f",
+  "description": "Resources and explanations for AP physics C: E and M!",
+  "dir": "ltr",
   "display": "standalone",
-  "background_color": "#001F3F",
+  "name": "Phys by Pen",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Phys by Pen",
+  "start_url": "/",
   "theme_color": "#c9dfff",
   "icons": [
     {
-      "src": "https://dl.dropboxusercontent.com/scl/fi/ut0j430toe9ru2rbm1hq2/phys-by-pen-for-index.png?rlkey=fbvl9zbnzobxm3663l2ulaepe&dl=0?raw=1",
-      "sizes": "192x192",
-      "type": "image/png"
+      "src": "https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&amp;dl=0?raw=1",
+      "type": "image/png",
+      "sizes": "1181x1181"
     },
     {
-      "src": "https://dl.dropboxusercontent.com/scl/fi/ut0j430toe9ru2rbm1hq2/phys-by-pen-for-index.png?rlkey=fbvl9zbnzobxm3663l2ulaepe&dl=0?raw=1",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1"
     }
-  ]
+  ],
+  "id": "Phys by Pen"
 }
