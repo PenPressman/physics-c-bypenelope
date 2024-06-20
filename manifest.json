@@ -1,7 +1,7 @@
 {
   "name": "Phys by Pen",
   "short_name": "PhysbyPen",
-  "start_url": "/index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#001F3F",
   "theme_color": "#c9dfff",
