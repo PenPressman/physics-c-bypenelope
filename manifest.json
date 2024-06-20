@@ -1,0 +1,20 @@
+{
+  "name": "Phys by Pen",
+  "short_name": "PhysbyPen",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#001F3F",
+  "theme_color": "#c9dfff",
+  "icons": [
+    {
+      "src": "https://dl.dropboxusercontent.com/scl/fi/ut0j430toe9ru2rbm1hq2/phys-by-pen-for-index.png?rlkey=fbvl9zbnzobxm3663l2ulaepe&dl=0?raw=1",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://dl.dropboxusercontent.com/scl/fi/ut0j430toe9ru2rbm1hq2/phys-by-pen-for-index.png?rlkey=fbvl9zbnzobxm3663l2ulaepe&dl=0?raw=1",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
