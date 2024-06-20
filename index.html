@@ -142,7 +142,7 @@
 
 .light-red-shadow {
       text-shadow: 1px 1px .5px #FF0000;
- color: #001F3F; /* red for thermo*/
+ color: #001F3F; /* back to normal*/
     display: block;
 margin: 0 auto; /* Center horizontally */
     text-align: center; /* Center text within button */
@@ -151,7 +151,7 @@ margin: 0 auto; /* Center horizontally */
 
     @media screen and (max-width: 480px) {
       .physics-button-container {
-        padding: 2px;
+        padding: 1px;
         grid-template-columns: repeat(1, 1fr);
         gap: 2px;
         justify-content: center;
@@ -160,10 +160,19 @@ margin: 0 auto; /* Center horizontally */
         display: none;
       }
 
+	     header {
+      background: #001f3f;
+       text-align: center;
+      padding: 10px;
+      color: #dce8fa;
+      font-size: 25px;
+      text-shadow: 4px 4px 4px #566fbf;
+    }
+
 
 .light-pink-shadow {
       text-shadow: 1px 1px .5px #c272b4;
-    color: #c272b4; /* Light pink color */
+    color: #001F3F; /* back to normal*/
     }
 
 
@@ -179,7 +188,7 @@ margin: 0 auto; /* Center horizontally */
 
  .light-red-shadow {
       text-shadow: 1px 1px .5px #FF0000;
- color: #FF0000; /* red for thermo*/
+ color: #001F3F; /* back to normal*/
     }
     
  
@@ -409,7 +418,7 @@ font-weight: bold; /* Bold text */
         left: 50%;
         transform: translateX(-50%);
         width: 300px; /* Wider box */
-        height: 620px; /* Shorter box */
+        height: 470px; /* Shorter box */
         background-color: #c9dfff; /* background */
         border: 7px solid; /* Colorful border */
         border-image: linear-gradient(to bottom, #4287f5, #ff3847) 1; /* Gradient border */
