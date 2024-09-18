@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-adsense-account" content="ca-pub-5077959573383561">
+    <link rel="manifest" href="manifest.json">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5077959573383561"
+    crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phys by Pen</title>
+    <meta name="description" content="Resources and explanations for AP physics C: E and M!">
+    <meta name="google-site-verification" content="riKf53f3Se-WIW2mjg--QE53K6J8YkSkidC29bytnZ8" />
+    <meta property="og:image" content="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1">
+    <meta name="description" content="Learn AP Physics C: E & M, and more, with explanations, formula sheets, and games + tools to help make things easier and more fun. ">
+    <link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4M671CKZE1');
+    </script>
+    <style>
+        body {
+            font-family: Calibri, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #4287f5;
+        }
+        header {
+            background: #001f3f;
+            text-align: center;
+            padding: 10px;
+            color: #dce8fa;
+            font-size: 31px;
+            text-shadow: 4px 4px 4px #566fbf;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #1c345c;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background: #4287f5;
+        }
+        .container {
+            padding: 2px;
+        }
+        .section {
+            margin-bottom: 0px;
+  width: 100%;
+            background: #4287f5;
+        }
+        footer {
+            background: #1c345c;
+            color: #fff;
+            text-align: center;
+            padding: 2px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .contact-info, .resume, .portfolio {
+            margin-top: 20px;
+        }
+.battery {
+    width: 60px; /* Decrease the width of the battery */
+    height: 120px; /* Decrease the height of the battery */
+    background-color: #333; /* Dark gray color for the battery */
+    position: absolute;
+    top: 46%; /* Adjust the top position to move the battery further up */
+    left: 50%; /* Position the battery 50% from the left */
+    transform: translate(-50%, -50%); /* Center the battery both vertically and horizontally */
+}
+	
+	
+	/* Media query for screens up to 480px wide (e.g., smartphones) */
+  @media screen and (max-width: 480px) {
+    .battery {
+   width: 60px; /* Decrease the width of the battery */
+    height: 120px; /* Decrease the height of the battery */
+    background-color: #333; /* Dark gray color for the battery */
+    position: absolute;
+    top: 40%; /* Adjust the top position to move the battery further up */
+    left: 50%; /* Position the battery 50% from the left */
+    transform: translate(-50%, -50%); /* Center the battery both vertically and horizontally */
+    }}
+
+.top-connector {
+    width: 20px; /* Decrease the width of the connector */
+    height: 6px; /* Decrease the height of the connector */
+    background-color: #666; /* Medium gray color for the connector */
+    position: absolute;
+    top: -6px; /* Position the connector above the battery */
+    left: 50%; /* Position the connector at the center horizontally */
+    transform: translateX(-50%); /* Center the connector horizontally */
+}
+
+.charging {
+    position: absolute;
+    width: 60px; /* Decrease the width of the charging indicator */
+    height: 115px; /* Decrease the height of the charging indicator */
+    background-color: #4CAF50; /* Green color for the charging indicator */
+    bottom: 3px; /* Decrease the distance from the bottom */
+    left: 50%; /* Position the charging indicator at the center horizontally */
+    transform: translateX(-50%); /* Center the charging indicator horizontally */
+    animation: chargeBattery 4s ease-in-out infinite alternate; /* Animation for charging */
+}
+
+	  
+
+
+
+
+  .battery::before,
+  .battery::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px; /* Width of the battery terminals */
+    height: 10px; /* Height of the battery terminals */
+    background-color: #666; /* Medium gray color for the terminals */
+    top: 50%; /* Position terminals vertically centered */
+  }
+
+  .battery::before {
+    left: 5px; /* Position left terminal */
+    transform: translate(-50%, -50%);
+  }
+
+  .battery::after {
+    right: 5px; /* Position right terminal */
+    transform: translate(50%, -50%);
+  }
+
+ 
+  @keyframes chargeBattery {
+    0% {
+      height: 0; /* Start height of charging indicator */
+	
+    }
+    100% {
+      height: 115px; /* End height of charging indicator */
+    }
+
+
+</style>
+</head>
+<body>
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Magnetism and Electromagnetism</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="sources.html">Sources</a>
+        <a href="homepageforgames.html">Games</a>
+        <a href="simulations.html">Simulations</a>
+        <a href="mailto:penelope.pressman@gmail.com">Contact</a>
+        <a href="about.html">About</a>
+    </nav>
+    <div class="container">
+        <section id="about" class="section">
+           <title> Magnetism and Electromagnetism</title>
+  <link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
+
+<meta name="description" content="Learn about Magnetism and Electromagnetism">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4M671CKZE1');
+</script>
+<style>
+  body {
+    background-color: #001f3f;
+    font-family: Calibri, sans-serif;
+    color: white; /* Setting font color to white for better readability on *darker* background */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center align the text */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  header {
+    background-color: #001f3f;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px; /* Increase font size for header */
+    margin-bottom: 5px; /* Add margin below header */
+     text-shadow: 4px 4px 4px #566fbf; /* Enhanced blue shadow */
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px;
+  }
+
+  .content {
+    width: 70%; /* Adjust width */
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin */
+    font-weight: lighter; /* Make text thinner */
+  }
+
+  .button {
+    background-color: #ADD8E6;
+    color: #001F3F;
+    padding: 15px 30px; /* Increase padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; /* Add margin above and below buttons */
+    font-weight: bold; /* Make text bold */
+    font-size: 18px; /* Increase font size */
+  }
+
+   button:hover {
+      background-color: #6092d1;
+    }
+
+  .hidden {
+    display: none;
+  }
+
+  .box {
+    background-color: #075a90
+; /* Color of sections */
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%; /* Decrease width */
+  }
+
+  .box p {
+    color: white; /* Set paragraph text to same as background color */
+  }
+</style>
+</head>
+<body>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>magnets Animation</title>
+<style>
+    body {
+        margin: 0;
+
+    }
+    .block {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 41%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+    }
+    .blue {
+        background-color: blue;
+        color: white;
+    }
+    .red {
+        background-color: red;
+        color: white;
+    }
+</style>
+</head>
+<body>
+<div class="block blue" id="blueBlock">-</div>
+<div class="block red" id="redBlock">+</div>
+<script>
+    const blueBlock = document.getElementById('blueBlock');
+    const redBlock = document.getElementById('redBlock');
+
+    let bluePosition = 0;
+    let redPosition = window.innerWidth - 50; 
+
+    function moveBlocks() {
+        bluePosition += 1;
+        redPosition -= 1;
+
+        blueBlock.style.left = bluePosition + 'px';
+        redBlock.style.left = redPosition + 'px';
+
+        if (bluePosition >= window.innerWidth / 2 || redPosition <= window.innerWidth / 2) {
+            bluePosition = 0;
+            redPosition = window.innerWidth - 50;
+        }
+    }
+
+    setInterval(moveBlocks, 10);
+</script>
+</body>
+</html>
+
+ 
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formatted Paragraph</title>
+<style>
+    /* Style for the specific paragraph */
+    .formatted-paragraph {
+        max-width: 900px; /* Set maximum width */
+        margin: 0 auto; /* Center the paragraph horizontally */
+        padding: 0 20px; /* Add some padding to the sides */
+        /* Add any additional styles for the paragraph */
+    }
+</style>
+</head>
+<body>
+ 
+<p class="formatted-paragraph"
+ </p>
+<br>
+
+ 
+<p class="formatted-paragraph" </u> <br><br><br>As the name suggests, this is all about magnets... and magnetic fields… and a bunch of other related stuff. First of all, there’s some overlap between this unit and electrostatics (I don’t just mean concepts you’ll need to keep in mind, I mean formulas that look weirdly alike), so take advantage of similarities and overlap to remember everything. Also, there are some interesting examples that might seem so only be useful for their specific scenarios at first, but they can actually be helpful in building your understanding, so I promise it ends up being worth it. Ok, time to start! <br>
+ </p>
+ 
+</body>
+</html>
+ 
+<div class="container">
+  <div class="content">
+ 
+ 
+      <button class="button" onclick="toggleUnits()">Relevant Units & Constants</button>
+    <button class="button" onclick="toggleFormulas()">Formulas</button>    <button class="button" onclick="toggleMainConcepts()">Concept Explanations</button>
+  </div>
+<div id="formulasBox" class="box hidden">
+ <h2 style="text-align: center;"> Magnetic Fields (B-fields) </h2>
+<p>
+B-field from current carrying wire: B=μ<sub>o</sub>I/2πr (where M<sub>0</sub> is the magnetic permittivity of free space, “r” is the distance between the field generator and the wire, and “I” is current as per usual)</p><br>
+
+<h2 style="text-align: center;"> Magnetic Forces </h2>
+<style>
+    /* Style for the header */
+    h2 {
+        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to the text */
+    }
+</style>
+<p>
+external magnetic force: F<sub>B</sub = qv × B, aka qv⊥B><br>
+current-carrying wire: F<sub>B</sub = IL × B, aka IL⊥B (where “L” is the length of the wire the B field crosses)<br>
+
+TWO current carrying wires: F<sub>B</sub>/L = μ<sub>0</sub>I<sub>1</sub>I<sub>2</sub>/2πr
+
+ <h4 style=”text-align: center;”><u>centripetal motion within the B-field</u></h4>
+
+r=mv/qB
+<br>
+So…<br>
+T=2πm/qB<br>
+f=qB/2πm<br>
+ω=2πf<br></p>
+
+
+<h4 style=”text-align: center;”><u>EXAMPLE: Mass Spectrometers</u></h4>
+<p>
+in the accelerator: a=qE<sub>1</sub>/m<br>
+in the velocity selector: v=E<sub>2</sub>/B<sub>2</sub><br>
+in the detector: q/m = E<sub>2</sub>/rB<sub>2</sub>B<sub>3</sub><br></p>
+<h4 style=”text-align: center;”><u>EXAMPLE: Cyclotrons</u></h4>
+<p>
+period: T=2πm/qB<br>
+
+frequency: f=qB/2πm<br>
+</p>
+<h4 style=”text-align: center;”><u>EXAMPLE: Motors</u></h4>
+<p>
+torque in a loop: τ=AIBsinθ (where “A” is the area of the loop (W*L))<br>
+for multiple loops (“n” loops): τ= NAIBsinθ = MBsinθ (where “M” is magnetic moment) = M × B  </p><br>
+<h2 style="text-align: center;">The Hall Effect + Drift Velocity </h2>
+<p>
+Hall voltage: V<sub>h</sub>=E<sub>H</sub>d = V<sub>drift (D)</sub>dB = BdJ/ne
+<br>
+V<sub>D=J/ne
+
+<br></p><br>
+<h2 style="text-align: center;">Ampere’s Law</h2>
+<p>
+∮B•dl = μ<sub>0</sub>I<sub>encl</sub></p><br>
+<h2 style="text-align: center;">Wire Systems</h2>
+<p>
+outside straight wire: B  = μ<sub>0</sub>I/2πr<br>
+inside straight wire: B  = μ<sub>0</sub>Ir/2πR<sup>2</sup> </p>
+
+
+<h4 style="text-align: center;"><u>Solenoid</u></h4>
+<p style="text-align: center;">
+B<sub>sol</sub>=μ<sub>0</sub>In (where “n” is the number of turns)
+</p>
+<h4 style="text-align: center;"><u>Toroid</u></h4>
+<p style="text-align: center;">
+B<sub>tor</sub>=μ<sub>0</sub>IN/2πr (same “n” as solenoids)
+<br>
+</p>
+<br>
+<h2 style="text-align: center;">Faraday's Law</h2>
+<p>
+magnetic flux: Φ<sub>B</sub> = ∫B•dA = BAcosθ for constant B
+induced emf: ε = -N dΦ<sub>B</sub>/dt = -NBLV</p><br>
+
+
+<h2 style="text-align: center;">Inductance (L)</h2>
+<p>
+L = NΦ<sub>B</sub>/I<br>
+for solenoids: L<sub>sol</sub>=μ<sub>0</sub>n<sup>2</sup>LA</p><br>
+<h2 style="text-align: center;">RL Circuits</h2>
+<p>
+ ε = V<sub>L</sub> = L di/dt<br>
+I =   ε/R = (1-e<sup>-Rt/L</sup>)
+<br>ε/R = I<sub>max</sub></p><br>
+
+
+</div>
+ 
+  <div id="conceptsBox" class="box hidden">
+    <h2 style="text-align: center;"> Magnetic Fields </h2>
+<style>
+    /* Style for the header */
+    h2 {
+        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to the text */
+    }
+</style>
+<p style="text-align: left;">
+Just as a charge creates an electric field, a magnet (OR moving charges)creates a magnetic field. If you think about where the field would be stronger, it’s pretty easy to intuit that it will be strongest closest to the “source” of the field, i.e. the magnet. Hopefully you recognize the idea of moving charges, because that is just current. As such, current flowing or the presence of a magnet will create a “B-field” (magnetic field). Other than learning formulas to find the B-field in given scenarios. The new thing to learn in this unit is the <u>right hand rules</u>, which, incidentally, involve both your right and left hands. Starting off, the one for fields is the easiest, and only involves the right. Make a thumbs up with your right hand, and then loosen it a bit so that your fingers are just curved instead of your fist being clenched. Your thump now represents the direction of current, and your fingers represent the B-field. If current is up, your thumb points up and your fingers curve towards you, aka “out of the page.” If your thumb (/current) points down, then the B-field curves into the page. If you have a circular object, it might be easier to imagine the, for example, circular wire, as your fingers, in which case the B-field is your current. However, I like to always keep the fingers the field (I think it's simpler/easier to keep track of), and then just reason through how the B-field would be positioned as the current shifts in a circle. The other right hand rule is a bit more complicated, and we’ll come back to it once we talk about forces:</p><br>
+
+ <h2 style="text-align: center;"> Magnetic Force </h2>
+<p style="text-align: left;">
+The key thing to remember when thinking about magnetic force is that a force is only created if there is <u>relative motion</u> between a charge and a B-field. I like to think of force as like magnetic friction, which is absolutely not a technical or in any way correct comparison, it just reminds me of kinetic friction, which reminds me that there needs to be relative motion for the force (*just like force of friction*) to occur. In this case, you’ll notice we find the magnetic force through the cross product of the charge and its velocity and the B-field, aka only the perpendicular components. This means if you have a particle traveling along the same direction a B-field points, it will experience no magnetic force. Take advantage of the world cross product: think of it as the charge needing to “cross” the B-field to feel a magnetic force. Also, notice that permeability of free space comes up again, but this time it’s magnetic permeability, so if the field and force is all going on in a non-vacuum, you would add a constant to the force formula to account for that. Ok, back to the right hand rules. To start with this next one, just remember that the left hand is for negative charges and the right is for positive ones (I remember it as: “I’m positive I’m right about this”). Next, now that we know that the velocity of the particle and B-field must be perpendicular, use that knowledge to orient your hands so that your pointer, thumb, and other fingers are all perpendicular to each other. The easiest way (in my opinion) to set this up, is to point a finger gun forward with your right hand, and then open your other three fingers so that they point left (so, pointer forward, thumb up, fingers left). Now do the opposite with the left hand (extra fingers to the right, same directions for thumb and pointer). All set! The most important thing for the right hand rules is not to let your fingers move relative to each other. THE POSE OF YOUR HAND IS A STATUE!! But… you can move the whole thing around! First, take this shape you made and move your forearm so that everything is oriented up. Now, your pointer should be up, thump pointed at you (aka “out of the page”), and other fingers to the left. Hopefully you’re wondering what this means. Well, your thumb represents force, your pointer represents velocity of the particle or the current, and the other fingers represent the B-fields. The way  they point is the direction those variables point. Since the relative position between the three stays the same (perpendicular), if you know 2/3 you can find the third! Now just remember to keep track of “into” the page (forward) or “out of the page” (towards you) and you’re all set. For the rest of the basic magnetic force stuff in this unit… you already know it. F=ma means a net b-force creates acceleration, just like regular. Yet again, review work and power since force and distance traveled lets you find that.</p><br>
+<h4 style=”text-align: center;”><u>E and B Fields</u></h4>
+<p style="text-align: left;">
+If we have perpendicular (ie “crossed”) B-fields and E-fields, then given the relationships between forces and fields for E and B, we’;; end up with the E-force and B-force in opposite directions. Therefore, we can find out which way a particle in the midst of that cross will move by comparing which is stronger. If the B-field is stronger, it “wins,” and the particle moves in the direction the B-force pushes it. If the E-field “wins,” the opposite is true, and if E=B the particle moves straight through! I like the rhyme of the three scenarios to help memorize. </p><br>
+<h4 style=”text-align: center;”><u>EXAMPLE: Mass Spectrometers</u></h4>
+<p style="text-align: left;">
+Mass spectrometers are useful for measuring mass-to-charge ratios and learning about molecules, but in this case, they are just useful for practicing learning about magnetic and electric fields and their effects. There are three portions of a mass spectrometer, a charge accelerator, then a velocity selector, then a detector. In order to get through the mass spectrometer, everything we set up needs to be very specific. In the accelerator, a potential difference is introduced by creating an electric field in a direction corresponding to the charge of the particle (if the charge is negative, the field points in the opposite direction of where you are trying to move the particle, and vice versa. Once we know the acceleration, we can find the velocity with which the particle will enter the velocity selector. In the selector, we use crossed E and B fields to set a specific E/B ratio that must be equal to the particle's velocity in order for it to get through. If the ratio is off, it will be deflected. Once the spectrometer has filtered us down to just the particles with a velocity equal to E/B, the last region has only a B field. In this region, the detector, we can use our centripetal force formula to find how far the B-field will curve the particle. However, rather than fully solving for “r,” we aim to just find the q/m ratio. That’s it!   </p><br>
+<h4 style=”text-align: center;”><u>EXAMPLE: Cyclotrons</u></h4>
+<p style="text-align: left;">
+Cyclotrons allow us to accelerate particles by speeding them around in loops that get faster every time. In between two B-fields, we create a potential difference. Each time the particle enters the B-field, it will get directed in a circle up or down depending on its charge. Back at the middle, the potential difference will make it swap sides again and get accelerated. The formulas on the formula sheet describe this process. You’ll notice that changing the B-field value will change the frequency of your cyclotron (and period etc).</p><br>
+<h4 style=”text-align: center;”><u>EXAMPLE: Motors</u></h4>
+<p style="text-align: left;">
+In a nutshell, simple motors in this unit use magnets and generated current in order to create continual movement. You can consider these motors just as serieses of current carrying loops, which will feel torque from the perpendicular forces that are being created. Take a look at the formulas on the formula page. Since each loop feels torque, the more loops you have, the more total torque you have → more spinning, faster motor! Memorize the formula and make sure that makes sense.</p><br>
+<h2 style="text-align: center;">The Hall Effect</h2>
+<p style="text-align: left;">
+Fundamentally, the hall effect is a new way of finding voltage once we have information about E and B fields (and forces). Hall voltage refers to the voltage that piles up and is measured in a circuit with a B and E field. You’ll notice one of the formulas for Hall voltage requires drift velocity, so that is next:</p><br>
+<h2 style="text-align: center;">Drift Velocity</h2>
+<p style="text-align: left;">
+Electrons always move around randomly and quickly (very very quickly). Overall, if there is no potential difference, the net velocity will be 0, UNLESS there IS a potential difference, in which case the electrons will be at “drift velocity.” I like to remember the formula for charge’s relationship to charge carriers/volume, cross sectional area, length, and charge of one carrier as “the charge for a nail,” since q=NALe. Since I =NALe/time, we can use that to find time, and plug time into v=change in distance over time, aka l/t, and find drift velocity. Check out the formulas to go over more of the relationships between variables and ways to solve things quickly.</p><br>
+
+<h2 style="text-align: center;">Ampere’s Law</h2>
+<p style="text-align: left;">
+Just as we can use Gauss’ law to solve for E-fields, we can use Ampere’s law for B-fields. Instead of enclosed charge, we’ll use inclosed current. Instead of Gausian spheres etc, we’ll use Amperian loops. Ok, examples:</p><br>
+<h4 style="text-align: center;"><u>Wire Systems</u></h4>
+<p style="text-align: left;">
+If we had just one current carrying wire, we can use the formulas we already know to find the B-field at a distance away, but we can also use Ampere’s law instead. First, draw the loop outside the “r” distance we are measuring the field at. Instead of surface area like in Gauss’ law, we’ll just use the circumference of a circle for the “area” of the loop. If you test it, you’ll see we end up with the same formula we’ve seen before. Sidenote, the direction of the loop = the direction of the B-field. For multiple wires, we can draw loops around each wire, and all the B-fields to get a net B-field. Remember to use the RH rules to keep directions consistent. If you have uniform current density within wires, you can use J (current over area) in order to find charge enclosed in the area of the wire in which you are enclosing a field.</p><br>
+
+<h4 style="text-align: center;"><u>Coaxial Cable</u></h4>
+<p style="text-align: left;">
+Aka, a circular wire with a spherical shell around it. When finding the I<sub>enclosed</sub>, the value will change as you move the amperian loop. IF you are within the spherical shell, you can use current density in order to find the current relative to the radius. If you are around the whole thing, just subtract the current causing out of the page field from into the page.
+</p>
+<h4 style="text-align: center;"><u>Solenoid</u></h4>
+<p style="text-align: left;">
+A solenoid is just a coil, not sure why it needs a special name — picture a wire coiled around a pencil if you took out the pencil. The coils create current pointing into the page at the bottom and out of the page at the top. For this class’ purposes, a simpler version will just be a row of “out of the page” current with a row of “into the page” current below it, aka B-field lines pointed straight right. If you make the coil into a circle, that is a “toroid,” making the simpler version of the B-field into a circle. For that, use an Amperian loop, and enclose whatever is in the middle
+</p>
+
+<h2 style="text-align: center;">Faraday's Law</h2>
+<p style="text-align: left;">
+The basic thing to know here is that if a B-field is CHANGING, then you can GENERATE a current. Therefore, the things affecting the size of that current will be the strength of the field, the number of coils, length of loop, and rate of change of the field in a loop scenario like we’ll usually see. That gives us a formula (aka Faraday's law) which is on the formula sheet. We relate everything to EMF instead of current, but you know V=IR already so it gets pretty simple to convert. Part of this formula is magnetic flux: </p><br>
+<h4 style="text-align: center;"><u>Magnetic Flux</u></h4>
+<p style="text-align: left;">
+Again, notice the parallel in the formula for electric flux. Generally, we would integrate the dot product of the B-field and dA, but since we usually have constant B and A, we can just do B dot A, aka multiply the parallel components (or just multiply by the cos of the angle between them). There are three factors in magnetic flux: amount of area, strength of B, and angle between them.</p><br>
+<h4 style="text-align: center;"><u>Lenz’s Law</u></h4>
+<p style="text-align: left;">
+Lenz’ law will tell us information about the direction of the current created. Basically, it says that current opposes the <u>effect</u> of the changing flux. In relating these, just remember the RH rule for curved and straight variables! </p><br>
+<h4 style="text-align: center;"><u>Faraday's Law Example</u></h4>
+<p style="text-align: left;">
+Now that you know the context, one example of these ideas is if we have a loop with a resistor inserted halfway into a B-field. In this case, the “area” that is relevant is just the part in the B-field, I like to think of it as “submerged.” In this case, everything will be constant except for the area, so we can separate it into length and width, knowing length is constant, and leaving width as the only thing changing with respect to time. Since the loop is moving, dw/dt=v.
+
+<h2 style="text-align: center;">Inductance </h2>
+<p style="text-align: left;">
+*coming soon* <br>
+Preview:<br>
+-Inductors act like open switches at first, and wires after lots of time (opposite of capacitors!)</p><br>
+<h2 style="text-align: center;">RL Circuits</h2>
+<p style="text-align: left;">
+*coming soon*</p><br>
+
+
+
+
+
+
+
+  </div>
+      
+  <div id="unitsBox" class="box hidden">
+    <h2 style="text-align: center;"> SI Units and Constants for Magnetism and Electromagnetism </h2>
+<p>Remember, if there’s not much <u>new</u>, review <u>what you can already do.</u></p>
+    <div style="text-align: center;">
+<head>
+    <style>
+ 
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 2px solid white; /* white border for each cell */
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h4><u>Units</h4></u>  
+ 
+    <table>
+ 
+        </tr>
+        <!-- Rows -->
+        <tr>
+            <td>magnetic field (B) </td>
+            <td>teslas [t] (tesla=Ns/Cm, newton second per coulomb meter) </td>
+        </tr>
+        <tr>
+            <td>magnetic permittivity</td>
+            <td>tesla meters per amp [Tm/A]</td>
+        </tr>
+        <tr>
+            <td>current density (J)</td>
+            <td>amp per meter squared [A/m<sup>2</sup>]</td>
+        </tr>
+        <tr>
+            <td>magnetic flux Φ<sub>B</sub></td>
+            <td>weber [Wb] or tesla meter squared [Tm<sup>2</sup>] </td>
+        </tr>
+        <tr>
+            <td>inductance (L)</td>
+            <td>henrys [H] (henry=TM<sup>2</sup>/A, tesla meter squared per amp)</td>
+        </tr>
+        
+         </table>
+        </p>
+    </div>
+  <div style="text-align: center;"> <h4><u>Constants</h4></u>  
+    	<p> </p><html>
+<head>
+	<title>  </title>
+	<style>
+ 
+    	table {
+        	border-collapse: collapse;
+        	width: 100%;
+    	}
+    	th, td {
+        	border: 2px solid white; /* white border for each cell */
+        	padding: 10px;
+        	text-align: center;
+    	}
+	</style>
+</head>
+<body>
+	<table>
+    	</tr>
+    	<!-- Rows -->
+    	        <tr>
+                   </tr>
+        <tr>
+            <td>magnetic permittivity of free space (μ<sub>0</sub>)</td>
+            <td>4π*10<sup>-7</sup></td>
+        </tr>
+      
+ 
+          	</table>
+    	</p>
+	</div>
+ 
+  </div>
+  </div>
+</div><script>
+  function toggleFormulas() {
+    var formulasBox = document.getElementById("formulasBox");
+    formulasBox.classList.toggle("hidden");
+  }
+ 
+  function toggleMainConcepts() {
+    var conceptsBox = document.getElementById("conceptsBox");
+    conceptsBox.classList.toggle("hidden");
+  }
+ 
+  function toggleUnits() {
+    var unitsBox = document.getElementById("unitsBox");
+    unitsBox.classList.toggle("hidden");
+  }
+ 
+  // Function to animate circle along the parabolic path
+  function animateCircle() {
+    var circle = document.getElementById("circle");
+    var path = document.getElementById("parabola");
+    var length = path.getTotalLength();
+    
+    // Animate circle along the path
+    var duration = 10000; // Duration of animation in milliseconds, slowed down
+    var startTime = null;
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = timestamp - startTime;
+      var point = path.getPointAtLength(progress % length);
+      circle.setAttribute("cx", point.x);
+      circle.setAttribute("cy", point.y);
+      window.requestAnimationFrame(step);
+    }
+    window.requestAnimationFrame(step);
+  }
+ 
+  // Call the function to animate circle
+  animateCircle();
+</script>
+ 
+</body>
+</html>
+ 
+ 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>phys by pen logo add</title>
+<style>
+  
+    .image {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        max-width: 70px; /* Adjust the size as needed */
+        max-height: 70px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <img class="image" src="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" alt="Physics Image">
+</div>
+</body>
+</html>
