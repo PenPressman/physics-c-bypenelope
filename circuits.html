@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-adsense-account" content="ca-pub-5077959573383561">
+    <link rel="manifest" href="manifest.json">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5077959573383561"
+    crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phys by Pen</title>
+    <meta name="description" content="Resources and explanations for AP physics C: E and M!">
+    <meta name="google-site-verification" content="riKf53f3Se-WIW2mjg--QE53K6J8YkSkidC29bytnZ8" />
+    <meta property="og:image" content="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1">
+    <meta name="description" content="Learn AP Physics C: E & M, and more, with explanations, formula sheets, and games + tools to help make things easier and more fun. ">
+    <link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4M671CKZE1');
+    </script>
+    <style>
+        body {
+            font-family: Calibri, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #4287f5;
+        }
+        header {
+            background: #001f3f;
+            text-align: center;
+            padding: 10px;
+            color: #dce8fa;
+            font-size: 31px;
+            text-shadow: 4px 4px 4px #566fbf;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #1c345c;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background: #4287f5;
+        }
+        .container {
+            padding: 2px;
+        }
+        .section {
+            margin-bottom: 0px;
+  width: 100%;
+            background: #4287f5;
+        }
+        footer {
+            background: #1c345c;
+            color: #fff;
+            text-align: center;
+            padding: 2px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .contact-info, .resume, .portfolio {
+            margin-top: 20px;
+        }
+.battery {
+    width: 60px; /* Decrease the width of the battery */
+    height: 120px; /* Decrease the height of the battery */
+    background-color: #333; /* Dark gray color for the battery */
+    position: absolute;
+    top: 46%; /* Adjust the top position to move the battery further up */
+    left: 50%; /* Position the battery 50% from the left */
+    transform: translate(-50%, -50%); /* Center the battery both vertically and horizontally */
+}
+	
+	
+	/* Media query for screens up to 480px wide (e.g., smartphones) */
+  @media screen and (max-width: 480px) {
+    .battery {
+   width: 60px; /* Decrease the width of the battery */
+    height: 120px; /* Decrease the height of the battery */
+    background-color: #333; /* Dark gray color for the battery */
+    position: absolute;
+    top: 40%; /* Adjust the top position to move the battery further up */
+    left: 50%; /* Position the battery 50% from the left */
+    transform: translate(-50%, -50%); /* Center the battery both vertically and horizontally */
+    }}
+
+.top-connector {
+    width: 20px; /* Decrease the width of the connector */
+    height: 6px; /* Decrease the height of the connector */
+    background-color: #666; /* Medium gray color for the connector */
+    position: absolute;
+    top: -6px; /* Position the connector above the battery */
+    left: 50%; /* Position the connector at the center horizontally */
+    transform: translateX(-50%); /* Center the connector horizontally */
+}
+
+.charging {
+    position: absolute;
+    width: 60px; /* Decrease the width of the charging indicator */
+    height: 115px; /* Decrease the height of the charging indicator */
+    background-color: #4CAF50; /* Green color for the charging indicator */
+    bottom: 3px; /* Decrease the distance from the bottom */
+    left: 50%; /* Position the charging indicator at the center horizontally */
+    transform: translateX(-50%); /* Center the charging indicator horizontally */
+    animation: chargeBattery 4s ease-in-out infinite alternate; /* Animation for charging */
+}
+
+	  
+
+
+
+
+  .battery::before,
+  .battery::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px; /* Width of the battery terminals */
+    height: 10px; /* Height of the battery terminals */
+    background-color: #666; /* Medium gray color for the terminals */
+    top: 50%; /* Position terminals vertically centered */
+  }
+
+  .battery::before {
+    left: 5px; /* Position left terminal */
+    transform: translate(-50%, -50%);
+  }
+
+  .battery::after {
+    right: 5px; /* Position right terminal */
+    transform: translate(50%, -50%);
+  }
+
+ 
+  @keyframes chargeBattery {
+    0% {
+      height: 0; /* Start height of charging indicator */
+	
+    }
+    100% {
+      height: 115px; /* End height of charging indicator */
+    }
+
+
+</style>
+</head>
+<body>
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Electrostatics</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="sources.html">Sources</a>
+        <a href="homepageforgames.html">Games</a>
+        <a href="simulations.html">Simulations</a>
+        <a href="mailto:penelope.pressman@gmail.com">Contact</a>
+        <a href="about.html">About</a>
+    </nav>
+    <div class="container">
+        <section id="about" class="section">
+           <title> Electrostatics</title>
+  <link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
+
+<meta name="description" content="Learn about Electrostatics">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4M671CKZE1');
+</script>
+<style>
+  body {
+    background-color: #001f3f;
+    font-family: Calibri, sans-serif;
+    color: white; /* Setting font color to white for better readability on *darker* background */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center align the text */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  header {
+    background-color: #001f3f;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px; /* Increase font size for header */
+    margin-bottom: 5px; /* Add margin below header */
+     text-shadow: 4px 4px 4px #566fbf; /* Enhanced blue shadow */
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px;
+  }
+
+  .content {
+    width: 70%; /* Adjust width */
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin */
+    font-weight: lighter; /* Make text thinner */
+  }
+
+  .button {
+    background-color: #ADD8E6;
+    color: #001F3F;
+    padding: 15px 30px; /* Increase padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; /* Add margin above and below buttons */
+    font-weight: bold; /* Make text bold */
+    font-size: 18px; /* Increase font size */
+  }
+
+   button:hover {
+      background-color: #6092d1;
+    }
+
+  .hidden {
+    display: none;
+  }
+
+  .box {
+    background-color: #075a90
+; /* Color of sections */
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%; /* Decrease width */
+  }
+
+  .box p {
+    color: white; /* Set paragraph text to same as background color */
+  }
+</style>
+</head>
+<body>
+
+<br>
+
+
+<div class="battery">
+  <div class="top-connector"></div>
+  <div class="charging"></div>
+</div>
+<br>
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formatted Paragraph</title>
+<style>
+    /* Style for the specific paragraph */
+    .formatted-paragraph {
+        max-width: 900px; /* Set maximum width */
+        margin: 0 auto; /* Center the paragraph horizontally */
+        padding: 0 20px; /* Add some padding to the sides */
+        /* Add any additional styles for the paragraph */
+    }
+</style>
+</head>
+<body>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<p class="formatted-paragraph" </u>The good news about this unit is there is very little to memorize. The bad news is, problems can get very confusing very quickly, so it's extra important to keep track of everything. When in doubt, write down all the things you know must be true, and draw the clearest possible versions of every problem. It's hard to explain this before we get to the details, but remember: combine what you can, draw every loop, and don’t mix up series vs parallel calculations.  <br>
+ </p>
+
+</body>
+</html>
+
+<div class="container">
+  <div class="content">
+
+ 
+       <button class="button" onclick="toggleUnits()">Relevant Units & Constants</button>
+    <button class="button" onclick="toggleFormulas()">Formulas</button>
+    <button class="button" onclick="toggleMainConcepts()">Concept Explanations</button>
+  </div>
+<div id="formulasBox" class="box hidden">
+  <h2 style="text-align: center;"> Basic Circuits </h2>
+<p style="text-align: center;">
+V=IR
+</p>
+ <h4 style="text-align: center;"> <u>Power Equations</u> </h4>
+<p style="text-align: center;">
+P=VI (*I remember this as VI=P, as in “VIP”)<br>
+P=V<sup>2</sup>/R<br>
+P=I<sup>2</sup>R
+<br><br>
+total E dissipated: E=Pt
+
+
+</p>
+
+  <h4 style="text-align: center;"> <u>Equivalent Resistance</u> </h4>
+<p style="text-align: center;">
+in series: R<sub>1</sub + R<sub>2</sub> = R<sub>eq</sub><br>
+in parallel: 1/R<sub>1</sub + 1/R<sub>2</sub> = R<sub>eq</sub>
+
+
+</p>
+<p>
+**Note, equivalent resistance is sometimes denoted as “R<sub>T</sub>”
+</p>
+
+  <h2 style="text-align: center;"> Capacitor Circuits </h2>
+
+<p>
+
+potential difference: ∆V=Ed **review E-fields!<br>
+charge in a capacitor: Q=CV<br><br>
+
+dielectrics: C=K ε<sub>0</sub> A/d (where “A” is the area of the plates) (where “K” is the dielectric constant)<br><br>
+
+parallel plate capacitors: C = ε<sub>0</sub> A/d (where “A” is the area of the plates)<br>
+cylindrical capacitors: C = 2π ε<sub>0</sub>/L ln(b/a) <br>
+spherical capacitors: C = 4π ε<sub>0</sub>(ab/(b-a))<br><br></p>
+
+  <h4 style="text-align: center;"> <u>Equivalent Capacitance </u></h4>
+In series:1/C<sub>1</sub + 1/C<sub>2</sub> = C<sub>eq</sub>
+In parallel: C<sub>1</sub + C<sub>2</sub> = C<sub>eq</sub>
+
+  <h4 style="text-align: center;"> <u>Energy</u></h4>
+<p>
+in a capacitor: U<sub>cap</sub>=1/2CV<sup>2</sup><br>
+in a capacitor: U<sub>cap</sub>=Q<sup>2</sup>2C<br><br>
+energy density: μ= 1/2ε<sub>0</sub>E<sup>2</sup></p>
+
+
+  <h2 style="text-align: center;"> Resistance Capacitor Circuits </h2>
+
+“tau,” aka RC circuit time constant: τ=RC =63.2% of total voltage<br><br>
+
+charge over time: q(t)= Q(1-e<sup>-t/RC</sup>)<br>
+voltage in a capacitor over time: V<sub>cap</sub>(t)= ε(1-e<sup>-t/RC</sup>)<br>
+voltage in a resistor over time: V<sub>R</sub>(t)= εe<sup>-t/RC</sup><br>
+current over time: i(t)= I<sub>max</sub>e<sup>-t/RC</sup><br></p>
+
+  <h2 style="text-align: center;"> Other </h2>
+<style>
+    /* Style for the header */
+    h2 {
+        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to the text */
+    }
+</style>
+
+
+<p>
+resistance of a wire: R= ρL/A (where “L” is the length of the wire and “A” is the area of the cross section)<br><br>
+resistivity: ρ=E/J<br>
+current density:J=i/A <br>
+conductivity: σ=1/ρ<br><br>
+
+voltage of a battery: V = ε-1R<sub>internal</sub> (where “ε” is EMF,  aka terminal voltage, aka electromotive force)
+
+</p>
+</div>
+
+  <div id="conceptsBox" class="box hidden">
+<h2 style="text-align: center;"> Basic Circuits </h2>
+<p style="text-align: left;">
+
+Sticking with the format of not having diagrams for this, picture a circuit as any closed loop made of a conductive material. There will be things interrupting the wire, but we’ll get to that soon. Also, this will be a weird unit to explain solely in a conceptual way, and if you are using this page to fully learn circuits for the first time, I recommend not only <u>drawing out diagrams</u> as we go, but looking up more example problems and anything you find helpful. Remember that “solving a circuit” generally means analyzing all relevant variables and finding their values (current, resistance etc). You may see examples that only require you to find certain variables, but generally speaking, you’ll need to know the whole circuit to ensure you accurately answer questions about parts of it (there are a few exceptions coming soon).
+<br><br>
+Getting started, we’ll begin with the simplest possible circuits. I like to think of anything in a circuit that isn’t a wire or battery as an “interruptor,” which is, of course, not a technical term. The easiest interruptor to understand is a resistor. If the circuit is a track and the current flowing through it is a runner, resistors are hurdles <u>slowing things down</u>. In order to make resistance even simpler, we can combine resistors in parallel or series (see the formulas on the formula page), and analyze a mini version of the circuit before splitting things back up. And, when ready to split things back up, we can either use the tools below OR utilize the fact that current will always prioritize the path of least resistance, so it will split proportionally to the amount of resistance on any given branch of a circuit. Say we start with 10A of current and split into 2 branches: branch X has 2 ohms of resistance, and branch Y has 8. When the current splits, 8A will go to branch X, and 2A to branch Y. See what I mean by proportional?<br><br>
+So, the relevant things to know:<br>
+1. Voltage. Caused by an electric potential difference, you can think of voltage as the “push” moving charge through a circuit. Most importantly (other than knowing V=IR), <u>Kirchoff’s loop rule</u> tells us  that in a closed loop, the total voltage will equal 0. This often means setting up systems of equations. <br><br>
+2. Current. As I mentioned above, current splits off at each branch, and the current across the whole branch will be equal throughout, regardless of resistance. Kirchhoff's node rule says that the current going into any “node” will be the same amount going out. And, keep in mind that current is a rate; specifically, the rate at which charge moves.<br><br>
+3. Analyzing circuits requires being very clear with your work, drawing loops when you can, and keeping track of arrows. Make sure you also keep track of the <u>direction</u> of current and voltage. Aside from at a battery, they will usually be opposite. As such, the direction of voltage arrows will also help you solve for voltage across multiple points. If a question asks for V<sub>AB</sub>, and the voltage arrows point from point A to point B, then V<sub>AB</sub> will be negative. Remember, this tells us the potential difference across those points.
+4. Also note, we can insert ammeters or voltmeters to measure current or voltage, just remember, voltmeters must be inserted in parallel to circuits, and ammeters must be inserted in series. Simple as that.<br><br>
+
+</p>
+ <h4 style="text-align: center;"> <u>Power</u> </h4>
+<p style="text-align: left;">
+Power doesn’t come up in a very complex way in this unit, so just remember units (watts), and memorize either one formula if you can figure out the rest, or a couple to make solving problems a bit quicker. That’s all!<br>
+</p>
+
+  <h4 style="text-align: center;"> <u>Equivalent Resistance</u> </h4>
+<p style="text-align: left;">
+Aside from memorizing the formulas for resistors in series or parallel, the reason this gets its own section is because there are a few things to keep in mind.<br>
+<br>1. The ways to solve parallel vs series are the opposite of the ways to solve for combined spring constants, and the opposite of solving equivalent capacitance, so look things over and practice when you can to ensure you don’t mix them up. <br>
+<br>2. Remember that to determine if resistors are in series, simply make sure that there is <u>no way</u> to draw a closed loop without going through both of them. If there is a way, they are not in series. <br>
+<br>3. Add the resistors in simple series first, then parallel, then any remaining series that are clarified once things are combined.
+<br>4. If this is confusing, do some practice and hopefully it won’t be. <br>
+</p>
+
+  <h2 style="text-align: center;"> Capacitor Circuits </h2>
+<p style="text-align: left;">
+
+I like to think of capacitors as wires that get suuuper flattened at the end. Then, instead of touching the other wire, they simply get close enough to move the electrons on  the opposite end, affecting the charge. In reality, there are lots of forms of capacitors, but we mostly see parallel plate capacitors, especially in RC circuits (coming up in a sec). The main things to know about capacitors is how they act over time, and before we get to the point where you can just memorize their behavior, understanding the foundations is helpful. When t=0, and the circuit first starts up, the capacitor has no charge stored in it, so it functionally acts like an open switch. I haven't spent time talking about switches because to be honest, I don’t want to overcomplicate it, but I think you can infer: when switches are open, the loop isn’t closed and current cannot flow. As such, when t=0, while there can still be a potential difference across a branch with a capacitor, there can be no flow. On the flip side, when t=∞ (or really just when enough time has passed to fill the capacitor up), the capacitor is fully charged up, making everything move along as easily as through a wire… so we can just think of capacitors at t=∞ as parts of wires, which takes us back to simple circuits. For the more complex stuff, here’s everything else you need to know:<br><br>
+<br>1. One way to influence capacitance is to add a “dielectric” inside the capacitor. This acts as an electric insulator that has us add a constant, depending on the material, to the formula for capacitance. In fact, we can always add a dielectric constant to a formula whenever we have previously assumed there was a vacuum (which you can tell by the presence of the permittivity of free space constant (ε<sub>0</sub>) in a formula). <br>
+<br>2. Aside from using the formulas for time in between 0 and ∞, just picture a capacitor “filling up” and pushing electrons along across the gap. Additionally, remember the special time “tau,” equal to RC, at which time we’ll have 63.2% of our total voltage. <br>
+<br>3. I’ve included the formulas for a few other specific capacitors, but practice deriving them by starting with Gauss’ law to find E, then finding the potential difference, and then plugging in to Q=CV to find C. Don’t worry, Q will cancel. </p>
+
+  <h4 style="text-align: center;"> <u>Equivalent Capacitance </u></h4>
+<p style="text-align: left;">
+
+Review my notes from equivalent resistance. <br><br>Same deal, opposite formulas (swap parallel and series).<br>
+
+
+  <h4 style="text-align: center;"> <u>Energy</u></h4>
+<p style="text-align: left;">
+
+Memorize the formulas, do some practice, same routine. Use whichever version of the formulas are easiest for you. Oh, and if the “½ something squared” looks familiar, that’s a good sign you're noticing the overlap in formulas for different types of energy! Of course, it’s also a helpful way to remember the formulas.</p>
+
+
+
+  <h2 style="text-align: center;"> Resistance Capacitor (“RC”) Circuits </h2>
+
+<p style="text-align: left;">
+
+If everything up to this point has made sense, then there isn’t anything you technically need to add to solve RC circuits. However, they’ll obviously get more complicated, so it's extra important to write down everything you can and use equivalent resistance and capacitance to simplify things as much as you can and work from there. Additionally, any time you have an open switch or capacitor at t=0, remember to think of any loop that is now open as a “turned off” branch of the circuit with no current flowing. You should be excited to see  this show up, it makes things easier! Now, <u>PRACTICE, PRACTICE, PRACTICE</u>! Good luck :)<br></p>
+
+
+  <h2 style="text-align: center;"> Other </h2>
+<p style="text-align: left;">
+
+I’m going to format this part in a list, because it’s all kind of random.<br><br>
+<br>1. Batteries: This just takes resistance circuits a step further. Now, instead of just assuming the overall voltage of the battery, analyze the circuit as usual to find the internal resistance, and solve for overall voltage (aka “terminal voltage”) of the battery by subtracting internal R x I from the initial voltage (aka “EMF”). <br>
+<br>2. Wires: Until now, we’ve been simplifying them, pretending they are basically exempt from any real-world properties that they obviously do have, i.e. resistance, volume, etc. So, use the formula to factor their resistance in if you need. Though, for AP purposes, don’t worry, they won’t be included in more complex circuit problems.<br>
+<br>If you want to take a look at the extra formulas I included, they’ll give you insight into other things we now have a foundation for, like charge density, resistivity, and conductivity. Hopefully it makes sense that conductivity is the inverse of resistivity!<br></p>
+
+
+
+  </div>
+      
+  <div id="unitsBox" class="box hidden">
+    <h2 style="text-align: center;"> SI Units for Circuits </h2>
+    <div style="text-align: center;">
+        <p>
+          <br>
+      <div style="text-align: center;">  
+        <p> <html>
+<head>
+    <title>  </title>
+    <style>
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 2px solid white; /* white border for each cell */
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        </tr>
+        <!-- Rows -->
+        <tr>
+            <td>current (I)</td>
+            <td>amps [A]</td>
+        </tr>
+        <tr>
+            <td>voltage (v)</td>
+            <td>volts [v] (volts = joules per coulomb, j/c)</td>
+        </tr>
+        <tr>
+            <td>resistance (R)</td>
+            <td>ohms [Ω]</td>
+        </tr>
+        <tr>
+            <td>capacitance (C)</td>
+            <td>farads [f] (farads = coulombs per volt, c/v)</td>
+      
+        </tr>
+
+	<tr>
+            <td>energy density (μ)</td>
+            <td>joule per cubic meter [J/m<sup>2</sup>]</td>
+      
+        </tr>
+	    <tr>
+            <td>resistivity (ρ)</td>
+            <td>ohm meters [Ωm]</td>
+      
+        </tr>
+<tr>
+            <td>tau (τ) </td>
+            <td>seconds [s]</td>
+      
+        </tr>
+         </table>
+        </p>
+    </div>
+  </div>
+  </div>
+</div>
+<script>
+  function toggleFormulas() {
+    var formulasBox = document.getElementById("formulasBox");
+    formulasBox.classList.toggle("hidden");
+  }
+
+  function toggleMainConcepts() {
+    var conceptsBox = document.getElementById("conceptsBox");
+    conceptsBox.classList.toggle("hidden");
+  }
+
+  function toggleUnits() {
+    var unitsBox = document.getElementById("unitsBox");
+    unitsBox.classList.toggle("hidden");
+  }
+
+  // Function to animate circle along the parabolic path
+  function animateCircle() {
+    var circle = document.getElementById("circle");
+    var path = document.getElementById("parabola");
+    var length = path.getTotalLength();
+    
+    // Animate circle along the path
+    var duration = 10000; // Duration of animation in milliseconds, slowed down
+    var startTime = null;
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = timestamp - startTime;
+      var point = path.getPointAtLength(progress % length);
+      circle.setAttribute("cx", point.x);
+      circle.setAttribute("cy", point.y);
+      window.requestAnimationFrame(step);
+    }
+    window.requestAnimationFrame(step);
+  }
+
+  // Call the function to animate circle
+  animateCircle();
+</script>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Example</title>
+    <style>
+        .menu {
+            display: none;
+            position: absolute;
+            top: 90px; /* Moved down */
+            left: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 4px;
+            z-index: 1;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .menu a, #likeButton {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+            color: #333;
+            background-color: #add8e6;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.4;
+         
+        }
+
+        .menu a:hover, #likeButton:hover {
+            background-color: #8ab6d6;
+        }
+
+        #menuButton {
+            position: absolute;
+            top: 30px; /* Moved down */
+            left: 34px;
+            font-size: 43px;
+            color: white;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+
+
+        }
+    </style>
+</head>
+<body>
+    <button id="menuButton" onclick="toggleMenu()">&#9776;</button>
+    <div id="menu" class="menu">
+        <a href="index.html">&#127968; Home</a>
+        <a href="mailto:penelope.pressman@gmail.com">&#128235; Contact</a>
+        <button id="likeButton">❤️ Like page         </button>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        var likeButton = document.getElementById("likeButton");
+        var likeCount = 0;
+        var liked = false;
+
+        likeButton.addEventListener("click", function() {
+            if (!liked) {
+                likeCount++;
+                likeButton.innerHTML = "Liked page ❤️";
+                likeButton.style.backgroundColor = "lightpink"; /* pink */
+                liked = true;
+                alert("Liked! Count: " + likeCount);
+            } else {
+                alert("You already liked this.");
+            }
+        });
+    </script>
+</body>
+</html>
+
+          
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>phys by pen logo add</title>
+<style>
+  
+    .image {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        max-width: 70px; /* Adjust the size as needed */
+        max-height: 70px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <img class="image" src="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" alt="Physics Image">
+</div>
+</body>
+</html>
