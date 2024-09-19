@@ -75,7 +75,7 @@
 </head>
 <body>
     <header>
-        <h1>Coming Soon</h1>
+        <h1>Pt. 2: Laws of Thermodynamics</h1>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -87,10 +87,10 @@
     </nav>
     <div class="container">
         <section id="about" class="section">
-<title>Coming Soon</title>
+<title>Pt. 2: Laws of Thermodynamics</title>
 	 <link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
 
-<meta name="description" content="Learn about Thermodynamics">
+<meta name="description" content="Learn about Pt. 2: Laws of Thermodynamics">
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1"></script>
@@ -102,6 +102,390 @@
   gtag('config', 'G-4M671CKZE1');
 </script>
 
+<meta name="description" content="Learn about thermodynamics">
+<style>
+body {
+   }
+  body {
+    background-color: #001f3f;
+    font-family: Calibri, sans-serif;
+    color: white; /* Setting font color to white for better readability on *darker* background */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center align the text */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  header {
+    background-color: #001f3f;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px; /* Increase font size for header */
+    margin-bottom: 5px; /* Add margin below header */
+	text-shadow: 4px 4px 4px #566fbf; /* Enhanced blue shadow */
+  }
+ 
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px;
+  }
+
+ 
+  .content {
+    width: 70%; /* Adjust width */
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin */
+    font-weight: lighter; /* Make text thinner */
+  }
+ 
+  .button {
+    background-color: #ADD8E6;
+    color: #001F3F;
+    padding: 15px 30px; /* Increase padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; /* Add margin above and below buttons */
+    font-weight: bold; /* Make text bold */
+    font-size: 18px; /* Increase font size */
+  }
+
+	 button:hover {
+      background-color: #6092d1;
+    }
+ 
+  .hidden {
+    display: none;
+  }
+ 
+  .box {
+    background-color: #075a90
+; /* Color of sections */
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%; /* Decrease width */
+  }
+ 
+  .box p {
+    color: white; /* Set paragraph text to same as background color */
+  }
+ 
+      }
+ 
+  
+</style>
+</head>
+<body>
+ 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Molecule Entropy Simulation</title>
+    <style>
+        canvas { 
+            border: 5px solid black; /* Thicker border */
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="entropyCanvas" width="250" height="200"></canvas> <!-- Horizontally wider box -->
+    <script>
+        const canvas = document.getElementById('entropyCanvas');
+        const ctx = canvas.getContext('2d');
+        const particles = [];
+        const numParticles = 100;
+        let speedMultiplier = 1; // Variable to make particles go faster
+
+        class Particle {
+            constructor(x, y, vx, vy) {
+                this.x = x;
+                this.y = y;
+                this.vx = vx;
+                this.vy = vy;
+                this.radius = 5;
+            }
+
+            move() {
+                this.x += this.vx * speedMultiplier; // Apply speed multiplier
+                this.y += this.vy * speedMultiplier;
+
+                // Make particles bounce off the walls
+                if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
+                if (this.y < 0 || this.y > canvas.height) this.vy = -this.vy;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+                ctx.fillStyle = 'white'; // Dots are still white
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+
+        // Initialize particles in one corner
+        for (let i = 0; i < numParticles; i++) {
+            const x = Math.random() * 50 + 10;
+            const y = Math.random() * 50 + 10;
+            const vx = Math.random() * 2;
+            const vy = Math.random() * 2;
+            particles.push(new Particle(x, y, vx, vy));
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'navy'; // Set background to navy
+            ctx.fillRect(0, 0, canvas.width, canvas.height); // Fill background navy
+            particles.forEach(particle => {
+                particle.move();
+                particle.draw();
+            });
+
+            // Increase speedMultiplier over time to make particles move faster
+            speedMultiplier += 0.001; // Adjust to control speed-up rate
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formatted Paragraph</title>
+<style>
+    /* Style for the specific paragraph */
+    .formatted-paragraph {
+        max-width: 1000px; /* Set maximum width */
+        margin: 0 auto; /* Center the paragraph horizontally */
+        padding: 0 20px; /* Add some padding to the sides */
+        /* Add any additional styles for the paragraph */
+    }
+</style>
+</head>
+<body>
+ 
+<p class="formatted-paragraph"
+ </p>
+<br>
+
+ 
+<p class="formatted-paragraph" </u>I’ve structured these thermodynamics pages differently than the mech E & M ones for a few reasons. First, because there’s no AP test, I’m not including random concepts that you may or may not need to know, since every course will be different; instead, I’m focusing more on understanding. Second, “formulas” don’t really work the same way. There are no more shortcuts. Well, there are some, but learning them is more effort than just understanding the concepts behind them AND we’re too far along now to get by via just memorizing stuff. As Resnick said in one of my favorite textbooks: <br><br><i>”The easiest way to master this subject is to follow the reasoning I give you. That way, you don’t have to store too many things in your head. Early on, when there are four or five formulas, you can memorize all of them and you can try every one of them until something works, but, after a couple of weeks, you will have hundreds of formulas, and you cannot memorize all of them. You cannot resort to trial and error. You have to know the logic.”</i><br><br> Trust him, he knows more than we do.<br><br> The other thing to know about this unit is that we often have multiple proofs of the same concept. That’s because (hopefully) the laws of physics always hold true, otherwise they wouldn’t be laws. This may sound weird to say, but you’ll soon see what I mean (get ready for entropy!). Alright, let’s start.
+ </p>
+
+ 
+</body>
+</html>
+ 
+<div class="container">
+  <div class="content">
+ 
+ 
+      <button class="button" onclick="toggleUnits()">COMING SOON</button>
+      <button class="button" onclick="toggleMainConcepts()">COMING SOON</button>
+  </div>
+<div id="formulasBox" class="box hidden">
+ <h2 style="text-align: center;"> Header </h2>
+<p>
+content</p><br>
+
+
+ <h4 style=”text-align: center;”><u>subheader</u></h4>
+
+conent</p>
+
+
+</div>
+ 
+  <div id="conceptsBox" class="box hidden">
+    <h2 style="text-align: center;">Terminology and Conventions</h2>
+<style>
+    /* Style for the header */
+    h2 {
+        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to the text */
+    }
+</style>
+<p style="text-align: left;">
+Before any specific content, there are a few important things I want to mention. First, different textbooks/courses/professors/teachers use different sign conventions, and explain terms in different ways. 
+While you can find formulas and symbols on the formula and unit pages, here are a couple things to note. 
+<br><br>First, while this is just a preference (/ in this case is just the way I learned this), there are multiple sign conventions for work. For the purpose of this site, I will use negative work to mean work done ON something, and positive work to mean work done BY something. I kinda like this convention better because it means that you can think of doing work as losing capacity for work (disclaimer: that is NOT scientific, that’s just my way of thinking). Ok, next note: <br>There are a lot of concepts that are referenced as meaning similar things coloquially in daily life that are NOT the same. To quickly define those:<br><br>
+Temperature: a <u>property</u>, the average kinetic energy of particles.<br>
+Heat: a <u>process</u> in which thermal energy is transferred.<br>
+Thermal energy: contrary to initial beliefs about thermodynamics (think early 1800s), everything we know about energy still applies, but now we’re talking about particles moving instead of total objects. This kind of energy is still an <u>extensive</u> property, meaning it is a <u>total</u> across an object/mass, not an <u>average</u> (which would be called an <u>intensive variable</u>.<br><br>Last thing before we actually start:
+<br><br>While thermodynamics is seemingly a “separate” part of physics at an intro level, the great thing about where we are at (modern-science-wise) is that all pieces still fit together. Energy is still conserved, you can still analyze position and momentum (/velocity), and gravity still affects things as normal. Yay!
+</p><br>
+
+ <h2 style="text-align: center;">The Basic Basics</h2>
+<h4 style=”text-align: center;”><u>Heat Transfer</u></h4>
+<p style="text-align: left;">
+To be honest, much of this will overlap with intro chem or bio classes, since it is just a review of methods of heat transfer. You may have also learned this in an intro science class earlier. <br>
+Ok, there are three methods of heat transfer:<br>
+Conduction – transfer of heat through physical touch between objects <br>
+Convection - transfer through movement of fluid (ie. pot of water on stove, hot water rises above cool water, then cools a bit at the topc while the water at the bottom heats. It then rises, and the cycle repeats) <br>
+Radiation - heat transfer without any physical contact; describes energy transfer through waves/particles (more on this later, and in optics)<br><br>
+So what is heat? <br><br>For years, scientists thought of it as its own form of matter, suggesting that what they called “caloric fluid” must be passing from one place to another. It takes years to discover that “heat” is actually based on how fast the particles in an object or substance are moving. <br><br>
+<h4 style=”text-align: center;”><u>Empirical Laws</u></h4>
+<p style="text-align: left;">
+There are a few important empirical laws that were then discovered that you should know (they will probably seem intuitive, but they were very revolutionary at the time):<br><br>
+Boyle’s law: P*V is proportional to a constant (P = pressure, V = volume)<br>
+Charle’s law: V is proportional to T (T = temperature)<br>
+Guy Lussac’s law: P is proportional to T<br>
+Clapeyron’s law: PV is proportional to T (I know, its weird that this took time to figure out after the previous two…)<br><br>
+Drumroll please… THE IDEAL GAS LAW! PV = nRT (n = number of molecules present, R = constant so check the units/constants page!)</p>
+
+<h2 style="text-align: center;">Thermometry + Thermal Expansion</h2>
+<h4 style=”text-align: center;”><u></u></h4>
+<p style="text-align: left;">
+Hopefully it makes sense intuitively why I grouped these together. Thermometers use the fact that liquid expands when hot to make temperature changes visual. Given how narrow the column inside a thermometer is, small changes make the density change enough to produce a visible height change.<br><br>
+So why do hotter temperatures correlate with higher pressure and greater volume? There is one fundamnedall explanation for all of the laws I wrote above. Higher temperature is a measure of the thermal energy of matter, and it gets thermal energy through the movement of particles. As such, higher temp = fast particles = particles bouncing off each other and hitting each other = particles moving outwards and covering more area. If they are contained (think, air inside a sealed container getting heated), then instead of gaining volume by expanding, the density will decrease. So, increase in temp means EITHER the volume or density (or a combo of both) went up, hence the ideal gas relation. To get the full law, there is just an empirically proven constant added into the mix.
+<h2 style="text-align: center;">Heat Capacity + Phase Changes</h2>
+<h4 style=”text-align: center;”><u></u></h4>
+<p style="text-align: left;">
+Most of the thermo stuff on here will be conceptual, but here’s an example of a commontype of Q. Consider these problems to be free points once you have it down, it’ll be easy. Starting with the simplest: let’s say you are asked how much energy it will take to melt 50g of ice? There are two concepts you need. One is the specific heat of water. This number tells you how much <u>energy</u> is neeed to change the temperature of one gram of the substance by one degree celsius (or kelvin, which has the same distance between degrees as celsius, just moved down by 273ish degrees). Using this, you can find how much energy it would take to increase the temp of the ice and get it to 32 degrees (melting point). However, contrary to what people often assume, you don’t end there. Since the question asked how much energy is needed to <u>melt</u> the ice, you also need to include <u>phase change</u> energy. We call this the “latent heat” of fusion or vaporization, for melting/solidifying and evaporating/condensing, respectively. To find that extra energy needed, simply multiply the latent heat by the mass of the substance. Now, these problems can get more complicated, but the concepts and methods of solving are still the same. Let’s say the question was how much ice from a block starting at 60g would remain if you poured 2g of 100 degree water on it? How much water would remain? Or sometimes you’ll be asked, describe the outcome of this combination? Use the simple example above to think through the more complicated ones.<br><br>
+
+
+  </div>
+      
+  <div id="unitsBox" class="box hidden">
+    <h2 style="text-align: center;"> Units and Constants for Intro to Thermodyanmics</h2>
+<p>Remember, if there’s not much <u>new</u>, review <u>what you can already do. </u>Also, for units with multiple options, I included them in order of how often they are used in practice problems (following the standard ones).</u></p>
+    <div style="text-align: center;">
+<head>
+    <style>
+ 
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 2px solid white; /* white border for each cell */
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h4><u>Units</h4></u>  
+ 
+    <table>
+ 
+        </tr>
+        <!-- Rows -->
+        <tr>
+            <td>temperature (T)</td>
+            <td>kelvin [K] = 1° celcius [C] - 273.15° C</td>
+        </tr>
+        <tr>
+            <td>pressure (P)</td>
+            <td>pascal [Pa] = 9.87 atmospheres [atm] = 1 newton per square meter [N/m<sup>2</sup>]</td>
+        </tr>
+
+        </tr>
+        <tr>
+            <td>density (ρ)</td>
+            <td>kilograms per cubic meter [kg/m<sup>3</sup>]</td>
+        </tr>
+        <tr>
+            <td>specific heat capacity (C)</td>
+            <td>joule per kilogram per kelvin (J/kg/K)</td>
+        </tr>
+        <tr>
+            <td>specific heat (c)</td>
+            <td>calories [c]</td>
+        </tr>
+        <tr>
+            <td>heat (Q)</td>
+            <td>joules [J]</td>
+        </tr>
+
+         </table>
+        </p>
+    </div>
+  <div style="text-align: center;"> <h4><u>Constants</h4></u>  
+    	<p> </p><html>
+<head>
+	<title>  </title>
+	<style>
+ 
+    	table {
+        	border-collapse: collapse;
+        	width: 100%;
+    	}
+    	th, td {
+        	border: 2px solid white; /* white border for each cell */
+        	padding: 10px;
+        	text-align: center;
+    	}
+	</style>
+</head>
+<body>
+	<table>
+    	</tr>
+    	<!-- Rows -->
+    	        <tr>
+                   </tr>
+         <tr>
+            <td>Boltzmann's constant (K<sub>B</sub>)</td>
+            <td>1.380649 × 10<sup>−23</sup> J/K</td>
+        </tr>
+        <tr>
+            <td>Stefan-Boltzmann constant (σ)</td>
+            <td>5.67 ×10<sup>−8</sup> W⋅m<sup>−2</sup>⋅K<sup>−4</sup></td>
+        </tr>
+<tr>
+            <td>gas constant (R) </td>
+            <td>8.314 J/mol·K</td>
+        </tr>
+        <tr>
+            <td>avogadro's number [N<sub>A</sub>]</td>
+            <td>6.022 × 10<sup>23</sup> mol<sup>-1</sup></td>
+        </tr>
+      
+ 
+          	</table>
+    	</p>
+	</div>
+ 
+  </div>
+  </div>
+</div><script>
+  function toggleFormulas() {
+    var formulasBox = document.getElementById("formulasBox");
+    formulasBox.classList.toggle("hidden");
+  }
+ 
+  function toggleMainConcepts() {
+    var conceptsBox = document.getElementById("conceptsBox");
+    conceptsBox.classList.toggle("hidden");
+  }
+ 
+  function toggleUnits() {
+    var unitsBox = document.getElementById("unitsBox");
+    unitsBox.classList.toggle("hidden");
+  }
+ 
+ 
+</script>
+ 
+</body>
+</html>
+ 
+ 
 
         </section>
     </div>
@@ -135,3 +519,4 @@
 </div>
 </body>
 </html>
+
