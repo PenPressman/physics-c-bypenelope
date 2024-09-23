@@ -297,6 +297,7 @@ body {
  
  
       <button class="button" onclick="toggleUnits()">COMING SOON</button>
+	     <button class="button" onclick="toggleFormulas()">COMING SOON</button>
       <button class="button" onclick="toggleMainConcepts()">COMING SOON</button>
   </div>
 <div id="formulasBox" class="box hidden">
@@ -313,7 +314,7 @@ conent</p>
 </div>
  
   <div id="conceptsBox" class="box hidden">
-    <h2 style="text-align: center;">Terminology and Conventions</h2>
+    <h2 style="text-align: center;">Title</h2>
 <style>
     /* Style for the header */
     h2 {
@@ -321,42 +322,7 @@ conent</p>
     }
 </style>
 <p style="text-align: left;">
-Before any specific content, there are a few important things I want to mention. First, different textbooks/courses/professors/teachers use different sign conventions, and explain terms in different ways. 
-While you can find formulas and symbols on the formula and unit pages, here are a couple things to note. 
-<br><br>First, while this is just a preference (/ in this case is just the way I learned this), there are multiple sign conventions for work. For the purpose of this site, I will use negative work to mean work done ON something, and positive work to mean work done BY something. I kinda like this convention better because it means that you can think of doing work as losing capacity for work (disclaimer: that is NOT scientific, that’s just my way of thinking). Ok, next note: <br>There are a lot of concepts that are referenced as meaning similar things coloquially in daily life that are NOT the same. To quickly define those:<br><br>
-Temperature: a <u>property</u>, the average kinetic energy of particles.<br>
-Heat: a <u>process</u> in which thermal energy is transferred.<br>
-Thermal energy: contrary to initial beliefs about thermodynamics (think early 1800s), everything we know about energy still applies, but now we’re talking about particles moving instead of total objects. This kind of energy is still an <u>extensive</u> property, meaning it is a <u>total</u> across an object/mass, not an <u>average</u> (which would be called an <u>intensive variable</u>.<br><br>Last thing before we actually start:
-<br><br>While thermodynamics is seemingly a “separate” part of physics at an intro level, the great thing about where we are at (modern-science-wise) is that all pieces still fit together. Energy is still conserved, you can still analyze position and momentum (/velocity), and gravity still affects things as normal. Yay!
-</p><br>
 
- <h2 style="text-align: center;">The Basic Basics</h2>
-<h4 style=”text-align: center;”><u>Heat Transfer</u></h4>
-<p style="text-align: left;">
-To be honest, much of this will overlap with intro chem or bio classes, since it is just a review of methods of heat transfer. You may have also learned this in an intro science class earlier. <br>
-Ok, there are three methods of heat transfer:<br>
-Conduction – transfer of heat through physical touch between objects <br>
-Convection - transfer through movement of fluid (ie. pot of water on stove, hot water rises above cool water, then cools a bit at the topc while the water at the bottom heats. It then rises, and the cycle repeats) <br>
-Radiation - heat transfer without any physical contact; describes energy transfer through waves/particles (more on this later, and in optics)<br><br>
-So what is heat? <br><br>For years, scientists thought of it as its own form of matter, suggesting that what they called “caloric fluid” must be passing from one place to another. It takes years to discover that “heat” is actually based on how fast the particles in an object or substance are moving. <br><br>
-<h4 style=”text-align: center;”><u>Empirical Laws</u></h4>
-<p style="text-align: left;">
-There are a few important empirical laws that were then discovered that you should know (they will probably seem intuitive, but they were very revolutionary at the time):<br><br>
-Boyle’s law: P*V is proportional to a constant (P = pressure, V = volume)<br>
-Charle’s law: V is proportional to T (T = temperature)<br>
-Guy Lussac’s law: P is proportional to T<br>
-Clapeyron’s law: PV is proportional to T (I know, its weird that this took time to figure out after the previous two…)<br><br>
-Drumroll please… THE IDEAL GAS LAW! PV = nRT (n = number of molecules present, R = constant so check the units/constants page!)</p>
-
-<h2 style="text-align: center;">Thermometry + Thermal Expansion</h2>
-<h4 style=”text-align: center;”><u></u></h4>
-<p style="text-align: left;">
-Hopefully it makes sense intuitively why I grouped these together. Thermometers use the fact that liquid expands when hot to make temperature changes visual. Given how narrow the column inside a thermometer is, small changes make the density change enough to produce a visible height change.<br><br>
-So why do hotter temperatures correlate with higher pressure and greater volume? There is one fundamnedall explanation for all of the laws I wrote above. Higher temperature is a measure of the thermal energy of matter, and it gets thermal energy through the movement of particles. As such, higher temp = fast particles = particles bouncing off each other and hitting each other = particles moving outwards and covering more area. If they are contained (think, air inside a sealed container getting heated), then instead of gaining volume by expanding, the density will decrease. So, increase in temp means EITHER the volume or density (or a combo of both) went up, hence the ideal gas relation. To get the full law, there is just an empirically proven constant added into the mix.
-<h2 style="text-align: center;">Heat Capacity + Phase Changes</h2>
-<h4 style=”text-align: center;”><u></u></h4>
-<p style="text-align: left;">
-Most of the thermo stuff on here will be conceptual, but here’s an example of a commontype of Q. Consider these problems to be free points once you have it down, it’ll be easy. Starting with the simplest: let’s say you are asked how much energy it will take to melt 50g of ice? There are two concepts you need. One is the specific heat of water. This number tells you how much <u>energy</u> is neeed to change the temperature of one gram of the substance by one degree celsius (or kelvin, which has the same distance between degrees as celsius, just moved down by 273ish degrees). Using this, you can find how much energy it would take to increase the temp of the ice and get it to 32 degrees (melting point). However, contrary to what people often assume, you don’t end there. Since the question asked how much energy is needed to <u>melt</u> the ice, you also need to include <u>phase change</u> energy. We call this the “latent heat” of fusion or vaporization, for melting/solidifying and evaporating/condensing, respectively. To find that extra energy needed, simply multiply the latent heat by the mass of the substance. Now, these problems can get more complicated, but the concepts and methods of solving are still the same. Let’s say the question was how much ice from a block starting at 60g would remain if you poured 2g of 100 degree water on it? How much water would remain? Or sometimes you’ll be asked, describe the outcome of this combination? Use the simple example above to think through the more complicated ones.<br><br>
 
 
   </div>
@@ -439,23 +405,6 @@ Most of the thermo stuff on here will be conceptual, but here’s an example of 
     	<!-- Rows -->
     	        <tr>
                    </tr>
-         <tr>
-            <td>Boltzmann's constant (K<sub>B</sub>)</td>
-            <td>1.380649 × 10<sup>−23</sup> J/K</td>
-        </tr>
-        <tr>
-            <td>Stefan-Boltzmann constant (σ)</td>
-            <td>5.67 ×10<sup>−8</sup> W⋅m<sup>−2</sup>⋅K<sup>−4</sup></td>
-        </tr>
-<tr>
-            <td>gas constant (R) </td>
-            <td>8.314 J/mol·K</td>
-        </tr>
-        <tr>
-            <td>avogadro's number [N<sub>A</sub>]</td>
-            <td>6.022 × 10<sup>23</sup> mol<sup>-1</sup></td>
-        </tr>
-      
  
           	</table>
     	</p>
