@@ -180,7 +180,107 @@ body {
 </head>
 <body>
  
+<br>
+<br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Relativity - Moving Car</title>
+  <style>
+    #relativity-container {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #e0f7fa; /* Light pale blue background */
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #001f3f; /* Navy text */
+    }
 
+    .road {
+      position: relative;
+      width: 100%;
+      height: 10px;
+      background-color: black;
+      margin: 50px 0;
+    }
+
+    .car {
+      position: absolute;
+      width: 100px;
+      height: 50px;
+      background-color: red;
+      border-radius: 5px;
+      top: -25px;
+      left: 0;
+      animation: moveCar 5s linear infinite;
+    }
+
+    .stationary {
+      position: absolute;
+      top: -70px;
+      left: 20px;
+      width: 50px;
+      height: 30px;
+      background-color: blue;
+      border-radius: 5px;
+    }
+
+    .caption {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #001f3f; /* Navy text */
+      margin-top: 20px;
+    }
+
+    @keyframes moveCar {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="relativity-container">
+    <div class="road">
+      <div class="stationary"></div>
+      <div class="car"></div>
+    </div>
+    <div class="caption">Stationary time: 0s | Moving car time: 0s</div>
+    <div class="note">(effect extremely exaggerated)</div>
+  </div>
+
+  <script>
+    (function() {
+      let stationaryTime = 0;
+      let movingTime = 0;
+
+      function updateCaption() {
+        stationaryTime++;
+        movingTime += 0.8; // Simulating time dilation for the moving car
+
+        document.querySelector('#relativity-container .caption').textContent =
+          `Stationary time: ${stationaryTime.toFixed(0)}s | Moving car time: ${movingTime.toFixed(0)}s`;
+      }
+
+      setInterval(updateCaption, 1000);
+    })();
+  </script>
+</body>
+</html>
 
 
  
@@ -207,7 +307,7 @@ body {
 <br>
 
  
-<p class="formatted-paragraph" </u> </p>
+<p class="formatted-paragraph" </u> While you wait for me to finish writing this page, here are some resources!</p>
 
  
 </body>
@@ -217,9 +317,9 @@ body {
   <div class="content">
  
  
-      <button class="button" onclick="toggleUnits()">COMING SOON</button>
-	     <button class="button" onclick="toggleFormulas()">COMING SOON</button>
-      <button class="button" onclick="toggleMainConcepts()">COMING SOON</button>
+      <button class="button" onclick="toggleUnits()">*Temporary resources*</button>
+	     <button class="button" onclick="toggleFormulasx()">COMING SOON</button>
+      <button class="button" onclick="toggleMainConceptsx()">COMING SOON</button>
   </div>
 <div id="formulasBox" class="box hidden">
  <h2 style="text-align: center;"> Header </h2>
@@ -249,8 +349,20 @@ conent</p>
   </div>
       
   <div id="unitsBox" class="box hidden">
-    <h2 style="text-align: center;"> Units and Constants for Intro to Thermodyanmics</h2>
-<p>Remember, if there’s not much <u>new</u>, review <u>what you can already do. </u>Also, for units with multiple options, I included them in order of how often they are used in practice problems (following the standard ones).</u></p>
+    <h2 style="text-align: center;"> Resources for Self-studying Special Relativity!</h2>
+</p>
+
+  <h4 style=”text-align: center;”><u>My Favorite Videos</u></h4>
+<p>
+<I>(Copy and paste the links)</I><br>
+Space-time diagrams: https://www.youtube.com/watch?v=bcZyJ7yXebQ <br><br>
+General: https://www.youtube.com/watch?v=qtqTPCAw7Fo <br><br>
+Time Dilation: https://www.youtube.com/watch?v=FGQseB-pvIg <br><br>
+Lorentz Tranformations: https://www.youtube.com/watch?v=qdycfWfAtsM <br><br></p><br>
+
+
+
+
     <div style="text-align: center;">
 <head>
     <style>
@@ -267,69 +379,9 @@ conent</p>
     </style>
 </head>
 <body>
-<h4><u>Units</h4></u>  
- 
-    <table>
- 
-        </tr>
-        <!-- Rows -->
-        <tr>
-            <td>temperature (T)</td>
-            <td>kelvin [K] = 1° celcius [C] - 273.15° C</td>
-        </tr>
-        <tr>
-            <td>pressure (P)</td>
-            <td>pascal [Pa] = 9.87 atmospheres [atm] = 1 newton per square meter [N/m<sup>2</sup>]</td>
-        </tr>
 
-        </tr>
-        <tr>
-            <td>density (ρ)</td>
-            <td>kilograms per cubic meter [kg/m<sup>3</sup>]</td>
-        </tr>
-        <tr>
-            <td>specific heat capacity (C)</td>
-            <td>joule per kilogram per kelvin (J/kg/K)</td>
-        </tr>
-        <tr>
-            <td>specific heat (c)</td>
-            <td>calories [c]</td>
-        </tr>
-        <tr>
-            <td>heat (Q)</td>
-            <td>joules [J]</td>
-        </tr>
 
-         </table>
-        </p>
-    </div>
-  <div style="text-align: center;"> <h4><u>Constants</h4></u>  
-    	<p> </p><html>
-<head>
-	<title>  </title>
-	<style>
  
-    	table {
-        	border-collapse: collapse;
-        	width: 100%;
-    	}
-    	th, td {
-        	border: 2px solid white; /* white border for each cell */
-        	padding: 10px;
-        	text-align: center;
-    	}
-	</style>
-</head>
-<body>
-	<table>
-    	</tr>
-    	<!-- Rows -->
-    	        <tr>
-                   </tr>
- 
-          	</table>
-    	</p>
-	</div>
  
   </div>
   </div>
