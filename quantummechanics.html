@@ -181,6 +181,142 @@ body {
 <body>
  
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum Mechanics - Wave-Particle Duality</title>
+  <style>
+    .quantum-container {
+      margin-top: 50px;
+      padding: 20px;
+    }
+
+    .stage {
+      position: relative;
+      width: 80%;
+      max-width: 600px;
+      height: 100px;
+      border: 2px solid #001f3f;
+      border-radius: 10px;
+      margin: 0 auto;
+      overflow: hidden;
+      background-color: transparent; /* Clear background */
+    }
+
+    .particle {
+      position: absolute;
+      top: 40px;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+      left: 0;
+      animation: moveParticle 5s linear infinite;
+      display: none; /* Hidden initially */
+    }
+
+    .wave {
+      position: absolute;
+      top: 0;
+      width: 200%; /* Double width for wave motion */
+      height: 100%;
+      background-color: transparent;
+      display: none; /* Hidden initially */
+      overflow: hidden;
+    }
+
+    .wave::before {
+      content: '';
+      position: absolute;
+      width: 200%; /* Full width for movement */
+      height: 100%;
+      background: repeating-linear-gradient(90deg, #001f3f, #001f3f 10px, transparent 10px, transparent 20px);
+      animation: waveMotion 2s linear infinite; /* Continuous wave motion */
+      opacity: 0.7;
+    }
+
+    .toggle-group {
+      margin-top: 20px;
+    }
+
+    .toggle {
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .toggle:hover {
+      background-color: #0056b3;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #002f6c;
+      margin-top: 20px;
+    }
+
+    @keyframes moveParticle {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: 90%;
+      }
+    }
+
+    @keyframes waveMotion {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="quantum-container">
+    <div class="stage">
+      <div class="particle" id="particle"></div>
+      <div class="wave" id="wave"></div>
+    </div>
+
+    <div class="toggle-group">
+      <button class="toggle" onclick="showPosition()">Show Position</button>
+      <button class="toggle" onclick="showVelocity()">Show Velocity</button>
+    </div>
+
+    <div class="note">(effect conceptually exaggerated)</div>
+  </div>
+
+  <script>
+    (function() {
+      const particle = document.getElementById('particle');
+      const wave = document.getElementById('wave');
+
+      // Function to display the particle (position view)
+      window.showPosition = function() {
+        particle.style.display = 'block';  // Show the particle
+        wave.style.display = 'none';      // Hide the wave
+      };
+
+      // Function to display the wave (velocity view)
+      window.showVelocity = function() {
+        particle.style.display = 'none';  // Hide the particle
+        wave.style.display = 'block';     // Show the wave
+      };
+    })();
+  </script>
+</body>
+</html>
 
 
  
@@ -207,7 +343,8 @@ body {
 <br>
 
  
-<p class="formatted-paragraph" </u> </p>
+ 
+<p class="formatted-paragraph" </u> While you wait for me to finish writing this page, here are some resources!</p>
 
  
 </body>
@@ -217,9 +354,9 @@ body {
   <div class="content">
  
  
-      <button class="button" onclick="toggleUnits()">COMING SOON</button>
-	     <button class="button" onclick="toggleFormulas()">COMING SOON</button>
-      <button class="button" onclick="toggleMainConcepts()">COMING SOON</button>
+      <button class="button" onclick="toggleUnits()">*Temporary resources*</button>
+	     <button class="button" onclick="toggleFormulasx()">COMING SOON</button>
+      <button class="button" onclick="toggleMainConceptsx()">COMING SOON</button>
   </div>
 <div id="formulasBox" class="box hidden">
  <h2 style="text-align: center;"> Header </h2>
@@ -249,87 +386,27 @@ conent</p>
   </div>
       
   <div id="unitsBox" class="box hidden">
-    <h2 style="text-align: center;"> Units and Constants for Intro to Thermodyanmics</h2>
-<p>Remember, if there’s not much <u>new</u>, review <u>what you can already do. </u>Also, for units with multiple options, I included them in order of how often they are used in practice problems (following the standard ones).</u></p>
-    <div style="text-align: center;">
-<head>
-    <style>
- 
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 2px solid white; /* white border for each cell */
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-<h4><u>Units</h4></u>  
- 
-    <table>
- 
-        </tr>
-        <!-- Rows -->
-        <tr>
-            <td>temperature (T)</td>
-            <td>kelvin [K] = 1° celcius [C] - 273.15° C</td>
-        </tr>
-        <tr>
-            <td>pressure (P)</td>
-            <td>pascal [Pa] = 9.87 atmospheres [atm] = 1 newton per square meter [N/m<sup>2</sup>]</td>
-        </tr>
+    <h2 style="text-align: center;"> Resources for Self-studying Quantum Mechanics!</h2>
+</p>
 
-        </tr>
-        <tr>
-            <td>density (ρ)</td>
-            <td>kilograms per cubic meter [kg/m<sup>3</sup>]</td>
-        </tr>
-        <tr>
-            <td>specific heat capacity (C)</td>
-            <td>joule per kilogram per kelvin (J/kg/K)</td>
-        </tr>
-        <tr>
-            <td>specific heat (c)</td>
-            <td>calories [c]</td>
-        </tr>
-        <tr>
-            <td>heat (Q)</td>
-            <td>joules [J]</td>
-        </tr>
+  <h4 style=”text-align: center;”><u>My Favorite Videos</u></h4>
+<p>
+<I>(Copy and paste the links)</I><br>
+Intro to the quantum world: https://www.youtube.com/watch?v=ARWBdfWpDyc  <br><br>
+Why can't I understand this stuff?: https://www.youtube.com/watch?v=BHOzudE1oRk  <br><br>
+Spin: https://www.youtube.com/watch?v=DCrvanB2UWA and https://www.youtube.com/watch?v=Odgg-IXwkwI<br><br>
+Probabilistic version: https://www.youtube.com/watch?v=wWZyLGEqgio <br><br>
+Get inspired: https://www.youtube.com/watch?v=TlmwLyeWv5M <br><br></p><br>
 
-         </table>
-        </p>
-    </div>
-  <div style="text-align: center;"> <h4><u>Constants</h4></u>  
-    	<p> </p><html>
-<head>
-	<title>  </title>
-	<style>
- 
-    	table {
-        	border-collapse: collapse;
-        	width: 100%;
-    	}
-    	th, td {
-        	border: 2px solid white; /* white border for each cell */
-        	padding: 10px;
-        	text-align: center;
-    	}
-	</style>
-</head>
-<body>
-	<table>
-    	</tr>
-    	<!-- Rows -->
-    	        <tr>
-                   </tr>
- 
-          	</table>
-    	</p>
-	</div>
+ <h4 style=”text-align: center;”><u>My Favorite Books</u></h4>
+<p>
+The Theoretical Minimum -- best book for math foundations and big picture<br><br>
+Feynman Lectures on Physics -- world's best explainer, I promise he will make things clearer than you thought possible <br><br>
+ <h4 style=”text-align: center;”><u>Other</u></h4>
+<p>
+The Science of Everything Podcast, James Fodor -- why not work on your understanding of the world while driving to school?
+
+
  
   </div>
   </div>
