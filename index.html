@@ -206,7 +206,19 @@ margin: 0 auto; /* Center horizontally */
  color: #069494; /* back to normal*/
     }
     
- 
+ /* Ensure popup is hidden by default */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Stay on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
 
   </style>
 </head>
@@ -224,7 +236,21 @@ margin: 0 auto; /* Center horizontally */
     <a href="simulations.html">Simulations</a>
    <a href="mailto:penelope.pressman@gmail.com">Contact</a>
 	   <a href="about.html">About</a>
-  </nav>
+<a href="https://github.com/PenPressman/physics-c-bypenelope.git" onclick="showContributionPopup()">Collaborate</a></nav/>
+
+
+
+<script>
+    // Function to show the contribution popup
+    function showContributionPopup() {
+        document.getElementById("contributePopup").style.display = "block";
+    }
+
+    // Function to hide the contribution popup
+    function closeContributionPopup() {
+        document.getElementById("contributePopup").style.display = "none";
+    }
+</script>
 
 
   <div class="container">
@@ -233,7 +259,6 @@ margin: 0 auto; /* Center horizontally */
    
     <!-- New section for AP Physics content -->
     <div class="physics-container">
-
 
 
    
@@ -485,8 +510,26 @@ font-weight: bold; /* Bold text */
     I'm working on updating this site with more content for other areas of physics (optics first, then I'll add relativity, quantum, other peices of modern physicsetc.) so check back in a few months if you're curious. I've also included some basic intros to concepts if you're in a pre-AP-C physics class. <br><br>Use what's helpful, ignore what isn't, and have fun :)
   	</p>
 </div>
+<script>
+    function showContributionPopup() {
+        document.getElementById("contributePopup").style.display = "block";
+    }
+
+    function closeContributionPopup() {
+        document.getElementById("contributePopup").style.display = "none";
+    }
+</script>
+
 
 <script>
+function showContributionPopup() {
+    document.getElementById('contributionPopupBox').classList.add('show');
+}
+function closeContributionPopup() {
+    document.getElementById('contributionPopupBox').classList.remove('show');
+}
+
+
     // Function to set a cookie
     function setCookie(name, value, days) {
         var expires = "";
