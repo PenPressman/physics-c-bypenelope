@@ -80,7 +80,7 @@
       position: relative;
       background-color: #001f3f;
       border-radius: 30px;
-      padding: 20px;
+      padding: 10px;
       margin: 20px auto; /* Adjusted margin for spacing */
       max-width: 1290px;
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
@@ -97,7 +97,7 @@
     .physics-content {
       text-align: center;
       color: #47a7f5;
-      margin-top: 18px;
+      margin-top: 10px;
     }
     .physics-button-container {
       display: grid;
@@ -137,7 +137,8 @@
     }
 .light-teal-shadow {
       text-shadow: 1px 1px .5px #069494;
- color: #069494; /* back to normal*/
+      color: #001f3f;
+
     }
 
   .center-button {
@@ -204,7 +205,7 @@ margin: 0 auto; /* Center horizontally */
     }
 .light-teal-shadow {
       text-shadow: 1px 1px .5px #069494;
- color: #069494; /* back to normal*/
+ color: #001f3f; /* back to normal*/
     }
     
  /* Ensure popup is hidden by default */
@@ -367,15 +368,15 @@ margin: 0 auto; /* Center horizontally */
 <div class="physics-container">
 <div class="physics-header">
 
-<h1 style="color: #c9dfff;">
-<span style="color: #FF0000; text-shadow: 2px 2px 4px #8B0000;">Thermodynamics</span>
+<h1 style="color: #FF0000; margin-top: 5; margin-bottom: 8px; padding: 0;">Thermodynamics</h1>
+<span style="color: #FF0000; text-shadow: 2px 2px 4px #8B0000;"></span>
 
 </div>
     <!-- Second section of buttons -->
     <div style="display: flex; justify-content: center;">
     <button class="physics-button light-red-shadow" onclick="location.href='introtothermodynamics.html'">Intro to Thermodynamics</button>
-	      <button class="physics-button light-red-shadow" onclick="location.href='lawsofthermo.html'">Pt 2: Laws of Thermo</button>
-	         <button class="physics-button light-red-shadow" onclick="location.href='statmech.html'">Statistical Mechanics</button>
+	      <button class="physics-button light-red-shadow  gap: 5px;" onclick="location.href='lawsofthermo.html'">Pt 2: Laws of Thermo</button>
+	          <!--    <button class="physics-button light-red-shadow" onclick="location.href='statmech.html'">Statistical Mechanics</button> -->
 </div>
 <br>
 
@@ -388,14 +389,16 @@ margin: 0 auto; /* Center horizontally */
 <div class="physics-header">
 
 <h1 style="color: #c9dfff;">
-<span style="color: #81efe3;  font-size: 36px; text-shadow: 2px 2px 4px #ADD8E6;">Modern Physics</span>
+<span style="color: #81efe3;  margin-top: 4; margin-bottom: 0px; padding: 0;font-size: 36px; text-shadow: 2px 2px 4px #ADD8E6;">Modern Physics</span>
 </h1>
-<p>No lessons so far, but click here for resources! To be updated soon once I learn :)</p>
+
+
+<p><span style="margin-top: 0; margin-bottom: 1px; padding: 0;font-size: 20px; text-shadow: 1px 1px 3px #ADD8E6;">No lessons so far, but click here for resources! To be updated soon once I learn :)</span></p>
 </div>
     <!-- Second section of buttons -->
     <div style="display: flex; justify-content: center;">
-    <button class="physics-button light-teal-shadow" onclick="location.href='specialrelativity.html'">Special Relativity</button>
-	      <button class="physics-button light-teal-shadow" onclick="location.href='quantummechanics.html'">Quantum Mechanics</button>
+    <button class="physics-button light-teal-shadow" style="color: #001f3f;" onclick="location.href='specialrelativity.html'">Special Relativity</button>
+	      <button class="physics-button light-teal-shadow" style="color: #001f3f;" onclick="location.href='quantummechanics.html'">Quantum Mechanics</button>
 	        
 </div>
 
