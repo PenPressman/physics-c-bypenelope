@@ -146,14 +146,7 @@
         max-height: 70px;
     }
 
-    .formatted-paragraph {
-        max-width: 900px; /* Set maximum width */
-        margin: 0 auto; /* Center the paragraph horizontally */
-        padding: 0 20px; /* Add some padding to the sides */
-    }
-
-
-
+ 
 
     /* Style for headers */
     h2, h3, h5, h5, h6 {
