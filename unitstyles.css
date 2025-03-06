@@ -146,7 +146,7 @@
         max-height: 70px;
     }
 
-<style>
+
     /* Style for paragraph that has to stay centered and not stretch across whole page */
     .formatted-paragraph {
         max-width: 900px; /* Set maximum width */
@@ -154,4 +154,12 @@
         padding: 0 20px; /* Add some padding to the sides */
         /* Add any additional styles for the paragraph */
     }
-</style>
+
+
+
+
+    /* Style for headers */
+    h2, h3, h5, h5, h6 {
+        text-shadow: 2px 2px 4px navy; /* Add a navy shadow to all headers */
+    }
+
