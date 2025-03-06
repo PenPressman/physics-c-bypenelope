@@ -138,15 +138,13 @@
         }
 
 
-    .image {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        max-width: 70px; /* Adjust the size as needed */
-        max-height: 70px;
+    /* Style for paragraph that has to stay centered and not stretch across whole page */
+    .formatted-paragraph {
+        max-width: 900px; /* Set maximum width */
+        margin: 0 auto; /* Center the paragraph horizontally */
+        padding: 0 20px; /* Add some padding to the sides */
+        /* Add any additional styles for the paragraph */
     }
-
- 
 
     /* Style for headers */
     h2, h3, h5, h5, h6 {
