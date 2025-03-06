@@ -146,12 +146,10 @@
         max-height: 70px;
     }
 
-   /* Style for paragraph that has to stay centered and not stretch across whole page */
     .formatted-paragraph {
         max-width: 900px; /* Set maximum width */
         margin: 0 auto; /* Center the paragraph horizontally */
         padding: 0 20px; /* Add some padding to the sides */
-        /* Add any additional styles for the paragraph */
     }
 
 
