@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-adsense-account" content="ca-pub-5077959573383561">
+    <link rel="manifest" href="manifest.json">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5077959573383561"
+    crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="unitstyles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phys by Pen</title>
+    <meta name="description" content="Resources and explanations for AP physics C: E and M!">
+    <meta name="google-site-verification" content="riKf53f3Se-WIW2mjg--QE53K6J8YkSkidC29bytnZ8" />
+    <meta property="og:image" content="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1">
+    <meta name="description" content="Learn AP Physics C: E & M, and more, with explanations, formula sheets, and games + tools to help make things easier and more fun. ">
+    <link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4M671CKZE1');
+    </script>
+   
+</head>
+<body>
+    <header>
+        <h1>Kinematics</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="sources.html">Sources</a>
+        <a href="homepageforgames.html">Games</a>
+        <a href="simulations.html">Simulations</a>
+        <a href="mailto:penelope.pressman@gmail.com">Contact</a>
+        <a href="about.html">About</a>
+    </nav>
+    <div class="container">
+        <section id="about" class="section">
+
+
+
+<title>Kinematics</title>
+  <link rel="icon" href="https://dl.dropboxusercontent.com/scl/fi/yw4e703hr5fvo166v5ykf/Phys-by-pen.png?rlkey=32bgd01afqwexhs4qdvhrace0&dl=0?raw=1" type="image/x-icon">
+   <meta name="description" content="Learn about Kinematics">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4M671CKZE1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4M671CKZE1');
+</script>
+  
+</head>
+<body>
+
+
+<svg width="70%" height="200" viewBox="0 0 1000 200" style="margin-top: -50px;">
+  <path id="parabola" d="M0,200 Q500,-6 1000,200" fill="none" stroke="#ADD8E6" stroke-dasharray="2 2" />
+  <circle id="circle" cx="0" cy="200" r="15" fill="#2750AF" />
+</svg>
+
+<div class="container">
+  <div class="content">
+     <p>Back to basics! Kinematics are pretty fundamental and come up a lot later on. Aside from memorizing the <u><b>kinematic equations</b></u>, go over the principle concepts and make sure you understand everything, especially common topics like <u><b>free-fall, projectile motion, relative velocity</b></u> and more. Since this is the first unit, make sure to review <u><b>calculus skills</b></u> (specifically deriving and integrating functions) and <u><b>calculator skills</b></u> (nsolve is the best :). You’ll notice that this unit is relatively short compared to the others, so I generally think of it as like a toolkit for later units rather than its own one.</p>
+  </div>
+  <div>
+       <button class="button" onclick="toggleUnits()"> Relevant SI Units</button>
+    <button class="button" onclick="toggleFormulas()">Formulas</button>
+    <button class="button" onclick="toggleMainConcepts()">Concept Explanations</button>
+   
+  </div>
+<div id="formulasBox" class="box hidden">
+    <h2>The Kinematic Equations</h2>
+
+    <p>v = v<sub>0</sub> + a*t</p>
+    <p>v<sub>0</sub> = v<sub>0</sub><sup>2</sup> + 2*a*(Δx)</p>
+    <p>(Δx) = v<sub>0</sub>*t + ½*a*t<sup>2</sup></p>
+    <p>(Δx) = ½(v + v<sub>0</sub>)*t</p>
+    <div style="text-align: left;">
+        <p>
+            *v<sub>0</sub>* = initial velocity, sometimes written as v<sub>i</sub><br>
+           *x = displacement in one direction (I use "x" as my go-to variable, but make sure to keep in mind what it is actually representing in a given scenario)<br>
+            *acceleration (must be constant in order to apply kinematics! Remember that a<sub>y</sub> due to gravity is equal to -9.8m/s, but you can round to -10 on the AP)
+        </p>
+        <p>*Note, aside from time, all variables must be analyzed using individual components (ie. x, y, or z direction).</p>
+    </div>
+
+    <h2 style="text-align: center;">Relative Velocity</h2>
+    <p style="text-align: center;">
+        V<sub>PS</sub> = V<sub>PW</sub> + V<sub>WS</sub><br>
+    </p>
+    <p style="text-align: left;">
+        (where each variable represents a reference frame, ie. V<sub>person to shore</sub> = V<sub>person to water</sub> + V<sub>water to shore</sub>)
+    </p>
+    <p style="text-align: left;">
+        You can learn more about the concept of relative velocity if you click the other button, but for now- to remember the formula, I like to think of it as splitting the two variables and adding a common one in the middle. In a nutshell, pick a variable and use it to split them!
+    </p>
+
+    <h2 style="text-align: center;">Other Formulas</h2>
+    <p style="text-align: center;">
+        Speed = d<sub>istance</sub>/t<br>
+        Constant velocity: v = Δx/t<br>
+        Average velocity: v<sub>avg</sub> = Δx/t<br>
+        Constant acceleration: a = Δv/t<br>
+        Average acceleration: a<sub>avg</sub> = Δv/t
+    </p>
+    <p style="text-align: left;">
+        For vectors, just remember the Pythagorean theorem: A<sup>2</sup> = B<sup>2</sup> + C<sup>2</sup>
+    </p>
+
+    <h2 style="text-align: center;">Calculus Relationships</h2>
+    <p style="text-align: center;">
+        v = dx/dt<br>
+        a = dv/dt = d<sup>2</sup>x/dx<sup>2</sup><br>
+        x = &int;v dt<br>
+        v = &int;a dt<br>
+        AUC (area under the curve) of a a/t graph is Δv<br>
+        AUC (area under the curve) of a v/t graph is Δx
+    </p>
+
+    <p style="text-align: left;">
+        *Remember, to find Δx or Δv, make the integral definite and include the initial condition! Also, keep in mind components just like with the kinematic equations, since v and a are vectors (more explanation in the concept section).
+    </p>
+</div>
+  <div id="conceptsBox" class="box hidden">
+    <h2 style="text-align: center;"> Overview </h2>
+    <div style="text-align: left;">
+        <p> Since making this is also my way of studying, I’m including the ways I’ve found it easiest to understand things. That being said, there’s no way around the fact that doing practice problems is the best way to make sure that you actually know the content and not just the formulas, so do as many as you can! However, if you’re tired before a test or something, feel free to just read these :) Also, random note: remember that distance and displacement are two different things! For example, if I walk 10 meters forward and then 10 meters back, if I wanted to find the distance I traveled, it would be 20 meters, but my displacement would be 0 meters. If I took a really curvy path to walk in a straight line forward, you could just use the straight version of the path to find displacement, but you would need to add up the length of the whole curvy path to find the distance. The place this will come up in this unit is speed vs velocity. Speed is distance over time, which will be the rate at which ground is traveled over (or flown through, swam through, etc.). Velocity is displacement over time, which will be the change in position over a given time. This will also make more sense when we talk about vectors, but it’s something to start thinking about.</p>
+     </p>
+    </div>
+    <h2 style="text-align: center;">Relative Velocity</h2>
+    <p style="text-align: left;">
+         I want to start with this because I think it's the most isolated concept from the rest of this unit, and once you get it…  you get it. Basically, think of walking on one of those flat escalators or moving floor things at airports, whatever you want to call them. In terms of how long it takes you to move from one place in the airport to another, we can just measure the time it takes for you to move, say, 20 meters. So, let’s say that took 20 seconds, aka you are moving at 1m/s. When we think of it more specifically, that’s really how fast you are moving relative to the still ground of the airport. The measurement of how long it took you from here to there doesn’t tell you how fast you were walking, or how fast the flat escalator was moving. In order to determine either of those velocities, we need to compare all three frames to each other: you to the ground, you to the escalator, and the escalator to the ground. The formula for relative velocity analysis (click the formula button to see it) makes a lot of sense when you think about it – my speed in the airport is a combination of how fast I'm walking and how fast the escalator is moving me, hence the addition. I like to think of it as squashing the middle variable in between the other two. (The middle variable being the frame of reference that relates to both others, which in the example above would be the flat escalator.) The only thing to keep in mind, and the reason you should do some practice problems, is that these can get just a bit more complicated when you take components into account. Remember to calculate the velocities in the x and y (or theoretically z? I haven't seen any examples of that…) directions separately. Then you’ll be good to go! 
+    <h2 style="text-align: center;">Vectors and Scalars</h2>
+    <p style="text-align: left;">
+       Speaking of splitting up components, this is important in general for any <u> vector quantities </u>. Because vectors take into account direction in addition to magnitude, you need to remember to split things into x and y. Stuff like mass, electric potential, and energy are scalars, so having a negative sign before an amount of energy would probably mean there was a change in energy or something like that. For vectors, like velocity, a negative sign refers to the direction of the velocity. A quick trick to remember is that if the velocity and acceleration have the same sign, the object is speeding up. If they are opposites, it is slowing down. That's why having "negative acceleration" does NOT necessarily entail slowing down (which might be confusing to those thinking of acceleration colloquially). If you're given individual components for something like velocity (ex. v=(2x)i + (4x <superscript> 2 </superscript>)j m/s), and you're given a scenario in which to find acceleration or some other variable, it's probably easiest to keep everything in terms of individual components (this is called "unit vector notation"). However, if you need to find the <u> magnitude </u> of the vector, make sure to use the Pythagorean theorem (you can find it under the equations button), and then use SOHCAHTOA to find the angle. There will be a lot more to go over about vectors and scalars in later units, but for now, this is all you need. Oh and, if you want to add vectors in a different way (and for some reason you are given an example where this is easier), you can  use the tip-to-tail method: draw the vectors by connecting each "tip" to the next one's "tail" and then find the final result. Remember, if one of them is negative, invert it before you add it (aka subtracting the vector).
+<br>
+<br>
+In short, vectors = the dreaded (or maybe fun for some people?) return of geometry.
+</br>
+  
+ <h2 style="text-align: center;">Projectile Motion</h2>
+
+ <p style="text-align: center;"> Aka, objects in the air, not touching anything or having any engines. The only specific condition you need to meet to use kinematics, the basic formulas for projectile motion, is having constant acceleration; meaning, no engine changing the object's velocity etc. In most cases, this will mean you have something being thrown/launched/dropped, and then (most likely neglecting air resistance), you'll evaluate the following motion of the object. In freefall, there will be <u>no</u> starting velocity (ie. v<sub>0</sub>=o). In all other cases, remember that the only acceleration you will probably have is acceleration due to gravity. I’m not going to spend a lot of time on this because the main thing is just to do some practice problems, but here are a few notes to keep in mind. </p>
+
+    <p style="text-align: left;">
+1. Remember that acceleration due to gravity (aka “g”) is in the <u> y direction only </u>! <br> <br>
+
+2. Remember that you can find the max height by finding where v <sub> y </sub> is 0, since that is where the velocity will change direction and the projectile will start heading back down.<br> <br>
+
+3. Unit 2 will explain this more, but aside from gravity, if there is no force acting on a projectile (which there will not be), it must have no other acceleration besides g. The exception to this would be if you had a problem where the projectile also had some sort of engine causing constant acceleration I guess.<br> <br>
+
+4. Since the kinematic equations are consistently effective at solving for your missing variables, start by writing down everything you know (i.e. make a chart of x and y variables) and then go from there!<br> <br>
+
+</p>
+
+  </div>
+      
+  <div id="unitsBox" class="box hidden">
+    <h2 style="text-align: center;"> SI Units for Kinematics </h2>
+    <div style="text-align: center;">
+        
+      <div style="text-align: center;">  
+        <p> <html>
+<head>
+    <title>  </title>
+   
+</head>
+<body>
+    <table>
+        </tr>
+        <!-- Rows -->
+        <tr>
+            <td>position (x)</td>
+            <td>meters [m] </td>
+        </tr>
+        <tr>
+            <td>velocity (v)</td>
+            <td>meters per second [m/s] </td>
+        </tr>
+        <tr>
+            <td>acceleration (a)</td>
+            <td> meters per second per second [m/s<sup>2</sup>]</td>
+        </tr>
+        <tr>
+            <td>time (t)</td>
+            <td>seconds [s] </td>
+        </tr>
+        <tr>
+            <td>speed (s)</td>
+            <td> meters per second [m/s] </td>
+        </tr>
+         </table>
+        </p>
+    </div>
+  </div>
+  </div>
+</div>
+<script>
+  function toggleFormulas() {
+    var formulasBox = document.getElementById("formulasBox");
+    formulasBox.classList.toggle("hidden");
+  }
+
+  function toggleMainConcepts() {
+    var conceptsBox = document.getElementById("conceptsBox");
+    conceptsBox.classList.toggle("hidden");
+  }
+
+  function toggleUnits() {
+    var unitsBox = document.getElementById("unitsBox");
+    unitsBox.classList.toggle("hidden");
+  }
+
+  // Function to animate circle along the parabolic path
+  function animateCircle() {
+    var circle = document.getElementById("circle");
+    var path = document.getElementById("parabola");
+    var length = path.getTotalLength();
+    
+    // Animate circle along the path
+    var duration = 10000; // Duration of animation in milliseconds, slowed down
+    var startTime = null;
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = timestamp - startTime;
+      var point = path.getPointAtLength(progress % length);
+      circle.setAttribute("cx", point.x);
+      circle.setAttribute("cy", point.y);
+      window.requestAnimationFrame(step);
+    }
+    window.requestAnimationFrame(step);
+  }
+
+  // Call the function to animate circle
+  animateCircle();
+</script>
+
+</body>
+</html>
+
+
+
+<br>
+<br>
+</body>
+</html>
+        </section>
+    </div>
+    <footer>
+        <p>Penelope Pressman - Phys by Pen 2024</p>
+    </footer>
+</body>
+</html>
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>phys by pen logo add</title>
+
+</head>
+<body>
+<div class="container">
+    <img class="image"
+	    src="https://dl.dropboxusercontent.com/scl/fi/ut0j430toe9ru2rbm1hq2/phys-by-pen-for-index.png?rlkey=fbvl9zbnzobxm3663l2ulaepe&dl=0?raw=1" alt="Physics Image">
+</div>
+</body>
+</html>
