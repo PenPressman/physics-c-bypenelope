@@ -145,4 +145,10 @@
         text-shadow: 2px 2px 4px navy; /* Add a navy shadow to all headers */
     }
 
- 
+ .image {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        max-width: 70px; /* Adjust the size as needed */
+        max-height: 70px;
+    }
