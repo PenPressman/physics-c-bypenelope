@@ -465,7 +465,22 @@
     text-align: center; /* Center the text horizontally */
   }
 
+nav.nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
 
+/* Responsive layout for phones */
+@media screen and (max-width: 480px) {
+  nav.nav-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #1c345c;
+  }
 
 .light-red-shadow {
       text-shadow: 1px 1px .5px #FF0000;
@@ -554,8 +569,8 @@ margin: 0 auto; /* Center horizontally */
 
 
   </header>
-  <nav>
-	      <a href="tool.html">Search</a>
+<nav class="nav-links">
+	<a href="tool.html">Search</a>
 	   <a href="mailto:physbypen@gmail.com">Contact</a>
 	   <a href="about.html">About</a>
     <a href="homepageforgames.html">Games</a>
