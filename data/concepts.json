@@ -293,3 +293,137 @@
   { "concept": "Standing Waves", "explanation": "Waves trapped between boundaries create repeating patterns—like guitar strings or microwave hot spots." }
 ]
 ​
+  [
+  {
+    "concept": "Elastic Collision",
+    "explanation": "In a perfectly elastic collision, objects bounce off each other and both momentum and kinetic energy are conserved. Think pool balls or ideal physics simulations."
+  },
+  {
+    "concept": "Inelastic Collision",
+    "explanation": "Here, objects stick together or lose some kinetic energy. Momentum is still conserved, but some energy turns into heat or deformation."
+  },
+  {
+    "concept": "Center of Mass",
+    "explanation": "This is the average position of mass in an object or system. If you threw something in the air and watched it spin, its center of mass would follow a parabolic path."
+  },
+  {
+    "concept": "Rotational Inertia",
+    "explanation": "Also called moment of inertia, it tells you how hard it is to spin something. More mass far from the axis = harder to spin."
+  },
+  {
+    "concept": "Angular Momentum",
+    "explanation": "It’s like momentum, but for spinning. Bigger radius or faster spin means more angular momentum—and it’s conserved unless a torque acts."
+  },
+  ...
+  {
+    "concept": "Doppler Effect",
+    "explanation": "That high-pitch siren sound coming toward you? Lower when it passes? That’s Doppler."
+  },
+  {
+    "concept": "Standing Waves",
+    "explanation": "Waves trapped between boundaries create repeating patterns—like guitar strings or microwave hot spots."
+  }
+]
+[
+  {
+    "concept": "Net Force",
+    "explanation": "If all the forces on an object cancel out, the net force is zero—which means no acceleration. Don’t confuse movement with net force!"
+  },
+  {
+    "concept": "Equilibrium",
+    "explanation": "When the net force on an object is zero, it's in equilibrium. That includes constant velocity *or* staying still—basically no acceleration."
+  },
+  {
+    "concept": "Newton’s First Law",
+    "explanation": "An object will stay at rest or move in a straight line at constant speed unless something unbalanced pushes or pulls on it."
+  },
+  {
+    "concept": "Inertia",
+    "explanation": "Inertia is an object's resistance to changes in motion. More mass = more inertia = harder to speed up, slow down, or turn."
+  },
+  {
+    "concept": "Free Body Diagram",
+    "explanation": "Draw ALL the forces acting on an object. Arrows show direction and size. These help more than you'd think—use them even if not required."
+  },
+  {
+    "concept": "Normal Force",
+    "explanation": "This is the surface pushing up on you so you don’t fall through. It’s not always equal to your weight—depends on the situation."
+  },
+  {
+    "concept": "Apparent Weight",
+    "explanation": "This is what you 'feel' as your weight, aka the normal force. It can be more or less than mg depending on acceleration."
+  },
+  {
+    "concept": "Newton’s Second Law",
+    "explanation": "F = ma. The bigger the force, the more acceleration. The more mass, the less acceleration you get from the same force."
+  },
+  {
+    "concept": "Contact Force",
+    "explanation": "Forces that happen from direct touching—like tension, normal force, friction. If two things touch, there’s at least one."
+  },
+  {
+    "concept": "Field Force",
+    "explanation": "Forces that act at a distance—like gravity, electric, or magnetic. They don’t need touching to work."
+  },
+  {
+    "concept": "Newton’s Third Law",
+    "explanation": "Every force has an equal and opposite reaction. Always. If object A pushes on B, then B pushes back on A equally hard."
+  },
+  {
+    "concept": "Force Pair",
+    "explanation": "The two forces in Newton’s Third Law. They act on different objects but are always equal in size and opposite in direction."
+  },
+  {
+    "concept": "Static Equilibrium",
+    "explanation": "All forces and torques balance, and the object isn’t moving. Classic example: a book sitting still on a table."
+  },
+  {
+    "concept": "Dynamic Equilibrium",
+    "explanation": "Forces are balanced, but the object is moving at constant velocity. No net force doesn’t mean no motion!"
+  },
+  {
+    "concept": "Weight vs Mass",
+    "explanation": "Mass is how much stuff you have. Weight is the force of gravity pulling on it. On the moon, your mass stays the same but your weight changes."
+  },
+  {
+    "concept": "Friction Direction",
+    "explanation": "Friction always resists the direction of intended relative motion, not necessarily movement. It can actually point forward—like when you walk."
+  },
+  {
+    "concept": "Coefficient of Friction",
+    "explanation": "This is a value that tells you how grippy two surfaces are. Higher = more friction."
+  },
+  {
+    "concept": "Static vs Kinetic Friction",
+    "explanation": "Static friction keeps things from starting to slide. Kinetic friction slows things down while they’re already sliding."
+  },
+  {
+    "concept": "Inclined Plane Components",
+    "explanation": "On a ramp, split gravity into parts: one down the ramp (causes sliding) and one into the ramp (affects normal force)."
+  },
+  {
+    "concept": "Pulley Tension",
+    "explanation": "If a pulley is massless and frictionless, tension stays constant throughout the rope. This simplifies Atwood machines."
+  },
+  {
+    "concept": "Acceleration Direction",
+    "explanation": "Acceleration always points in the direction of the net force, even if the object is moving the other way!"
+  },
+  {
+    "concept": "Terminal Velocity",
+    "explanation": "The speed at which drag force cancels out weight, so the object stops accelerating during free fall."
+  },
+  {
+    "concept": "Drag Force",
+    "explanation": "Drag opposes motion through a fluid like air or water, and it increases with speed."
+  },
+  {
+    "concept": "Spring Equilibrium",
+    "explanation": "When a spring hangs at rest, the upward spring force exactly balances the downward weight."
+  },
+  {
+    "concept": "Spring Constant",
+    "explanation": "The 'k' in Hooke’s Law. A stiffer spring has a higher k, meaning it takes more force to stretch or compress it."
+  }
+]
+
