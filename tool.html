@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Phys by Pen – Physics Concept Explorer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background: #f9f9f9;
+    }
+    h1 {
+      color: #1E55A7;
+    }
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 1rem 0;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-left: 5px solid #1E55A7;
+      border-radius: 6px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .card h2 {
+      margin-top: 0;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔎 Physics Concept Explorer</h1>
+  <p>Search for any concept and see the 15-year-old-level explanation!</p>
+  <input type="text" id="searchBox" placeholder="Try 'momentum', 'refraction', or 'energy'..." />
+
+  <div id="results"></div>
+
+  <script>
+    let concepts = [];
+
+    async function loadConcepts() {
+      const res = await fetch('data/physbypen_explanations_15.json');
+      concepts = await res.json();
+      render("");
+    }
+
+    function render(query) {
+      const container = document.getElementById("results");
+      container.innerHTML = "";
+
+      const filtered = concepts.filter(item =>
+        item.concept.toLowerCase().includes(query.toLowerCase())
+      );
+
+      filtered.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <h2>${item.concept}</h2>
+          <p>${item.explanation}</p>
+        `;
+        container.appendChild(card);
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = "<p>No matching concepts found.</p>";
+      }
+    }
+
+    document.getElementById("searchBox").addEventListener("input", e => {
+      render(e.target.value);
+    });
+
+    loadConcepts();
+  </script>
+
+</body>
+</html>
