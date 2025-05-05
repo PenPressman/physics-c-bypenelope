@@ -787,15 +787,13 @@
 !
     ];
 
-    function render(query) {
-      const container = document.getElementById("results");
-      container.innerHTML = "";
+  function render(query) {
+  const container = document.getElementById("results");
+  container.innerHTML = "";
 
-      if (!query.trim()) return; // Do not show anything if query is empty
-
-      const filtered = concepts.filter(item =>
-        item.concept.toLowerCase().includes(query.toLowerCase())
-      );
+  const filtered = concepts.filter(item =>
+    item.concept.toLowerCase().includes(query.toLowerCase())
+  );
 
       filtered.forEach(item => {
         const card = document.createElement("div");
