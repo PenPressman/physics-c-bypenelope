@@ -1,0 +1,295 @@
+[
+  {
+    "concept": "Acceleration",
+    "explanation": "Acceleration tells you how quickly speed is changing."
+  },
+  {
+    "concept": "Newton’s Second Law",
+    "explanation": "Force = mass × acceleration. More mass or more speed-up means more force."
+  },
+  {
+    "concept": "Speed of Light",
+    "explanation": "Light moves faster than anything else—nothing beats it."
+  },
+  {
+    "concept": "Friction",
+    "explanation": "Friction slows things down when they rub together."
+  },
+  {
+    "concept": "Weight",
+    "explanation": "Weight is gravity acting on mass: more mass = more weight."
+  },
+  {
+    "concept": "Density",
+    "explanation": "Density = mass divided by volume."
+  },
+  {
+    "concept": "Buoyant Force",
+    "explanation": "Floating happens because water pushes up on objects."
+  },
+  {
+    "concept": "Sound",
+    "explanation": "Sound is a wave that travels through matter like air or water."
+  },
+  {
+    "concept": "Wave-Particle Duality",
+    "explanation": "Sometimes light acts like a wave, sometimes like a particle."
+  },
+  {
+    "concept": "Electric Current",
+    "explanation": "Electric current is moving charge, like electrons in a wire."
+  },
+  {
+    "concept": "Capacitance",
+    "explanation": "A capacitor stores energy by holding electric charge."
+  },
+  {
+    "concept": "Magnetic Fields",
+    "explanation": "A magnet or a moving charge makes a magnetic field around it."
+  },
+  {
+    "concept": "Induction",
+    "explanation": "Changing magnetic fields can produce electricity."
+  },
+  {
+    "concept": "Simple Harmonic Motion",
+    "explanation": "SHM means something moves in a repeating cycle, like a spring."
+  },
+  {
+    "concept": "Pressure",
+    "explanation": "Pressure = Force ÷ Area. Smaller areas = more pressure."
+  },
+  {
+    "concept": "Terminal Velocity",
+    "explanation": "Objects stop speeding up when air drag matches gravity."
+  },
+  {
+    "concept": "Refraction",
+    "explanation": "Light changes direction when it moves between materials."
+  },
+  {
+    "concept": "Diffraction",
+    "explanation": "Diffraction happens when waves go through gaps or around edges."
+  },
+  {
+    "concept": "Constructive Interference",
+    "explanation": "Waves can add up to make a bigger wave if they match."
+  },
+  {
+    "concept": "Destructive Interference",
+    "explanation": "Waves meeting out of sync can cancel each other."
+  },
+  {
+    "concept": "Electric Potential Energy",
+    "explanation": "Like gravity, electric fields can store energy in positions."
+  },
+  {
+    "concept": "Power",
+    "explanation": "More power means energy is used faster."
+  },
+  {
+    "concept": "Momentum",
+    "explanation": "Momentum = mass × velocity. Bigger or faster things have more."
+  },
+  {
+    "concept": "Impulse",
+    "explanation": "Impulse is force × time, and it changes momentum."
+  },
+  {
+    "concept": "Torque",
+    "explanation": "Torque causes rotation and depends on how far the force is from the pivot."
+  }
+]
+
+[
+  {
+    "concept": "Acceleration",
+    "explanation": "Acceleration tells you how quickly speed is changing."
+  },
+  {
+    "concept": "Newton’s Second Law",
+    "explanation": "Force = mass × acceleration. More mass or more speed-up means more force."
+  },
+  {
+    "concept": "Speed of Light",
+    "explanation": "Light moves faster than anything else—nothing beats it."
+  },
+  {
+    "concept": "Friction",
+    "explanation": "Friction slows things down when they rub together."
+  },
+  {
+    "concept": "Weight",
+    "explanation": "Weight is gravity acting on mass: more mass = more weight."
+  },
+  {
+    "concept": "Density",
+    "explanation": "Density = mass divided by volume."
+  },
+  {
+    "concept": "Buoyant Force",
+    "explanation": "Floating happens because water pushes up on objects."
+  },
+  {
+    "concept": "Sound",
+    "explanation": "Sound is a wave that travels through matter like air or water."
+  },
+  {
+    "concept": "Wave-Particle Duality",
+    "explanation": "Sometimes light acts like a wave, sometimes like a particle."
+  },
+  {
+    "concept": "Electric Current",
+    "explanation": "Electric current is moving charge, like electrons in a wire."
+  },
+  {
+    "concept": "Capacitance",
+    "explanation": "A capacitor stores energy by holding electric charge."
+  },
+  {
+    "concept": "Magnetic Fields",
+    "explanation": "A magnet or a moving charge makes a magnetic field around it."
+  },
+  {
+    "concept": "Induction",
+    "explanation": "Changing magnetic fields can produce electricity."
+  },
+  {
+    "concept": "Simple Harmonic Motion",
+    "explanation": "SHM means something moves in a repeating cycle, like a spring."
+  },
+  {
+    "concept": "Pressure",
+    "explanation": "Pressure = Force ÷ Area. Smaller areas = more pressure."
+  },
+  {
+    "concept": "Terminal Velocity",
+    "explanation": "Objects stop speeding up when air drag matches gravity."
+  },
+  {
+    "concept": "Refraction",
+    "explanation": "Light changes direction when it moves between materials."
+  },
+  {
+    "concept": "Diffraction",
+    "explanation": "Diffraction happens when waves go through gaps or around edges."
+  },
+  {
+    "concept": "Constructive Interference",
+    "explanation": "Waves can add up to make a bigger wave if they match."
+  },
+  {
+    "concept": "Destructive Interference",
+    "explanation": "Waves meeting out of sync can cancel each other."
+  }
+]
+
+[
+  { "concept": "Acceleration", "explanation": "Acceleration tells you how quickly speed is changing." },
+  { "concept": "Newton’s Second Law", "explanation": "Force = mass × acceleration. More mass or more speed-up means more force." },
+  { "concept": "Speed of Light", "explanation": "Light moves faster than anything else—nothing beats it." },
+  { "concept": "Friction", "explanation": "Friction slows things down when they rub together." },
+  { "concept": "Weight", "explanation": "Weight is gravity acting on mass: more mass = more weight." },
+  { "concept": "Density", "explanation": "Density = mass divided by volume." },
+  { "concept": "Buoyant Force", "explanation": "Floating happens because water pushes up on objects." },
+  { "concept": "Sound", "explanation": "Sound is a wave that travels through matter like air or water." },
+  { "concept": "Wave-Particle Duality", "explanation": "Sometimes light acts like a wave, sometimes like a particle." },
+  { "concept": "Electric Current", "explanation": "Electric current is moving charge, like electrons in a wire." },
+  { "concept": "Capacitance", "explanation": "A capacitor stores energy by holding electric charge." },
+  { "concept": "Magnetic Fields", "explanation": "A magnet or a moving charge makes a magnetic field around it." },
+  { "concept": "Induction", "explanation": "Changing magnetic fields can produce electricity." },
+  { "concept": "Simple Harmonic Motion", "explanation": "SHM means something moves in a repeating cycle, like a spring." },
+  { "concept": "Pressure", "explanation": "Pressure = Force ÷ Area. Smaller areas = more pressure." },
+  { "concept": "Terminal Velocity", "explanation": "Objects stop speeding up when air drag matches gravity." },
+  { "concept": "Refraction", "explanation": "Light changes direction when it moves between materials." },
+  { "concept": "Diffraction", "explanation": "Diffraction happens when waves go through gaps or around edges." },
+  { "concept": "Constructive Interference", "explanation": "Waves can add up to make a bigger wave if they match." },
+  { "concept": "Destructive Interference", "explanation": "Waves meeting out of sync can cancel each other." },
+  { "concept": "Electric Potential Energy", "explanation": "Like gravity, electric fields can store energy in positions." },
+  { "concept": "Power", "explanation": "More power means energy is used faster." },
+  { "concept": "Momentum", "explanation": "Momentum = mass × velocity. Bigger or faster things have more." },
+  { "concept": "Impulse", "explanation": "Impulse is force × time, and it changes momentum." },
+  { "concept": "Torque", "explanation": "Torque causes rotation and depends on how far the force is from the pivot." },
+  { "concept": "Conservation of Momentum", "explanation": "In a system with no outside forces, the total momentum stays the same, even if objects inside the system bounce off each other." },
+  { "concept": "Kinetic Energy", "explanation": "Kinetic energy is motion energy. If something is heavier or faster, it has more of it." },
+  { "concept": "Gravitational Potential Energy", "explanation": "Gravity gives things energy when you lift them. The higher they are, the more energy they have." },
+  { "concept": "Ohm’s Law", "explanation": "Ohm’s Law says current increases if voltage goes up, assuming resistance stays the same." },
+  { "concept": "Second Law of Thermodynamics", "explanation": "Entropy is disorder. In a closed system, it always increases or stays the same." },
+  { "concept": "Free Fall", "explanation": "When something falls with gravity and *only* gravity acting on it. So, no air resistance or engines." },
+  { "concept": "Projectile Motion", "explanation": "Think throwing a ball. Horizontally it keeps going, vertically it rises then falls because of gravity." },
+  { "concept": "Normal Force", "explanation": "This is the force that the ground uses to push up on you so you don’t fall through." },
+  { "concept": "Tension", "explanation": "When a rope or string pulls on something, it creates tension. Everyone feels the same tension through the rope." },
+  { "concept": "Spring Force (Hooke’s Law)", "explanation": "The more you stretch or squish a spring, the harder it pulls back. F = -kx." },
+  { "concept": "Centripetal Force", "explanation": "Going in a circle? There must be a force pulling toward the center." },
+  { "concept": "Circular Motion Acceleration", "explanation": "Even at constant speed, going in a circle means you're constantly accelerating—because your direction’s always changing." },
+  { "concept": "Newton’s Third Law", "explanation": "For every action, there’s an equal and opposite reaction. You push on a wall—it pushes back." },
+  { "concept": "Work-Energy Theorem", "explanation": "If you do work on something, its energy changes. So pushing = more kinetic energy." },
+  { "concept": "Conservation of Energy", "explanation": "Energy can’t be created or destroyed—just changes form." },
+  { "concept": "Mechanical Energy", "explanation": "This is the sum of kinetic + potential energy. It stays constant if there’s no friction or external work." },
+  { "concept": "Gravitational Force", "explanation": "Any two objects with mass attract each other. Even you and your phone." },
+  { "concept": "Electric Charge", "explanation": "Like charges repel, opposites attract. Comes in positive and negative." },
+  { "concept": "Electric Field", "explanation": "This is how a charge 'reaches out' to affect other charges around it." },
+  { "concept": "Voltage (Electric Potential)", "explanation": "Think of it like electric pressure. Higher voltage = more push for charges to move." },
+  
+  [
+  { "concept": "Acceleration", "explanation": "Acceleration tells you how quickly speed is changing." },
+  { "concept": "Newton’s Second Law", "explanation": "Force = mass × acceleration. More mass or more speed-up means more force." },
+  { "concept": "Speed of Light", "explanation": "Light moves faster than anything else—nothing beats it." },
+  { "concept": "Friction", "explanation": "Friction slows things down when they rub together." },
+  { "concept": "Weight", "explanation": "Weight is gravity acting on mass: more mass = more weight." },
+  { "concept": "Density", "explanation": "Density = mass divided by volume." },
+  { "concept": "Buoyant Force", "explanation": "Floating happens because water pushes up on objects." },
+  { "concept": "Sound", "explanation": "Sound is a wave that travels through matter like air or water." },
+  { "concept": "Wave-Particle Duality", "explanation": "Sometimes light acts like a wave, sometimes like a particle." },
+  { "concept": "Electric Current", "explanation": "Electric current is moving charge, like electrons in a wire." },
+  { "concept": "Capacitance", "explanation": "A capacitor stores energy by holding electric charge." },
+  { "concept": "Magnetic Fields", "explanation": "A magnet or a moving charge makes a magnetic field around it." },
+  { "concept": "Induction", "explanation": "Changing magnetic fields can produce electricity." },
+  { "concept": "Simple Harmonic Motion", "explanation": "SHM means something moves in a repeating cycle, like a spring." },
+  { "concept": "Pressure", "explanation": "Pressure = Force ÷ Area. Smaller areas = more pressure." },
+  { "concept": "Terminal Velocity", "explanation": "Objects stop speeding up when air drag matches gravity." },
+  { "concept": "Refraction", "explanation": "Light changes direction when it moves between materials." },
+  { "concept": "Diffraction", "explanation": "Diffraction happens when waves go through gaps or around edges." },
+  { "concept": "Constructive Interference", "explanation": "Waves can add up to make a bigger wave if they match." },
+  { "concept": "Destructive Interference", "explanation": "Waves meeting out of sync can cancel each other." },
+  { "concept": "Electric Potential Energy", "explanation": "Like gravity, electric fields can store energy in positions." },
+  { "concept": "Power", "explanation": "More power means energy is used faster." },
+  { "concept": "Momentum", "explanation": "Momentum = mass × velocity. Bigger or faster things have more." },
+  { "concept": "Impulse", "explanation": "Impulse is force × time, and it changes momentum." },
+  { "concept": "Torque", "explanation": "Torque causes rotation and depends on how far the force is from the pivot." },
+  { "concept": "Conservation of Momentum", "explanation": "In a system with no outside forces, the total momentum stays the same, even if objects inside the system bounce off each other." },
+  { "concept": "Kinetic Energy", "explanation": "Kinetic energy is motion energy. If something is heavier or faster, it has more of it." },
+  { "concept": "Gravitational Potential Energy", "explanation": "Gravity gives things energy when you lift them. The higher they are, the more energy they have." },
+  { "concept": "Ohm’s Law", "explanation": "Ohm’s Law says current increases if voltage goes up, assuming resistance stays the same." },
+  { "concept": "Second Law of Thermodynamics", "explanation": "Entropy is disorder. In a closed system, it always increases or stays the same." },
+  { "concept": "Free Fall", "explanation": "When something falls with gravity and *only* gravity acting on it. So, no air resistance or engines." },
+  { "concept": "Projectile Motion", "explanation": "Think throwing a ball. Horizontally it keeps going, vertically it rises then falls because of gravity." },
+  { "concept": "Normal Force", "explanation": "This is the force that the ground uses to push up on you so you don’t fall through." },
+  { "concept": "Tension", "explanation": "When a rope or string pulls on something, it creates tension. Everyone feels the same tension through the rope." },
+  { "concept": "Spring Force (Hooke’s Law)", "explanation": "The more you stretch or squish a spring, the harder it pulls back. F = -kx." },
+  { "concept": "Centripetal Force", "explanation": "Going in a circle? There must be a force pulling toward the center." },
+  { "concept": "Circular Motion Acceleration", "explanation": "Even at constant speed, going in a circle means you're constantly accelerating—because your direction’s always changing." },
+  { "concept": "Newton’s Third Law", "explanation": "For every action, there’s an equal and opposite reaction. You push on a wall—it pushes back." },
+  { "concept": "Work-Energy Theorem", "explanation": "If you do work on something, its energy changes. So pushing = more kinetic energy." },
+  { "concept": "Conservation of Energy", "explanation": "Energy can’t be created or destroyed—just changes form." },
+  { "concept": "Mechanical Energy", "explanation": "This is the sum of kinetic + potential energy. It stays constant if there’s no friction or external work." },
+  { "concept": "Gravitational Force", "explanation": "Any two objects with mass attract each other. Even you and your phone." },
+  { "concept": "Electric Charge", "explanation": "Like charges repel, opposites attract. Comes in positive and negative." },
+  { "concept": "Electric Field", "explanation": "This is how a charge 'reaches out' to affect other charges around it." },
+  { "concept": "Voltage (Electric Potential)", "explanation": "Think of it like electric pressure. Higher voltage = more push for charges to move." },
+  { "concept": "Current", "explanation": "Current is the flow of electric charge. It's what powers devices." },
+  { "concept": "Resistance", "explanation": "This is what makes it harder for current to flow. Wires, resistors, even your body." },
+  { "concept": "Series vs Parallel Circuits", "explanation": "In series, everything is one path. In parallel, current can split." },
+  { "concept": "Right-Hand Rule", "explanation": "For magnetism: fingers in current direction, curl them, thumb points in magnetic field direction." },
+  { "concept": "Faraday’s Law", "explanation": "Changing magnetic fields = electricity. That’s how generators work." },
+  { "concept": "Induced Current", "explanation": "If a magnet moves near a coil, the coil gets current that fights the change." },
+  { "concept": "Lenz’s Law", "explanation": "The direction of induced current opposes the change that caused it." },
+  { "concept": "Pendulums", "explanation": "They swing with constant back-and-forth motion, and their period depends on length—not mass!" },
+  { "concept": "Waves (Mechanical)", "explanation": "These move energy without moving matter long distances. Think sound, water waves." },
+  { "concept": "Amplitude", "explanation": "This is wave height—higher amplitude = more energy." },
+  { "concept": "Frequency", "explanation": "How often a wave cycles per second. High frequency = short wavelength." },
+  { "concept": "Period", "explanation": "The time for one full wave cycle. It’s the inverse of frequency." },
+  { "concept": "Doppler Effect", "explanation": "That high-pitch siren sound coming toward you? Lower when it passes? That’s Doppler." },
+  { "concept": "Standing Waves", "explanation": "Waves trapped between boundaries create repeating patterns—like guitar strings or microwave hot spots." }
+]
+​
