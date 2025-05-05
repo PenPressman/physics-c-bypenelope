@@ -49,7 +49,7 @@
     let concepts = [];
 
     async function loadConcepts() {
-      const res = await fetch('data/physbypen_explanations_15.json');
+      const res = await fetch('data/concepts.json');
       concepts = await res.json();
       render("");
     }
