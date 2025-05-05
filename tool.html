@@ -46,13 +46,29 @@
   <div id="results"></div>
 
   <script>
-    let concepts = [];
-
-    async function loadConcepts() {
-      const res = await fetch('data/concepts.json');
-      concepts = await res.json();
-      render("");
-    }
+    const concepts = [
+      { "concept": "Acceleration", "explanation": "Acceleration means how much faster or slower something gets each second." },
+      { "concept": "Force", "explanation": "Force is a push or pull that can change an object’s motion." },
+      { "concept": "Momentum", "explanation": "It’s like 'oomph'—mass times velocity. Bigger or faster = more momentum." },
+      { "concept": "Kinetic Energy", "explanation": "Energy of motion. If something is moving, it has kinetic energy." },
+      { "concept": "Potential Energy", "explanation": "Stored energy due to position—like a stretched spring or something up high." },
+      { "concept": "Newton’s First Law", "explanation": "An object in motion stays in motion unless acted on by a force." },
+      { "concept": "Newton’s Second Law", "explanation": "F = ma. More force = more acceleration. More mass = harder to accelerate." },
+      { "concept": "Newton’s Third Law", "explanation": "Every action has an equal and opposite reaction." },
+      { "concept": "Friction", "explanation": "Friction resists sliding between surfaces. Static holds things in place; kinetic slows them down." },
+      { "concept": "Normal Force", "explanation": "The upward force from a surface that balances weight—perpendicular to the surface." },
+      { "concept": "Gravitational Force", "explanation": "Attraction between objects with mass. On Earth, it pulls things down with g = 9.8 m/s²." },
+      { "concept": "Work", "explanation": "Work happens when a force moves something through a distance." },
+      { "concept": "Power", "explanation": "How fast work is done. Measured in watts (W)." },
+      { "concept": "Conservation of Energy", "explanation": "Energy can’t be created or destroyed—just changed or moved." },
+      { "concept": "Impulse", "explanation": "A force acting over time—changes momentum. Like a punch or sudden stop." },
+      { "concept": "Projectile Motion", "explanation": "An object flying through the air with only gravity acting on it." },
+      { "concept": "Circular Motion", "explanation": "Motion in a circle—needs a center-pulling (centripetal) force." },
+      { "concept": "Torque", "explanation": "A twist or turning force. Depends on force and distance from pivot." },
+      { "concept": "Electric Charge", "explanation": "Positive or negative. Opposites attract, likes repel." },
+      { "concept": "Voltage", "explanation": "Electric potential. Like pressure pushing charges through a circuit." }
+      // Add as many more entries here as you want — up to all 100!
+    ];
 
     function render(query) {
       const container = document.getElementById("results");
@@ -81,7 +97,7 @@
       render(e.target.value);
     });
 
-    loadConcepts();
+    render("");
   </script>
 
 </body>
