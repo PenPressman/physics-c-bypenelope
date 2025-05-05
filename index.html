@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +43,7 @@
     left: 0;
     width: 100%;
     height: 100px;
-    background-color: #001f3f; /* optional background */
+    background-color: #c9dfff; /* optional background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -465,23 +468,7 @@
     text-align: center; /* Center the text horizontally */
   }
 
-nav.nav-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
-}
 
-/* Responsive layout for phones */
-@media screen and (max-width: 480px) {
-  nav.nav-links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 10px;
-    padding: 10px;
-	   background-color: #001f3f;
-    text-align: center;
-    background-color: #1c345c;
-  }
 
 .light-red-shadow {
       text-shadow: 1px 1px .5px #FF0000;
@@ -570,13 +557,15 @@ margin: 0 auto; /* Center horizontally */
 
 
   </header>
-<nav class="nav-links">
-	<a href="tool.html">Search</a>
+  <nav>
+	      <a href="tool.html">Search</a>
 	   <a href="mailto:physbypen@gmail.com">Contact</a>
 	   <a href="about.html">About</a>
     <a href="homepageforgames.html">Games</a>
     <a href="simulations.html">Simulations</a>
 	      <a href="sources.html">Sources</a>
+<a href="https://github.com/PenPressman/physics-c-bypenelope.git" onclick="showContributionPopup()">Collaborate</a></nav/>
+
 
 
 <script>
@@ -946,7 +935,7 @@ function closeContributionPopup() {
     </div>
   </div>
   <footer>
-    <p> Penelope Pressman - Phys by Pen [Last update: 5.4.25]</p>
+    <p> Penelope Pressman - Phys by Pen [Last update: 2.19.25]</p>
   </footer>
 </body>
 </html>
