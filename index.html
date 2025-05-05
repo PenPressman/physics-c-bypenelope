@@ -29,6 +29,29 @@
 
 </script>
 	<style>
+
+		.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: -10px; /* Tighten spacing */
+}
+
+.logo-img {
+  max-width: 200px;
+  width: 60%;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .logo-img {
+    max-width: 140px;
+    width: 80%;
+  }
+}
+
+		
 		.logo-img {
   position: absolute;
   top: 40px;
@@ -904,6 +927,9 @@ function closeContributionPopup() {
 
   </body>
 </html>
+<div class="logo-container">
+  <img src="https://dl.dropboxusercontent.com/scl/fi/441vmqmi0gjfzzsifp4v5/phys-w-lightning.png?rlkey=6kkcsx67q5sn2f2b1ep4yrid8&raw=1" alt="Phys by Pen Logo" class="logo-img">
+</div>
 
       
     </div>
@@ -940,7 +966,6 @@ raw=1" alt="Physics Image">
 </body>
 </html>
 
-Physbypen—feb 18
 
 
 
